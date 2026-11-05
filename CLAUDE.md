@@ -22,9 +22,11 @@ https://neab-bage.github.io. Idioma do site e dos textos: português do Brasil.
 ## Regras
 - Links internos são **relativos** (`{{ root }}`), para funcionar em qualquer endereço. Não
   usar caminhos absolutos.
-- Identidade visual: logotipo monocromático do NEAB; azul institucional #14314F, azul de
-  apoio #235C86, acento ocre #8A6420, grafite #15202B. Títulos em Source Serif 4, texto em
-  Inter. Trocar as variáveis no topo de `style.css` troca o site inteiro.
+- Identidade visual: paleta "Concreto e cobre" — marca e títulos em preto #0A0A0A, texto
+  #46433E, secundário #6E6A63, cobre #9C5A2C para links e botões, concreto #F4F2EE nas faixas
+  e #DDD7CC nas linhas. Tipografia IBM Plex Sans. Logotipo do NEAB em preto, horizontal
+  (proporção 2,17:1). Trocar as variáveis no topo de `style.css` troca o site inteiro.
+
 - Acessibilidade: uma `h1` por página, `alt` nas imagens, foco visível, contraste AA,
   respeitar `prefers-reduced-motion`.
 - **Repositório público: nunca commitar dados pessoais** — CPF, RG, telefone e endereço

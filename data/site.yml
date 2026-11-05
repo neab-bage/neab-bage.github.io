@@ -167,6 +167,16 @@ parceiros:
       beneficios: []
       url: ""
 
+# Logotipos exibidos na página inicial. Arquivos em static/img/logos/ (PNG, de preferência
+# monocromáticos ou em cores oficiais, fundo transparente). Se o arquivo não existir, o site
+# mostra o nome como link de texto.
+logos_institucionais:
+  titulo: "Articulação institucional"
+  itens:
+    - {nome: "Confea", arquivo: "confea.png", url: "https://www.confea.org.br/", alt: "Confea — Conselho Federal de Engenharia e Agronomia"}
+    - {nome: "CREA-RS", arquivo: "crea-rs.png", url: "https://www.crea-rs.org.br/", alt: "CREA-RS — Conselho Regional de Engenharia e Agronomia do Rio Grande do Sul"}
+    - {nome: "Mútua", arquivo: "mutua.png", url: "https://www.mutua.com.br/", alt: "Mútua — Caixa de Assistência dos Profissionais do Crea"}
+
 # ------------------------------------------------------------------ documentos e transparência
 
 documentos:

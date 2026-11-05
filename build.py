@@ -64,6 +64,12 @@ def carregar_site():
     insta = (contato.get("instagram") or "").strip()
     usuario = insta.split("?")[0].split("#")[0].rstrip("/").rsplit("/", 1)[-1].lstrip("@") if insta else ""
     contato["instagram_user"] = f"@{usuario}" if usuario else ""
+    logos = site.get("logos_institucionais") or {}
+    for item in logos.get("itens") or []:
+        arq = ROOT / "static" / "img" / "logos" / (item.get("arquivo") or "")
+        item["tem_imagem"] = bool(item.get("arquivo")) and arq.is_file()
+        if not item["tem_imagem"]:
+            print(f"Aviso: logotipo de {item.get('nome')} não encontrado em static/img/logos/; exibindo o nome.")
     return site
 
 

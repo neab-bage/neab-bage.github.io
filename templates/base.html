@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}{{ site.nome }} — {{ site.nome_longo }}</title>
   <meta name="description" content="{{ description or site.descricao_curta }}">
-  <meta name="theme-color" content="#14314F">
+  <meta name="theme-color" content="#0A0A0A">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.nome }}">
   <meta property="og:description" content="{{ description or site.descricao_curta }}">
@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="{{ root }}static/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="{{ root }}static/css/style.css">
 </head>
 <body{% if active == "home" %} class="home"{% endif %}>
@@ -49,6 +49,22 @@
   <main id="conteudo">
 {% block conteudo %}{% endblock %}
   </main>
+
+  {% if site.logos_institucionais and site.logos_institucionais.itens %}
+  <aside class="instituicoes">
+    <div class="wrap">
+      <p class="instituicoes__titulo">{{ site.logos_institucionais.titulo }}</p>
+      <ul class="instituicoes__lista">
+        {% for o in site.logos_institucionais.itens %}
+        <li><a href="{{ o.url }}" target="_blank" rel="noopener">
+          {% if o.tem_imagem %}<img src="{{ root }}static/img/logos/{{ o.arquivo }}" alt="{{ o.alt or o.nome }}" loading="lazy">
+          {% else %}<span class="instituicoes__nome">{{ o.nome }}</span>{% endif %}
+        </a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+  {% endif %}
 
   <footer class="rodape">
     <div class="wrap rodape__grade">
