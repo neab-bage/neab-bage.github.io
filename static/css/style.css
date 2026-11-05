@@ -108,6 +108,10 @@ ul,ol{margin:0 0 1em;padding-left:1.1rem}
 /* ---------- cartões ---------- */
 .cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:8px}
 .cartoes--3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cartoes--areas{grid-template-columns:repeat(auto-fit,minmax(192px,1fr));gap:16px}
+.cartoes--areas .cartao{padding:22px 18px}
+.cartoes--areas .cartao h2{font-size:1.02rem;line-height:1.25}
+@media (max-width:1060px){.cartoes--areas{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}}
 .cartoes--5{grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:16px}
 .cartao--diretoria{background:var(--preto);border-color:var(--preto)}
 .cartao--diretoria h2{color:#fff}
