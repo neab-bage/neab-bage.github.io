@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Comunicação</p>
+    <h1>Notícias</h1>
+    <p class="cab__lead">Atividades, decisões e informações do núcleo para os associados e para a comunidade.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% if noticias %}
+  <ul class="lista-posts lista-posts--cheia">
+    {% for p in noticias %}
+    <li>
+      <a href="{{ root }}noticias/{{ p.slug }}/">
+        <small>{{ p.categoria }} · {{ p.data_br }}</small>
+        <strong>{{ p.titulo }}</strong>
+        {% if p.resumo %}<span>{{ p.resumo }}</span>{% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="nota">Nenhuma notícia publicada ainda.</p>
+  {% endif %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Prestação de contas</p>
+    <h1>Transparência</h1>
+    <p class="cab__lead">{{ site.transparencia.intro }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <h2>Compromissos</h2>
+  <ul class="checklist">
+    {% for c in site.transparencia.compromissos %}
+    <li>{{ i.icon("escudo", 20) }}<span>{{ c }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="faixa">
+  <div class="wrap">
+    <h2>Exercícios</h2>
+    {% if site.transparencia.exercicios %}
+    <ul class="docs">
+      {% for e in site.transparencia.exercicios %}
+      <li class="doc">
+        <span class="doc__ic">{{ i.icon("documento", 22) }}</span>
+        <div class="doc__corpo">
+          <strong>Exercício {{ e.ano }}</strong>
+          {% if e.resumo %}<p>{{ e.resumo }}</p>{% endif %}
+        </div>
+        <span class="doc__links">
+          {% if e.relatorio %}<a class="btn btn--peq btn--suave" href="{{ root }}static/documentos/{{ e.relatorio }}" target="_blank" rel="noopener">Relatório</a>{% endif %}
+          {% if e.demonstracoes %}<a class="btn btn--peq btn--suave" href="{{ root }}static/documentos/{{ e.demonstracoes }}" target="_blank" rel="noopener">Demonstrações</a>{% endif %}
+          {% if e.parecer %}<a class="btn btn--peq btn--suave" href="{{ root }}static/documentos/{{ e.parecer }}" target="_blank" rel="noopener">Parecer do Conselho Fiscal</a>{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="faixa__txt">Os relatórios de atividades e as demonstrações financeiras passam a
+       ser publicados nesta página a cada encerramento de exercício. Enquanto isso, os
+       documentos podem ser solicitados à Diretoria pela
+       <a href="{{ root }}contato/">página de contato</a>.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}

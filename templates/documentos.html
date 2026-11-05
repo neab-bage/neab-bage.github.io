@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Atos da entidade</p>
+    <h1>Documentos</h1>
+    <p class="cab__lead">Estatuto Social, editais e atos do processo eleitoral do NEAB.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% for g in site.documentos.grupos %}
+  <h2>{{ g.titulo }}</h2>
+  <ul class="docs">
+    {% for d in g.itens %}
+    <li class="doc">
+      <span class="doc__ic">{{ i.icon("documento", 22) }}</span>
+      <div class="doc__corpo">
+        <strong>{{ d.titulo }}</strong>
+        <small>{{ d.data }}</small>
+        {% if d.resumo %}<p>{{ d.resumo }}</p>{% endif %}
+      </div>
+      {% if d.arquivo %}
+      <a class="btn btn--peq btn--suave" href="{{ root }}static/documentos/{{ d.arquivo }}" target="_blank" rel="noopener">{{ i.icon("baixar", 16) }}PDF</a>
+      {% else %}
+      <span class="doc__pendente">Em breve</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  <p class="nota">Documentos aprovados em Assembleia Geral são publicados aqui após o registro.
+     Para solicitar um documento não listado, use a <a href="{{ root }}contato/">página de contato</a>.</p>
+</section>
+
+{% endblock %}

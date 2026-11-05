@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Fale com o núcleo</p>
+    <h1>Contato</h1>
+    <p class="cab__lead">Para associar-se, propor uma parceria, solicitar documentos ou levar um
+       assunto do exercício profissional à Diretoria.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <ul class="contatos">
+    <li class="contato">
+      <span class="contato__ic">{{ i.icon("local", 22) }}</span>
+      <div>
+        <strong>Sede</strong>
+        <p>{{ site.sede.endereco }}<br>{{ site.sede.cidade }}{% if site.sede.cep %} · CEP {{ site.sede.cep }}{% endif %}
+           {% if site.sede.complemento %}<br>{{ site.sede.complemento }}{% endif %}</p>
+      </div>
+    </li>
+    {% if site.contato.email %}
+    <li class="contato">
+      <span class="contato__ic">{{ i.icon("email", 22) }}</span>
+      <div>
+        <strong>E-mail</strong>
+        <p><a href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a></p>
+      </div>
+    </li>
+    {% endif %}
+    {% if site.contato.telefone %}
+    <li class="contato">
+      <span class="contato__ic">{{ i.icon("telefone", 22) }}</span>
+      <div>
+        <strong>Telefone</strong>
+        <p>{{ site.contato.telefone }}</p>
+      </div>
+    </li>
+    {% endif %}
+    {% if site.contato.instagram %}
+    <li class="contato">
+      <span class="contato__ic">{{ i.icon("instagram", 22) }}</span>
+      <div>
+        <strong>Instagram</strong>
+        <p><a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">Perfil do NEAB</a></p>
+      </div>
+    </li>
+    {% endif %}
+  </ul>
+  {% if not site.contato.email and not site.contato.telefone %}
+  <p class="nota">Os canais oficiais de contato do núcleo serão publicados aqui. Até então, a
+     Diretoria pode ser procurada na sede da Inspetoria Regional do CREA-RS em Bagé.</p>
+  {% endif %}
+</section>
+
+{% endblock %}

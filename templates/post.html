@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">{{ post.categoria }} · {{ post.data_br }}</p>
+    <h1>{{ post.titulo }}</h1>
+    {% if post.resumo %}<p class="cab__lead">{{ post.resumo }}</p>{% endif %}
+  </div>
+</section>
+
+<article class="wrap secao">
+  <div class="texto">
+    {{ post.html | safe }}
+    {% if post.autor %}<p class="nota">Publicado por {{ post.autor }}.</p>{% endif %}
+  </div>
+  <p><a class="link-seta" href="{{ root }}noticias/">Todas as notícias {{ i.icon("seta", 16) }}</a></p>
+</article>
+
+{% endblock %}

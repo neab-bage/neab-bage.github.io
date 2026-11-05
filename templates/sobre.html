@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Este site</p>
+    <h1>Sobre o site</h1>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <div class="texto">
+    <h2>Como funciona</h2>
+    <p>{{ site.sobre_site.desenvolvimento }}</p>
+    <p>O conteúdo das páginas fica em arquivos de dados no repositório: para atualizar a
+       diretoria, um documento ou uma atividade, altera-se o arquivo e o site é publicado
+       automaticamente.</p>
+
+    <h2>Responsável</h2>
+    <p>{{ site.sobre_site.responsavel }}{% if site.sobre_site.email %} — <a href="mailto:{{ site.sobre_site.email }}">{{ site.sobre_site.email }}</a>{% endif %}</p>
+
+    <h2>Código e licença</h2>
+    <p><a href="{{ site.sobre_site.repositorio }}" target="_blank" rel="noopener">Repositório no GitHub {{ i.icon("externo", 16) }}</a></p>
+    <p>{{ site.sobre_site.licenca }}</p>
+
+    <h2>Acessibilidade</h2>
+    <p>As páginas seguem uma estrutura de títulos única por página, descrição alternativa nas
+       imagens, foco visível na navegação por teclado e contraste adequado. Encontrou alguma
+       barreira? Avise pela <a href="{{ root }}contato/">página de contato</a>.</p>
+  </div>
+</section>
+
+{% endblock %}

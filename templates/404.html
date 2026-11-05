@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Erro 404</p>
+    <h1>Página não encontrada</h1>
+    <p class="cab__lead">O endereço pode ter mudado ou o conteúdo não existe mais.</p>
+    <div class="acoes">
+      <a class="btn btn--primario" href="{{ root }}">Ir para o início {{ i.icon("seta", 18) }}</a>
+      <a class="btn btn--suave" href="{{ root }}contato/">Falar com o núcleo</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

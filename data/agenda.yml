@@ -1,0 +1,13 @@
+# Atividades do NEAB. O build separa automaticamente em "próximas" e "realizadas" pela data.
+# Campos: id (slug único, usado no arquivo .ics), titulo, data (AAAA-MM-DD), inicio/fim (HH:MM),
+#         tipo, local, resumo, descricao (Markdown, opcional), inscricao (URL, opcional).
+
+- id: assembleia-geral-eletiva-2026
+  titulo: "Assembleia Geral Eletiva — Diretoria biênio 2027/2028"
+  data: 2026-07-20
+  inicio: "18:30"
+  tipo: "Assembleia Geral"
+  local: "Sede da Inspetoria Regional do CREA-RS, Bagé/RS"
+  resumo: >-
+    Eleição da Diretoria do NEAB para o biênio 2027/2028, convocada pelo edital de 11 de
+    julho de 2026. Com chapa única inscrita, a Assembleia deliberou pela eleição por aclamação.

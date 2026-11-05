@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Quem somos</p>
+    <h1>O NEAB</h1>
+    <p class="cab__lead">{{ site.descricao_curta }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <div class="texto">
+    <h2>Finalidade</h2>
+    <p>{{ site.finalidade }}</p>
+    <p>O NEAB é uma sociedade civil, pessoa jurídica de direito privado, sem finalidade
+       econômica e com duração por prazo indeterminado. Sua abrangência: {{ site.abrangencia }}.</p>
+    <p class="aviso">{{ i.icon("balanca", 20) }} {{ site.ressalva_estatutaria }}</p>
+
+    {% if site.fundacao.confirmado %}
+    <h2>Histórico</h2>
+    <p>{{ site.fundacao.texto or "Fundado em " ~ site.fundacao.ano ~ "." }}</p>
+    {% endif %}
+
+    <h2>Sede</h2>
+    <p>{{ site.sede.endereco }} — {{ site.sede.cidade }}{% if site.sede.cep %}, CEP {{ site.sede.cep }}{% endif %}.</p>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="wrap">
+    <h2>Como o núcleo é administrado</h2>
+    <p class="faixa__txt">{{ site.governanca.intro }}</p>
+    <div class="cartoes cartoes--3">
+      {% for o in site.governanca.orgaos %}
+      <article class="cartao cartao--estatico">
+        <h3>{{ o.titulo }}</h3>
+        <p>{{ o.texto }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <div class="texto">
+    <h2>Patrimônio e manutenção</h2>
+    <p>Os fundos do núcleo vêm das mensalidades dos associados. O valor é proposto anualmente
+       pelo Conselho Fiscal e aprovado pela Assembleia Geral, na prestação de contas. A
+       Diretoria pode firmar convênios com órgãos e instituições que tragam ao núcleo
+       benefícios econômicos, culturais ou tecnológicos.</p>
+    <div class="acoes">
+      <a class="btn btn--primario" href="{{ root }}documentos/">Estatuto e documentos {{ i.icon("seta", 18) }}</a>
+      <a class="btn btn--suave" href="{{ root }}diretoria/">Diretoria atual</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Atividades</p>
+    <h1>Agenda</h1>
+    <p class="cab__lead">Assembleias, reuniões, cursos e eventos do núcleo. Cada atividade pode
+       ser adicionada ao seu calendário.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <h2>Próximas atividades</h2>
+  {% if agenda_prox %}
+  <ul class="ativs">
+    {% for a in agenda_prox %}
+    <li class="ativ">
+      <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
+      <div class="ativ__corpo">
+        <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}{% if a.tipo %} · {{ a.tipo }}{% endif %}</small>
+        <h3>{{ a.titulo }}</h3>
+        {% if a.local %}<p class="ativ__local">{{ i.icon("local", 16) }}{{ a.local }}</p>{% endif %}
+        {% if a.resumo %}<p>{{ a.resumo }}</p>{% endif %}
+        {% if a.html %}<div class="texto texto--peq">{{ a.html | safe }}</div>{% endif %}
+        <p class="ativ__acoes">
+          <a class="btn btn--peq btn--suave" href="{{ root }}agenda/{{ a.id }}.ics">{{ i.icon("calendario", 16) }}Adicionar ao calendário</a>
+          {% if a.inscricao %}<a class="btn btn--peq btn--primario" href="{{ a.inscricao }}" target="_blank" rel="noopener">Inscrever-se {{ i.icon("externo", 16) }}</a>{% endif %}
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="nota">Nenhuma atividade marcada no momento.</p>
+  {% endif %}
+</section>
+
+{% if agenda_real %}
+<section class="faixa">
+  <div class="wrap">
+    <h2>Realizadas</h2>
+    <ul class="ativs ativs--passadas">
+      {% for a in agenda_real %}
+      <li class="ativ">
+        <span class="data-bloco data-bloco--neutro"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
+        <div class="ativ__corpo">
+          <small>{{ a.data_br }}{% if a.tipo %} · {{ a.tipo }}{% endif %}</small>
+          <h3>{{ a.titulo }}</h3>
+          {% if a.resumo %}<p>{{ a.resumo }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Biênio {{ site.diretoria.biennio }}</p>
+    <h1>Diretoria e representação</h1>
+    <p class="cab__lead">{{ site.diretoria.eleicao }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <h2>Diretoria</h2>
+  <ul class="pessoas">
+    {% for m in site.diretoria.membros %}
+    <li class="pessoa">
+      <span class="pessoa__cargo">{{ m.cargo }}</span>
+      <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="nota">Os mandatos duram dois anos e os cargos são exercidos gratuitamente. Em
+     impedimentos e ausências, o Presidente é substituído, nesta ordem, pelo Vice-Presidente,
+     pelo Secretário e pelo Tesoureiro.</p>
+</section>
+
+<section class="wrap secao">
+  <h2>Conselho Fiscal</h2>
+  {% if site.conselho_fiscal.titulares %}
+  <div class="duas">
+    <div>
+      <h3>Titulares</h3>
+      <ul class="pessoas pessoas--simples">
+        {% for m in site.conselho_fiscal.titulares %}
+        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h3>Suplentes</h3>
+      <ul class="pessoas pessoas--simples">
+        {% for m in site.conselho_fiscal.suplentes %}
+        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% else %}
+  <p class="nota">Três membros titulares e três suplentes, eleitos por voto secreto, com
+     mandato de dois anos. A composição do biênio {{ site.conselho_fiscal.biennio }} será
+     publicada aqui.</p>
+  {% endif %}
+</section>
+
+<section class="wrap secao">
+  <h2>Representação junto ao CREA-RS</h2>
+  <p class="texto__p">{{ site.representacao_crea.texto }}</p>
+  {% if site.representacao_crea.membros %}
+  <ul class="pessoas">
+    {% for m in site.representacao_crea.membros %}
+    <li class="pessoa">
+      <span class="pessoa__cargo">{{ m.cargo }}</span>
+      <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <p class="nota">Somente profissionais das áreas abrangidas pelo sistema CONFEA/CREA votam e
+     são votados em questões relacionadas ao sistema.</p>
+</section>
+
+{% if site.comissao_eleitoral and site.comissao_eleitoral.membros %}
+<section class="faixa">
+  <div class="wrap">
+    <h2>Comissão Eleitoral {{ site.comissao_eleitoral.ano }}</h2>
+    <p class="faixa__txt">Responsável pela organização, fiscalização e condução do processo
+       eleitoral do biênio {{ site.diretoria.biennio }}.</p>
+    <ul class="pessoas">
+      {% for m in site.comissao_eleitoral.membros %}
+      <li class="pessoa">
+        <span class="pessoa__cargo">{{ m.cargo }}</span>
+        <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+{% if site.gestoes_anteriores %}
+<section class="wrap secao">
+  <h2>Gestões anteriores</h2>
+  {% for g in site.gestoes_anteriores %}
+  <h3>Biênio {{ g.biennio }}</h3>
+  <ul class="pessoas">
+    {% for m in g.membros %}
+    <li class="pessoa">
+      <span class="pessoa__cargo">{{ m.cargo }}</span>
+      <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+{% endif %}
+
+{% endblock %}

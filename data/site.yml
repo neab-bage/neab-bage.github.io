@@ -1,0 +1,209 @@
+# Dados do site do NEAB — edite aqui os textos, a diretoria, os parceiros e os documentos.
+# Regra geral: trocar conteúdo pelos dados, não pelo HTML.
+
+nome: NEAB
+nome_longo: Núcleo dos Engenheiros e Arquitetos de Bagé
+local: Bagé/RS
+base_url: "/"            # usado só na página 404. Em Pages de projeto: "/nome-do-repositorio/"
+
+descricao_curta: >-
+  O NEAB é a sociedade civil que reúne engenheiros, arquitetos e profissionais de
+  especialidades afins da regional do CREA-RS de Bagé para defender o exercício
+  profissional e valorizar a engenharia e a arquitetura na região.
+
+fundacao:
+  ano: 1968
+  confirmado: false      # PENDENTE: confirmar o ano e a data de fundação (a arte comemorativa é de 58 anos, em 2026)
+  texto: ""              # quando confirmado, um parágrafo curto de histórico aqui
+
+finalidade: >-
+  Proteger e defender os interesses profissionais dos associados e valorizar o exercício
+  das profissões de engenharia e arquitetura, sem finalidade econômica, com objetivos
+  voltados à promoção de atividades de relevância pública e social.
+
+abrangencia: "Municípios da regional do CREA-RS de Bagé"
+
+# O Art. 3, parágrafo único, do Estatuto é parte da identidade da entidade.
+ressalva_estatutaria: >-
+  O NEAB não pode ser usado em questões de natureza político-partidária, religiosa ou racial.
+
+sede:
+  endereco: "Rua Alan Kardec, nº 177 — Loja 01"
+  cidade: "Bagé/RS"
+  cep: "96402-080"
+  complemento: ""        # ponto de referência, se útil
+
+contato:
+  email: ""              # PENDENTE: e-mail institucional do NEAB
+  telefone: ""           # PENDENTE: telefone ou WhatsApp de contato
+  instagram: ""          # PENDENTE: perfil do NEAB, se houver
+  facebook: ""
+
+numeros:
+  - {valor: "4", rotulo: "cargos na Diretoria"}
+  - {valor: "3+3", rotulo: "membros do Conselho Fiscal"}
+  - {valor: "2", rotulo: "anos de mandato"}
+  - {valor: "1", rotulo: "regional do CREA-RS"}
+
+# ------------------------------------------------------------------ governança
+
+governanca:
+  intro: >-
+    A administração do NEAB compete à Diretoria e ao Conselho Fiscal, e a Assembleia Geral
+    é o órgão máximo da entidade. Os mandatos duram dois anos e os cargos são exercidos
+    gratuitamente.
+  orgaos:
+    - titulo: "Assembleia Geral"
+      texto: >-
+        Órgão máximo do NEAB, constituída pelos associados no pleno gozo de seus direitos.
+        Reúne-se anualmente em sessão ordinária, nos 30 dias seguintes ao encerramento do
+        exercício financeiro, para apreciar o relatório e as contas do exercício anterior, e
+        em sessão extraordinária sempre que convocada por edital.
+    - titulo: "Diretoria"
+      texto: >-
+        Composta por Presidente, Vice-Presidente, Secretário e Tesoureiro, eleitos por voto
+        secreto. Dirige e administra a entidade, executa as decisões da Assembleia Geral,
+        propõe o orçamento anual e organiza o relatório anual.
+    - titulo: "Conselho Fiscal"
+      texto: >-
+        Três membros titulares e três suplentes, eleitos por voto secreto. Opina sobre o
+        desempenho financeiro e contábil e sobre as operações patrimoniais, e pode examinar
+        a escrituração da entidade em qualquer época.
+
+# ------------------------------------------------------------------ diretoria
+
+diretoria:
+  biennio: "2027/2028"
+  eleicao: >-
+    Eleita por aclamação na Assembleia Geral Eletiva de 20 de julho de 2026, na sede da
+    Inspetoria Regional do CREA-RS em Bagé, após a inscrição de chapa única.
+  membros:
+    - {cargo: "Presidente", nome: "Cecília Nunes Vieira Lacerda da Luz", titulo: "Arq."}
+    - {cargo: "Vice-Presidente", nome: "Aliane Pedroso da Croce", titulo: "Eng.ª Civil"}
+    - {cargo: "Secretário", nome: "Bruno Ferreira Saliba", titulo: "Arq."}
+    - {cargo: "Tesoureiro", nome: "Bruno Dias Robaina", titulo: "Eng. Civil"}
+
+conselho_fiscal:
+  biennio: "2027/2028"
+  nota: "PENDENTE: nomes dos três titulares e três suplentes."
+  titulares: []
+  suplentes: []
+
+# Representantes do NEAB junto ao CREA-RS (Art. 10 do Estatuto).
+representacao_crea:
+  nota: "PENDENTE: nomes do titular, do suplente e do substituto de suplente."
+  membros: []
+  texto: >-
+    Os representantes do NEAB junto ao CREA-RS — titular, suplente e substituto de suplente —
+    são eleitos pela Assembleia Geral, como os demais cargos, para mandato de dois anos.
+
+gestoes_anteriores:
+  - biennio: "2025/2026"
+    membros:
+      - {cargo: "Presidente", nome: "Jerônimo Bazerque Pereira", titulo: "Eng. Civil"}
+      - {cargo: "Secretário", nome: "Dineu Resende Borba Neto", titulo: "Arq."}
+
+comissao_eleitoral:
+  ano: 2026
+  membros:
+    - {cargo: "Presidente da Comissão", nome: "Adalberto Schafer", titulo: "Eng. Civil"}
+    - {cargo: "Membro", nome: "Marcelo Goskes", titulo: "Arq."}
+    - {cargo: "Membro", nome: "Márcio Marun Gomes", titulo: "Eng. Civil"}
+
+# ------------------------------------------------------------------ associe-se
+
+associar:
+  chamada: >-
+    Associar-se ao NEAB é somar-se a um grupo que representa a engenharia e a arquitetura
+    da região junto ao CREA-RS, acompanha as questões do exercício profissional e organiza
+    formação, eventos e convênios para os profissionais de Bagé e da regional.
+  quem_pode:
+    - "Profissionais da engenharia e da arquitetura registrados no respectivo Conselho."
+    - "Profissionais de especialidades afins, de nível superior, regulamentadas pelo CREA-RS."
+  como:
+    - titulo: "Fale com a Diretoria"
+      texto: "Entre em contato pelos canais da página de contato e manifeste o interesse em associar-se."
+    - titulo: "Indicação de associado"
+      texto: "Qualquer associado pode propor novos associados à Diretoria, conforme o Estatuto."
+    - titulo: "Contribuição mensal"
+      texto: >-
+        Os fundos do NEAB vêm das mensalidades dos associados. O valor é proposto anualmente
+        pelo Conselho Fiscal e aprovado pela Assembleia Geral, na prestação de contas.
+  mensalidade: ""        # PENDENTE: valor vigente e forma de pagamento, se puder ser público
+  direitos:
+    - "Frequentar a sede do núcleo."
+    - "Participar das Assembleias Gerais, congressos e conferências."
+    - "Acompanhar as reuniões do Conselho Fiscal e discutir pareceres e trabalhos técnicos."
+    - "Apresentar conferências e trabalhos técnicos no núcleo, com anuência da Diretoria."
+    - "Propor questões para estudo, relacionadas às finalidades do núcleo."
+    - "Votar e ser votado para os cargos eletivos."
+    - "Propor novos associados."
+    - "Integrar as comissões técnicas do núcleo."
+  deveres:
+    - "Manter em dia a contribuição mensal."
+    - "Observar o Estatuto Social e o Código de Ética Profissional."
+
+# ------------------------------------------------------------------ parceiros
+
+parceiros:
+  intro: >-
+    Convênios e parcerias firmados pelo núcleo trazem benefícios econômicos, culturais ou
+    tecnológicos aos associados, conforme o Art. 34 do Estatuto.
+  itens:
+    - nome: "Mútua — Caixa de Assistência dos Profissionais do CREA"
+      resumo: >-
+        Assistência aos profissionais registrados no sistema CONFEA/CREA, com linhas de
+        crédito, auxílios e benefícios sociais.
+      beneficios: []     # PENDENTE: lista dos benefícios a divulgar
+      url: ""
+    - nome: "Clube Mútua"
+      resumo: >-
+        Programa de vantagens e descontos da Mútua em comércio, serviços, educação e saúde
+        para profissionais associados.
+      beneficios: []
+      url: ""
+    - nome: "Tecnoprev"
+      resumo: "PENDENTE: descrever a parceria e os benefícios aos associados."
+      beneficios: []
+      url: ""
+
+# ------------------------------------------------------------------ documentos e transparência
+
+documentos:
+  intro: >-
+    Estatuto, editais e atos da entidade. Os arquivos ficam em
+    <code>static/documentos/</code> e são listados aqui.
+  grupos:
+    - titulo: "Estatuto Social"
+      itens:
+        - {titulo: "Estatuto Social do NEAB", data: "21 de julho de 2025", arquivo: "estatuto-neab-2025.pdf",
+           resumo: "Texto vigente, aprovado em Assembleia Geral."}
+    - titulo: "Processo eleitoral 2026 — biênio 2027/2028"
+      itens:
+        - {titulo: "Termo de aclamação e proclamação do resultado eleitoral", data: "20 de julho de 2026",
+           arquivo: "termo-aclamacao-2026.pdf",
+           resumo: "Proclamação da Diretoria eleita para o biênio 2027/2028."}
+        - {titulo: "Edital de convocação e comissão eleitoral", data: "11 de julho de 2026",
+           arquivo: "", resumo: "PENDENTE: publicar versão sem os dados pessoais da assinatura digital."}
+
+transparencia:
+  intro: >-
+    O Art. 35 do Estatuto determina que o NEAB dê publicidade, no encerramento do exercício
+    fiscal, ao relatório de atividades e às demonstrações financeiras, com as certidões
+    negativas de débitos, à disposição de qualquer cidadão.
+  compromissos:
+    - "Observar os princípios fundamentais de contabilidade e as Normas Brasileiras de Contabilidade."
+    - "Publicar, no encerramento de cada exercício fiscal, o relatório de atividades e as demonstrações financeiras."
+    - "Disponibilizar as certidões negativas de débitos com a Previdência Social e com o FGTS."
+  exercicios: []         # PENDENTE: {ano, relatorio: arquivo.pdf, demonstracoes: arquivo.pdf, parecer: arquivo.pdf}
+
+# ------------------------------------------------------------------ sobre o site
+
+sobre_site:
+  responsavel: "PENDENTE: responsável pelo site no núcleo"
+  email: ""
+  desenvolvimento: >-
+    Site estático em Python (Jinja2), publicado no GitHub Pages. Desenvolvido com apoio de
+    ferramenta de inteligência artificial (Claude, Anthropic), com curadoria e revisão do NEAB.
+  repositorio: "https://github.com/neab-bage/neab-bage.github.io"
+  licenca: "Conteúdo do NEAB; código do site sob licença MIT."

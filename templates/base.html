@@ -1,0 +1,91 @@
+{% import "_icons.html" as i %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.nome }} — {{ site.nome_longo }}</title>
+  <meta name="description" content="{{ description or site.descricao_curta }}">
+  <meta name="theme-color" content="#14314F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.nome }}">
+  <meta property="og:description" content="{{ description or site.descricao_curta }}">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/png" href="{{ root }}static/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ root }}static/css/style.css">
+</head>
+<body{% if active == "home" %} class="home"{% endif %}>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="wrap topo__in">
+      <a class="marca" href="{{ root }}" aria-label="{{ site.nome_longo }} — página inicial">
+        <img src="{{ root }}static/img/logo-neab.png" alt="" width="865" height="944">
+        <span class="marca__txt"><strong>{{ site.nome }}</strong><small>{{ site.nome_longo }}</small></span>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__abrir">{{ i.icon("menu", 22) }}<span class="sr">Abrir menu</span></span>
+        <span class="menu-btn__fechar">{{ i.icon("fechar", 22) }}<span class="sr">Fechar menu</span></span>
+      </button>
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul>
+          <li><a href="{{ root }}o-neab/"{% if active == "neab" %} aria-current="page"{% endif %}>O NEAB</a></li>
+          <li><a href="{{ root }}diretoria/"{% if active == "diretoria" %} aria-current="page"{% endif %}>Diretoria</a></li>
+          <li><a href="{{ root }}parceiros/"{% if active == "parceiros" %} aria-current="page"{% endif %}>Parceiros</a></li>
+          <li><a href="{{ root }}noticias/"{% if active == "noticias" %} aria-current="page"{% endif %}>Notícias</a></li>
+          <li><a href="{{ root }}agenda/"{% if active == "agenda" %} aria-current="page"{% endif %}>Agenda</a></li>
+          <li><a href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}>Documentos</a></li>
+          <li><a href="{{ root }}transparencia/"{% if active == "transparencia" %} aria-current="page"{% endif %}>Transparência</a></li>
+          <li><a href="{{ root }}contato/"{% if active == "contato" %} aria-current="page"{% endif %}>Contato</a></li>
+          <li><a class="nav__cta" href="{{ root }}associe-se/"{% if active == "associe" %} aria-current="page"{% endif %}>Associe-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+{% block conteudo %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div>
+        <img class="rodape__logo" src="{{ root }}static/img/logo-neab-branco.png" alt="" width="865" height="944" loading="lazy">
+        <p class="rodape__marca"><strong>{{ site.nome }}</strong><br>{{ site.nome_longo }}</p>
+        <p class="rodape__txt">{{ site.abrangencia }}</p>
+      </div>
+      <div>
+        <h2>Sede</h2>
+        <p class="rodape__txt">{{ site.sede.endereco }}<br>{{ site.sede.cidade }}{% if site.sede.cep %} · CEP {{ site.sede.cep }}{% endif %}</p>
+        {% if site.contato.email or site.contato.telefone %}
+        <p class="rodape__txt">
+          {% if site.contato.email %}<a href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a><br>{% endif %}
+          {% if site.contato.telefone %}{{ site.contato.telefone }}{% endif %}
+        </p>
+        {% endif %}
+      </div>
+      <div>
+        <h2>Navegação</h2>
+        <ul class="rodape__links">
+          <li><a href="{{ root }}o-neab/">O NEAB</a></li>
+          <li><a href="{{ root }}associe-se/">Associe-se</a></li>
+          <li><a href="{{ root }}documentos/">Documentos</a></li>
+          <li><a href="{{ root }}transparencia/">Transparência</a></li>
+          <li><a href="{{ root }}sobre/">Sobre o site</a></li>
+        </ul>
+        {% if site.contato.instagram %}
+        <a class="rodape__social" href="{{ site.contato.instagram }}" target="_blank" rel="noopener">{{ i.icon("instagram", 20) }}<span>Instagram</span></a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="wrap rodape__base">
+      <p>© {{ ano }} {{ site.nome_longo }}</p>
+      <p>{{ site.ressalva_estatutaria }}</p>
+    </div>
+  </footer>
+  <script src="{{ root }}static/js/main.js" defer></script>
+</body>
+</html>

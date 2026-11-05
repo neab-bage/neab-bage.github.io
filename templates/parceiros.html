@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Convênios</p>
+    <h1>Parceiros e benefícios</h1>
+    <p class="cab__lead">{{ site.parceiros.intro }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <div class="cartoes cartoes--3">
+    {% for p in site.parceiros.itens %}
+    <article class="cartao cartao--estatico">
+      <span class="cartao__ic">{{ i.icon("maos", 22) }}</span>
+      <h2>{{ p.nome }}</h2>
+      <p>{{ p.resumo }}</p>
+      {% if p.beneficios %}
+      <ul class="checklist checklist--peq">
+        {% for b in p.beneficios %}
+        <li>{{ i.icon("check", 18) }}<span>{{ b }}</span></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if p.url %}
+      <a class="link-seta" href="{{ p.url }}" target="_blank" rel="noopener">Acessar {{ i.icon("externo", 16) }}</a>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  <p class="nota">Associados interessados em um convênio, ou empresas que queiram firmar
+     parceria com o núcleo, podem falar com a Diretoria pela
+     <a href="{{ root }}contato/">página de contato</a>.</p>
+</section>
+
+{% endblock %}

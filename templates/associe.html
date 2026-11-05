@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Quadro de associados</p>
+    <h1>Associe-se ao NEAB</h1>
+    <p class="cab__lead">{{ site.associar.chamada }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <h2>Quem pode se associar</h2>
+  <ul class="checklist">
+    {% for q in site.associar.quem_pode %}
+    <li>{{ i.icon("check", 20) }}<span>{{ q }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="faixa">
+  <div class="wrap">
+    <h2>Como se associar</h2>
+    <ol class="passos">
+      {% for p in site.associar.como %}
+      <li>
+        <strong>{{ p.titulo }}</strong>
+        <span>{{ p.texto }}</span>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if site.associar.mensalidade %}
+    <p class="faixa__txt"><strong>Contribuição vigente:</strong> {{ site.associar.mensalidade }}</p>
+    {% endif %}
+    <div class="acoes">
+      <a class="btn btn--primario" href="{{ root }}contato/">Falar com a Diretoria {{ i.icon("seta", 18) }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap secao duas">
+  <div>
+    <h2>Direitos do associado</h2>
+    <ul class="checklist">
+      {% for d in site.associar.direitos %}
+      <li>{{ i.icon("check", 20) }}<span>{{ d }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2>Deveres</h2>
+    <ul class="checklist checklist--neutra">
+      {% for d in site.associar.deveres %}
+      <li>{{ i.icon("seta", 20) }}<span>{{ d }}</span></li>
+      {% endfor %}
+    </ul>
+    <p class="nota">O associado pode pedir demissão a qualquer tempo, por escrito, à
+       Presidência. São excluídos do quadro os associados que deixarem de contribuir por doze
+       meses consecutivos, os condenados por crime infamante em sentença passada em julgado e
+       os que ferirem os princípios do Código de Ética Profissional.</p>
+  </div>
+</section>
+
+{% endblock %}
