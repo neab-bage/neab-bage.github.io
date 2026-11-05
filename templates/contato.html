@@ -19,6 +19,7 @@
         <strong>Sede</strong>
         <p>{{ site.sede.endereco }}<br>{{ site.sede.cidade }}{% if site.sede.cep %} · CEP {{ site.sede.cep }}{% endif %}
            {% if site.sede.complemento %}<br>{{ site.sede.complemento }}{% endif %}</p>
+        <p><a class="link-seta" href="https://www.openstreetmap.org/search?query={{ (site.sede.endereco ~ ', ' ~ site.sede.cidade) | urlencode }}" target="_blank" rel="noopener">Ver no mapa {{ i.icon("externo", 16) }}</a></p>
       </div>
     </li>
     {% if site.contato.email %}

@@ -39,11 +39,9 @@ contato:
   instagram: "https://www.instagram.com/neabbage/"
   facebook: ""
 
-numeros:
-  - {valor: "4", rotulo: "cargos na Diretoria"}
-  - {valor: "3+3", rotulo: "membros do Conselho Fiscal"}
-  - {valor: "2", rotulo: "anos de mandato"}
-  - {valor: "1", rotulo: "regional do CREA-RS"}
+# PENDENTE: números que digam algo sobre a entidade — nº de associados, anos de história,
+# municípios da regional, atividades por ano. Enquanto a lista estiver vazia, a faixa não aparece.
+numeros: []
 
 # ------------------------------------------------------------------ governança
 

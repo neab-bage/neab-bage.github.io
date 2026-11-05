@@ -53,11 +53,13 @@
   <div class="wrap">
     <h2>Para que existe o núcleo</h2>
     <p class="faixa__txt">{{ site.finalidade }}</p>
+    {% if site.numeros %}
     <ul class="numeros">
       {% for n in site.numeros %}
       <li><strong>{{ n.valor }}</strong><span>{{ n.rotulo }}</span></li>
       {% endfor %}
     </ul>
+    {% endif %}
   </div>
 </section>
 
