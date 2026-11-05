@@ -93,6 +93,8 @@ def carregar_associados():
     pasta = ROOT / "static" / "img" / "associados"
     faltando = 0
     for g in dados.get("grupos", []):
+        g["slug"] = slug(g["area"])
+        g["total"] = len(g.get("pessoas", []))
         for p in g.get("pessoas", []):
             s = p.get("foto") or slug(p["nome"])
             achou = None
@@ -256,6 +258,9 @@ def gerar():
     render("atuacao.html", "atuacao/index.html", active="atuacao", title="Atuação")
     render("diretoria.html", "diretoria/index.html", active="diretoria", title="Diretoria e representação")
     render("associados.html", "associados/index.html", active="associados", title="Associados")
+    for g in (associados or {}).get("grupos", []):
+        render("associados_area.html", f"associados/{g['slug']}/index.html", active="associados",
+               title=g["area"], grupo=g)
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")

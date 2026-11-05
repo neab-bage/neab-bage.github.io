@@ -305,3 +305,9 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .assoc__registro{display:block;margin-top:3px;font-size:.8rem;color:var(--grafite-2);font-variant-numeric:tabular-nums}
 .assoc__contato{display:block;font-size:.84rem;color:var(--grafite-2);margin-top:5px;word-break:break-word}
 .assoc__contato a{display:inline-block;margin:0 4px}
+
+/* ---------- modalidades dos associados ---------- */
+.area-cartao{position:relative}
+.area-cartao__n{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;border-radius:12px;background:var(--cobre-claro);color:var(--cobre);font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:10px}
+.cab__volta{font-weight:600;text-decoration:none;color:var(--cobre)}
+.cab__volta:hover{color:var(--preto)}
