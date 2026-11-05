@@ -11,18 +11,11 @@
 </section>
 
 <section class="wrap secao">
-  {% set total = associados.grupos | map(attribute="pessoas") | map("length") | sum %}
-  <p class="assoc-resumo">
-    <strong>{{ total }}</strong> profissionais associados em dia em {{ associados.ano_referencia }},
-    em {{ associados.grupos | length }} áreas de formação.
-  </p>
-
   <div class="cartoes cartoes--3">
     {% for g in associados.grupos %}
     <a class="cartao area-cartao" href="{{ root }}associados/{{ g.slug }}/">
-      <span class="area-cartao__n">{{ g.total }}</span>
+      <span class="cartao__ic">{{ i.icon("pessoas", 22) }}</span>
       <h2>{{ g.area }}</h2>
-      <p>{% if g.total == 1 %}1 profissional associado{% else %}{{ g.total }} profissionais associados{% endif %} em dia.</p>
       <span class="link-seta">Ver profissionais {{ i.icon("seta", 16) }}</span>
     </a>
     {% endfor %}

@@ -291,11 +291,8 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 @media (max-width:700px){.ano-grupo{grid-template-columns:1fr;gap:12px}.ano-grupo__ano{position:static}}
 
 /* ---------- quadro de associados ---------- */
-.assoc-resumo{font-size:1.05rem;color:var(--grafite-2);border-left:3px solid var(--cobre);padding-left:16px;margin-bottom:34px}
-.assoc-resumo strong{color:var(--preto);font-size:1.3rem}
 .assoc-grupo{margin-bottom:34px}
 .assoc-grupo h2{display:flex;align-items:center;gap:12px;font-size:1.25rem;padding-bottom:10px;border-bottom:1px solid var(--concreto-2)}
-.assoc-grupo__n{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--cobre);background:var(--cobre-claro);border-radius:999px;padding:3px 10px}
 .assoc-lista{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:20px}
 .assoc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio);padding:12px 12px 16px;text-align:center}
 .assoc__foto{width:100%;aspect-ratio:1/1;height:auto;border-radius:12px;object-fit:cover;background:var(--concreto);margin-bottom:12px}
@@ -308,6 +305,5 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 
 /* ---------- modalidades dos associados ---------- */
 .area-cartao{position:relative}
-.area-cartao__n{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;border-radius:12px;background:var(--cobre-claro);color:var(--cobre);font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:10px}
 .cab__volta{font-weight:600;text-decoration:none;color:var(--cobre)}
 .cab__volta:hover{color:var(--preto)}
