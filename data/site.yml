@@ -13,8 +13,19 @@ descricao_curta: >-
 
 fundacao:
   ano: 1968
-  confirmado: false      # PENDENTE: confirmar o ano e a data de fundação (a arte comemorativa é de 58 anos, em 2026)
-  texto: ""              # quando confirmado, um parágrafo curto de histórico aqui
+  confirmado: true
+  texto: >-
+    O NEAB foi fundado em 20 de agosto de 1968, num período de forte expansão urbana de Bagé,
+    quando o município passou a exigir planejamento qualificado, modernização das edificações e
+    ampliação da infraestrutura. A primeira sede ficava na Galeria Kalil, sala 7. Os estatutos da
+    sociedade foram publicados no Diário Oficial do
+    Estado em 30 de julho de 1970 e registrados no Cartório de Registro de Bagé em 3 de setembro
+    do mesmo ano. Desde então, o núcleo se firmou como referência regional na defesa da boa
+    técnica e na valorização profissional.
+  estatutos_publicacao: "30 de julho de 1970, no Diário Oficial do Estado"
+  estatutos_registro: "3 de setembro de 1970, no Cartório de Registro de Bagé"
+  fundadores: [Ernesto Rebouças, Nêd Medina Quintana, Danilo Malafaia Barreto,
+               Ney Mário Mércio Carneiro, José Genovese, Glênio Mércio Carneiro, Waldir Alves Ramos]
 
 finalidade: >-
   Proteger e defender os interesses profissionais dos associados e valorizar o exercício
@@ -31,17 +42,23 @@ sede:
   endereco: "Rua Alan Kardec, nº 177 — Loja 01"
   cidade: "Bagé/RS"
   cep: "96402-080"
-  complemento: ""        # ponto de referência, se útil
+  complemento: "Nas dependências da Inspetoria do CREA-RS de Bagé"
 
 contato:
-  email: ""              # PENDENTE: e-mail institucional do NEAB
+  email: "neabbage@gmail.com"
   telefone: ""           # PENDENTE: telefone ou WhatsApp de contato
   instagram: "https://www.instagram.com/neabbage/"
-  facebook: ""
+  facebook: ""           # PENDENTE: confirmar o perfil "neab.bage" citado no guia Aprova Fácil
 
-# PENDENTE: números que digam algo sobre a entidade — nº de associados, anos de história,
-# municípios da regional, atividades por ano. Enquanto a lista estiver vazia, a faixa não aparece.
-numeros: []
+# ATENÇÃO, número de associados: o guia Aprova Fácil de setembro de 2026 lista 46 profissionais
+# (23 arquitetos, 13 engenheiros civis, 7 de segurança do trabalho, 2 eletricistas, 1 mecânico;
+# quem tem dupla titulação pode aparecer duas vezes). Já o Jornal Minuano, em dez/2024, falou em
+# "mais de 220 membros ativos". Os dois números não batem — confirmar com a secretaria antes de
+# divulgar qualquer um deles. Enquanto isso, a faixa não exibe contagem de associados.
+numeros:
+  - {valor: "1968", rotulo: "ano de fundação"}
+  - {valor: "58", rotulo: "anos de atuação na Campanha"}
+  - {valor: "5", rotulo: "especialidades no quadro de associados"}
 
 # ------------------------------------------------------------------ governança
 
@@ -71,10 +88,26 @@ governanca:
 # ------------------------------------------------------------------ diretoria
 
 diretoria:
+  biennio: "2025/2026"
+  rotulo: "Diretoria em exercício"
+  eleicao: >-
+    Diretoria em exercício no biênio 2025/2026, conforme divulgação do próprio núcleo.
+  # Registros profissionais no CREA-RS e no CAU. Para ocultá-los no site, basta trocar para false.
+  mostrar_registros: true
+  membros:
+    - {cargo: "Presidente", nome: "Jerônimo Bazerque Pereira", titulo: "Eng. Civil", registro: "CREA-RS 207849"}
+    - {cargo: "Vice-Presidente", nome: "Cecília Nunes Vieira Lacerda da Luz", titulo: "Arq.", registro: "CAU A224200-1"}
+    - {cargo: "Tesoureiro", nome: "Maurício Fernandes Fara", titulo: "Eng. Civil", registro: "CREA-RS 239393"}
+    - {cargo: "Secretário", nome: "Dineu Resende Borba Neto", titulo: "Arq.", registro: "CAU A45078-2"}
+    - {cargo: "Marketing", nome: "Aliane da Croce", titulo: "Eng.ª Civil", registro: "CREA-RS 234118"}
+
+diretoria_eleita:
   biennio: "2027/2028"
+  rotulo: "Diretoria eleita"
   eleicao: >-
     Eleita por aclamação na Assembleia Geral Eletiva de 20 de julho de 2026, na sede da
-    Inspetoria Regional do CREA-RS em Bagé, após a inscrição de chapa única.
+    Inspetoria Regional do CREA-RS em Bagé, após a inscrição de chapa única. Assume o mandato
+    no biênio 2027/2028.
   membros:
     - {cargo: "Presidente", nome: "Cecília Nunes Vieira Lacerda da Luz", titulo: "Arq."}
     - {cargo: "Vice-Presidente", nome: "Aliane Pedroso da Croce", titulo: "Eng.ª Civil"}
@@ -82,24 +115,32 @@ diretoria:
     - {cargo: "Tesoureiro", nome: "Bruno Dias Robaina", titulo: "Eng. Civil"}
 
 conselho_fiscal:
-  biennio: "2027/2028"
-  nota: "PENDENTE: nomes dos três titulares e três suplentes."
-  titulares: []
-  suplentes: []
+  biennio: "2025/2026"
+  nota: "PENDENTE: composição do biênio 2027/2028."
+  titulares:
+    - {nome: "Ana Lúcia Kalil Sarmento", titulo: "Arq.", registro: "CAU A33015-9"}
+    - {nome: "Rafael Evaldt Hendler", titulo: "Eng. Civil", registro: "CREA-RS 207801"}
+    - {nome: "Gustavo Scherer Fatturi Pires", titulo: "Eng. Civil", registro: "CREA-RS 207819"}
+  suplentes:
+    # O guia Aprova Fácil grafa "Azucena da Fonseca Fros"; o Jornal Minuano, "Azucena Netto Costa
+    # da Fonseca". Confirmar a forma correta.
+    - {nome: "Luiza Maria Saraiva Cardoso", titulo: "Arq.", registro: "CAU A74809-9"}
+    - {nome: "Azucena da Fonseca Fros", titulo: "Arq.", registro: "CAU A161463-0"}
+    - {nome: "Rafael Daneris Delabary", titulo: "Eng. Civil", registro: "CREA-RS 257786"}
 
 # Representantes do NEAB junto ao CREA-RS (Art. 10 do Estatuto).
 representacao_crea:
-  nota: "PENDENTE: nomes do titular, do suplente e do substituto de suplente."
-  membros: []
+  trienio: "2026/2028"
+  nota: ""
+  membros:
+    - {cargo: "Titular", nome: "Alexandro Gularte Schäfer", titulo: "Eng. Civil"}
+    - {cargo: "Suplente", nome: "Maurício Fernandes Fara", titulo: "Eng. Civil"}
   texto: >-
-    Os representantes do NEAB junto ao CREA-RS — titular, suplente e substituto de suplente —
-    são eleitos pela Assembleia Geral, como os demais cargos, para mandato de dois anos.
+    Os representantes do NEAB junto ao CREA-RS são eleitos pela Assembleia Geral, como os demais
+    cargos. O núcleo tem assento no plenário estadual do Conselho; os representantes do triênio
+    2026/2028 tomaram posse na sessão plenária de 8 de janeiro de 2026.
 
-gestoes_anteriores:
-  - biennio: "2025/2026"
-    membros:
-      - {cargo: "Presidente", nome: "Jerônimo Bazerque Pereira", titulo: "Eng. Civil"}
-      - {cargo: "Secretário", nome: "Dineu Resende Borba Neto", titulo: "Arq."}
+# As gestões anteriores ficam em data/gestoes/ — um arquivo por gestão.
 
 comissao_eleitoral:
   ano: 2026
@@ -107,6 +148,89 @@ comissao_eleitoral:
     - {cargo: "Presidente da Comissão", nome: "Adalberto Schafer", titulo: "Eng. Civil"}
     - {cargo: "Membro", nome: "Marcelo Goskes", titulo: "Arq."}
     - {cargo: "Membro", nome: "Márcio Marun Gomes", titulo: "Eng. Civil"}
+
+# ------------------------------------------------------------------ atuação
+
+atuacao:
+  chamada: >-
+    O NEAB existe para qualificar o exercício da engenharia e da arquitetura na regional de
+    Bagé e para levar esse conhecimento técnico ao debate público da cidade.
+  frentes:
+    - titulo: "Representação profissional"
+      icone: balanca
+      texto: >-
+        Defesa dos interesses profissionais dos associados junto ao sistema CONFEA/CREA, com
+        assento no plenário do CREA-RS, e interlocução permanente com o poder público municipal.
+    - titulo: "Produção técnica"
+      icone: documento
+      texto: >-
+        Projetos estruturais, vistorias em edificações e perícias judiciais realizados pelos
+        profissionais associados.
+    - titulo: "Debate urbano"
+      icone: local
+      texto: >-
+        Promoção de debates sobre urbanismo, patrimônio, habitação e infraestrutura, e defesa do
+        patrimônio histórico e cultural de Bagé.
+    - titulo: "Formação"
+      icone: livro
+      texto: >-
+        Cursos, palestras e mostras técnicas para a qualificação permanente dos profissionais
+        da região.
+    - titulo: "Assessoria ao poder público"
+      icone: maos
+      texto: >-
+        Apoio técnico à administração municipal na análise de projetos e na formulação de
+        políticas urbanas.
+    - titulo: "Comunicação com a sociedade"
+      icone: jornal
+      texto: >-
+        Informação à população sobre obras e manutenção predial, pelo programa de rádio
+        Universos da Engenharia e pelo caderno mensal Ellas Revista — Projeto & Construção.
+  realizacoes:
+    - ano: "2024"
+      data: "10 de dezembro de 2024"
+      titulo: "Sala do Profissional"
+      texto: >-
+        Inaugurada pelo NEAB e pela Mútua-RS, com a Prefeitura de Bagé, é a primeira sala de
+        engenheiros e arquitetos instalada dentro de uma prefeitura municipal no país. Equipada
+        para a análise de projetos junto à Secretaria de Planejamento, permite abrir plantas
+        digitais e ajustar detalhes com o projetista na hora, dando agilidade à tramitação dos
+        processos e qualificando o atendimento aos profissionais.
+      link: "https://www.instagram.com/neabbage/reel/DDamEOWSYc1/"
+      link_rotulo: "Registro da inauguração"
+    - ano: "2025"
+      titulo: "Universos da Engenharia"
+      texto: >-
+        Programa semanal na Rádio Pop Rock que leva informação e conhecimento de engenharia à
+        comunidade. Conquistou o 2º lugar no Prêmio Destaque Divulga Mútua de 2025, na categoria
+        Valorização Profissional.
+    - ano: "2026"
+      titulo: "Ellas Revista — Projeto & Construção"
+      texto: >-
+        Caderno mensal publicado no Jornal Minuano e assinado pelo NEAB, com trabalhos dos
+        associados, conteúdo técnico e análises urbanas. A primeira edição, em março de 2026,
+        homenageou os fundadores do núcleo.
+    - ano: "2026"
+      titulo: "Café da Manhã do NEAB"
+      texto: >-
+        Encontros periódicos do núcleo com seus associados, em formato de conversa aberta, com
+        convidados de dentro e de fora das profissões. Em 2026 as edições trataram do papel dos
+        profissionais na construção das cidades, do respeito e do combate ao assédio no ambiente
+        de trabalho, e de sistemas construtivos, em visita técnica a uma obra. As edições ficam
+        registradas na página de cursos e formação.
+    - ano: "2026"
+      data: "Em andamento, desde outubro de 2026"
+      titulo: "Um olhar sobre o Arroio Bagé"
+      texto: >-
+        Estudo de reconhecimento do território do Arroio Bagé, iniciado com saídas de campo que
+        reúnem profissionais do núcleo e a GEPLAN, da Prefeitura de Bagé. A leitura do território
+        — ambiental, histórica e paisagística — busca subsidiar propostas de preservação e
+        ordenamento que também representem oportunidade de desenvolvimento para a cidade.
+    - ano: "2026"
+      titulo: "Grupo Aliança Bagé"
+      texto: >-
+        O núcleo integra a articulação das entidades da classe produtiva de Bagé, que leva às
+        autoridades pautas de patrimônio histórico, organização urbana e desenvolvimento local.
 
 # ------------------------------------------------------------------ associe-se
 
@@ -191,8 +315,9 @@ documentos:
         - {titulo: "Termo de aclamação e proclamação do resultado eleitoral", data: "20 de julho de 2026",
            arquivo: "termo-aclamacao-2026.pdf",
            resumo: "Proclamação da Diretoria eleita para o biênio 2027/2028."}
-        - {titulo: "Edital de convocação e comissão eleitoral", data: "11 de julho de 2026",
-           arquivo: "", resumo: "PENDENTE: publicar versão sem os dados pessoais da assinatura digital."}
+        - {titulo: "Edital de convocação e apresentação da Comissão Eleitoral", data: "11 de julho de 2026",
+           arquivo: "edital-convocacao-2026.pdf",
+           resumo: "Convocação da Assembleia Geral Eletiva e composição da Comissão Eleitoral. Transcrição sem os dados da assinatura digital."}
 
 transparencia:
   intro: >-

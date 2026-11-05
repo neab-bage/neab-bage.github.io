@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Quadro social {{ associados.ano_referencia }}</p>
+    <h1>Associados</h1>
+    <p class="cab__lead">{{ associados.nota }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% set total = associados.grupos | map(attribute="pessoas") | map("length") | sum %}
+  <p class="assoc-resumo">
+    <strong>{{ total }}</strong> profissionais associados em dia em {{ associados.ano_referencia }},
+    em {{ associados.grupos | length }} áreas de formação.
+  </p>
+
+  {% for g in associados.grupos %}
+  <div class="assoc-grupo">
+    <h2>{{ g.area }} <span class="assoc-grupo__n">{{ g.pessoas | length }}</span></h2>
+    <ul class="assoc-lista">
+      {% for p in g.pessoas %}
+      <li class="assoc">
+        {% if p.foto_arquivo %}
+        <img class="assoc__foto" src="{{ root }}static/img/associados/{{ p.foto_arquivo }}" alt="{{ p.nome }}" loading="lazy" width="200" height="200">
+        {% else %}
+        <span class="assoc__foto assoc__foto--vazia" aria-hidden="true">{{ p.iniciais }}</span>
+        {% endif %}
+        <div class="assoc__dados">
+          <strong class="assoc__nome">{{ p.nome }}</strong>
+          {% if p.registro %}<span class="assoc__registro">{{ p.registro }}</span>{% endif %}
+          {% if p.autoriza_contato %}
+          <span class="assoc__contato">
+            {% if p.email %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
+            {% if p.telefone %}<span>{{ p.telefone }}</span>{% endif %}
+            {% if p.site %}<a href="{{ p.site }}" target="_blank" rel="noopener">site</a>{% endif %}
+          </span>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+
+  <p class="nota">Os dados de contato aparecem apenas para quem autorizou a divulgação na
+     internet. Associado que queira incluir ou retirar seu contato pode solicitar pela
+     <a href="{{ root }}contato/">página de contato</a>.</p>
+  <div class="acoes">
+    <a class="btn btn--primario" href="{{ root }}associe-se/">Quero constar nesta relação {{ i.icon("seta", 18) }}</a>
+  </div>
+</section>
+
+{% endblock %}

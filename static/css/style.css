@@ -160,6 +160,7 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .pessoa{border:1px solid var(--concreto-2);border-left:3px solid var(--cobre);border-radius:var(--raio-p);padding:16px 18px;background:#fff}
 .pessoa__cargo{display:block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cobre)}
 .pessoa__nome{display:block;font-family:var(--serif);font-size:1.08rem;color:var(--preto);margin-top:3px}
+.pessoa__registro{display:block;margin-top:4px;font-size:.82rem;color:var(--grafite-2);font-variant-numeric:tabular-nums}
 .pessoas--simples .pessoa{border-left-color:var(--concreto-2)}
 
 /* ---------- listas marcadas e passos ---------- */
@@ -253,3 +254,54 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .instituicoes__lista a{text-decoration:none}
 .instituicoes__lista a:hover .instituicoes__nome{color:var(--cobre)}
 .instituicoes__lista a:hover img,.instituicoes__lista a:focus-visible img{opacity:1}
+
+/* ---------- realizações ---------- */
+.realizacoes{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:18px;max-width:80ch}
+.realizacoes li{display:flex;gap:20px;align-items:flex-start;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio);padding:20px 22px}
+.realizacoes__ano{flex:none;font-weight:600;font-size:.88rem;letter-spacing:.06em;color:var(--cobre);padding-top:3px}
+.realizacoes__data{font-size:.88rem;color:var(--grafite-2);margin:0 0 .5em !important}
+.realizacoes h3{margin:0 0 .35em}
+.realizacoes p{margin:0;color:var(--grafite-2);font-size:.97rem}
+
+/* ---------- gestões anteriores ---------- */
+.gestao{border-top:1px solid var(--concreto-2);padding-top:28px;margin-top:28px}
+.gestao:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.gestao__cab h2{margin-bottom:.3em}
+.gestao__posse{display:flex;align-items:flex-start;gap:8px;color:var(--grafite-2);font-size:.95rem;max-width:75ch}
+.gestao__posse .icon{flex:none;margin-top:3px;color:var(--cobre)}
+.gestao h3{margin:1.4em 0 .3em;font-size:1rem}
+.gestao__linha{color:var(--grafite-2);font-size:.97rem;max-width:80ch}
+
+/* ---------- cursos e formação ---------- */
+.ano-grupo{display:grid;grid-template-columns:110px 1fr;gap:24px;align-items:start;border-top:1px solid var(--concreto-2);padding-top:26px;margin-top:26px}
+.ano-grupo:first-of-type{border-top:0;margin-top:0;padding-top:0}
+.ano-grupo__ano{font-size:1.6rem;color:var(--cobre);margin:0;position:sticky;top:96px}
+.ano-grupo__ano--aberto{font-size:.95rem;color:var(--grafite-2);line-height:1.3}
+.formacao{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.formacao li{background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio);padding:20px 22px}
+.formacao__cab{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.formacao__data{font-size:.88rem;color:var(--grafite-2)}
+.formacao h3{margin:0 0 .5em}
+.formacao__min{display:flex;align-items:center;gap:7px;font-weight:500;font-size:.95rem;margin-bottom:.6em}
+.formacao__min .icon{color:var(--cobre)}
+.formacao p{color:var(--grafite-2);font-size:.97rem;margin:0 0 .5em}
+.formacao__meta{font-size:.88rem;color:var(--grafite-2)}
+.etiqueta-peq--neutra{background:var(--concreto);color:var(--grafite-2)}
+.etiqueta-peq{display:inline-block;background:var(--cobre-claro);color:var(--cobre);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+@media (max-width:700px){.ano-grupo{grid-template-columns:1fr;gap:12px}.ano-grupo__ano{position:static}}
+
+/* ---------- quadro de associados ---------- */
+.assoc-resumo{font-size:1.05rem;color:var(--grafite-2);border-left:3px solid var(--cobre);padding-left:16px;margin-bottom:34px}
+.assoc-resumo strong{color:var(--preto);font-size:1.3rem}
+.assoc-grupo{margin-bottom:34px}
+.assoc-grupo h2{display:flex;align-items:center;gap:12px;font-size:1.25rem;padding-bottom:10px;border-bottom:1px solid var(--concreto-2)}
+.assoc-grupo__n{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--cobre);background:var(--cobre-claro);border-radius:999px;padding:3px 10px}
+.assoc-lista{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:20px}
+.assoc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio);padding:12px 12px 16px;text-align:center}
+.assoc__foto{width:100%;aspect-ratio:1/1;height:auto;border-radius:12px;object-fit:cover;background:var(--concreto);margin-bottom:12px}
+.assoc__foto--vazia{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:2.1rem;letter-spacing:.03em;color:var(--cobre);background:var(--cobre-claro)}
+.assoc__dados{min-width:0}
+.assoc__nome{display:block;font-weight:600;font-size:.98rem;line-height:1.3;color:var(--preto)}
+.assoc__registro{display:block;margin-top:3px;font-size:.8rem;color:var(--grafite-2);font-variant-numeric:tabular-nums}
+.assoc__contato{display:block;font-size:.84rem;color:var(--grafite-2);margin-top:5px;word-break:break-word}
+.assoc__contato a{display:inline-block;margin:0 4px}

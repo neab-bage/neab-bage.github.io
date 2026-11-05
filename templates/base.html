@@ -32,13 +32,15 @@
       </button>
       <nav class="nav" id="menu" aria-label="Principal">
         <ul class="nav__lista">
-          {% set g_nucleo = active in ["neab","diretoria","documentos","transparencia"] %}
-          {% set g_assoc  = active in ["associe","parceiros"] %}
+          {% set g_nucleo = active in ["neab","atuacao","formacao","diretoria","documentos","transparencia"] %}
+          {% set g_assoc  = active in ["associe","associados","parceiros"] %}
           {% set g_com    = active in ["noticias","agenda"] %}
           <li class="nav__item">
             <button class="nav__grupo{% if g_nucleo %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">O núcleo{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
               <li><a href="{{ root }}o-neab/"{% if active == "neab" %} aria-current="page"{% endif %}>Apresentação</a></li>
+              <li><a href="{{ root }}atuacao/"{% if active == "atuacao" %} aria-current="page"{% endif %}>Atuação</a></li>
+              <li><a href="{{ root }}formacao/"{% if active == "formacao" %} aria-current="page"{% endif %}>Cursos e formação</a></li>
               <li><a href="{{ root }}diretoria/"{% if active == "diretoria" %} aria-current="page"{% endif %}>Diretoria e representação</a></li>
               <li><a href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}>Documentos</a></li>
               <li><a href="{{ root }}transparencia/"{% if active == "transparencia" %} aria-current="page"{% endif %}>Transparência</a></li>
@@ -48,6 +50,7 @@
             <button class="nav__grupo{% if g_assoc %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Associados{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
               <li><a href="{{ root }}associe-se/"{% if active == "associe" %} aria-current="page"{% endif %}>Como se associar</a></li>
+              <li><a href="{{ root }}associados/"{% if active == "associados" %} aria-current="page"{% endif %}>Quadro de associados</a></li>
               <li><a href="{{ root }}parceiros/"{% if active == "parceiros" %} aria-current="page"{% endif %}>Parceiros e benefícios</a></li>
             </ul>
           </li>
@@ -94,7 +97,7 @@
       </div>
       <div>
         <h2>Sede</h2>
-        <p class="rodape__txt">{{ site.sede.endereco }}<br>{{ site.sede.cidade }}{% if site.sede.cep %} · CEP {{ site.sede.cep }}{% endif %}</p>
+        <p class="rodape__txt">{% if site.sede.complemento %}{{ site.sede.complemento }}<br>{% endif %}{{ site.sede.endereco }}<br>{{ site.sede.cidade }}{% if site.sede.cep %} · CEP {{ site.sede.cep }}{% endif %}</p>
         {% if site.contato.email or site.contato.telefone %}
         <p class="rodape__txt">
           {% if site.contato.email %}<a href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a><br>{% endif %}

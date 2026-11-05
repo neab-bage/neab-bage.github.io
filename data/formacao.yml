@@ -1,0 +1,115 @@
+# Cursos, palestras, seminários e demais atividades de formação promovidas ou trazidas pelo NEAB.
+# Acrescente um item por atividade. O site agrupa por ano, do mais recente para o mais antigo.
+#
+# Campos:
+#   ano         obrigatório, usado para agrupar e ordenar
+#   data        como aparece no registro: "Junho de 2017", "12 de março de 2024"
+#   titulo      nome da atividade
+#   tipo        curso | palestra | seminário | oficina | mostra  (aparece como etiqueta)
+#   ministrante quem conduziu, com o título profissional
+#   texto       descrição curta, opcional
+#   promocao    quem promoveu, quando não foi o próprio NEAB
+#   papel       realização | participação  (padrão: realização)
+#   local       onde ocorreu, opcional
+#   parceria    entidades parceiras, opcional
+#   fonte       de onde veio a informação, opcional
+
+- ano: 2017
+  data: "Junho de 2017"
+  titulo: "Norma de Desempenho de Edificações Habitacionais (NBR 15.575)"
+  tipo: "curso"
+  ministrante: "Eng.ª Civil Márcia Elisa Pretto"
+  texto: >-
+    Curso trazido a Bagé pelo NEAB sobre a norma de desempenho das edificações habitacionais,
+    dentro da linha de aperfeiçoamento e valorização profissional do núcleo. Foi um dos
+    destaques do período.
+  fonte: "Acervo do NEAB"
+
+- ano: 2023
+  data: "26 de abril de 2023, às 19h"
+  titulo: "Loteamento, condomínio e suas peculiaridades"
+  tipo: "palestra"
+  papel: "participação"
+  promocao: "Comissão Especial de Direito Imobiliário da OAB Subseção Bagé"
+  local: "Salão de Eventos da OAB Subseção Bagé — Rua Caetano Gonçalves, 1011"
+  ministrante: "Eng. Civil Jerônimo Bazerque Pereira"
+  texto: >-
+    Palestra sobre as particularidades jurídicas e técnicas de loteamentos e condomínios,
+    conduzida pelo então presidente do NEAB, especialista em Patologia das Construções e em
+    Avaliações e Perícias e membro do IBAPE/RS.
+  fonte: "Convite de divulgação do evento"
+
+- ano:                       # PENDENTE: o cartaz não traz o ano. Pela sede (Rua Alan Kardec,
+                             # inaugurada em julho de 2023), é de 2023 ou posterior.
+  data: "23 de outubro, às 19h"
+  titulo: "Patologia e Recuperação"
+  tipo: "palestra"
+  papel: "apoio"
+  programa: "Capacita+"
+  promocao: "CREA-RS"
+  parceria: "NEAB e CDER-RS — Colégio de Entidades Regionais"
+  local: "Inspetoria do CREA-RS em Bagé — Rua Alan Kardec, 177, loja 01, Centro"
+  ministrante: "Eng.ª Civil Lia Quintana"
+  texto: >-
+    Palestra presencial do programa Capacita+ do CREA-RS sobre patologia e recuperação de
+    estruturas, realizada em Bagé com apoio do NEAB. Inscrições pelo Sympla.
+  fonte: "Cartaz de divulgação do evento"
+
+- ano: 2026
+  data: "28 de maio de 2026"
+  titulo: "Planejamento Urbano, Desenvolvimento e Memória"
+  tipo: "palestra"
+  ministrante: "Efreu Quintana"
+  texto: ""
+  fonte: ""
+  # PENDENTE: título profissional do palestrante, local e quem promoveu.
+
+- ano: 2026
+  data: "4 de agosto de 2026, às 8h15"
+  titulo: "Arquitetos, Engenheiros e Designers — para que servimos?"
+  tipo: "encontro"
+  programa: "Café da Manhã"
+  ministrante: "Arq. Eulália de Souza Anselmo"
+  local: "LEB Livraria e Cafeteria, Bagé"
+  texto: >-
+    Edição do Café da Manhã do NEAB, encontro voltado à reflexão, ao networking e à valorização
+    profissional. A convidada compartilhou sua experiência e sua visão sobre o papel desses
+    profissionais na construção das cidades, dos espaços e da qualidade de vida.
+  fonte: "Convite de divulgação do NEAB"
+
+- ano: 2026
+  data: "14 de setembro de 2026, às 19h30"
+  titulo: "Conectando vozes, fortalecendo futuros"
+  tipo: "palestra"
+  papel: "participação"
+  promocao: "URCAMP — 25ª Semana Acadêmica de Arquitetura e Urbanismo e Engenharia Civil"
+  local: "Auditório da URCAMP, Bagé/RS"
+  texto: >-
+    Participação do NEAB na Semana Acadêmica da URCAMP, com uma reflexão dirigida aos estudantes
+    sobre o papel das entidades de classe e a importância da participação profissional na
+    construção de uma sociedade mais integrada e com mais oportunidades para as próximas gerações.
+  fonte: "Convite de divulgação do NEAB"
+
+- ano: 2026
+  data: "16 de setembro de 2026"
+  titulo: "Mulheres em obras: desafios, respeito e combate ao assédio"
+  tipo: "encontro"
+  programa: "Café da Manhã"
+  ministrante: "Dra. Paula Ferraz, juíza titular da 2ª Vara Criminal de Bagé"
+  texto: >-
+    Edição do Café da Manhã do NEAB dedicada ao respeito e ao enfrentamento do assédio no
+    ambiente profissional, com orientações práticas sobre como proceder diante dessas situações.
+  fonte: "Registro do NEAB"
+
+- ano: 2026
+  data: "27 de outubro de 2026"
+  titulo: "NEAB em obra — sistema construtivo Wood Frame"
+  tipo: "visita técnica"
+  programa: "Café da Manhã"
+  local: "Obra em andamento, Bagé"
+  parceria: "Construtora Canun, Espaço Smart e Vetrion Esquadrias"
+  texto: >-
+    Última edição do Café da Manhã de 2026, em formato especial: visita técnica a uma obra em
+    andamento executada em Wood Frame. As empresas envolvidas no empreendimento apresentaram
+    processos e esclareceram dúvidas sobre o sistema construtivo e seus materiais.
+  fonte: "Registro do NEAB"

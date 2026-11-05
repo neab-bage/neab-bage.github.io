@@ -4,36 +4,54 @@
 
 <section class="cab">
   <div class="wrap">
-    <p class="etiqueta">Biênio {{ site.diretoria.biennio }}</p>
+    <p class="etiqueta">Quem responde pelo núcleo</p>
     <h1>Diretoria e representação</h1>
-    <p class="cab__lead">{{ site.diretoria.eleicao }}</p>
+    <p class="cab__lead">A administração do NEAB compete à Diretoria e ao Conselho Fiscal, com
+       mandatos de dois anos exercidos gratuitamente.</p>
   </div>
 </section>
 
 <section class="wrap secao">
-  <h2>Diretoria</h2>
+  <h2>{{ site.diretoria.rotulo or "Diretoria" }} · biênio {{ site.diretoria.biennio }}</h2>
   <ul class="pessoas">
     {% for m in site.diretoria.membros %}
     <li class="pessoa">
       <span class="pessoa__cargo">{{ m.cargo }}</span>
       <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+      {% if site.diretoria.mostrar_registros and m.registro %}<span class="pessoa__registro">{{ m.registro }}</span>{% endif %}
     </li>
     {% endfor %}
   </ul>
-  <p class="nota">Os mandatos duram dois anos e os cargos são exercidos gratuitamente. Em
-     impedimentos e ausências, o Presidente é substituído, nesta ordem, pelo Vice-Presidente,
-     pelo Secretário e pelo Tesoureiro.</p>
+  <p class="nota">Em impedimentos e ausências, o Presidente é substituído, nesta ordem, pelo
+     Vice-Presidente, pelo Secretário e pelo Tesoureiro.</p>
 </section>
 
+{% if site.diretoria_eleita %}
+<section class="faixa">
+  <div class="wrap">
+    <h2>{{ site.diretoria_eleita.rotulo }} · biênio {{ site.diretoria_eleita.biennio }}</h2>
+    <p class="faixa__txt">{{ site.diretoria_eleita.eleicao }}</p>
+    <ul class="pessoas">
+      {% for m in site.diretoria_eleita.membros %}
+      <li class="pessoa">
+        <span class="pessoa__cargo">{{ m.cargo }}</span>
+        <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 <section class="wrap secao">
-  <h2>Conselho Fiscal</h2>
+  <h2>Conselho Fiscal · biênio {{ site.conselho_fiscal.biennio }}</h2>
   {% if site.conselho_fiscal.titulares %}
   <div class="duas">
     <div>
       <h3>Titulares</h3>
       <ul class="pessoas pessoas--simples">
         {% for m in site.conselho_fiscal.titulares %}
-        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong></li>
+        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>{% if site.diretoria.mostrar_registros and m.registro %}<span class="pessoa__registro">{{ m.registro }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     </div>
@@ -41,7 +59,7 @@
       <h3>Suplentes</h3>
       <ul class="pessoas pessoas--simples">
         {% for m in site.conselho_fiscal.suplentes %}
-        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong></li>
+        <li class="pessoa"><strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>{% if site.diretoria.mostrar_registros and m.registro %}<span class="pessoa__registro">{{ m.registro }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     </div>
@@ -54,7 +72,7 @@
 </section>
 
 <section class="wrap secao">
-  <h2>Representação junto ao CREA-RS</h2>
+  <h2>Representação junto ao CREA-RS · triênio {{ site.representacao_crea.trienio }}</h2>
   <p class="texto__p">{{ site.representacao_crea.texto }}</p>
   {% if site.representacao_crea.membros %}
   <ul class="pessoas">
@@ -88,21 +106,13 @@
 </section>
 {% endif %}
 
-{% if site.gestoes_anteriores %}
 <section class="wrap secao">
   <h2>Gestões anteriores</h2>
-  {% for g in site.gestoes_anteriores %}
-  <h3>Biênio {{ g.biennio }}</h3>
-  <ul class="pessoas">
-    {% for m in g.membros %}
-    <li class="pessoa">
-      <span class="pessoa__cargo">{{ m.cargo }}</span>
-      <strong class="pessoa__nome">{{ m.titulo }} {{ m.nome }}</strong>
-    </li>
-    {% endfor %}
-  </ul>
-  {% endfor %}
+  <p class="texto__p">O registro das diretorias que conduziram o núcleo ao longo de sua história
+     está reunido em página própria, em construção.</p>
+  <div class="acoes">
+    <a class="btn btn--suave" href="{{ root }}diretoria/gestoes/">Ver gestões anteriores {{ i.icon("seta", 18) }}</a>
+  </div>
 </section>
-{% endif %}
 
 {% endblock %}

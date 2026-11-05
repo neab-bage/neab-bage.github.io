@@ -1,0 +1,25 @@
+periodo: "2023/2024"
+inicio: 2023
+fim: 2024
+
+posse:
+  data: ""
+  local: ""
+  nota: >-
+    A primeira reunião da diretoria foi divulgada pelo núcleo como marco de início da gestão,
+    com o anúncio de que as metas e ações do período seriam apresentadas em seguida.
+
+fonte: "Publicação no Instagram do NEAB (@neabbage)"
+observacao: >-
+  A publicação lista cinco integrantes; não há menção a Conselho Fiscal nem a diretorias de
+  relacionamento. Confirmar se havia outros cargos.
+
+diretoria:
+  - {cargo: "Presidente", nome: "Jerônimo Bazerque", titulo: "Eng. Civil"}
+  - {cargo: "Vice-Presidente", nome: "Dineu Borba", titulo: "Arq."}
+  - {cargo: "Secretária", nome: "Cecília Lacerda", titulo: "Arq."}
+  - {cargo: "Tesoureiro", nome: "Maurício Fara", titulo: "Eng. Civil"}
+  - {cargo: "Diretora de Marketing", nome: "Aliane da Croce", titulo: "Eng. Civil"}
+
+conselho_fiscal: []
+relacionamento: []

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Memória</p>
+    <h1>Gestões anteriores</h1>
+    <p class="cab__lead">Registro das diretorias que conduziram o núcleo ao longo de sua
+       história. Este levantamento está em construção: gestões faltantes vão sendo
+       acrescentadas conforme a documentação é localizada.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% if gestoes %}
+  {% for g in gestoes %}
+  <article class="gestao">
+    <div class="gestao__cab">
+      <h2>Biênio {{ g.periodo }}</h2>
+      {% if g.posse and g.posse.data %}
+      <p class="gestao__posse">{{ i.icon("calendario", 16) }}Posse em {{ g.posse.data }}{% if g.posse.local %}, {{ g.posse.local }}{% endif %}.
+        {% if g.posse.nota %}{{ g.posse.nota }}{% endif %}</p>
+      {% endif %}
+    </div>
+
+    <ul class="pessoas">
+      {% for m in g.diretoria %}
+      <li class="pessoa">
+        <span class="pessoa__cargo">{{ m.cargo }}</span>
+        <strong class="pessoa__nome">{% if m.titulo %}{{ m.titulo }} {% endif %}{{ m.nome }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if g.conselho_fiscal %}
+    <h3>Conselho Fiscal</h3>
+    <p class="gestao__linha">{% for m in g.conselho_fiscal %}{% if m.titulo %}{{ m.titulo }} {% endif %}{{ m.nome }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+    {% endif %}
+
+    {% if g.relacionamento %}
+    <h3>Diretorias de relacionamento</h3>
+    <p class="gestao__linha">{% for m in g.relacionamento %}{{ m.municipio }}: {{ m.nome }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+    {% endif %}
+
+    {% if g.fonte or g.observacao %}
+    <p class="nota">{% if g.fonte %}Fonte: {{ g.fonte }}.{% endif %} {{ g.observacao or "" }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+  {% else %}
+  <p class="nota">Nenhuma gestão registrada ainda.</p>
+  {% endif %}
+
+  <p class="nota">Tem documentos, atas ou recortes de jornal sobre alguma gestão do núcleo?
+     Fale conosco pela <a href="{{ root }}contato/">página de contato</a> — esse acervo é
+     construído coletivamente.</p>
+</section>
+
+{% endblock %}

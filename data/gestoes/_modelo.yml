@@ -1,0 +1,21 @@
+# Modelo para registrar uma gestão. Copie este arquivo, renomeie para o período
+# (ex.: 2021-2023.yml) e preencha o que souber. Campos em branco simplesmente não aparecem.
+# Arquivos começados por "_" são ignorados pelo build.
+
+periodo: "AAAA/AAAA"       # como a gestão é chamada, ex.: "2019/2021"
+inicio: 0000               # ano inicial, usado só para ordenar
+fim: 0000
+
+posse:
+  data: ""                 # ex.: "8 de julho de 2019"
+  local: ""                # ex.: "Câmara de Vereadores de Bagé"
+  nota: ""                 # presenças, detalhes da cerimônia
+
+fonte: ""                  # de onde veio a informação: recorte de jornal, ata, acervo
+observacao: ""             # qualquer ressalva, lacuna ou dúvida
+
+diretoria:
+  - {cargo: "Presidente", nome: "", titulo: ""}
+
+conselho_fiscal: []        # - {nome: "", titulo: ""}
+relacionamento: []         # - {municipio: "", nome: ""}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">Aperfeiçoamento profissional</p>
+    <h1>Cursos e formação</h1>
+    <p class="cab__lead">Cursos, palestras e oficinas promovidos ou trazidos a Bagé pelo núcleo.
+       Este registro está em construção e vai sendo completado conforme o acervo é organizado.</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% if formacao %}
+  {% for grupo in formacao %}
+  <div class="ano-grupo">
+    <h2 class="ano-grupo__ano{% if not grupo.ano %} ano-grupo__ano--aberto{% endif %}">{{ grupo.ano or grupo.rotulo }}</h2>
+    <ul class="formacao">
+      {% for f in grupo.itens %}
+      <li>
+        <div class="formacao__cab">
+          {% if f.tipo %}<span class="etiqueta-peq">{{ f.tipo }}</span>{% endif %}
+          {% if f.programa %}<span class="etiqueta-peq etiqueta-peq--neutra">{{ f.programa }}</span>{% endif %}
+          {% if f.data %}<span class="formacao__data">{{ f.data }}</span>{% endif %}
+          {% if f.papel in ["participação","apoio"] %}<span class="etiqueta-peq etiqueta-peq--neutra">{{ f.papel }}</span>{% endif %}
+        </div>
+        <h3>{{ f.titulo }}</h3>
+        {% if f.ministrante %}<p class="formacao__min">{{ i.icon("pessoas", 16) }}{{ f.ministrante }}</p>{% endif %}
+        {% if f.texto %}<p>{{ f.texto }}</p>{% endif %}
+        {% if f.local %}<p class="formacao__meta">{{ f.local }}</p>{% endif %}
+        {% if f.promocao %}<p class="formacao__meta">Promoção: {{ f.promocao }}</p>{% endif %}
+        {% if f.parceria %}<p class="formacao__meta">Parceria: {{ f.parceria }}</p>{% endif %}
+        {% if f.fonte %}<p class="formacao__meta">Fonte: {{ f.fonte }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p class="nota">Nenhuma atividade registrada ainda.</p>
+  {% endif %}
+
+  <p class="nota">Participou de um curso ou palestra do NEAB que não está aqui? Fale conosco
+     pela <a href="{{ root }}contato/">página de contato</a>.</p>
+</section>
+
+{% endblock %}

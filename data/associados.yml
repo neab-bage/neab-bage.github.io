@@ -1,0 +1,77 @@
+# Quadro de associados em dia, conforme o guia Aprova Fácil (setembro de 2026).
+# Associado em dia é quem está com a contribuição do ano corrente quitada.
+#
+# PRIVACIDADE: este repositório é público e indexado por buscadores. Publicar e-mail e telefone
+# pessoais aqui é diferente de publicá-los num guia impresso distribuído na categoria. Por isso
+# os contatos ficam VAZIOS por padrão e só devem ser preenchidos para quem autorizar expressamente
+# a divulgação na internet. O site mostra o contato apenas quando "autoriza_contato: true".
+#
+# Campos: nome, registro (CREA-RS ou CAU), email, telefone, site, autoriza_contato
+
+ano_referencia: 2026
+nota: >-
+  Relação dos profissionais associados em dia com o núcleo. Para constar nesta página, associe-se
+  e mantenha a contribuição anual em dia.
+
+grupos:
+  - area: "Arquitetura e Urbanismo"
+    pessoas:
+      - {nome: "Aline Machado Pillon", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Ana Lúcia Kalil Sarmento", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Ana Paula Lopes Siqueira Ritta", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Antônio Augusto Nadal da Luz", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Azucena da Fonseca Fros", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Bruno Ferreira Saliba", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Dineu Resende Borba Neto", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Diogo Suñé Pfeifer Sant'Anna", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Eliza Furlong Antochevis", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Fernanda Vieira Barasuol", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Gabriela Schardosim de S. Brandão Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Giovana Delpino da Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Gladis Carolina Barcellos Saavedra (Neneca)", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Luiza Maria Saraiva Cardoso", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Marcelo Goskes", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Marcus Flávio Jardim Fernandes", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Mariana Hoesel Scherer", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Matheus Quadros Rosa Veleda", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Mohamad Ali Mohd Yacoub", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Natália Menezes Barbosa Rachinhas", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Taís de Oliveira Maciel", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Verônica Machado de Sá Ferreira", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Victória Vieira", registro: "", email: "", telefone: "", autoriza_contato: false}
+
+  - area: "Engenharia Civil"
+    pessoas:
+      - {nome: "Alexandro Gularte", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Bruno Dias Robaina", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Danielly Dias Ferreira", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Fábio Burgo da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Glaucea Pereira da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Gustavo Fatturi", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Katia Helena Ubal de Rodrigues", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Muriéle de Oliveira D’Avila", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Márcio Marun Gomes", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Pierre Carvalho Madruga", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Rafael Deneris Delabary", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Roberto Guadalupe Leite Seixas", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Volmir Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
+
+  - area: "Engenharia de Segurança do Trabalho"
+    pessoas:
+      - {nome: "(53) 99920-6047", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Danielly Dias Ferreira", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Douglas de Tarso da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Fábio Burgo da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Katia Helena Ubal de Rodrigues", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Márcio Marun Gomes", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Rafael Evaldt Hendler", registro: "", email: "", telefone: "", autoriza_contato: false}
+
+  - area: "Engenharia Elétrica"
+    pessoas:
+      - {nome: "Douglas de Tarso da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Jorge Dias Dias da Costa", registro: "", email: "", telefone: "", autoriza_contato: false}
+
+  - area: "Engenharia Mecânica"
+    pessoas:
+      - {nome: "Luciano Vacilotto", registro: "", email: "", telefone: "", autoriza_contato: false}
+

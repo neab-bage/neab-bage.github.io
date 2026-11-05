@@ -1,0 +1,40 @@
+periodo: "2019/2021"
+inicio: 2019
+fim: 2021
+
+posse:
+  data: "8 de julho de 2019, às 20h"
+  local: "Câmara de Vereadores de Bagé"
+  nota: >-
+    Sessão solene dupla: homenagem ao NEAB pelos cinquenta anos de fundação e posse da nova
+    diretoria. A cerimônia contou com a presença da então presidente do CREA-RS,
+    Eng.ª Civil Alice Helena Coelho Sholl.
+
+fonte: "Convite da sessão solene e recorte de jornal, acervo do NEAB"
+observacao: >-
+  O convite da sessão solene chama o mandato de "gestão 19/20"; confirmar se o biênio correto é
+  2019/2020 ou 2019/2021. Os títulos profissionais de cada integrante não constam do recorte e
+  não foram preenchidos para não haver suposição.
+
+diretoria:
+  - {cargo: "Presidente", nome: "Antonio Luiz Arla da Silva"}
+  - {cargo: "1º Vice-Presidente", nome: "Aliane da Croce"}
+  - {cargo: "2º Vice-Presidente", nome: "Carine Sachett"}
+  - {cargo: "1º Secretário", nome: "Emilio Roberto Mansur"}
+  - {cargo: "2ª Secretária", nome: "Cecília Lacerda"}
+  - {cargo: "1º Tesoureiro", nome: "Fidler Gusmão"}
+  - {cargo: "2º Tesoureiro", nome: "Bruno Robaina"}
+  - {cargo: "1º Diretor de Marketing", nome: "Maurício Fara"}
+  - {cargo: "2º Diretor de Marketing", nome: "Jerônimo Bazerque"}
+  - {cargo: "Diretor de Convênios", nome: "Márcio Marun"}
+  - {cargo: "Diretor de Integração e Capacitação", nome: "Thuam Cruz"}
+
+conselho_fiscal:
+  - {nome: "Adriane Alves"}
+  - {nome: "Luciano Vacilotto"}
+  - {nome: "Márcio Marun"}
+
+relacionamento:
+  - {municipio: "Dom Pedrito", nome: "Joice"}
+  - {municipio: "Candiota", nome: "Marcelo Leal"}
+  - {municipio: "Hulha Negra", nome: "Wagner Tavares"}

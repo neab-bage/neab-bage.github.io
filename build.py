@@ -73,6 +73,71 @@ def carregar_site():
     return site
 
 
+def slug(texto):
+    """'Ana Lúcia Kalil Sarmento' -> 'ana-lucia-kalil-sarmento' (nome do arquivo da foto)."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", texto).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def carregar_associados():
+    """Lê data/associados.yml e resolve a foto de cada associado, se houver.
+
+    A foto vai em static/img/associados/<slug-do-nome>.jpg (ou .png/.webp). Quando não existe,
+    o site mostra as iniciais no lugar — nenhuma imagem quebrada.
+    """
+    arq = ROOT / "data" / "associados.yml"
+    if not arq.exists():
+        return None
+    dados = yaml.safe_load(arq.read_text(encoding="utf-8")) or {}
+    pasta = ROOT / "static" / "img" / "associados"
+    faltando = 0
+    for g in dados.get("grupos", []):
+        for p in g.get("pessoas", []):
+            s = p.get("foto") or slug(p["nome"])
+            achou = None
+            for ext in (".jpg", ".jpeg", ".png", ".webp"):
+                if (pasta / (s + ext)).is_file():
+                    achou = s + ext
+                    break
+            p["foto_arquivo"] = achou
+            p["slug"] = s
+            partes = [x for x in p["nome"].split() if len(x) > 2]
+            p["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else p["nome"][:2].upper()
+            if not achou:
+                faltando += 1
+    if faltando:
+        print(f"Aviso: {faltando} associado(s) sem foto em static/img/associados/; exibindo as iniciais.")
+    return dados
+
+
+def carregar_gestoes():
+    """Lê data/gestoes/*.yml — um arquivo por gestão. Arquivos iniciados por _ são ignorados."""
+    pasta = ROOT / "data" / "gestoes"
+    gestoes = []
+    for arq in sorted(pasta.glob("*.yml")) if pasta.exists() else []:
+        if arq.name.startswith("_"):
+            continue
+        g = yaml.safe_load(arq.read_text(encoding="utf-8")) or {}
+        g["arquivo"] = arq.name
+        gestoes.append(g)
+    gestoes.sort(key=lambda g: g.get("inicio") or 0, reverse=True)
+    return gestoes
+
+
+def carregar_formacao():
+    """Lê data/formacao.yml e agrupa cursos e palestras por ano, do mais recente ao mais antigo."""
+    arq = ROOT / "data" / "formacao.yml"
+    itens = (yaml.safe_load(arq.read_text(encoding="utf-8")) or []) if arq.exists() else []
+    anos = {}
+    for x in itens:
+        anos.setdefault(x.get("ano") or 0, []).append(x)
+    com_ano = [{"ano": a, "itens": anos[a]} for a in sorted((k for k in anos if k), reverse=True)]
+    if 0 in anos:  # sem ano definido: vai para o fim, rotulado
+        com_ano.append({"ano": None, "rotulo": "Ano a confirmar", "itens": anos[0]})
+    return com_ano
+
+
 def carregar_agenda(hoje):
     """Lê data/agenda.yml e separa em próximas e realizadas (data no fuso de Brasília)."""
     arq = ROOT / "data" / "agenda.yml"
@@ -156,6 +221,9 @@ def carregar_noticias():
 def gerar():
     site = carregar_site()
     noticias = carregar_noticias()
+    gestoes = carregar_gestoes()
+    formacao = carregar_formacao()
+    associados = carregar_associados()
     hoje = dt.datetime.now(TZ).date()
     ag_prox, ag_real = carregar_agenda(hoje)
 
@@ -176,7 +244,7 @@ def gerar():
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, noticias_home=noticias[:3],
+            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, associados=associados,
             agenda_prox=ag_prox, agenda_real=ag_real, agenda_home=ag_prox[:2],
             root=root, ano=ano, **ctx)
         saida = DIST / destino
@@ -185,7 +253,11 @@ def gerar():
 
     render("home.html", "index.html", active="home")
     render("neab.html", "o-neab/index.html", active="neab", title="O NEAB")
+    render("atuacao.html", "atuacao/index.html", active="atuacao", title="Atuação")
     render("diretoria.html", "diretoria/index.html", active="diretoria", title="Diretoria e representação")
+    render("associados.html", "associados/index.html", active="associados", title="Associados")
+    render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
+    render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")
     render("parceiros.html", "parceiros/index.html", active="parceiros", title="Parceiros e benefícios")
     render("agenda.html", "agenda/index.html", active="agenda", title="Agenda")
@@ -206,7 +278,7 @@ def gerar():
     # 404: usa a raiz do site (base_url) em vez de caminho relativo
     render("404.html", "404.html", base_abs=site.get("base_url", "/"), title="Página não encontrada")
 
-    print(f"Site gerado em {DIST} — {len(noticias)} notícia(s), "
+    print(f"Site gerado em {DIST} — {len(noticias)} notícia(s), {len(gestoes)} gestão(ões) registrada(s), "
           f"{len(ag_prox)} atividade(s) futura(s), {len(ag_real)} realizada(s).")
 
 

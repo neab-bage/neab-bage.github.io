@@ -16,15 +16,25 @@
     <p>{{ site.finalidade }}</p>
     <p>O NEAB é uma sociedade civil, pessoa jurídica de direito privado, sem finalidade
        econômica e com duração por prazo indeterminado. Sua abrangência: {{ site.abrangencia }}.</p>
+    {% if site.numeros %}
+    <ul class="numeros">
+      {% for x in site.numeros %}
+      <li><strong>{{ x.valor }}</strong><span>{{ x.rotulo }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
     <p class="aviso">{{ i.icon("balanca", 20) }} {{ site.ressalva_estatutaria }}</p>
 
     {% if site.fundacao.confirmado %}
     <h2>Histórico</h2>
-    <p>{{ site.fundacao.texto or "Fundado em " ~ site.fundacao.ano ~ "." }}</p>
+    <p>{{ site.fundacao.texto }}</p>
+    {% if site.fundacao.fundadores %}
+    <p><strong>Fundadores:</strong> {{ site.fundacao.fundadores | join(", ") }}.</p>
+    {% endif %}
     {% endif %}
 
     <h2>Sede</h2>
-    <p>{{ site.sede.endereco }} — {{ site.sede.cidade }}{% if site.sede.cep %}, CEP {{ site.sede.cep }}{% endif %}.</p>
+    <p>{% if site.sede.complemento %}{{ site.sede.complemento }}.<br>{% endif %}{{ site.sede.endereco }} — {{ site.sede.cidade }}{% if site.sede.cep %}, CEP {{ site.sede.cep }}{% endif %}.</p>
   </div>
 </section>
 

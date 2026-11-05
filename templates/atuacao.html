@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab">
+  <div class="wrap">
+    <p class="etiqueta">O que fazemos</p>
+    <h1>Atuação</h1>
+    <p class="cab__lead">{{ site.atuacao.chamada }}</p>
+  </div>
+</section>
+
+<section class="wrap secao">
+  <div class="cartoes cartoes--3">
+    {% for f in site.atuacao.frentes %}
+    <article class="cartao cartao--estatico">
+      <span class="cartao__ic">{{ i.icon(f.icone or "check", 22) }}</span>
+      <h2>{{ f.titulo }}</h2>
+      <p>{{ f.texto }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% if site.atuacao.realizacoes %}
+<section class="faixa">
+  <div class="wrap">
+    <h2>Realizações recentes</h2>
+    <ul class="realizacoes">
+      {% for r in site.atuacao.realizacoes %}
+      <li>
+        <span class="realizacoes__ano">{{ r.ano }}</span>
+        <div>
+          <h3>{{ r.titulo }}</h3>
+          {% if r.data %}<p class="realizacoes__data">{{ r.data }}</p>{% endif %}
+          <p>{{ r.texto }}</p>
+          {% if r.link %}<p><a class="link-seta" href="{{ r.link }}" target="_blank" rel="noopener">{{ r.link_rotulo or "Ver registro" }} {{ i.icon("externo", 16) }}</a></p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<section class="wrap secao">
+  <div class="texto">
+    <p>Essa atuação depende do quadro de associados. Profissionais de engenharia e arquitetura
+       registrados no respectivo Conselho, e de especialidades afins regulamentadas pelo CREA-RS,
+       podem se associar.</p>
+    <div class="acoes">
+      <a class="btn btn--primario" href="{{ root }}associe-se/">Associe-se ao NEAB {{ i.icon("seta", 18) }}</a>
+      <a class="btn btn--suave" href="{{ root }}o-neab/">Sobre o núcleo</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
