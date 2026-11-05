@@ -36,7 +36,7 @@ sede:
 contato:
   email: ""              # PENDENTE: e-mail institucional do NEAB
   telefone: ""           # PENDENTE: telefone ou WhatsApp de contato
-  instagram: ""          # PENDENTE: perfil do NEAB, se houver
+  instagram: "https://www.instagram.com/neabbage/"
   facebook: ""
 
 numeros:
