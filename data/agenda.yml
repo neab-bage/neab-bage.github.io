@@ -25,8 +25,27 @@
   titulo: "Reunião com os associados — patrimônio, planejamento urbano e valorização profissional"
   data: 2026-10-14
   tipo: "Reunião"
-  local: "Auditório da Casa JW, Bagé"
+  local: "Auditório da Casa JW, Bagé"   # a agenda prévia indicava o CREA; o registro do dia aponta a Casa JW
   resumo: >-
     Encontro do núcleo com seus associados para discutir pautas institucionais, analisar
     documentos e definir encaminhamentos para a continuidade dos trabalhos junto aos órgãos
     públicos e às instituições parceiras. O espaço foi cedido pela Casa JW.
+
+- id: campo-arroio-bage-2026-10-27
+  titulo: "Núcleo de trabalho e campo — Arroio Bagé"
+  data: 2026-10-27
+  inicio: "09:00"
+  tipo: "Trabalho de campo"
+  local: "Fundos do Museu, Bagé"
+  resumo: >-
+    Segunda saída de campo do estudo de reconhecimento do Arroio Bagé, em parceria com soldados
+    do 3º Batalhão Logístico.
+
+- id: encerramento-e-posse-2026-11-26
+  titulo: "Encerramento das atividades de 2026 e posse da nova diretoria"
+  data: 2026-11-26
+  tipo: "Solenidade"
+  destaque: true
+  resumo: >-
+    Encerramento das atividades do núcleo em 2026 e cerimônia de posse da diretoria eleita para
+    o biênio 2027/2028.

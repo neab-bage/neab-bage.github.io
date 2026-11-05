@@ -106,8 +106,8 @@ diretoria_eleita:
   rotulo: "Diretoria eleita"
   eleicao: >-
     Eleita por aclamação na Assembleia Geral Eletiva de 20 de julho de 2026, na sede da
-    Inspetoria Regional do CREA-RS em Bagé, após a inscrição de chapa única. Assume o mandato
-    no biênio 2027/2028.
+    Inspetoria Regional do CREA-RS em Bagé, após a inscrição de chapa única. A posse está marcada
+    para 26 de novembro de 2026, na solenidade de encerramento das atividades do ano.
   membros:
     - {cargo: "Presidente", nome: "Cecília Nunes Vieira Lacerda da Luz", titulo: "Arq."}
     - {cargo: "Vice-Presidente", nome: "Aliane Pedroso da Croce", titulo: "Eng.ª Civil"}
@@ -297,6 +297,7 @@ logos_institucionais:
   itens:
     - {nome: "Confea", arquivo: "confea.png", url: "https://www.confea.org.br/", alt: "Confea — Conselho Federal de Engenharia e Agronomia"}
     - {nome: "CREA-RS", arquivo: "crea-rs.png", url: "https://www.crea-rs.org.br/", alt: "CREA-RS — Conselho Regional de Engenharia e Agronomia do Rio Grande do Sul"}
+    - {nome: "CAU/RS", arquivo: "cau-rs.png", url: "https://www.caurs.gov.br/", alt: "CAU/RS — Conselho de Arquitetura e Urbanismo do Rio Grande do Sul"}
     - {nome: "Mútua", arquivo: "mutua.png", url: "https://www.mutua.com.br/", alt: "Mútua — Caixa de Assistência dos Profissionais do Crea"}
 
 # ------------------------------------------------------------------ documentos e transparência
