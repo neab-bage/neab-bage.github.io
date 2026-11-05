@@ -5,7 +5,6 @@
 <section class="hero">
   <div class="wrap hero__grade">
     <div>
-      <p class="etiqueta">{{ site.abrangencia }}</p>
       <h1>Núcleo dos Engenheiros e Arquitetos de <span>Bagé</span></h1>
       <p class="hero__lead">{{ site.descricao_curta }}</p>
       <div class="hero__acoes">
@@ -21,17 +20,11 @@
 </section>
 
 <section class="wrap secao">
-  <div class="cartoes">
+  <div class="cartoes cartoes--5">
     <a class="cartao" href="{{ root }}o-neab/">
       <span class="cartao__ic">{{ i.icon("info", 22) }}</span>
       <h2>O que é o NEAB</h2>
       <p>Finalidade, abrangência e como a entidade é organizada e administrada.</p>
-      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
-    </a>
-    <a class="cartao" href="{{ root }}diretoria/">
-      <span class="cartao__ic">{{ i.icon("pessoas", 22) }}</span>
-      <h2>Diretoria {{ site.diretoria.biennio }}</h2>
-      <p>Quem responde pelo núcleo no biênio e a representação junto ao CREA-RS.</p>
       <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
     </a>
     <a class="cartao" href="{{ root }}associe-se/">
@@ -46,58 +39,39 @@
       <p>Convênios que trazem vantagens econômicas, culturais e tecnológicas.</p>
       <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
     </a>
+    <a class="cartao" href="{{ root }}noticias/">
+      <span class="cartao__ic">{{ i.icon("jornal", 22) }}</span>
+      <h2>Notícias e agenda</h2>
+      <p>Atividades, decisões e comunicados do núcleo aos associados.</p>
+      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
+    </a>
+    <a class="cartao cartao--diretoria" href="{{ root }}diretoria/">
+      <h2>Diretoria {{ site.diretoria.biennio }}</h2>
+      <ul class="cartao__diretoria">
+        {% for m in site.diretoria.membros %}
+        <li><small>{{ m.cargo }}</small>{{ m.titulo }} {{ m.nome }}</li>
+        {% endfor %}
+      </ul>
+      <span class="link-seta">Diretoria e representação {{ i.icon("seta", 16) }}</span>
+    </a>
   </div>
 </section>
 
-<section class="faixa">
-  <div class="wrap">
-    <h2>Para que existe o núcleo</h2>
-    <p class="faixa__txt">{{ site.finalidade }}</p>
-    {% if site.numeros %}
-    <ul class="numeros">
-      {% for n in site.numeros %}
-      <li><strong>{{ n.valor }}</strong><span>{{ n.rotulo }}</span></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </div>
-</section>
-
-{% if agenda_home or noticias_home %}
-<section class="wrap secao duas">
-  {% if noticias_home %}
-  <div>
-    <div class="secao__cab"><h2>Notícias</h2><a class="link-seta" href="{{ root }}noticias/">Todas {{ i.icon("seta", 16) }}</a></div>
-    <ul class="lista-posts">
-      {% for p in noticias_home %}
-      <li>
-        <a href="{{ root }}noticias/{{ p.slug }}/">
-          <small>{{ p.categoria }} · {{ p.data_br }}</small>
-          <strong>{{ p.titulo }}</strong>
-          {% if p.resumo %}<span>{{ p.resumo }}</span>{% endif %}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-  {% if agenda_home %}
-  <div>
-    <div class="secao__cab"><h2>Próximas atividades</h2><a class="link-seta" href="{{ root }}agenda/">Agenda {{ i.icon("seta", 16) }}</a></div>
-    <ul class="lista-ativ">
-      {% for a in agenda_home %}
-      <li>
-        <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
-        <span class="lista-ativ__txt">
-          <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>
-          <strong>{{ a.titulo }}</strong>
-          {% if a.local %}<span>{{ a.local }}</span>{% endif %}
-        </span>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
+{% if agenda_home %}
+<section class="wrap secao">
+  <div class="secao__cab"><h2>Próximas atividades</h2><a class="link-seta" href="{{ root }}agenda/">Agenda completa {{ i.icon("seta", 16) }}</a></div>
+  <ul class="lista-ativ">
+    {% for a in agenda_home %}
+    <li>
+      <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
+      <span class="lista-ativ__txt">
+        <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>
+        <strong>{{ a.titulo }}</strong>
+        {% if a.local %}<span>{{ a.local }}</span>{% endif %}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
 {% endif %}
 
