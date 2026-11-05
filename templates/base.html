@@ -77,7 +77,7 @@
           <li><a href="{{ root }}sobre/">Sobre o site</a></li>
         </ul>
         {% if site.contato.instagram %}
-        <a class="rodape__social" href="{{ site.contato.instagram }}" target="_blank" rel="noopener">{{ i.icon("instagram", 20) }}<span>Instagram</span></a>
+        <a class="rodape__social" href="{{ site.contato.instagram }}" target="_blank" rel="noopener">{{ i.icon("instagram", 20) }}<span>{{ site.contato.instagram_user or "Instagram" }}</span></a>
         {% endif %}
       </div>
     </div>

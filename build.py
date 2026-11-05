@@ -60,6 +60,10 @@ def carregar_site():
     f = site.get("fundacao", {})
     if f.get("ano"):
         site["idade"] = hoje.year - int(f["ano"])
+    contato = site["contato"] = site.get("contato") or {}
+    insta = (contato.get("instagram") or "").strip()
+    usuario = insta.split("?")[0].split("#")[0].rstrip("/").rsplit("/", 1)[-1].lstrip("@") if insta else ""
+    contato["instagram_user"] = f"@{usuario}" if usuario else ""
     return site
 
 

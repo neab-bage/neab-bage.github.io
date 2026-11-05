@@ -44,7 +44,7 @@
       <span class="contato__ic">{{ i.icon("instagram", 22) }}</span>
       <div>
         <strong>Instagram</strong>
-        <p><a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">Perfil do NEAB</a></p>
+        <p><a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">{{ site.contato.instagram_user or "Perfil do NEAB" }}</a></p>
       </div>
     </li>
     {% endif %}
