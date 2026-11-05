@@ -40,10 +40,10 @@ ul,ol{margin:0 0 1em;padding-left:1.1rem}
 .topo{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.3) blur(10px);border-bottom:1px solid var(--linha)}
 .topo__in{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:76px}
 .marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--azul)}
-.marca img{height:50px;width:auto}
+.marca img{height:44px;width:auto}
 .marca__txt{display:flex;flex-direction:column;line-height:1.15}
 .marca__txt strong{font-family:var(--serif);font-size:1.4rem;letter-spacing:.02em}
-.marca__txt small{font-size:.72rem;color:var(--tinta-2);max-width:17ch}
+.marca__txt small{font-size:.8rem;color:var(--tinta-2)}
 .nav ul{display:flex;align-items:center;gap:2px;margin:0;padding:0;list-style:none;flex-wrap:wrap}
 .nav a{display:block;color:var(--tinta);text-decoration:none;font-weight:500;font-size:.93rem;padding:9px 12px;border-radius:999px;transition:background .15s,color .15s}
 .nav a:hover{background:var(--azul-claro);color:var(--azul)}
@@ -85,7 +85,7 @@ ul,ol{margin:0 0 1em;padding-left:1.1rem}
 .hero__lead{font-size:1.12rem;color:var(--tinta-2);max-width:40ch}
 .hero__acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .hero__selo{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:.92rem;font-weight:600;color:var(--azul-2)}
-.hero__logo{width:min(320px,100%);height:auto;margin-inline:auto;filter:drop-shadow(0 18px 32px rgba(21,32,43,.14))}
+.hero__logo{width:min(420px,100%);height:auto;margin-inline:auto;filter:drop-shadow(0 18px 32px rgba(21,32,43,.14))}
 
 /* ---------- cabeçalho de página ---------- */
 .cab{background:var(--bruma);border-bottom:1px solid var(--linha);padding:54px 0 48px}
@@ -188,7 +188,7 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .rodape{background:var(--tinta);color:#C8D3DD;padding:48px 0 24px;margin-top:0}
 .rodape__grade{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px}
 .rodape h2{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;font-family:var(--sans);font-weight:700;margin-bottom:.9em}
-.rodape__logo{width:84px;height:auto;margin-bottom:14px;opacity:.92}
+.rodape__logo{width:150px;height:auto;margin-bottom:14px;opacity:.92}
 .rodape__marca strong{font-family:var(--serif);font-size:1.5rem;color:#fff;letter-spacing:.02em}
 .rodape__txt{font-size:.94rem;line-height:1.6}
 .rodape a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
@@ -213,7 +213,7 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
   .nav a{padding:12px 14px;border-radius:var(--raio-p);font-size:1rem}
   .nav .nav__cta{margin:8px 0 0;text-align:center}
   .hero__grade{grid-template-columns:1fr;gap:28px;padding:44px 0 52px}
-  .hero__logo{width:min(220px,60%)}
+  .hero__logo{width:min(300px,80%)}
   .duas{grid-template-columns:1fr;gap:34px}
   .rodape__grade{grid-template-columns:1fr;gap:28px}
   .cta__in{padding:38px 0}
