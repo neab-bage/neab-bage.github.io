@@ -13,7 +13,7 @@
 <section class="wrap secao">
   <ul class="assoc-lista">
     {% for p in grupo.pessoas %}
-    <li class="assoc">
+    <li><a class="assoc" href="{{ root }}associados/{{ p.slug }}/">
       {% if p.foto_arquivo %}
       <img class="assoc__foto" src="{{ root }}static/img/associados/{{ p.foto_arquivo }}" alt="{{ p.nome }}" loading="lazy" width="200" height="200">
       {% else %}
@@ -30,7 +30,7 @@
         </span>
         {% endif %}
       </div>
-    </li>
+    </a></li>
     {% endfor %}
   </ul>
 

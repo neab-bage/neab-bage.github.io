@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+
+<section class="cab cab--ficha">
+  <div class="wrap ficha__topo">
+    {% if pessoa.foto_arquivo %}
+    <img class="ficha__foto" src="{{ root }}static/img/associados/{{ pessoa.foto_arquivo }}" alt="{{ pessoa.nome }}" width="300" height="300">
+    {% else %}
+    <span class="ficha__foto ficha__foto--vazia" aria-hidden="true">{{ pessoa.iniciais }}</span>
+    {% endif %}
+    <div>
+      <p class="etiqueta">{{ pessoa.areas | join(" · ") }}</p>
+      <h1>{{ pessoa.nome }}</h1>
+      {% if pessoa.registro %}<p class="ficha__registro">{{ pessoa.registro }}</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap secao">
+  {% if pessoa.autoriza_contato and (pessoa.email or pessoa.telefone or pessoa.site) %}
+  <h2>Contato profissional</h2>
+  <ul class="ficha__contatos">
+    {% if pessoa.email %}
+    <li>{{ i.icon("email", 20) }}<a href="mailto:{{ pessoa.email }}">{{ pessoa.email }}</a></li>
+    {% endif %}
+    {% if pessoa.telefone %}
+    <li>{{ i.icon("telefone", 20) }}<span>{{ pessoa.telefone }}</span></li>
+    {% endif %}
+    {% if pessoa.site %}
+    <li>{{ i.icon("externo", 20) }}<a href="{{ pessoa.site }}" target="_blank" rel="noopener">{{ pessoa.site }}</a></li>
+    {% endif %}
+  </ul>
+  <p class="nota">Dados de contato conforme o guia Aprova Fácil do NEAB. Para corrigir ou retirar,
+     fale com o núcleo pela <a href="{{ root }}contato/">página de contato</a>.</p>
+  {% else %}
+  <p class="nota">Este profissional não tem dados de contato publicados. Para falar com ele,
+     procure o núcleo pela <a href="{{ root }}contato/">página de contato</a>.</p>
+  {% endif %}
+
+  <div class="acoes">
+    {% for a in pessoa.areas %}
+    <a class="btn btn--suave btn--peq" href="{{ root }}associados/{{ a | slug }}/">Outros de {{ a }}</a>
+    {% endfor %}
+    <a class="btn btn--suave btn--peq" href="{{ root }}associados/">Todas as modalidades</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -108,6 +108,15 @@ def carregar_associados():
             p["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else p["nome"][:2].upper()
             if not achou:
                 faltando += 1
+    pessoas = {}
+    for g in dados.get("grupos", []):
+        for p in g.get("pessoas", []):
+            reg = pessoas.setdefault(p["slug"], dict(p, areas=[]))
+            reg["areas"].append(g["area"])
+            if p.get("registro") and not reg.get("registro"):
+                reg["registro"] = p["registro"]
+            p["ficha"] = p["slug"]
+    dados["pessoas"] = sorted(pessoas.values(), key=lambda p: p["slug"])
     if faltando:
         print(f"Aviso: {faltando} associado(s) sem foto em static/img/associados/; exibindo as iniciais.")
     return dados
@@ -239,6 +248,7 @@ def gerar():
                       autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["md"] = md
+    env.filters["slug"] = slug
     ano = hoje.year
 
     def render(template, destino, base_abs=None, **ctx):
@@ -258,6 +268,9 @@ def gerar():
     render("atuacao.html", "atuacao/index.html", active="atuacao", title="Atuação")
     render("diretoria.html", "diretoria/index.html", active="diretoria", title="Diretoria e representação")
     render("associados.html", "associados/index.html", active="associados", title="Associados")
+    for p in (associados or {}).get("pessoas", []):
+        render("associado.html", f"associados/{p['slug']}/index.html", active="associados",
+               title=p["nome"], pessoa=p)
     for g in (associados or {}).get("grupos", []):
         render("associados_area.html", f"associados/{g['slug']}/index.html", active="associados",
                title=g["area"], grupo=g)
