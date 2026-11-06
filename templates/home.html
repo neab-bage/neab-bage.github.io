@@ -21,39 +21,40 @@
 
 <section class="wrap secao">
   <h2 class="sr">Seções do site</h2>
-  <div class="atalhos">
-    <a class="atalho" href="{{ root }}o-neab/">
-      <span class="atalho__ic">{{ i.icon("info", 20) }}</span>
-      <span class="atalho__txt"><strong>O NEAB</strong>Finalidade, histórico e governança</span>
-    </a>
-    <a class="atalho" href="{{ root }}atuacao/">
-      <span class="atalho__ic">{{ i.icon("maos", 20) }}</span>
-      <span class="atalho__txt"><strong>Atuação</strong>Frentes de trabalho e realizações</span>
-    </a>
-    <a class="atalho" href="{{ root }}diretoria/">
-      <span class="atalho__ic">{{ i.icon("pessoas", 20) }}</span>
-      <span class="atalho__txt"><strong>Diretoria</strong>Gestão e representação no CREA-RS</span>
-    </a>
-    <a class="atalho" href="{{ root }}associados/">
-      <span class="atalho__ic">{{ i.icon("cracha", 20) }}</span>
-      <span class="atalho__txt"><strong>Associados</strong>Profissionais por modalidade</span>
-    </a>
-    <a class="atalho" href="{{ root }}formacao/">
-      <span class="atalho__ic">{{ i.icon("livro", 20) }}</span>
-      <span class="atalho__txt"><strong>Cursos e formação</strong>Palestras, cursos e visitas técnicas</span>
-    </a>
-    <a class="atalho" href="{{ root }}parceiros/">
-      <span class="atalho__ic">{{ i.icon("escudo", 20) }}</span>
-      <span class="atalho__txt"><strong>Parceiros</strong>Convênios e benefícios</span>
-    </a>
-    <a class="atalho" href="{{ root }}documentos/">
-      <span class="atalho__ic">{{ i.icon("documento", 20) }}</span>
-      <span class="atalho__txt"><strong>Documentos</strong>Estatuto, editais e atos</span>
-    </a>
-    <a class="atalho" href="{{ root }}transparencia/">
-      <span class="atalho__ic">{{ i.icon("balanca", 20) }}</span>
-      <span class="atalho__txt"><strong>Transparência</strong>Prestação de contas</span>
-    </a>
+  <div class="eixos">
+    <nav class="eixo" aria-label="O núcleo">
+      <h3 class="eixo__titulo">{{ i.icon("info", 18) }}O núcleo</h3>
+      <ul>
+        <li><a href="{{ root }}o-neab/">Apresentação<small>Finalidade, histórico e governança</small></a></li>
+        <li><a href="{{ root }}atuacao/">Atuação<small>Frentes de trabalho e realizações</small></a></li>
+        <li><a href="{{ root }}diretoria/">Diretoria e representação<small>Gestão atual e assento no CREA-RS</small></a></li>
+        <li><a href="{{ root }}diretoria/gestoes/">Gestões anteriores<small>Memória das diretorias</small></a></li>
+      </ul>
+    </nav>
+    <nav class="eixo" aria-label="Atividades">
+      <h3 class="eixo__titulo">{{ i.icon("calendario", 18) }}Atividades</h3>
+      <ul>
+        <li><a href="{{ root }}agenda/">Agenda<small>Próximas atividades e realizadas</small></a></li>
+        <li><a href="{{ root }}formacao/">Cursos e formação<small>Palestras, cursos e visitas técnicas</small></a></li>
+        <li><a href="{{ root }}noticias/">Notícias<small>O que o núcleo tem feito</small></a></li>
+      </ul>
+    </nav>
+    <nav class="eixo" aria-label="Associados">
+      <h3 class="eixo__titulo">{{ i.icon("cracha", 18) }}Associados</h3>
+      <ul>
+        <li><a href="{{ root }}associe-se/">Como se associar<small>Requisitos, direitos e deveres</small></a></li>
+        <li><a href="{{ root }}associados/">Quadro de associados<small>Profissionais por modalidade</small></a></li>
+        <li><a href="{{ root }}beneficios/">Benefícios e convênios<small>Vantagens para quem é associado</small></a></li>
+      </ul>
+    </nav>
+    <nav class="eixo" aria-label="Transparência">
+      <h3 class="eixo__titulo">{{ i.icon("balanca", 18) }}Transparência</h3>
+      <ul>
+        <li><a href="{{ root }}documentos/">Documentos<small>Estatuto, editais e atos</small></a></li>
+        <li><a href="{{ root }}transparencia/">Prestação de contas<small>Relatórios e demonstrações</small></a></li>
+        <li><a href="{{ root }}contato/">Contato<small>Sede e canais do núcleo</small></a></li>
+      </ul>
+    </nav>
   </div>
 </section>
 

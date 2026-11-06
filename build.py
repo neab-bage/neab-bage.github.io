@@ -264,7 +264,7 @@ def gerar():
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")
-    render("parceiros.html", "parceiros/index.html", active="parceiros", title="Parceiros e benefícios")
+    render("parceiros.html", "beneficios/index.html", active="beneficios", title="Benefícios e convênios")
     render("agenda.html", "agenda/index.html", active="agenda", title="Agenda")
     render("documentos.html", "documentos/index.html", active="documentos", title="Documentos")
     render("transparencia.html", "transparencia/index.html", active="transparencia", title="Transparência")
