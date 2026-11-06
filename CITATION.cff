@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Se você usar ou citar este site, use as informações abaixo."
+title: "Site do NEAB — Núcleo dos Engenheiros e Arquitetos de Bagé"
+type: software
+abstract: >-
+  Site institucional do Núcleo dos Engenheiros e Arquitetos de Bagé (NEAB), entidade de classe
+  fundada em 1968 e vinculada ao sistema CONFEA/CREA, com abrangência na regional do CREA-RS de
+  Bagé. Reúne a apresentação e o histórico da entidade, suas frentes de atuação, a diretoria e a
+  representação institucional, o quadro de associados por modalidade, o registro de cursos e
+  formações, as gestões anteriores, documentos, transparência, notícias e agenda. Gerador
+  estático em Python com Jinja2, publicado em GitHub Pages.
+authors:
+  - family-names: "Schäfer"
+    given-names: "Alexandro Gularte"
+    affiliation: "Universidade Federal do Pampa (Unipampa)"
+    orcid: "https://orcid.org/0000-0001-8700-0860"
+version: "1.0.0"
+date-released: "2026-11-06"
+url: "https://neab-bage.github.io/"
+repository-code: "https://github.com/neab-bage/neab-bage.github.io"
+license: MIT
+keywords:
+  - entidade de classe
+  - engenharia
+  - arquitetura
+  - CONFEA/CREA
+  - Bagé
+  - patrimônio histórico
