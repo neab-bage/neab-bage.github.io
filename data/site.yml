@@ -340,4 +340,8 @@ sobre_site:
     Site estático em Python (Jinja2), publicado no GitHub Pages. Desenvolvido com apoio de
     ferramenta de inteligência artificial (Claude, Anthropic), com curadoria e revisão do NEAB.
   repositorio: "https://github.com/neab-bage/neab-bage.github.io"
+  doi: "10.5281/zenodo.24011478"
+  citacao: >-
+    SCHÄFER, A. G.; PEREIRA, J. B.; LACERDA DA LUZ, C. N. V.; GOMES, M. M. Site do NEAB —
+    Núcleo dos Engenheiros e Arquitetos de Bagé. Versão 1.0.0. Bagé: NEAB, 2026.
   licenca: "Conteúdo do NEAB; código do site sob licença MIT."

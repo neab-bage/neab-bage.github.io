@@ -25,6 +25,7 @@ authors:
     affiliation: "Núcleo dos Engenheiros e Arquitetos de Bagé (NEAB)"
 version: "1.0.0"
 date-released: "2026-11-06"
+doi: 10.5281/zenodo.24011478
 url: "https://neab-bage.github.io/"
 repository-code: "https://github.com/neab-bage/neab-bage.github.io"
 license: MIT

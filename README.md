@@ -6,6 +6,8 @@ CREA-RS de Bagé.
 
 🌐 **https://neab-bage.github.io**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24011478.svg)](https://doi.org/10.5281/zenodo.24011478)
+
 ## Como funciona
 
 Gerador estático em Python: `build.py` lê os dados em `data/`, as notícias em `noticias/` e os
@@ -47,6 +49,15 @@ Depois de editar, basta fazer o commit na `main`: o site se publica sozinho em p
 O repositório é público. Não inclua CPF, RG, telefone ou endereço particular, documentos com
 dados de assinatura digital, nem listas de associados. Nomes e cargos de quem ocupa função
 eletiva no núcleo são informação pública; o restante, não.
+
+## Como citar
+
+> SCHÄFER, A. G.; PEREIRA, J. B.; LACERDA DA LUZ, C. N. V.; GOMES, M. M. **Site do NEAB —
+> Núcleo dos Engenheiros e Arquitetos de Bagé**. Versão 1.0.0. Bagé: NEAB, 2026.
+> DOI: 10.5281/zenodo.24011478. Disponível em: https://neab-bage.github.io/
+
+Os metadados de citação estão em `CITATION.cff`; o GitHub oferece o botão "Cite this repository"
+a partir dele.
 
 ## Licença
 
