@@ -22,6 +22,11 @@ fundacao:
     Estado em 30 de julho de 1970 e registrados no Cartório de Registro de Bagé em 3 de setembro
     do mesmo ano. Desde então, o núcleo se firmou como referência regional na defesa da boa
     técnica e na valorização profissional.
+  foto:
+    arquivo: "historico/primeira-reuniao.jpg"
+    legenda: "Registro de uma das primeiras reuniões do NEAB."
+    credito: "Acervo do NEAB"
+    fonte: "https://www.instagram.com/neabbage/p/ByiPTLdnXSD/"
   estatutos_publicacao: "30 de julho de 1970, no Diário Oficial do Estado"
   estatutos_registro: "3 de setembro de 1970, no Cartório de Registro de Bagé"
   fundadores: [Ernesto Rebouças, Nêd Medina Quintana, Danilo Malafaia Barreto,

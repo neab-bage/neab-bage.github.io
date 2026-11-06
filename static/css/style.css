@@ -327,3 +327,9 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .eixo a small{display:block;margin-top:2px;font-weight:400;font-size:.85rem;color:var(--grafite-2)}
 .eixo a:hover{color:var(--cobre)}
 .eixo a:hover small{color:var(--grafite-2)}
+
+/* ---------- foto histórica ---------- */
+.foto-historica{margin:28px 0;max-width:620px}
+.foto-historica img{width:100%;height:auto;border-radius:var(--raio);border:1px solid var(--concreto-2)}
+.foto-historica figcaption{margin-top:10px;font-size:.9rem;color:var(--grafite-2);line-height:1.45}
+.foto-historica figcaption span{display:block;font-size:.82rem;color:var(--grafite-2);opacity:.8;margin-top:2px}
