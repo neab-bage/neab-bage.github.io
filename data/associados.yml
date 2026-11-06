@@ -17,19 +17,20 @@ grupos:
   - area: "Arquitetura e Urbanismo"
     pessoas:
       - {nome: "Aline Machado Pillon", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Ana Lúcia Kalil Sarmento", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Ana Lúcia Kalil Sarmento", registro: "CAU A33015-9", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Ana Paula Lopes Siqueira Ritta", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Antônio Augusto Nadal da Luz", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Azucena da Fonseca Fros", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Azucena da Fonseca Fros", registro: "CAU A161463-0", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Bruno Ferreira Saliba", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Dineu Resende Borba Neto", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Cecília Nunes Vieira Lacerda da Luz", registro: "CAU A224200-1", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Dineu Resende Borba Neto", registro: "CAU A45078-2", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Diogo Suñé Pfeifer Sant'Anna", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Eliza Furlong Antochevis", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Fernanda Vieira Barasuol", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Gabriela Schardosim de S. Brandão Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Giovana Delpino da Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Gladis Carolina Barcellos Saavedra (Neneca)", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Luiza Maria Saraiva Cardoso", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Luiza Maria Saraiva Cardoso", registro: "CAU A74809-9", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Marcelo Goskes", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Marcus Flávio Jardim Fernandes", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Mariana Hoesel Scherer", registro: "", email: "", telefone: "", autoriza_contato: false}
@@ -42,17 +43,21 @@ grupos:
 
   - area: "Engenharia Civil"
     pessoas:
-      - {nome: "Alexandro Gularte", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Adalberto Gularte Schäfer", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Alexandro Gularte Schäfer", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Aliane Pedroso da Croce", registro: "CREA-RS 234118", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Bruno Dias Robaina", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Danielly Dias Ferreira", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Fábio Burgo da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Glaucea Pereira da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Gustavo Fatturi", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Gustavo Scherer Fatturi Pires", registro: "CREA-RS 207819", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Jerônimo Bazerque Pereira", registro: "CREA-RS 207849", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Katia Helena Ubal de Rodrigues", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Muriéle de Oliveira D’Avila", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Márcio Marun Gomes", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Maurício Fernandes Fara", registro: "CREA-RS 239393", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Muriéle de Oliveira D’Avila", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Pierre Carvalho Madruga", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Rafael Deneris Delabary", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Rafael Daneris Delabary", registro: "CREA-RS 257786", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Roberto Guadalupe Leite Seixas", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Volmir Silveira", registro: "", email: "", telefone: "", autoriza_contato: false}
 
@@ -64,7 +69,7 @@ grupos:
       - {nome: "Fábio Burgo da Silva", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Katia Helena Ubal de Rodrigues", registro: "", email: "", telefone: "", autoriza_contato: false}
       - {nome: "Márcio Marun Gomes", registro: "", email: "", telefone: "", autoriza_contato: false}
-      - {nome: "Rafael Evaldt Hendler", registro: "", email: "", telefone: "", autoriza_contato: false}
+      - {nome: "Rafael Evaldt Hendler", registro: "CREA-RS 207801", email: "", telefone: "", autoriza_contato: false}
 
   - area: "Engenharia Elétrica"
     pessoas:
