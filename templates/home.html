@@ -9,7 +9,7 @@
       <p class="hero__lead">{{ site.descricao_curta }}</p>
       <div class="hero__acoes">
         <a class="btn btn--primario" href="{{ root }}associe-se/">Associe-se ao NEAB {{ i.icon("seta", 18) }}</a>
-        <a class="btn btn--suave" href="{{ root }}o-neab/">Conheça o núcleo</a>
+        <a class="btn btn--suave" href="{{ root }}atuacao/">O que fazemos</a>
       </div>
       {% if site.fundacao.confirmado and site.idade %}
       <p class="hero__selo">{{ i.icon("escudo", 18) }} {{ site.idade }} anos de representação profissional em Bagé</p>
@@ -20,69 +20,96 @@
 </section>
 
 <section class="wrap secao">
-  <div class="cartoes cartoes--5">
-    <a class="cartao" href="{{ root }}o-neab/">
-      <span class="cartao__ic">{{ i.icon("info", 22) }}</span>
-      <h2>O que é o NEAB</h2>
-      <p>Finalidade, abrangência e como a entidade é organizada e administrada.</p>
-      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
+  <h2 class="sr">Seções do site</h2>
+  <div class="atalhos">
+    <a class="atalho" href="{{ root }}o-neab/">
+      <span class="atalho__ic">{{ i.icon("info", 20) }}</span>
+      <span class="atalho__txt"><strong>O NEAB</strong>Finalidade, histórico e governança</span>
     </a>
-    <a class="cartao" href="{{ root }}associe-se/">
-      <span class="cartao__ic">{{ i.icon("cracha", 22) }}</span>
-      <h2>Associe-se</h2>
-      <p>Quem pode se associar, como fazer e quais são os direitos do associado.</p>
-      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
+    <a class="atalho" href="{{ root }}atuacao/">
+      <span class="atalho__ic">{{ i.icon("maos", 20) }}</span>
+      <span class="atalho__txt"><strong>Atuação</strong>Frentes de trabalho e realizações</span>
     </a>
-    <a class="cartao" href="{{ root }}parceiros/">
-      <span class="cartao__ic">{{ i.icon("maos", 22) }}</span>
-      <h2>Parceiros e benefícios</h2>
-      <p>Convênios que trazem vantagens econômicas, culturais e tecnológicas.</p>
-      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
+    <a class="atalho" href="{{ root }}diretoria/">
+      <span class="atalho__ic">{{ i.icon("pessoas", 20) }}</span>
+      <span class="atalho__txt"><strong>Diretoria</strong>Gestão e representação no CREA-RS</span>
     </a>
-    <a class="cartao" href="{{ root }}noticias/">
-      <span class="cartao__ic">{{ i.icon("jornal", 22) }}</span>
-      <h2>Notícias e agenda</h2>
-      <p>Atividades, decisões e comunicados do núcleo aos associados.</p>
-      <span class="link-seta">Ver mais {{ i.icon("seta", 16) }}</span>
+    <a class="atalho" href="{{ root }}associados/">
+      <span class="atalho__ic">{{ i.icon("cracha", 20) }}</span>
+      <span class="atalho__txt"><strong>Associados</strong>Profissionais por modalidade</span>
     </a>
-    <a class="cartao cartao--diretoria" href="{{ root }}diretoria/">
-      <h2>Diretoria {{ site.diretoria.biennio }}</h2>
-      <ul class="cartao__diretoria">
-        {% for m in site.diretoria.membros %}
-        <li><small>{{ m.cargo }}</small>{{ m.titulo }} {{ m.nome }}</li>
-        {% endfor %}
-      </ul>
-      <span class="link-seta">Diretoria e representação {{ i.icon("seta", 16) }}</span>
+    <a class="atalho" href="{{ root }}formacao/">
+      <span class="atalho__ic">{{ i.icon("livro", 20) }}</span>
+      <span class="atalho__txt"><strong>Cursos e formação</strong>Palestras, cursos e visitas técnicas</span>
+    </a>
+    <a class="atalho" href="{{ root }}parceiros/">
+      <span class="atalho__ic">{{ i.icon("escudo", 20) }}</span>
+      <span class="atalho__txt"><strong>Parceiros</strong>Convênios e benefícios</span>
+    </a>
+    <a class="atalho" href="{{ root }}documentos/">
+      <span class="atalho__ic">{{ i.icon("documento", 20) }}</span>
+      <span class="atalho__txt"><strong>Documentos</strong>Estatuto, editais e atos</span>
+    </a>
+    <a class="atalho" href="{{ root }}transparencia/">
+      <span class="atalho__ic">{{ i.icon("balanca", 20) }}</span>
+      <span class="atalho__txt"><strong>Transparência</strong>Prestação de contas</span>
     </a>
   </div>
 </section>
 
-{% if agenda_home %}
-<section class="wrap secao">
-  <div class="secao__cab"><h2>Próximas atividades</h2><a class="link-seta" href="{{ root }}agenda/">Agenda completa {{ i.icon("seta", 16) }}</a></div>
-  <ul class="lista-ativ">
-    {% for a in agenda_home %}
-    <li>
-      <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
-      <span class="lista-ativ__txt">
-        <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>
-        <strong>{{ a.titulo }}</strong>
-        {% if a.local %}<span>{{ a.local }}</span>{% endif %}
-      </span>
-    </li>
-    {% endfor %}
-  </ul>
+{% if noticias_home or agenda_prox %}
+<section class="faixa">
+  <div class="wrap duas">
+    <div>
+      <div class="secao__cab"><h2>Notícias</h2><a class="link-seta" href="{{ root }}noticias/">Todas {{ i.icon("seta", 16) }}</a></div>
+      <ul class="lista-posts">
+        {% for p in noticias_home %}
+        <li>
+          <a href="{{ root }}noticias/{{ p.slug }}/">
+            <small>{{ p.categoria }} · {{ p.data_br }}</small>
+            <strong>{{ p.titulo }}</strong>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="secao__cab"><h2>Agenda</h2><a class="link-seta" href="{{ root }}agenda/">Completa {{ i.icon("seta", 16) }}</a></div>
+      {% if agenda_prox %}
+      <ul class="lista-ativ">
+        {% for a in agenda_prox[:3] %}
+        <li>
+          <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
+          <span class="lista-ativ__txt">
+            <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>
+            <strong>{{ a.titulo }}</strong>
+            {% if a.local %}<span>{{ a.local }}</span>{% endif %}
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="nota">Nenhuma atividade marcada no momento. As realizadas ficam registradas na agenda.</p>
+      {% endif %}
+    </div>
+  </div>
 </section>
 {% endif %}
 
-<section class="cta">
-  <div class="wrap cta__in">
+<section class="faixa-diretoria">
+  <div class="wrap faixa-diretoria__in">
     <div>
-      <h2>Faça parte do NEAB</h2>
-      <p>Profissionais de engenharia e arquitetura registrados no respectivo Conselho, e de
-         especialidades afins regulamentadas pelo CREA-RS, podem se associar.</p>
+      <p class="etiqueta etiqueta--clara">{{ site.diretoria.rotulo or "Diretoria" }} · {{ site.diretoria.biennio }}</p>
+      <ul class="faixa-diretoria__lista">
+        {% for m in site.diretoria.membros %}
+        <li><small>{{ m.cargo }}</small>{{ m.titulo }} {{ m.nome }}</li>
+        {% endfor %}
+      </ul>
     </div>
-    <a class="btn btn--claro" href="{{ root }}associe-se/">Quero me associar {{ i.icon("seta", 18) }}</a>
+    <div class="faixa-diretoria__acoes">
+      <a class="btn btn--claro" href="{{ root }}diretoria/">Diretoria e representação {{ i.icon("seta", 18) }}</a>
+      <a class="link-seta faixa-diretoria__contato" href="{{ root }}contato/">Falar com o núcleo {{ i.icon("seta", 16) }}</a>
+    </div>
   </div>
 </section>
 
