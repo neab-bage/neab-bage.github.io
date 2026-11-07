@@ -154,8 +154,8 @@ grupos:
       - nome: "Adalberto Gularte Schäfer"
         registro: ""
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 9957-0717"
+        autoriza_contato: true
       - nome: "Alexandro Gularte Schäfer"
         registro: ""
         email: "alschafer@gmail.com"
@@ -209,8 +209,8 @@ grupos:
       - nome: "Maurício Fernandes Fara"
         registro: "CREA-RS 239393"
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 9977-0255"
+        autoriza_contato: true
       - nome: "Muriéle de Oliveira D’Avila"
         registro: ""
         email: "davila.muriele@gmail.com"
