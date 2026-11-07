@@ -22,13 +22,6 @@
       <div class="assoc__dados">
         <strong class="assoc__nome">{{ p.nome }}</strong>
         {% if p.registro %}<span class="assoc__registro">{{ p.registro }}</span>{% endif %}
-        {% if p.autoriza_contato %}
-        <span class="assoc__contato">
-          {% if p.email %}<a href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
-          {% if p.telefone %}<span>{{ p.telefone }}</span>{% endif %}
-          {% if p.site %}<a href="{{ p.site }}" target="_blank" rel="noopener">site</a>{% endif %}
-        </span>
-        {% endif %}
       </div>
     </a></li>
     {% endfor %}

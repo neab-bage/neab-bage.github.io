@@ -56,8 +56,8 @@ grupos:
       - nome: "Cecília Nunes Vieira Lacerda da Luz"
         registro: "CAU A224200-1"
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 99966-4786"
+        autoriza_contato: true
       - nome: "Dineu Resende Borba Neto"
         registro: "CAU A45078-2"
         email: "dineu@borbaneto.com.br"
@@ -194,8 +194,8 @@ grupos:
       - nome: "Jerônimo Bazerque Pereira"
         registro: "CREA-RS 207849"
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 9909-7753"
+        autoriza_contato: true
       - nome: "Katia Helena Ubal de Rodrigues"
         registro: ""
         email: "ubalkatia@gmail.com"
