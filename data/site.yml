@@ -300,10 +300,10 @@ parceiros:
 logos_institucionais:
   titulo: "Articulação institucional"
   itens:
-    - {nome: "Confea", arquivo: "confea.png", url: "https://www.confea.org.br/", alt: "Confea — Conselho Federal de Engenharia e Agronomia"}
-    - {nome: "CREA-RS", arquivo: "crea-rs.png", url: "https://www.crea-rs.org.br/", alt: "CREA-RS — Conselho Regional de Engenharia e Agronomia do Rio Grande do Sul"}
-    - {nome: "CAU/RS", arquivo: "cau-rs.png", url: "https://www.caurs.gov.br/", alt: "CAU/RS — Conselho de Arquitetura e Urbanismo do Rio Grande do Sul"}
-    - {nome: "Mútua", arquivo: "mutua.png", url: "https://www.mutua.com.br/", alt: "Mútua — Caixa de Assistência dos Profissionais do Crea"}
+    - {nome: "Confea", descricao: "Conselho Federal de Engenharia e Agronomia", arquivo: "confea.png", url: "https://www.confea.org.br/", alt: "Confea — Conselho Federal de Engenharia e Agronomia"}
+    - {nome: "CREA-RS", descricao: "Conselho Regional de Engenharia e Agronomia do RS", arquivo: "crea-rs.png", url: "https://www.crea-rs.org.br/", alt: "CREA-RS — Conselho Regional de Engenharia e Agronomia do Rio Grande do Sul"}
+    - {nome: "CAU/RS", descricao: "Conselho de Arquitetura e Urbanismo do RS", arquivo: "cau-rs.png", url: "https://www.caurs.gov.br/", alt: "CAU/RS — Conselho de Arquitetura e Urbanismo do Rio Grande do Sul"}
+    - {nome: "Mútua", descricao: "Caixa de Assistência dos Profissionais do Crea", arquivo: "mutua.png", url: "https://www.mutua.com.br/", alt: "Mútua — Caixa de Assistência dos Profissionais do Crea"}
 
 # ------------------------------------------------------------------ documentos e transparência
 

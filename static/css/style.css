@@ -244,11 +244,14 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 /* ---------- faixa de logos institucionais ---------- */
 .instituicoes{background:#fff;border-top:1px solid var(--concreto-2);padding:32px 0;text-align:center}
 .instituicoes__titulo{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grafite-2);margin:0 0 18px}
-.instituicoes__lista{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;list-style:none;margin:0;padding:0}
+.instituicoes__lista{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:16px 20px;list-style:none;margin:0;padding:0}
 .instituicoes__lista img{max-height:48px;width:auto;opacity:.75;transition:opacity .15s}
-.instituicoes__nome{font-weight:600;font-size:.95rem;color:var(--grafite-2)}
+.instituicoes__placa{display:flex;flex-direction:column;justify-content:center;gap:4px;min-height:60px;min-width:196px;padding:12px 18px;border:1px solid var(--concreto-2);border-radius:var(--raio);background:var(--concreto);transition:border-color .15s,background .15s}
+.instituicoes__placa strong{font-size:1rem;font-weight:700;letter-spacing:.02em;color:var(--grafite);line-height:1.2}
+.instituicoes__placa small{font-size:.74rem;line-height:1.3;color:var(--grafite-2)}
+.instituicoes__lista a:hover .instituicoes__placa,.instituicoes__lista a:focus-visible .instituicoes__placa{border-color:var(--cobre);background:var(--cobre-claro)}
+.instituicoes__lista a:hover .instituicoes__placa strong{color:var(--cobre-esc)}
 .instituicoes__lista a{text-decoration:none}
-.instituicoes__lista a:hover .instituicoes__nome{color:var(--cobre)}
 .instituicoes__lista a:hover img,.instituicoes__lista a:focus-visible img{opacity:1}
 
 /* ---------- realizações ---------- */
@@ -346,3 +349,51 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__contatos .icon{color:var(--cobre);flex:none}
 a.assoc{text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
 a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
+
+/* ---------- guia prático: check-lists ---------- */
+.guia__protocolo{display:flex;align-items:flex-start;gap:10px;background:var(--cobre-claro);border-radius:var(--raio);padding:16px 20px;margin:0 0 28px;max-width:80ch;color:var(--grafite);font-size:.97rem}
+.guia__protocolo .icon{flex:none;margin-top:2px;color:var(--cobre)}
+.guia__indice{border:1px solid var(--concreto-2);border-radius:var(--raio);padding:18px 22px;margin:0 0 40px;background:#fff}
+.guia__indice-tit{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grafite-2);margin:0 0 10px}
+.guia__indice ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 10px}
+.guia__indice a{display:inline-block;font-size:.92rem;font-weight:500;text-decoration:none;color:var(--grafite);background:var(--concreto);border:1px solid var(--concreto-2);border-radius:999px;padding:6px 14px;transition:background .15s,border-color .15s,color .15s}
+.guia__indice a:hover,.guia__indice a:focus-visible{background:var(--cobre-claro);border-color:var(--cobre);color:var(--cobre-esc)}
+
+.checklist{background:#fff;border:1px solid var(--concreto-2);border-left:3px solid var(--concreto-2);border-radius:var(--raio);padding:26px 28px;margin:0 0 24px;scroll-margin-top:96px;transition:border-left-color .2s}
+.checklist--completo{border-left-color:var(--cobre)}
+.checklist__cab{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.checklist__cab h2{margin:0 0 8px;font-size:1.2rem}
+.checklist__contador{flex:none;margin:3px 0 0;font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--cobre);font-variant-numeric:tabular-nums}
+.checklist--completo .checklist__contador{color:var(--cobre-esc)}
+.checklist__resumo{color:var(--grafite-2);font-size:.97rem;margin:10px 0 0;max-width:78ch}
+.checklist__itens{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:2px;max-width:82ch}
+.checklist__itens label{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;margin:0 -12px;border-radius:10px;cursor:pointer;line-height:1.45;transition:background .12s}
+.checklist__itens label:hover{background:var(--concreto)}
+.checklist__itens input{flex:none;width:20px;height:20px;margin:1px 0 0;accent-color:var(--cobre);cursor:pointer}
+.checklist__itens input:checked + span{color:var(--grafite-2);text-decoration:line-through;text-decoration-color:var(--concreto-2);text-decoration-thickness:1.5px}
+.checklist__tabela{width:100%;max-width:460px;border-collapse:collapse;margin:22px 0 0;font-size:.94rem}
+.checklist__tabela caption{text-align:left;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grafite-2);padding-bottom:8px}
+.checklist__tabela th,.checklist__tabela td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--concreto-2)}
+.checklist__tabela th{font-size:.76rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--grafite-2);background:var(--concreto)}
+.checklist__tabela td:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+.checklist__notas{list-style:none;margin:20px 0 0;padding:14px 18px;background:var(--concreto);border-radius:10px;display:grid;gap:7px;font-size:.9rem;color:var(--grafite-2);max-width:80ch}
+.checklist__notas li{padding-left:16px;position:relative}
+.checklist__notas li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--cobre)}
+.checklist__acoes{margin:18px 0 0;min-height:1px}
+.botao-txt{background:none;border:0;padding:0;font:inherit;font-size:.86rem;font-weight:600;color:var(--grafite-2);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.botao-txt:hover{color:var(--cobre)}
+
+.aviso{border:1px solid var(--concreto-2);border-top:3px solid var(--cobre);border-radius:var(--raio);background:#fff;padding:22px 26px;margin:40px 0 0;max-width:82ch}
+.aviso p{margin:0;color:var(--grafite-2);font-size:.95rem}
+.aviso__fonte{margin-top:.7em !important;font-size:.86rem}
+
+@media (max-width:620px){.checklist{padding:22px 20px}.checklist__itens label{margin:0 -8px;padding:11px 8px}}
+
+@media print{
+  .nav,.instituicoes,.rodape,.guia__indice,.checklist__acoes,.checklist__contador{display:none !important}
+  .checklist{break-inside:avoid;border:0;border-top:1px solid #999;border-radius:0;padding:14px 0;margin:0}
+  .checklist__itens input{-webkit-appearance:none;appearance:none;width:14px;height:14px;border:1.3px solid #333;border-radius:3px}
+  .checklist__itens input:checked + span{text-decoration:none;color:#000}
+  .guia__protocolo{background:none;border:1px solid #999;padding:10px 12px}
+  .aviso{border:1px solid #999}
+}

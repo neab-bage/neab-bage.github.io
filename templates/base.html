@@ -45,6 +45,7 @@
               <li><a href="{{ root }}diretoria/gestoes/">Gestões anteriores</a></li>
             </ul>
           </li>
+          <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
           <li class="nav__item">
             <button class="nav__grupo{% if g_ativ %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Atividades{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
@@ -87,7 +88,10 @@
         {% for o in site.logos_institucionais.itens %}
         <li><a href="{{ o.url }}" target="_blank" rel="noopener">
           {% if o.tem_imagem %}<img src="{{ root }}static/img/logos/{{ o.arquivo }}" alt="{{ o.alt or o.nome }}" loading="lazy">
-          {% else %}<span class="instituicoes__nome">{{ o.nome }}</span>{% endif %}
+          {% else %}<span class="instituicoes__placa">
+            <strong>{{ o.nome }}</strong>
+            {% if o.descricao %}<small>{{ o.descricao }}</small>{% endif %}
+          </span>{% endif %}
         </a></li>
         {% endfor %}
       </ul>

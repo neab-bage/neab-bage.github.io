@@ -1,0 +1,14 @@
+Fotos dos associados, exibidas no quadro de associados e na ficha individual.
+
+Nome do arquivo: o nome do associado em minusculas, sem acentos, com hifens
+no lugar dos espacos. Extensoes aceitas: .jpg .jpeg .png .webp
+
+  Alexandro Gularte Schafer  ->  alexandro-gularte-schafer.jpg
+  Cecilia ...                ->  cecilia-....jpg
+
+Enquadramento: quadrado (1:1), rosto centralizado, pelo menos 600x600 px.
+A imagem e recortada em 1:1 pelo site, entao o que estiver fora do quadrado
+central sera cortado.
+
+Quem ainda nao enviou foto aparece com as iniciais sobre fundo cobre; o build
+avisa no terminal quantas fotos faltam.

@@ -1,0 +1,118 @@
+# ---------------------------------------------------------------------------
+# Check-lists do Guia Prático do NEAB.
+#
+# Fonte: Guia Prático NEAB — Check List, publicado pelo Núcleo.
+# Estes documentos reproduzem exigências de órgãos públicos (Geplan/Prefeitura
+# Municipal de Bagé, IPHAE/SEDAC, DAEB, Corpo de Bombeiros) e MUDAM. Ao revisar,
+# confira cada lista na fonte oficial e atualize o campo `atualizacao` abaixo.
+#
+# Campos de cada lista:
+#   id       - usado na âncora e na chave do navegador que guarda as marcações
+#   titulo   - como aparece no guia
+#   resumo   - uma frase explicando quando a lista se aplica (escrita para o site)
+#   orgao    - onde se protocola/para quem se destina (opcional)
+#   itens    - cada exigência, uma por linha
+#   notas    - observações do guia, fora da lista de marcar (opcional)
+#   tabela   - {colunas: [], linhas: [[]]} (opcional)
+# ---------------------------------------------------------------------------
+
+titulo: "Guia prático"
+chamada: "Check-lists de documentos"
+atualizacao: "Edição 2026"
+intro: >-
+  O NEAB reúne aqui as listas de documentos exigidos nos principais processos de
+  aprovação em Bagé. São as mesmas do <strong>Guia Prático do NEAB</strong>, agora em
+  formato que você pode ir marcando enquanto monta a pasta — as marcações ficam
+  guardadas no seu próprio navegador.
+nota_protocolo: >-
+  Os processos são protocolados na <strong>Geplan</strong>. A tramitação pode ser
+  acompanhada pelo número do protocolo no sistema da Prefeitura.
+aviso: >-
+  As exigências são definidas pelos órgãos competentes e podem mudar sem que o NEAB
+  seja comunicado. Confirme sempre na Geplan, no IPHAE ou no órgão responsável antes
+  de protocolar. Em caso de divergência, vale o que determina o órgão.
+
+listas:
+  - id: plano-diretor
+    titulo: "Informação do Plano Diretor"
+    orgao: "Geplan"
+    resumo: >-
+      Primeira etapa: a consulta que define o que o Plano Diretor permite no terreno.
+      A liberação dela é pré-requisito para a aprovação do projeto arquitetônico.
+    itens:
+      - "Requerimento preenchido e assinado pelo proprietário ou profissional"
+      - "Taxa paga"
+      - "02 vias do formulário do PD preenchidas pelo profissional"
+      - "01 via da Matrícula do Registro de Imóveis atualizada (menos de 30 dias de emissão)"
+
+  - id: projeto-arquitetonico
+    titulo: "Projeto arquitetônico"
+    orgao: "Geplan"
+    resumo: "Aprovação do projeto, depois de liberada a Informação do Plano Diretor."
+    itens:
+      - "Requerimento preenchido e taxa paga"
+      - "Informação do Plano Diretor liberada"
+      - "Termo de Aprovação do DAEB"
+      - "Certificado de Aprovação de PPCI (quando comercial/institucional ou multifamiliar)"
+      - "02 vias do projeto arquitetônico"
+      - "02 vias de RRT ou ART"
+      - "03 vias do Memorial Descritivo"
+    notas:
+      - "Apresentar todos os processos em pasta."
+      - "Cores do projeto: existente em <strong>azul</strong>, a construir em <strong>vermelho</strong>, a demolir em <strong>amarelo</strong>."
+
+  - id: iphae
+    titulo: "Protocolo no IPHAE"
+    orgao: "IPHAE/SEDAC"
+    resumo: >-
+      Imóveis tombados ou situados em área de entorno de bem tombado. Resumo da
+      Instrução Normativa SEDAC/IPHAE nº 04/2026.
+    itens:
+      - "Matrícula atualizada do imóvel"
+      - "ART ou RRT"
+      - "Projeto arquitetônico com planta de situação e localização, planta de cobertura, plantas baixas, cortes, fachadas, e indicação de demolir, construir e conservar"
+      - "Memorial descritivo, com descrição de materiais, técnicas e cores"
+      - "Memorial justificativo"
+      - "Perfil da testada da quadra onde está inserido o imóvel"
+      - "Documentação fotográfica com planta esquemática com a indicação do ponto de tomada e ângulo da foto"
+      - "Maquete eletrônica"
+      - "Estudo cromático"
+    notas:
+      - "Via digital para certidões: <a href=\"mailto:geplan@bage.rs.gov.br\">geplan@bage.rs.gov.br</a>, com nome do proprietário e endereço no corpo do e-mail."
+
+  - id: equipamentos-publicitarios
+    titulo: "Equipamentos publicitários"
+    orgao: "Geplan"
+    resumo: "Letreiros, painéis e demais veículos publicitários."
+    itens:
+      - "Planta de situação e localização"
+      - "Projeto de equipamento publicitário, contendo indicação do local onde será instalado com respectivo detalhamento"
+      - "Memorial descritivo com descrição textual dos materiais do equipamento proposto"
+      - "Maquete eletrônica com o veículo publicitário inserido no projeto"
+      - "Perfil da testada da quadra"
+      - "Estudo cromático"
+
+  - id: inspecao-predial
+    titulo: "Laudo de Inspeção Predial"
+    resumo: >-
+      Certidão de Inspeção Predial. A idade da construção conta a partir da carta de
+      habite-se ou de outra evidência de ocupação, e define a periodicidade do laudo.
+    itens:
+      - "Edifícios multifamiliares, públicos, uso misto (residencial e comercial), industriais, institucionais e de lazer (de grande porte ou com aglomerações humanas)"
+      - "Laudo de Inspeção Predial e alvará dos bombeiros"
+    tabela:
+      titulo: "Periodicidade do laudo"
+      colunas: ["Idade da construção", "Laudo a cada"]
+      linhas:
+        - ["10 a 20 anos", "10 anos"]
+        - ["20 a 30 anos", "05 anos"]
+        - ["Acima de 30 anos", "03 anos"]
+
+  - id: obras-inacabadas
+    titulo: "Obras inacabadas, irregulares ou abandonadas"
+    resumo: "Exigências específicas para regularizar obras paradas ou sem licença."
+    itens:
+      - "Obras inclusas, inacabadas, irregulares ou abandonadas devem apresentar a Certidão de Inspeção Predial"
+      - "É obrigatória a emissão da ART (Anotação de Responsabilidade Técnica — CREA) ou da RRT (Registro de Responsabilidade Técnica — CAU)"
+      - "O laudo de inspeção deve ser elaborado por engenheiro ou arquiteto devidamente registrado e com situação ativa no respectivo Conselho Profissional"
+      - "O laudo técnico deve contemplar os aspectos estruturais da edificação, conforme as normas técnicas vigentes da ABNT"

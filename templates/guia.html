@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<header class="cab">
+  <div class="wrap">
+    <p class="etiqueta">{{ guia.chamada }}</p>
+    <h1>{{ guia.titulo }}</h1>
+    <p class="cab__txt">{{ guia.intro | safe }}</p>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="wrap">
+
+    {% if guia.nota_protocolo %}
+    <p class="guia__protocolo">
+      {{ i.icon("info", 20) }}
+      <span>{{ guia.nota_protocolo | safe }}</span>
+    </p>
+    {% endif %}
+
+    <nav class="guia__indice" aria-label="Índice dos check-lists">
+      <p class="guia__indice-tit">Nesta página</p>
+      <ul>
+        {% for l in guia.listas %}
+        <li><a href="#{{ l.id }}">{{ l.titulo }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% for l in guia.listas %}
+    <article class="checklist" id="{{ l.id }}" data-lista="{{ l.id }}">
+      <div class="checklist__cab">
+        <div>
+          <h2>{{ l.titulo }}</h2>
+          {% if l.orgao %}<p class="etiqueta-peq etiqueta-peq--neutra">{{ l.orgao }}</p>{% endif %}
+        </div>
+        <p class="checklist__contador" data-contador hidden></p>
+      </div>
+
+      {% if l.resumo %}<p class="checklist__resumo">{{ l.resumo | safe }}</p>{% endif %}
+
+      <ul class="checklist__itens">
+        {% for item in l.itens %}
+        <li>
+          <label>
+            <input type="checkbox" data-item="{{ loop.index0 }}">
+            <span>{{ item | safe }}</span>
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {% if l.tabela %}
+      <table class="checklist__tabela">
+        {% if l.tabela.titulo %}<caption>{{ l.tabela.titulo }}</caption>{% endif %}
+        <thead><tr>{% for c in l.tabela.colunas %}<th scope="col">{{ c }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for linha in l.tabela.linhas %}
+          <tr>{% for c in linha %}<td>{{ c }}</td>{% endfor %}</tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+
+      {% if l.notas %}
+      <ul class="checklist__notas">
+        {% for n in l.notas %}<li>{{ n | safe }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      <p class="checklist__acoes">
+        <button type="button" class="botao-txt" data-limpar hidden>Desmarcar tudo</button>
+      </p>
+    </article>
+    {% endfor %}
+
+    <aside class="aviso">
+      <p><strong>Antes de protocolar, confirme.</strong> {{ guia.aviso | safe }}</p>
+      {% if guia.atualizacao %}<p class="aviso__fonte">Fonte: Guia Prático do NEAB — {{ guia.atualizacao }}.</p>{% endif %}
+    </aside>
+
+  </div>
+</section>
+
+<script>
+(function () {
+  var PREFIXO = 'neab-guia:';
+  function ler(chave) { try { return localStorage.getItem(chave); } catch (e) { return null; } }
+  function gravar(chave, valor) { try { localStorage.setItem(chave, valor); } catch (e) {} }
+  function apagar(chave) { try { localStorage.removeItem(chave); } catch (e) {} }
+
+  document.querySelectorAll('.checklist[data-lista]').forEach(function (bloco) {
+    var id = bloco.dataset.lista;
+    var caixas = Array.prototype.slice.call(bloco.querySelectorAll('input[type=checkbox][data-item]'));
+    var contador = bloco.querySelector('[data-contador]');
+    var limpar = bloco.querySelector('[data-limpar]');
+    if (!caixas.length) return;
+
+    function chave(caixa) { return PREFIXO + id + ':' + caixa.dataset.item; }
+
+    function atualizar() {
+      var marcados = caixas.filter(function (c) { return c.checked; }).length;
+      bloco.classList.toggle('checklist--completo', marcados === caixas.length);
+      if (contador) {
+        contador.hidden = marcados === 0;
+        contador.textContent = marcados === caixas.length
+          ? 'Tudo reunido — ' + marcados + ' de ' + caixas.length
+          : marcados + ' de ' + caixas.length;
+      }
+      if (limpar) limpar.hidden = marcados === 0;
+    }
+
+    caixas.forEach(function (caixa) {
+      if (ler(chave(caixa)) === '1') caixa.checked = true;
+      caixa.addEventListener('change', function () {
+        if (caixa.checked) gravar(chave(caixa), '1'); else apagar(chave(caixa));
+        atualizar();
+      });
+    });
+
+    if (limpar) limpar.addEventListener('click', function () {
+      caixas.forEach(function (caixa) { caixa.checked = false; apagar(chave(caixa)); });
+      atualizar();
+    });
+
+    atualizar();
+  });
+})();
+</script>
+{% endblock %}

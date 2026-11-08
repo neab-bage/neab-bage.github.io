@@ -47,6 +47,17 @@
         <li><a href="{{ root }}beneficios/">Benefícios e convênios<small>Vantagens para quem é associado</small></a></li>
       </ul>
     </nav>
+    {% if guia %}
+    <nav class="eixo" aria-label="Guia prático">
+      <h3 class="eixo__titulo">{{ i.icon("check", 18) }}Guia prático</h3>
+      <ul>
+        {% for l in guia.listas[:3] %}
+        <li><a href="{{ root }}guia/#{{ l.id }}">{{ l.titulo }}<small>{{ l.itens | length }} documentos</small></a></li>
+        {% endfor %}
+        <li><a href="{{ root }}guia/">Todos os check-lists<small>O que levar em cada processo</small></a></li>
+      </ul>
+    </nav>
+    {% endif %}
     <nav class="eixo" aria-label="Transparência">
       <h3 class="eixo__titulo">{{ i.icon("balanca", 18) }}Transparência</h3>
       <ul>

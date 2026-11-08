@@ -1,0 +1,22 @@
+Logotipos institucionais da faixa "Articulação institucional" (rodapé de todas as páginas).
+
+Nomes esperados pelo build (data/site.yml -> logos_institucionais):
+
+  confea.png    Confea  - Conselho Federal de Engenharia e Agronomia
+  crea-rs.png   CREA-RS - Conselho Regional de Engenharia e Agronomia do RS
+  cau-rs.png    CAU/RS  - Conselho de Arquitetura e Urbanismo do RS
+  mutua.png     Mutua   - Caixa de Assistencia dos Profissionais do Crea
+
+Requisitos:
+  - fundo transparente (PNG com alfa ou SVG); a faixa e branca e um fundo
+    branco chapado deixa uma caixa visivel em volta da marca
+  - altura util de 48 px na tela; forneca pelo menos 144 px de altura (3x)
+    para telas de alta densidade
+  - use os arquivos oficiais do manual de marca de cada entidade, sem
+    redesenhar, recortar ou recolorir
+
+Enquanto um arquivo nao existir, o build avisa no terminal e a faixa mostra
+uma placa com a sigla e o nome por extenso no lugar do logotipo.
+
+Sao marcas registradas de terceiros: confirme com cada entidade a autorizacao
+de uso antes de publicar.

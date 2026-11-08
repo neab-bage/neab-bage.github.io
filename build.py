@@ -136,6 +136,14 @@ def carregar_gestoes():
     return gestoes
 
 
+def carregar_guia():
+    """Lê data/guia.yml — os check-lists do Guia Prático do NEAB."""
+    arq = ROOT / "data" / "guia.yml"
+    if not arq.exists():
+        return None
+    return yaml.safe_load(arq.read_text(encoding="utf-8")) or None
+
+
 def carregar_formacao():
     """Lê data/formacao.yml e agrupa cursos e palestras por ano, do mais recente ao mais antigo."""
     arq = ROOT / "data" / "formacao.yml"
@@ -234,6 +242,7 @@ def gerar():
     noticias = carregar_noticias()
     gestoes = carregar_gestoes()
     formacao = carregar_formacao()
+    guia = carregar_guia()
     associados = carregar_associados()
     hoje = dt.datetime.now(TZ).date()
     ag_prox, ag_real = carregar_agenda(hoje)
@@ -256,7 +265,7 @@ def gerar():
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, associados=associados,
+            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, associados=associados,
             agenda_prox=ag_prox, agenda_real=ag_real, agenda_home=ag_prox[:2],
             root=root, ano=ano, **ctx)
         saida = DIST / destino
@@ -275,6 +284,8 @@ def gerar():
         render("associados_area.html", f"associados/{g['slug']}/index.html", active="associados",
                title=g["area"], grupo=g)
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
+    if guia:
+        render("guia.html", "guia/index.html", active="guia", title=guia.get("titulo", "Guia prático"))
     render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")
     render("parceiros.html", "beneficios/index.html", active="beneficios", title="Benefícios e convênios")
