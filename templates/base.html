@@ -45,7 +45,6 @@
               <li><a href="{{ root }}diretoria/gestoes/">Gestões anteriores</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
           <li class="nav__item">
             <button class="nav__grupo{% if g_ativ %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Atividades{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
@@ -69,6 +68,7 @@
               <li><a href="{{ root }}transparencia/"{% if active == "transparencia" %} aria-current="page"{% endif %}>Prestação de contas</a></li>
             </ul>
           </li>
+          <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
           <li class="nav__item"><a href="{{ root }}contato/"{% if active == "contato" %} aria-current="page"{% endif %}>Contato</a></li>
           <li class="nav__item"><a class="nav__cta" href="{{ root }}associe-se/">Associe-se</a></li>
         </ul>
