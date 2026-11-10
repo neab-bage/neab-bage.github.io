@@ -28,7 +28,7 @@
     <li>{{ i.icon("telefone", 20) }}<span>{{ pessoa.telefone }}</span></li>
     {% endif %}
     {% if pessoa.site %}
-    <li>{{ i.icon("externo", 20) }}<a href="{{ pessoa.site }}" target="_blank" rel="noopener">{{ pessoa.site }}</a></li>
+    <li>{{ i.icon("externo", 20) }}<a href="{{ pessoa.site_url or pessoa.site }}" target="_blank" rel="noopener">{{ pessoa.site_rotulo or pessoa.site }}</a></li>
     {% endif %}
   </ul>
   <p class="nota">Para corrigir, acrescentar ou retirar dados desta página, fale com o núcleo pela

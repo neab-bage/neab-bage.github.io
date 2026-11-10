@@ -57,11 +57,12 @@ grupos:
         registro: "CAU A224200-1"
         email: ""
         telefone: "(53) 99966-4786"
+        site: "arvenaarquitetura.com.br"
         autoriza_contato: true
       - nome: "Dineu Resende Borba Neto"
         registro: "CAU A45078-2"
         email: "dineu@borbaneto.com.br"
-        telefone: "(53) 3241-8342"
+        telefone: "(53) 3241-8342 / (53) 99103-6100"
         autoriza_contato: true
       - nome: "Diogo Suñé Pfeifer Sant'Anna"
         registro: ""
@@ -73,12 +74,17 @@ grupos:
         email: "eliza.antochevis@gmail.com"
         telefone: "(53) 99164-7857"
         autoriza_contato: true
+      - nome: "Eulália de Souza Anselmo"
+        registro: ""
+        email: ""
+        telefone: "(53) 99945-4981"
+        autoriza_contato: true
       - nome: "Fernanda Vieira Barasuol"
         registro: ""
         email: "nanda.barasuol@gmail.com"
         telefone: "(53) 99972-8245"
         autoriza_contato: true
-      - nome: "Gabriela Schardosim de S. Brandão Silveira"
+      - nome: "Gabriela S. de S. Brandão Silveira"
         registro: ""
         email: "gabrielassbrandao@hotmail.com"
         telefone: "(53) 99965-8885"
@@ -88,20 +94,36 @@ grupos:
         email: "arquitetagiovanasilveira@hotmail.com"
         telefone: "(53) 99945-3623"
         autoriza_contato: true
-      - nome: "Gladis Carolina Barcellos Saavedra (Neneca)"
+      - nome: "Gladis Barcellos Saavedra (Neneca)"
         registro: ""
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 99973-5765"
+        autoriza_contato: true
+      - nome: "Juliana de Oliveira Taschetto"
+        registro: ""
+        email: ""
+        telefone: "(53) 99123-6177"
+        autoriza_contato: true
+      - nome: "Luciana Grillo Suñé"
+        registro: ""
+        email: ""
+        telefone: "(51) 99101-5854"
+        autoriza_contato: true
       - nome: "Luiza Maria Saraiva Cardoso"
         registro: "CAU A74809-9"
         email: "contato@luizacardoso.com"
         telefone: "(53) 99957-5894"
         autoriza_contato: true
-      - nome: "Marcelo Goskes"
+      - nome: "Magali Nocchi Collares Gonçalves"
+        registro: ""
+        email: "atico.arq.br@gmail.com"
+        telefone: "(53) 99971-3568"
+        autoriza_contato: true
+      - nome: "Marcelo Abrantes Goskes"
         registro: ""
         email: "marcelo@goskes.com.br"
         telefone: "(21) 99926-1209"
+        site: "www.goskes.com.br"
         autoriza_contato: true
       - nome: "Marcus Flávio Jardim Fernandes"
         registro: ""
@@ -127,11 +149,22 @@ grupos:
         registro: ""
         email: "arvenaarquitetura@gmail.com"
         telefone: "(53) 99925-4737"
+        site: "arvenaarquitetura.com.br"
         autoriza_contato: true
       - nome: "Nubia Margot Menezes Jardim"
         registro: ""
         email: "arqnubiamargot_asm@yahoo (incompleto no guia)"
         telefone: "(53) 3242-7399"
+        autoriza_contato: true
+      - nome: "Rachel Beckman Morgado"
+        registro: ""
+        email: ""
+        telefone: "(53) 99931-1009"
+        autoriza_contato: true
+      - nome: "Sandro Martinez Conceição"
+        registro: ""
+        email: ""
+        telefone: "(53) 99959-6538"
         autoriza_contato: true
       - nome: "Taís de Oliveira Maciel"
         registro: ""
@@ -142,30 +175,35 @@ grupos:
         registro: ""
         email: "arvenaarquitetura@gmail.com"
         telefone: "(53) 99947-6945"
+        site: "arvenaarquitetura.com.br"
         autoriza_contato: true
       - nome: "Victória Vieira"
         registro: ""
         email: "victoria-vieira@hotmail.com"
         telefone: "(53) 99996-9797"
         autoriza_contato: true
-
   - area: "Engenharia Civil"
     pessoas:
       - nome: "Adalberto Gularte Schäfer"
         registro: ""
         email: ""
-        telefone: "(53) 9957-0717"
+        telefone: "(53) 99957-0717"
         autoriza_contato: true
       - nome: "Alexandro Gularte Schäfer"
         registro: ""
         email: "alschafer@gmail.com"
         telefone: "(53) 99951-9908"
         autoriza_contato: true
-      - nome: "Aliane Pedroso da Croce"
+      - nome: "Aliane da Croce"
         registro: "CREA-RS 234118"
         email: ""
-        telefone: ""
-        autoriza_contato: false
+        telefone: "(53) 99942-2828"
+        autoriza_contato: true
+      - nome: "Antônio Luiz Arla da Silva"
+        registro: ""
+        email: ""
+        telefone: "(53) 3311-0775 / (53) 99945-4455"
+        autoriza_contato: true
       - nome: "Bruno Dias Robaina"
         registro: ""
         email: "bruno@engenhariamatriz.com.br"
@@ -176,10 +214,20 @@ grupos:
         email: "engenheiradanielly@gmail.com"
         telefone: "(53) 99103-4538"
         autoriza_contato: true
+      - nome: "Eduardo Silva Mendes"
+        registro: ""
+        email: ""
+        telefone: "(53) 99994-0960"
+        autoriza_contato: true
       - nome: "Fábio Burgo da Silva"
         registro: ""
         email: "fabioburgo21@gmail.com"
         telefone: "(53) 98119-1765"
+        autoriza_contato: true
+      - nome: "Fidler Seixas Albano Gusmão"
+        registro: ""
+        email: ""
+        telefone: "(53) 3247-5459 / (53) 99972-0890"
         autoriza_contato: true
       - nome: "Glaucea Pereira da Silva"
         registro: ""
@@ -194,7 +242,7 @@ grupos:
       - nome: "Jerônimo Bazerque Pereira"
         registro: "CREA-RS 207849"
         email: ""
-        telefone: "(53) 9909-7753"
+        telefone: "(53) 99909-7753"
         autoriza_contato: true
       - nome: "Katia Helena Ubal de Rodrigues"
         registro: ""
@@ -206,10 +254,15 @@ grupos:
         email: "marcio.marun@terra.com.br"
         telefone: "(53) 3247-6000 · (53) 99972-3012"
         autoriza_contato: true
+      - nome: "Marcus Flavius da Nova Menezes"
+        registro: ""
+        email: ""
+        telefone: "(53) 99972-4212"
+        autoriza_contato: true
       - nome: "Maurício Fernandes Fara"
         registro: "CREA-RS 239393"
         email: ""
-        telefone: "(53) 9977-0255"
+        telefone: "(53) 99977-0255"
         autoriza_contato: true
       - nome: "Muriéle de Oliveira D’Avila"
         registro: ""
@@ -226,19 +279,38 @@ grupos:
         email: "rafaeldelabary@hotmail.com"
         telefone: "(53) 99162-2812"
         autoriza_contato: true
+      - nome: "Rafael Evaldt Hendler"
+        registro: ""
+        email: ""
+        telefone: "(53) 99996-9697"
+        autoriza_contato: true
+      - nome: "Reinaldo Camargo de Lima"
+        registro: ""
+        email: "engreinaldocl@gmail.com"
+        telefone: "(53) 99961-4565"
+        autoriza_contato: true
       - nome: "Roberto Guadalupe Leite Seixas"
         registro: ""
         email: "concrefort.rs@hotmail.com"
         telefone: "(53) 99968-5960"
+        autoriza_contato: true
+      - nome: "Ronald Rolin de Moura"
+        registro: ""
+        email: ""
+        telefone: "(53) 99976-2639"
         autoriza_contato: true
       - nome: "Volmir Silveira"
         registro: ""
         email: "volmireng@gmail.com"
         telefone: "(53) 99966-9494"
         autoriza_contato: true
-
   - area: "Engenharia de Segurança do Trabalho"
     pessoas:
+      - nome: "Anastácia Peres Isasmendi"
+        registro: ""
+        email: "anastaciaisasmendi@gmail.com"
+        telefone: "(53) 99169-2749"
+        autoriza_contato: true
       - nome: "Danielly Dias Ferreira"
         registro: ""
         email: "engenheiradanielly@gmail.com"
@@ -269,25 +341,44 @@ grupos:
         email: "construtorahendler@hotmail.com"
         telefone: "(53) 99996-9697"
         autoriza_contato: true
-
-  - area: "Engenharia Elétrica"
+      - nome: "Reinaldo Camargo de Lima"
+        registro: ""
+        email: "engreinaldocl@gmail.com"
+        telefone: "(53) 99961-4565"
+        autoriza_contato: true
+  - area: "Engenharia Elétrica — Engenharia de Energia"
     pessoas:
+      - nome: "Caíque Nunes Maria Santana"
+        registro: ""
+        email: ""
+        telefone: "(53) 99968-1158"
+        autoriza_contato: true
       - nome: "Douglas de Tarso da Silva"
         registro: ""
         email: "eng.douglas.tarso.dts@outlook.com"
         telefone: "(12) 99728-5083"
         autoriza_contato: true
+  - area: "Engenharia Química"
+    pessoas:
+      - nome: "Anastácia Peres Isasmendi"
+        registro: ""
+        email: "anastaciaisasmendi@gmail.com"
+        telefone: "(53) 99169-2749"
+        autoriza_contato: true
+  - area: "Engenharia Mecânica"
+    pessoas:
       - nome: "Jorge Dias Dias da Costa"
         registro: ""
         email: "jddiasdacosta@gmail.com"
         telefone: "(53) 98112-7532"
         autoriza_contato: true
-
-  - area: "Engenharia Mecânica"
-    pessoas:
       - nome: "Luciano Vacilotto"
         registro: ""
         email: "luciano_vacilotto@hotmail.com"
         telefone: "(53) 3241-1140 · (53) 98121-2025"
         autoriza_contato: true
-
+      - nome: "Reinaldo Camargo de Lima"
+        registro: ""
+        email: "engreinaldocl@gmail.com"
+        telefone: "(53) 99961-4565"
+        autoriza_contato: true

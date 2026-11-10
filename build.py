@@ -104,6 +104,10 @@ def carregar_associados():
                     break
             p["foto_arquivo"] = achou
             p["slug"] = s
+            if p.get("site"):
+                # o guia traz os endereços sem esquema; o href precisa dele, o rótulo não
+                p["site_rotulo"] = re.sub(r"^https?://", "", p["site"]).rstrip("/")
+                p["site_url"] = p["site"] if "://" in p["site"] else "https://" + p["site"]
             partes = [x for x in p["nome"].split() if len(x) > 2]
             p["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else p["nome"][:2].upper()
             if not achou:
@@ -115,6 +119,9 @@ def carregar_associados():
             reg["areas"].append(g["area"])
             if p.get("registro") and not reg.get("registro"):
                 reg["registro"] = p["registro"]
+            for campo in ("site", "site_url", "site_rotulo", "email", "telefone"):
+                if p.get(campo) and not reg.get(campo):
+                    reg[campo] = p[campo]
             p["ficha"] = p["slug"]
     dados["pessoas"] = sorted(pessoas.values(), key=lambda p: p["slug"])
     if faltando:
