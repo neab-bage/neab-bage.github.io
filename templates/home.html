@@ -37,6 +37,7 @@
         <li><a href="{{ root }}agenda/">Agenda<small>Próximas atividades e realizadas</small></a></li>
         <li><a href="{{ root }}formacao/">Cursos e formação<small>Palestras, cursos e visitas técnicas</small></a></li>
         <li><a href="{{ root }}noticias/">Notícias<small>O que o núcleo tem feito</small></a></li>
+        {% if programa %}<li><a href="{{ root }}universo-das-engenharias/">{{ programa.titulo }}<small>{{ programa.dia }}, {{ programa.horario }} · {{ programa.frequencia }}</small></a></li>{% endif %}
       </ul>
     </nav>
     <nav class="eixo" aria-label="Associados">

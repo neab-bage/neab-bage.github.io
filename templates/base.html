@@ -33,7 +33,7 @@
       <nav class="nav" id="menu" aria-label="Principal">
         <ul class="nav__lista">
           {% set g_nucleo = active in ["neab","atuacao","diretoria"] %}
-          {% set g_ativ   = active in ["agenda","formacao","noticias"] %}
+          {% set g_ativ   = active in ["agenda","formacao","noticias","programa"] %}
           {% set g_assoc  = active in ["associe","associados","beneficios"] %}
           {% set g_transp = active in ["documentos","transparencia"] %}
           <li class="nav__item">
@@ -51,6 +51,7 @@
               <li><a href="{{ root }}agenda/"{% if active == "agenda" %} aria-current="page"{% endif %}>Agenda</a></li>
               <li><a href="{{ root }}formacao/"{% if active == "formacao" %} aria-current="page"{% endif %}>Cursos e formação</a></li>
               <li><a href="{{ root }}noticias/"{% if active == "noticias" %} aria-current="page"{% endif %}>Notícias</a></li>
+              <li><a href="{{ root }}universo-das-engenharias/"{% if active == "programa" %} aria-current="page"{% endif %}>Universo das Engenharias</a></li>
             </ul>
           </li>
           <li class="nav__item">

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<header class="cab">
+  <div class="wrap">
+    <p class="etiqueta">{{ programa.chamada }}</p>
+    <h1>{{ programa.titulo }}</h1>
+    <p class="cab__txt">{{ programa.resumo }}</p>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="wrap">
+
+    <div class="programa__cartao">
+      <p class="programa__quando">
+        {{ i.icon("radio", 22) }}
+        <span><strong>{{ programa.dia }}, {{ programa.horario }}</strong><br>
+        {{ programa.emissora }} · {{ programa.frequencia }}</span>
+      </p>
+      {% if programa.link %}
+      <a class="botao botao--linha" href="{{ programa.link }}" target="_blank" rel="noopener">
+        {{ programa.link_rotulo or "Ouvir ao vivo" }}{{ i.icon("externo", 18) }}
+      </a>
+      {% endif %}
+    </div>
+
+    <div class="prosa">
+      {% for p in programa.texto %}<p>{{ p }}</p>{% endfor %}
+    </div>
+
+    {% if programa.apresentadores %}
+    <h2 class="programa__tit">Apresentação</h2>
+    <ul class="assoc-lista assoc-lista--curta">
+      {% for a in programa.apresentadores %}
+      <li class="assoc">
+        {% if a.foto_arquivo %}
+        <img class="assoc__foto" src="{{ root }}static/img/associados/{{ a.foto_arquivo }}" alt="" width="800" height="800" loading="lazy">
+        {% else %}
+        <span class="assoc__foto assoc__foto--vazia" aria-hidden="true">{{ a.iniciais }}</span>
+        {% endif %}
+        <span class="assoc__dados">
+          {% if a.ficha %}
+          <a class="assoc__nome" href="{{ root }}associados/{{ a.ficha }}/">{{ a.chamado or a.nome }}</a>
+          {% else %}
+          <span class="assoc__nome">{{ a.chamado or a.nome }}</span>
+          {% endif %}
+          <small class="assoc__registro">{{ a.tratamento }}</small>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if programa.edicoes %}
+    <h2 class="programa__tit">Edições</h2>
+    <ul class="formacao">
+      {% for e in programa.edicoes %}
+      <li>
+        <div class="formacao__cab">
+          <span class="formacao__data">{{ e.data_br }}</span>
+        </div>
+        <h3>{{ e.tema }}</h3>
+        {% if e.convidados %}<p class="formacao__min">{{ i.icon("pessoas", 18) }}{{ e.convidados }}</p>{% endif %}
+        {% if e.resumo %}<p>{{ e.resumo }}</p>{% endif %}
+        {% if e.link %}<p class="formacao__meta"><a href="{{ e.link }}" target="_blank" rel="noopener">Ouvir esta edição{{ i.icon("externo", 16) }}</a></p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="programa__nota">As edições passam a ser registradas aqui à medida que forem ao ar.</p>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

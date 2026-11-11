@@ -151,6 +151,30 @@ def carregar_guia():
     return yaml.safe_load(arq.read_text(encoding="utf-8")) or None
 
 
+def carregar_programa(associados):
+    """Lê data/programa.yml e liga cada apresentador à sua ficha no quadro de associados."""
+    arq = ROOT / "data" / "programa.yml"
+    if not arq.exists():
+        return None
+    d = yaml.safe_load(arq.read_text(encoding="utf-8")) or None
+    if not d:
+        return None
+    fichas = {p["slug"]: p for p in (associados or {}).get("pessoas", [])}
+    for a in d.get("apresentadores") or []:
+        s = slug(a["nome"])
+        ficha = fichas.get(s)
+        a["ficha"] = s if ficha else None
+        a["foto_arquivo"] = ficha.get("foto_arquivo") if ficha else None
+        partes = [x for x in a["nome"].split() if len(x) > 2]
+        a["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else a["nome"][:2].upper()
+    eds = d.get("edicoes") or []
+    for e in eds:
+        if e.get("data"):
+            e["data_br"] = data_br(e["data"])
+    eds.sort(key=lambda e: e.get("data") or dt.date.min, reverse=True)
+    return d
+
+
 def carregar_formacao():
     """Lê data/formacao.yml e agrupa cursos e palestras por ano, do mais recente ao mais antigo."""
     arq = ROOT / "data" / "formacao.yml"
@@ -251,6 +275,7 @@ def gerar():
     formacao = carregar_formacao()
     guia = carregar_guia()
     associados = carregar_associados()
+    programa = carregar_programa(associados)
     hoje = dt.datetime.now(TZ).date()
     ag_prox, ag_real = carregar_agenda(hoje)
 
@@ -272,7 +297,7 @@ def gerar():
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, associados=associados,
+            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, programa=programa, associados=associados,
             agenda_prox=ag_prox, agenda_real=ag_real, agenda_home=ag_prox[:2],
             root=root, ano=ano, **ctx)
         saida = DIST / destino
@@ -293,6 +318,9 @@ def gerar():
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     if guia:
         render("guia.html", "guia/index.html", active="guia", title=guia.get("titulo", "Guia prático"))
+    if programa:
+        render("programa.html", "universo-das-engenharias/index.html", active="programa",
+               title=programa.get("titulo", "Programa de rádio"))
     render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")
     render("parceiros.html", "beneficios/index.html", active="beneficios", title="Benefícios e convênios")

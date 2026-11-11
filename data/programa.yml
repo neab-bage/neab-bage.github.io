@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# Universo das Engenharias — programa semanal de rádio apresentado por associados.
+#
+# Para registrar uma edição, acrescente um item em `edicoes` (mais recente primeiro):
+#   - data: 2026-11-18
+#     tema: "Drenagem urbana"
+#     convidados: "Fulano de Tal, engenheiro da Prefeitura"
+#     resumo: "O que acontece com a água da chuva depois que ela sai da rua."
+#     link: "https://..."          # opcional: gravação ou matéria
+# Os campos convidados, resumo e link são opcionais.
+# ---------------------------------------------------------------------------
+
+titulo: "Universo das Engenharias"
+chamada: "Programa semanal de rádio"
+emissora: "Pop Rock FM"
+frequencia: "98.1 FM"
+dia: "Quartas-feiras"
+horario: "11h às 12h"
+link: "https://poprockbage.com.br/programacao/universo-das-engenharias"
+link_rotulo: "Página do programa na emissora"
+
+apresentadores:
+  - {nome: "Antônio Luiz Arla da Silva", tratamento: "Eng. Civil", chamado: "Antônio Arla"}
+  - {nome: "Márcio Marun Gomes", tratamento: "Eng. Civil", chamado: "Márcio Marun"}
+
+resumo: >-
+  Um programa sobre a engenharia que está no cotidiano das pessoas — muitas vezes
+  imperceptível, sempre essencial.
+
+texto:
+  - >-
+    O Universo das Engenharias mostra como a engenharia está presente no dia a dia,
+    muitas vezes de forma imperceptível, mas sempre essencial para o desenvolvimento da
+    sociedade. A cada edição, aborda temas relevantes para a cidade e a região, com
+    debates qualificados e entrevistas com especialistas, gestores e profissionais.
+  - >-
+    Da infraestrutura urbana à tecnologia que passa despercebida dentro de casa, cada
+    edição parte de um tema concreto para mostrar a engenharia que existe por trás dele.
+  - >-
+    O programa funciona como ponte entre quem estuda, quem produz e quem usa, num formato
+    que dispensa o jargão técnico sem abrir mão do rigor.
+
+edicoes: []

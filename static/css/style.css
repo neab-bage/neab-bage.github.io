@@ -397,3 +397,15 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
   .guia__protocolo{background:none;border:1px solid #999;padding:10px 12px}
   .aviso{border:1px solid #999}
 }
+
+/* ---------- programa de rádio ---------- */
+.programa__cartao{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;background:var(--preto);color:#F2EEE9;border-radius:var(--raio);padding:26px 30px;margin:0 0 34px}
+.programa__quando{display:flex;align-items:center;gap:14px;margin:0;font-size:1.02rem;line-height:1.45;color:#CFC9C0}
+.programa__quando .icon{flex:none;color:var(--cobre)}
+.programa__quando strong{color:#fff;font-size:1.12rem;letter-spacing:.01em}
+.botao--linha{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:8px}
+.botao--linha:hover,.botao--linha:focus-visible{background:var(--cobre);border-color:var(--cobre);color:#fff}
+.programa__tit{margin:40px 0 0;font-size:1.2rem;padding-bottom:10px;border-bottom:1px solid var(--concreto-2)}
+.assoc-lista--curta{grid-template-columns:repeat(auto-fill,minmax(176px,1fr));max-width:400px}
+.programa__nota{margin:18px 0 0;color:var(--grafite-2);font-size:.95rem}
+@media (max-width:620px){.programa__cartao{padding:22px;gap:18px}}
