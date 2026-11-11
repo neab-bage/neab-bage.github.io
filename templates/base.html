@@ -133,6 +133,11 @@
     </div>
     <div class="wrap rodape__base">
       <p>© {{ ano }} {{ site.nome_longo }}</p>
+      {% if site.sobre_site.responsavel %}
+      <p class="rodape__credito">Site desenvolvido e mantido por {{ site.sobre_site.responsavel }} ·
+        <a href="{{ root }}sobre/">Sobre o site</a>{% if site.sobre_site.doi %} ·
+        <a href="https://doi.org/{{ site.sobre_site.doi }}" target="_blank" rel="noopener">DOI {{ site.sobre_site.doi }}</a>{% endif %}</p>
+      {% endif %}
     </div>
   </footer>
   <script src="{{ root }}static/js/main.js" defer></script>

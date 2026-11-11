@@ -210,6 +210,9 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .rodape__social{display:inline-flex;align-items:center;gap:8px;margin-top:16px;border-bottom:none !important;font-size:.94rem}
 .rodape__base{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);margin-top:36px;padding-top:18px;font-size:.85rem;color:#8C8780}
 .rodape__base p{margin:0;max-width:62ch}
+.rodape__credito{color:#8C8780}
+.rodape__credito a{color:inherit;text-decoration:underline}
+.rodape__credito a:hover{color:#fff}
 
 /* ---------- responsivo ---------- */
 @media (max-width:1000px){

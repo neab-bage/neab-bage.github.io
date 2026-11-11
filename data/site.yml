@@ -339,8 +339,14 @@ transparencia:
 # ------------------------------------------------------------------ sobre o site
 
 sobre_site:
-  responsavel: "PENDENTE: responsável pelo site no núcleo"
-  email: ""
+  responsavel: "Alexandro Gularte Schäfer"
+  responsavel_papel: "Concepção, desenvolvimento e manutenção do site"
+  responsavel_filiacao: >-
+    Engenheiro civil, associado ao NEAB, professor da Universidade Federal do Pampa
+    (Unipampa), Campus Bagé.
+  responsavel_orcid: "0000-0001-8700-0860"
+  responsavel_ficha: "alexandro-gularte-schafer"
+  email: "neabbage@gmail.com"
   desenvolvimento: >-
     Site estático em Python (Jinja2), publicado no GitHub Pages. Desenvolvido com apoio de
     ferramenta de inteligência artificial (Claude, Anthropic), com curadoria e revisão do NEAB.

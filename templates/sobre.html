@@ -17,8 +17,15 @@
        diretoria, um documento ou uma atividade, altera-se o arquivo e o site é publicado
        automaticamente.</p>
 
-    <h2>Responsável</h2>
-    <p>{{ site.sobre_site.responsavel }}{% if site.sobre_site.email %} — <a href="mailto:{{ site.sobre_site.email }}">{{ site.sobre_site.email }}</a>{% endif %}</p>
+    <h2>Autoria e responsabilidade</h2>
+    <p>{% if site.sobre_site.responsavel_papel %}{{ site.sobre_site.responsavel_papel }}:{% endif %}
+       <strong>{% if site.sobre_site.responsavel_ficha %}<a href="{{ root }}associados/{{ site.sobre_site.responsavel_ficha }}/">{{ site.sobre_site.responsavel }}</a>{% else %}{{ site.sobre_site.responsavel }}{% endif %}</strong>.
+       {% if site.sobre_site.responsavel_filiacao %}{{ site.sobre_site.responsavel_filiacao }}{% endif %}</p>
+    {% if site.sobre_site.responsavel_orcid %}
+    <p>ORCID: <a href="https://orcid.org/{{ site.sobre_site.responsavel_orcid }}" target="_blank" rel="noopener">{{ site.sobre_site.responsavel_orcid }}{{ i.icon("externo", 16) }}</a></p>
+    {% endif %}
+    <p>Correções, atualizações de conteúdo e pedidos de retirada de informação devem ser
+       encaminhados ao núcleo{% if site.sobre_site.email %} — <a href="mailto:{{ site.sobre_site.email }}">{{ site.sobre_site.email }}</a>{% endif %}.</p>
 
     <h2>Código e licença</h2>
     <p><a href="{{ site.sobre_site.repositorio }}" target="_blank" rel="noopener">Repositório no GitHub {{ i.icon("externo", 16) }}</a></p>

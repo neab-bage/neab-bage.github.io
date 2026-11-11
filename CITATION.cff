@@ -23,6 +23,11 @@ authors:
   - family-names: "Gomes"
     given-names: "Márcio Marun"
     affiliation: "Núcleo dos Engenheiros e Arquitetos de Bagé (NEAB)"
+contact:
+  - family-names: "Schäfer"
+    given-names: "Alexandro Gularte"
+    affiliation: "Universidade Federal do Pampa (Unipampa)"
+    orcid: "https://orcid.org/0000-0001-8700-0860"
 version: "1.0.0"
 date-released: "2026-11-06"
 doi: 10.5281/zenodo.24011478

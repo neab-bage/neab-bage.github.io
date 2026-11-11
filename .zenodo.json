@@ -38,5 +38,19 @@
       "relation": "isDocumentedBy",
       "scheme": "url"
     }
+  ],
+  "contributors": [
+    {
+      "name": "Schäfer, Alexandro Gularte",
+      "affiliation": "Universidade Federal do Pampa (Unipampa)",
+      "orcid": "0000-0001-8700-0860",
+      "type": "ProjectLeader"
+    },
+    {
+      "name": "Schäfer, Alexandro Gularte",
+      "affiliation": "Universidade Federal do Pampa (Unipampa)",
+      "orcid": "0000-0001-8700-0860",
+      "type": "ContactPerson"
+    }
   ]
 }
