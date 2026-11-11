@@ -33,15 +33,41 @@ def associados():
     return {slug(p["nome"]): p["nome"] for g in d["grupos"] for p in g["pessoas"]}
 
 def casar(nome_arquivo, mapa):
+    """Casa o nome do arquivo com um associado. Devolve (slug, como_casou) ou (None, motivo)."""
+    import difflib
     s = slug(Path(nome_arquivo).stem)
     if s in mapa:
-        return s
-    candidatos = [k for k in mapa if k.startswith(s + "-") or k == s]
+        return s, "exato"
+
+    # prefixo: "sandro-martinez" -> "sandro-martinez-conceicao"
+    candidatos = [k for k in mapa if k.startswith(s + "-")]
     if len(candidatos) == 1:
-        return candidatos[0]
+        return candidatos[0], "prefixo"
     if len(candidatos) > 1:
-        print(f"  ambíguo: {nome_arquivo} casa com {', '.join(candidatos)} — renomeie o arquivo")
-    return None
+        return None, f"ambíguo entre {', '.join(candidatos)}"
+
+    # tokens: todas as partes do arquivo aparecem no nome, em ordem
+    partes = [t for t in s.split("-") if len(t) > 2]
+    if partes:
+        candidatos = [k for k in mapa if all(t in k.split("-") for t in partes)]
+        if len(candidatos) == 1:
+            return candidatos[0], "partes do nome"
+        if len(candidatos) > 1:
+            return None, f"ambíguo entre {', '.join(candidatos)}"
+
+    # aproximado: tolera erro de digitação ("marum" por "marun")
+    if partes:
+        pontos = []
+        for k in mapa:
+            tk = k.split("-")
+            soma = sum(max((difflib.SequenceMatcher(None, t, u).ratio() for u in tk), default=0)
+                       for t in partes) / len(partes)
+            pontos.append((soma, k))
+        pontos.sort(reverse=True)
+        melhor, segundo = pontos[0], (pontos[1] if len(pontos) > 1 else (0, None))
+        if melhor[0] >= 0.85 and melhor[0] - segundo[0] >= 0.08:
+            return melhor[1], f"aproximado ({melhor[0]:.0%} — CONFIRA)"
+    return None, "não encontrei esse nome no quadro de associados"
 
 def detectar_rosto(caminho):
     """Devolve (x, y, w, h) do rosto, ou None."""
@@ -118,14 +144,15 @@ def main():
     for arq in sorted(origem.iterdir()):
         if arq.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff"):
             continue
-        s = casar(arq.name, mapa)
+        s, como_casou = casar(arq.name, mapa)
         if not s:
-            print(f"  ignorado: {arq.name} — não encontrei esse nome no quadro de associados")
+            print(f"  ignorado: {arq.name} — {como_casou}")
             continue
         saida = DESTINO / f"{s}.jpg"
         como, lado = preparar(arq, saida)
         kb = saida.stat().st_size // 1024
-        print(f"  {mapa[s]:<42} {arq.name} -> {saida.name}  ({como}, recorte {lado}px, {kb} KB)")
+        print(f"  {mapa[s]:<42} {arq.name} -> {saida.name}")
+        print(f"  {'':<42} nome: {como_casou} | {como}, recorte {lado}px, {kb} KB")
         feitos += 1
     print(f"\n{feitos} foto(s) preparada(s) em {DESTINO.relative_to(RAIZ)}")
     print("Rode 'python3 build.py' e confira o resultado antes de publicar.")
