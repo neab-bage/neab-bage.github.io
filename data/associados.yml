@@ -99,6 +99,11 @@ grupos:
         email: ""
         telefone: "(53) 99973-5765"
         autoriza_contato: true
+      - nome: "Júlia Bueno Raota Fernandes"
+        registro: "CAU A329516-8"
+        email: ""
+        telefone: "(53) 99104-7839"
+        autoriza_contato: true
       - nome: "Juliana de Oliveira Taschetto"
         registro: ""
         email: ""
