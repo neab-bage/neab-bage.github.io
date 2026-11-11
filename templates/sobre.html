@@ -11,12 +11,6 @@
 
 <section class="wrap secao">
   <div class="texto">
-    <h2>Como funciona</h2>
-    <p>{{ site.sobre_site.desenvolvimento }}</p>
-    <p>O conteúdo das páginas fica em arquivos de dados no repositório: para atualizar a
-       diretoria, um documento ou uma atividade, altera-se o arquivo e o site é publicado
-       automaticamente.</p>
-
     <h2>Autoria e responsabilidade</h2>
     <p>{% if site.sobre_site.responsavel_papel %}{{ site.sobre_site.responsavel_papel }}:{% endif %}
        <strong>{% if site.sobre_site.responsavel_ficha %}<a href="{{ root }}associados/{{ site.sobre_site.responsavel_ficha }}/">{{ site.sobre_site.responsavel }}</a>{% else %}{{ site.sobre_site.responsavel }}{% endif %}</strong>.

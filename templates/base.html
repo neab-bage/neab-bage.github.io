@@ -35,7 +35,7 @@
           {% set g_nucleo = active in ["neab","atuacao","diretoria"] %}
           {% set g_ativ   = active in ["agenda","formacao","noticias","programa"] %}
           {% set g_assoc  = active in ["associe","associados","beneficios"] %}
-          {% set g_transp = active in ["documentos","transparencia"] %}
+          {% set g_transp = active in ["documentos","transparencia","sobre"] %}
           <li class="nav__item">
             <button class="nav__grupo{% if g_nucleo %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">O núcleo{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
@@ -67,6 +67,7 @@
             <ul class="nav__sub">
               <li><a href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}>Documentos</a></li>
               <li><a href="{{ root }}transparencia/"{% if active == "transparencia" %} aria-current="page"{% endif %}>Prestação de contas</a></li>
+              <li><a href="{{ root }}sobre/"{% if active == "sobre" %} aria-current="page"{% endif %}>Sobre o site</a></li>
             </ul>
           </li>
           <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>

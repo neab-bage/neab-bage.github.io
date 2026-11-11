@@ -347,9 +347,6 @@ sobre_site:
   responsavel_orcid: "0000-0001-8700-0860"
   responsavel_ficha: "alexandro-gularte-schafer"
   email: "neabbage@gmail.com"
-  desenvolvimento: >-
-    Site estático em Python (Jinja2), publicado no GitHub Pages. Desenvolvido com apoio de
-    ferramenta de inteligência artificial (Claude, Anthropic), com curadoria e revisão do NEAB.
   repositorio: "https://github.com/neab-bage/neab-bage.github.io"
   doi: "10.5281/zenodo.24011478"
   citacao: >-
