@@ -19,9 +19,10 @@ horario: "11h às 12h"
 link: "https://poprockbage.com.br/programacao/universo-das-engenharias"
 link_rotulo: "Página do programa na emissora"
 
-# Perfis do programa. `icone` aceita: instagram, externo.
+# Perfis do programa e da emissora. `icone` aceita: instagram, facebook, externo.
 redes:
   - {nome: "Instagram", icone: "instagram", url: "https://www.instagram.com/programauniversodasengenharias/"}
+  - {nome: "Transmissão no Facebook", icone: "facebook", url: "https://facebook.com/omelhormixdoradio"}
 
 apresentadores:
   - {nome: "Antônio Luiz Arla da Silva", tratamento: "Eng. Civil", chamado: "Antônio Arla"}
