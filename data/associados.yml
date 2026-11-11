@@ -8,10 +8,13 @@
 # Os registros no CREA-RS e no CAU vieram da seção da diretoria; os demais estão em branco
 # até a secretaria fornecê-los.
 #
-# PRIVACIDADE: este repositório é público e indexado por buscadores. Publicar e-mail e telefone
-# pessoais aqui é diferente de publicá-los num guia impresso distribuído na categoria. Por isso
-# os contatos ficam VAZIOS por padrão e só devem ser preenchidos para quem autorizar expressamente
-# a divulgação na internet. O site mostra o contato apenas quando "autoriza_contato: true".
+# CONTATOS: o núcleo entende que e-mail e telefone aqui são o contato PROFISSIONAL de cada
+# associado e que a divulgação atende ao interesse de quem procura um profissional — a mesma
+# finalidade do guia Aprova Fácil, de onde os dados vieram. Por isso são publicados.
+# Atenção: o repositório é público e indexado por buscadores, e o histórico do Git guarda tudo
+# que já foi commitado. Se alguém pedir a retirada do seu contato, esvazie os campos OU marque
+# "autoriza_contato: false" — o site deixa de exibir, mas o dado permanece no histórico.
+# O site mostra o contato apenas quando "autoriza_contato: true".
 #
 # Campos: nome, registro (CREA-RS ou CAU), email, telefone, site, autoriza_contato
 
@@ -30,7 +33,7 @@ grupos:
         autoriza_contato: true
       - nome: "Ana Lúcia Kalil Sarmento"
         registro: "CAU A33015-9"
-        email: "analuciaks@hotmail.comr"
+        email: "analuciaks@hotmail.com"
         telefone: "(53) 99928-6801"
         autoriza_contato: true
       - nome: "Ana Paula Lopes Siqueira Ritta"
@@ -158,7 +161,7 @@ grupos:
         autoriza_contato: true
       - nome: "Nubia Margot Menezes Jardim"
         registro: ""
-        email: "arqnubiamargot_asm@yahoo (incompleto no guia)"
+        email: "arqnubiamargot_asm@yahoo.com.br"
         telefone: "(53) 3242-7399"
         autoriza_contato: true
       - nome: "Rachel Beckman Morgado"
@@ -191,7 +194,7 @@ grupos:
     pessoas:
       - nome: "Adalberto Gularte Schäfer"
         registro: ""
-        email: ""
+        email: "ad.schafer@gmail.com"
         telefone: "(53) 99957-0717"
         autoriza_contato: true
       - nome: "Alexandro Gularte Schäfer"
@@ -201,7 +204,7 @@ grupos:
         autoriza_contato: true
       - nome: "Aliane da Croce"
         registro: "CREA-RS 234118"
-        email: ""
+        email: "alianecroce@gmail.com"
         telefone: "(53) 99942-2828"
         autoriza_contato: true
       - nome: "Antônio Luiz Arla da Silva"
@@ -355,7 +358,7 @@ grupos:
     pessoas:
       - nome: "Caíque Nunes Maria Santana"
         registro: ""
-        email: ""
+        email: "nunescaique10@gmail.com"
         telefone: "(53) 99968-1158"
         autoriza_contato: true
       - nome: "Douglas de Tarso da Silva"
