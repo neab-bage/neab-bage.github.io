@@ -19,6 +19,10 @@ horario: "11h às 12h"
 link: "https://poprockbage.com.br/programacao/universo-das-engenharias"
 link_rotulo: "Página do programa na emissora"
 
+# Perfis do programa. `icone` aceita: instagram, externo.
+redes:
+  - {nome: "Instagram", icone: "instagram", url: "https://www.instagram.com/programauniversodasengenharias/"}
+
 apresentadores:
   - {nome: "Antônio Luiz Arla da Silva", tratamento: "Eng. Civil", chamado: "Antônio Arla"}
   - {nome: "Márcio Marun Gomes", tratamento: "Eng. Civil", chamado: "Márcio Marun"}

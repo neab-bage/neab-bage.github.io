@@ -18,11 +18,18 @@
         <span><strong>{{ programa.dia }}, {{ programa.horario }}</strong><br>
         {{ programa.emissora }} · {{ programa.frequencia }}</span>
       </p>
-      {% if programa.link %}
-      <a class="botao botao--linha" href="{{ programa.link }}" target="_blank" rel="noopener">
-        {{ programa.link_rotulo or "Ouvir ao vivo" }}{{ i.icon("externo", 18) }}
-      </a>
-      {% endif %}
+      <div class="programa__acoes">
+        {% if programa.link %}
+        <a class="botao botao--linha" href="{{ programa.link }}" target="_blank" rel="noopener">
+          {{ programa.link_rotulo or "Ouvir ao vivo" }}{{ i.icon("externo", 18) }}
+        </a>
+        {% endif %}
+        {% for r in programa.redes or [] %}
+        <a class="botao botao--linha" href="{{ r.url }}" target="_blank" rel="noopener">
+          {{ i.icon(r.icone or "externo", 18) }}{{ r.nome }}
+        </a>
+        {% endfor %}
+      </div>
     </div>
 
     <div class="prosa">
