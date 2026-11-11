@@ -357,7 +357,12 @@ grupos:
         registro: ""
         email: "eng.douglas.tarso.dts@outlook.com"
         telefone: "(12) 99728-5083"
+      - nome: "Jorge Dias Dias da Costa"
+        registro: ""
+        email: "jddiasdacosta@gmail.com"
+        telefone: "(53) 98112-7532"
         autoriza_contato: true
+
   - area: "Engenharia Química"
     pessoas:
       - nome: "Anastácia Peres Isasmendi"
@@ -367,11 +372,6 @@ grupos:
         autoriza_contato: true
   - area: "Engenharia Mecânica"
     pessoas:
-      - nome: "Jorge Dias Dias da Costa"
-        registro: ""
-        email: "jddiasdacosta@gmail.com"
-        telefone: "(53) 98112-7532"
-        autoriza_contato: true
       - nome: "Luciano Vacilotto"
         registro: ""
         email: "luciano_vacilotto@hotmail.com"
