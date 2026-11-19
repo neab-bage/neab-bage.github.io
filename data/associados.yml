@@ -97,6 +97,11 @@ grupos:
         email: "arquitetagiovanasilveira@hotmail.com"
         telefone: "(53) 99945-3623"
         autoriza_contato: true
+      - nome: "Gisele Pinheiro"
+        registro: ""
+        email: "giselepinheirogp@hotmail.com"
+        telefone: "(53) 99990-8151"
+        autoriza_contato: true
       - nome: "Gladis Barcellos Saavedra (Neneca)"
         registro: ""
         email: ""
@@ -104,7 +109,7 @@ grupos:
         autoriza_contato: true
       - nome: "Júlia Bueno Raota Fernandes"
         registro: "CAU A329516-8"
-        email: ""
+        email: "juliaraota791@gmail.com"
         telefone: "(53) 99104-7839"
         autoriza_contato: true
       - nome: "Juliana de Oliveira Taschetto"
@@ -219,7 +224,7 @@ grupos:
         autoriza_contato: true
       - nome: "Danielly Dias Ferreira"
         registro: ""
-        email: "engenheiradanielly@gmail.com"
+        email: "safiraengenhariabage@gmail.com"
         telefone: "(53) 99103-4538"
         autoriza_contato: true
       - nome: "Eduardo Silva Mendes"
@@ -269,7 +274,7 @@ grupos:
         autoriza_contato: true
       - nome: "Maurício Fernandes Fara"
         registro: "CREA-RS 239393"
-        email: ""
+        email: "mauriciofarabage@gmail.com"
         telefone: "(53) 99977-0255"
         autoriza_contato: true
       - nome: "Muriéle de Oliveira D’Avila"
@@ -321,7 +326,7 @@ grupos:
         autoriza_contato: true
       - nome: "Danielly Dias Ferreira"
         registro: ""
-        email: "engenheiradanielly@gmail.com"
+        email: "safiraengenhariabage@gmail.com"
         telefone: "(53) 99103-4538"
         autoriza_contato: true
       - nome: "Douglas de Tarso da Silva"
