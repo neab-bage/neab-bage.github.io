@@ -311,17 +311,7 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .cab__volta:hover{color:var(--preto)}
 
 
-/* ---------- faixa da diretoria ---------- */
-.faixa-diretoria{background:var(--preto);color:#CFC9C0}
-.faixa-diretoria__in{display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;padding:44px 0}
-.etiqueta--clara{color:#A3927F}
-.faixa-diretoria__lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 30px}
-.faixa-diretoria__lista li{font-size:.97rem;font-weight:500;color:#F2EEE9;line-height:1.35}
-.faixa-diretoria__lista small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#A3927F}
-.faixa-diretoria__acoes{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
-.faixa-diretoria__contato{color:#CFC9C0}
-.faixa-diretoria__contato:hover{color:#fff}
-@media (max-width:860px){.faixa-diretoria__in{flex-direction:column;align-items:flex-start;padding:34px 0}}
+@media (max-width:860px){}
 
 /* ---------- eixos da home ---------- */
 .eixos{display:grid;grid-template-columns:repeat(auto-fit,minmax(236px,1fr));gap:28px 32px}
@@ -489,3 +479,11 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .adiante{margin:34px 0 0;padding:18px 22px;background:var(--concreto);border-left:3px solid var(--cobre);border-radius:0 var(--raio) var(--raio) 0;max-width:82ch}
 .adiante p{margin:0;color:var(--grafite);font-size:.97rem;line-height:1.55}
 .adiante strong{color:var(--preto)}
+
+/* ---------- quem responde pelo núcleo (linha discreta na home) ---------- */
+.secao--rente{padding-top:0}
+.quem-responde{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0;padding:16px 20px;border:1px solid var(--concreto-2);border-radius:var(--raio);font-size:.95rem;color:var(--grafite-2)}
+.quem-responde .icon{flex:none;color:var(--cobre)}
+.quem-responde strong{color:var(--preto);font-weight:600}
+.quem-responde > span{flex:1 1 auto;min-width:0}
+.quem-responde .link-seta{flex:none}

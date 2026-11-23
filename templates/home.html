@@ -129,21 +129,16 @@
   </div>
 </section>
 
-<section class="faixa-diretoria">
-  <div class="wrap faixa-diretoria__in">
-    <div>
-      <p class="etiqueta etiqueta--clara">{{ site.diretoria.rotulo or "Diretoria" }} · {{ site.diretoria.biennio }}</p>
-      <ul class="faixa-diretoria__lista">
-        {% for m in site.diretoria.membros %}
-        <li><small>{{ m.cargo }}</small>{{ m.titulo }} {{ m.nome }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="faixa-diretoria__acoes">
-      <a class="btn btn--claro" href="{{ root }}diretoria/">Diretoria e representação {{ i.icon("seta", 18) }}</a>
-      <a class="link-seta faixa-diretoria__contato" href="{{ root }}contato/">Falar com o núcleo {{ i.icon("seta", 16) }}</a>
-    </div>
-  </div>
+<section class="wrap secao secao--rente">
+  <p class="quem-responde">
+    {{ i.icon("escudo", 18) }}
+    <span><strong>{{ site.diretoria.rotulo or "Diretoria" }} · {{ site.diretoria.biennio }}</strong>
+    {% if site.diretoria.membros %}
+      — {{ site.diretoria.membros[0].cargo }} {{ site.diretoria.membros[0].titulo }} {{ site.diretoria.membros[0].nome }}
+    {% endif %}
+    </span>
+    <a class="link-seta" href="{{ root }}diretoria/">Diretoria e representação {{ i.icon("seta", 16) }}</a>
+  </p>
 </section>
 
 {% endblock %}
