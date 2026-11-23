@@ -488,3 +488,10 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .presidentes--solo{border-top:0;margin-top:0;padding-top:0}
 .guia__pdf{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 28px}
 .guia__pdf small{color:#6E6A63}
+.normas{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.norma{padding:14px 0 0;border-top:1px solid var(--linha,#DDD7CC)}
+.norma:first-child{border-top:0;padding-top:0}
+.norma__tit{margin:0 0 4px;font-weight:600}
+.norma__ementa{margin:0 0 6px;max-width:70ch}
+.norma__meta{margin:0;font-size:.85rem;color:#6E6A63;display:flex;gap:12px;flex-wrap:wrap}
+.norma__sem-link{font-style:italic}

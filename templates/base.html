@@ -44,6 +44,7 @@
           {% set g_ativ   = active in ["agenda","formacao","noticias","programa"] %}
           {% set g_assoc  = active in ["associe","associados","beneficios"] %}
           {% set g_transp = active in ["documentos","transparencia","sobre"] %}
+          {% set g_prof   = active in ["guia","legislacao"] %}
           <li class="nav__item">
             <button class="nav__grupo{% if g_nucleo %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">O núcleo{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
@@ -78,7 +79,13 @@
               <li><a href="{{ root }}sobre/"{% if active == "sobre" %} aria-current="page"{% endif %}>Sobre o site</a></li>
             </ul>
           </li>
-          <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
+          <li class="nav__item">
+            <button class="nav__grupo{% if g_prof %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Para o profissional{{ i.icon("chevron", 16) }}</button>
+            <ul class="nav__sub">
+              <li><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
+              <li><a href="{{ root }}legislacao/"{% if active == "legislacao" %} aria-current="page"{% endif %}>Legislação</a></li>
+            </ul>
+          </li>
           <li class="nav__item"><a href="{{ root }}contato/"{% if active == "contato" %} aria-current="page"{% endif %}>Contato</a></li>
         </ul>
       </nav>
@@ -132,6 +139,7 @@
           <li><a href="{{ root }}associe-se/">Associe-se</a></li>
           <li><a href="{{ root }}documentos/">Documentos</a></li>
           <li><a href="{{ root }}transparencia/">Transparência</a></li>
+          <li><a href="{{ root }}legislacao/">Legislação</a></li>
           <li><a href="{{ root }}sobre/">Sobre o site</a></li>
         </ul>
         {% if site.contato.instagram %}

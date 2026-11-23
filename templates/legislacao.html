@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<header class="cab">
+  <div class="wrap">
+    <p class="etiqueta">{{ leg.chamada }}</p>
+    <h1>{{ leg.titulo }}</h1>
+    <p class="cab__txt">{{ leg.intro }}</p>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="wrap">
+
+    {% if leg.aviso %}
+    <p class="guia__protocolo">
+      {{ i.icon("info", 20) }}
+      <span>{{ leg.aviso }}</span>
+    </p>
+    {% endif %}
+
+    <nav class="guia__indice" aria-label="Índice da legislação">
+      <p class="guia__indice-tit">Nesta página</p>
+      <ul>
+        {% for b in leg.blocos %}
+        <li><a href="#{{ b.id }}">{{ b.titulo }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% for b in leg.blocos %}
+    <article class="checklist" id="{{ b.id }}">
+      <div class="checklist__cab">
+        <div><h2>{{ b.titulo }}</h2></div>
+      </div>
+      {% if b.resumo %}<p class="checklist__resumo">{{ b.resumo }}</p>{% endif %}
+
+      {% if b.itens %}
+      <ul class="normas">
+        {% for n in b.itens %}
+        <li class="norma">
+          <p class="norma__tit">
+            {% if n.url %}
+            <a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.titulo }}{{ i.icon("externo", 15) }}</a>
+            {% else %}{{ n.titulo }}{% endif %}
+          </p>
+          <p class="norma__ementa">{{ n.ementa }}</p>
+          <p class="norma__meta">
+            {% if n.fonte %}<span>{{ n.fonte }}</span>{% endif %}
+            {% if n.url is not defined or not n.url %}<span class="norma__sem-link">texto não localizado em fonte oficial</span>{% endif %}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="programa__nota">Esta seção ainda está sendo montada.</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+  </div>
+</section>
+{% endblock %}

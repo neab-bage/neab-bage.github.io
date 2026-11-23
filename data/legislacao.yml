@@ -1,0 +1,116 @@
+# ---------------------------------------------------------------------------
+# Legislação de referência para o exercício profissional e para os processos
+# de aprovação em Bagé.
+#
+# REGRA: links apontam para a FONTE OFICIAL (Planalto, Assembleia do RS, CBMRS,
+# CONFEA, CAU/BR, Prefeitura). Só hospedar cópia em static/documentos/ quando
+# não houver fonte oficial estável na internet.
+#
+# Cada item: titulo, ementa, url (opcional), fonte (quem publica), nota (opcional).
+# Itens sem `url` aparecem como referência, sem link — use para o que ainda não
+# foi localizado em fonte oficial.
+#
+# CONFERIR PERIODICAMENTE: norma revogada ou link quebrado leva o profissional a
+# protocolar errado. Ver a seção de pendências no fim deste arquivo.
+# ---------------------------------------------------------------------------
+
+titulo: "Legislação"
+chamada: "Normas de referência"
+intro: >-
+  As normas que regem o exercício profissional e os processos de aprovação em Bagé.
+  Os links levam às fontes oficiais, onde o texto está sempre atualizado.
+aviso: >-
+  Esta página é um índice de consulta, não uma fonte oficial. Antes de protocolar,
+  confirme a versão vigente no órgão responsável — as normas mudam, em especial as
+  estaduais de prevenção de incêndio e as municipais de uso do solo.
+
+blocos:
+  - id: exercicio
+    titulo: "Exercício profissional"
+    resumo: >-
+      Define quem pode assinar o quê, e como a responsabilidade técnica é registrada.
+    itens:
+      - titulo: "Lei nº 5.194/1966"
+        ementa: "Regula o exercício das profissões de engenheiro, arquiteto e engenheiro-agrônomo. É a lei que cria o sistema CONFEA/CREA."
+        url: "https://www.planalto.gov.br/ccivil_03/leis/l5194.htm"
+        fonte: "Planalto"
+      - titulo: "Lei nº 6.496/1977"
+        ementa: "Institui a Anotação de Responsabilidade Técnica (ART) e autoriza a criação da Mútua."
+        url: "https://www.planalto.gov.br/ccivil_03/leis/L6496.htm"
+        fonte: "Planalto"
+      - titulo: "Lei nº 12.378/2010"
+        ementa: "Regulamenta o exercício da arquitetura e urbanismo e cria o CAU/BR e os CAUs estaduais. É a norma que separa as atribuições de arquitetos das do sistema CONFEA/CREA."
+        url: "https://www.planalto.gov.br/ccivil_03/_Ato2007-2010/2010/Lei/L12378.htm"
+        fonte: "Planalto"
+      - titulo: "Resolução CONFEA nº 218/1973"
+        ementa: "Discrimina as atividades das diferentes modalidades da engenharia. É a referência para saber o que cada modalidade pode assinar."
+        fonte: "CONFEA"
+        nota: "PENDENTE: localizar o endereço estável no portal do CONFEA."
+      - titulo: "Resolução CONFEA nº 1.137/2023"
+        ementa: "Dispõe sobre a ART, o acervo técnico-profissional e o acervo operacional."
+        fonte: "CONFEA"
+        nota: "PENDENTE: localizar o endereço estável no portal do CONFEA."
+      - titulo: "Resoluções CAU/BR nº 21/2012 e nº 91/2014"
+        ementa: "Atividades e atribuições do arquiteto e urbanista, e o Registro de Responsabilidade Técnica (RRT)."
+        fonte: "CAU/BR"
+        nota: "PENDENTE: localizar os endereços estáveis no portal do CAU/BR."
+
+  - id: incendio
+    titulo: "Segurança contra incêndio"
+    resumo: >-
+      Base do PPCI, exigido no protocolo de projeto arquitetônico comercial,
+      institucional e multifamiliar.
+    itens:
+      - titulo: "Lei Complementar estadual nº 14.376/2013"
+        ementa: "Estabelece as normas de segurança, prevenção e proteção contra incêndios nas edificações e áreas de risco do Rio Grande do Sul. Conhecida como Lei Kiss."
+        url: "https://www.bombeiros.rs.gov.br/upload/arquivos/202212/30115130-lec-n-14-376.pdf"
+        fonte: "Corpo de Bombeiros Militar do RS"
+        nota: "Texto consolidado publicado pelo CBMRS. A lei recebeu várias alterações desde 2013 — confirme a versão vigente antes de protocolar."
+      - titulo: "Decreto estadual nº 51.803/2014"
+        ementa: "Regulamenta a Lei Complementar 14.376/2013 e remete às Resoluções Técnicas do CBMRS, que detalham cada medida de segurança."
+        fonte: "Governo do Estado do RS"
+        nota: "PENDENTE: localizar o endereço oficial do texto consolidado."
+
+  - id: urbanismo
+    titulo: "Urbanismo e edificações"
+    resumo: >-
+      Normas federais que estruturam a política urbana e as exigências de projeto.
+    itens: []
+    nota: >-
+      PENDENTE: Estatuto da Cidade (10.257/2001), parcelamento do solo (6.766/1979),
+      acessibilidade (13.146/2015 e NBR 9050), mobilidade urbana (12.587/2012),
+      segurança contra incêndio (13.425/2017).
+
+  - id: municipal
+    titulo: "Bagé"
+    resumo: >-
+      A legislação que a Geplan aplica na análise dos processos.
+    itens:
+      - titulo: "Lei municipal nº 4.919/2010"
+        ementa: "Obriga as edificações do município a possuir Certidão de Inspeção Predial. É a base do check-list de inspeção predial do Guia Prático."
+        fonte: "Prefeitura Municipal de Bagé"
+        nota: "PENDENTE: confirmar o endereço oficial do texto consolidado."
+    nota: >-
+      PENDENTE: Plano Diretor, Código de Obras, Código de Posturas, uso e ocupação do
+      solo, Plano de Mobilidade e a legislação do centro histórico. A consolidação da
+      legislação municipal de Bagé parece estar hospedada em portal de terceiros
+      (ceaam.net), e não no site da Prefeitura — verificar se segue ativo e atualizado
+      antes de apontar o site do núcleo para lá. Se não estiver, baixar e hospedar.
+
+  - id: patrimonio
+    titulo: "Patrimônio histórico"
+    resumo: >-
+      Aplica-se a toda intervenção no conjunto tombado do centro de Bagé.
+    itens:
+      - titulo: "Instrução Normativa SEDAC/IPHAE nº 04/2026"
+        ementa: "Documentos e critérios para intervenção em imóvel tombado ou em área de entorno. O Guia Prático do NEAB traz um resumo dos itens exigidos."
+        fonte: "SEDAC/IPHAE"
+        nota: "PENDENTE: localizar o endereço oficial."
+
+  - id: tecnicas
+    titulo: "Normas técnicas"
+    resumo: >-
+      As normas da ABNT citadas nos processos são de acesso pago e não podem ser
+      reproduzidas aqui. Ficam listadas apenas como referência.
+    itens: []
+    nota: "PENDENTE: relacionar as NBR mais citadas nos processos de Bagé."

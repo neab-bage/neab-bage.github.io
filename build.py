@@ -359,6 +359,10 @@ def gerar():
     render("documentos.html", "documentos/index.html", active="documentos", title="Documentos")
     render("transparencia.html", "transparencia/index.html", active="transparencia", title="Transparência")
     render("contato.html", "contato/index.html", active="contato", title="Contato")
+    leg = yaml.safe_load((ROOT / "data" / "legislacao.yml").read_text(encoding="utf-8"))
+    render("legislacao.html", "legislacao/index.html", active="legislacao",
+           title="Legislação", leg=leg,
+           description="Normas de referência para o exercício profissional e para os processos de aprovação em Bagé.")
     render("sobre.html", "sobre/index.html", active="sobre", title="Sobre o site")
 
     render("noticias.html", "noticias/index.html", active="noticias", title="Notícias")
