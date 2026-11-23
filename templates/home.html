@@ -8,8 +8,8 @@
       <h1>Núcleo dos Engenheiros e Arquitetos de <span>Bagé</span></h1>
       <p class="hero__lead">{{ site.chamada_home or site.descricao_curta }}</p>
       <div class="hero__acoes">
-        <a class="btn btn--primario" href="{{ root }}associe-se/">Associe-se ao NEAB {{ i.icon("seta", 18) }}</a>
-        <a class="btn btn--suave" href="{{ root }}atuacao/">O que fazemos</a>
+        <a class="btn btn--primario" href="{{ root }}guia/">Guia prático {{ i.icon("seta", 18) }}</a>
+        <a class="btn btn--suave" href="{{ root }}o-neab/">Conheça o núcleo</a>
       </div>
       {% if site.fundacao.confirmado and site.idade %}
       <p class="hero__selo">{{ i.icon("escudo", 18) }} {{ site.idade }} anos de representação profissional em Bagé</p>
@@ -56,11 +56,11 @@
         {% if programa %}<li><a href="{{ root }}universo-das-engenharias/">{{ programa.titulo }}<small>{{ programa.dia }}, {{ programa.horario }} · {{ programa.frequencia }}</small></a></li>{% endif %}
       </ul>
     </nav>
-    <nav class="eixo" aria-label="Associados">
-      <h3 class="eixo__titulo">{{ i.icon("cracha", 18) }}Associados</h3>
+    <nav class="eixo" aria-label="Profissionais">
+      <h3 class="eixo__titulo">{{ i.icon("cracha", 18) }}Profissionais</h3>
       <ul>
+        <li><a href="{{ root }}associados/">Encontre um profissional<small>Engenheiros e arquitetos por modalidade</small></a></li>
         <li><a href="{{ root }}associe-se/">Como se associar<small>Requisitos, direitos e deveres</small></a></li>
-        <li><a href="{{ root }}associados/">Quadro de associados<small>Profissionais por modalidade</small></a></li>
         <li><a href="{{ root }}beneficios/">Benefícios e convênios<small>Vantagens para quem é associado</small></a></li>
       </ul>
     </nav>
@@ -113,6 +113,21 @@
   </div>
 </section>
 {% endif %}
+
+<section class="wrap secao chamado">
+  <div class="chamado__in">
+    <div>
+      <p class="etiqueta">Para quem é do ramo</p>
+      <h2>É engenheiro ou arquiteto em Bagé?</h2>
+      <p class="chamado__txt">O núcleo representa a categoria junto ao CREA-RS, à Prefeitura e às demais
+         entidades, promove formação e defende o exercício profissional na região da Campanha desde 1968.</p>
+    </div>
+    <div class="chamado__acoes">
+      <a class="btn btn--primario" href="{{ root }}associe-se/">Como se associar {{ i.icon("seta", 18) }}</a>
+      <a class="link-seta" href="{{ root }}beneficios/">Benefícios e convênios {{ i.icon("seta", 16) }}</a>
+    </div>
+  </div>
+</section>
 
 <section class="faixa-diretoria">
   <div class="wrap faixa-diretoria__in">

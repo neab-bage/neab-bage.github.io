@@ -75,6 +75,13 @@
     </article>
     {% endfor %}
 
+    <aside class="adiante">
+      <p><strong>Precisa de um profissional habilitado?</strong> A ART e a RRT citadas nestas listas
+         só podem ser emitidas por engenheiro ou arquiteto com registro ativo no respectivo Conselho.
+         O núcleo mantém a <a href="{{ root }}associados/">relação dos profissionais associados</a>,
+         por modalidade.</p>
+    </aside>
+
     <aside class="aviso">
       <p><strong>Antes de protocolar, confirme.</strong> {{ guia.aviso | safe }}</p>
       {% if guia.atualizacao %}<p class="aviso__fonte">Fonte: Guia Prático do NEAB — {{ guia.atualizacao }}.</p>{% endif %}

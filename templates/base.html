@@ -63,10 +63,10 @@
             </ul>
           </li>
           <li class="nav__item">
-            <button class="nav__grupo{% if g_assoc %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Associados{{ i.icon("chevron", 16) }}</button>
+            <button class="nav__grupo{% if g_assoc %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Profissionais{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
+              <li><a href="{{ root }}associados/"{% if active == "associados" %} aria-current="page"{% endif %}>Encontre um profissional</a></li>
               <li><a href="{{ root }}associe-se/"{% if active == "associe" %} aria-current="page"{% endif %}>Como se associar</a></li>
-              <li><a href="{{ root }}associados/"{% if active == "associados" %} aria-current="page"{% endif %}>Quadro de associados</a></li>
               <li><a href="{{ root }}beneficios/"{% if active == "beneficios" %} aria-current="page"{% endif %}>Benefícios e convênios</a></li>
             </ul>
           </li>
@@ -80,7 +80,6 @@
           </li>
           <li class="nav__item"><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
           <li class="nav__item"><a href="{{ root }}contato/"{% if active == "contato" %} aria-current="page"{% endif %}>Contato</a></li>
-          <li class="nav__item"><a class="nav__cta" href="{{ root }}associe-se/">Associe-se</a></li>
         </ul>
       </nav>
     </div>
