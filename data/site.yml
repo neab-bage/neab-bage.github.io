@@ -289,8 +289,10 @@ parceiros:
         para profissionais associados.
       beneficios: []
       url: ""
+    # PENDENTE (nota interna, não aparece no site): obter da Diretoria a descrição da
+    # parceria e a lista de benefícios, e substituir o texto genérico abaixo.
     - nome: "Tecnoprev"
-      resumo: "PENDENTE: descrever a parceria e os benefícios aos associados."
+      resumo: "Convênio firmado pelo núcleo. Condições e benefícios com a Diretoria."
       beneficios: []
       url: ""
 
