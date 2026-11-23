@@ -33,16 +33,18 @@ galeria: >-
   O NEAB mantém uma <strong>Galeria de Presidentes</strong>, inaugurada em
   2 de dezembro de 2016 na sede do núcleo.
 nota: >-
-  A reconstituição segue em curso. Faltam identificar os períodos da maior parte
-  dos mandatos — em especial entre 2011 e 2014 e entre 2021 e 2022 — e confirmar
-  eventuais reeleições. Quem puder contribuir com documentos, atas ou registros
-  fotográficos pode falar com a Diretoria.
+  A reconstituição segue em curso. Falta identificar os períodos da maior parte dos
+  mandatos anteriores a 2006 — e, no intervalo já mapeado, os anos de 2011 a 2014.
+  Quem puder contribuir com documentos, atas ou registros fotográficos pode falar
+  com a Diretoria.
 
 linha:
   - {periodo: "2023–2024", nome: "Jerônimo Bazerque Pereira", formacao: "Engenheiro Civil",
      fonte: "CREA-RS; Jornal Minuano, jun. e dez. 2024"}
+  - {periodo: "2021–2022", nome: "Antônio Luiz Arla da Silva", formacao: "Engenheiro Civil",
+     observacao: "Segundo mandato", fonte: "Informação da Diretoria do NEAB"}
   - {periodo: "2019–2020", nome: "Antônio Luiz Arla da Silva", formacao: "Engenheiro Civil",
-     fonte: "CREA-RS, 2019; Jornal Minuano, 2020"}
+     fonte: "CREA-RS, 2019; Jornal Minuano, 2020; Diretoria do NEAB"}
   - {periodo: "2017–2018", nome: "Adalberto Gularte Schäfer", formacao: "Engenheiro Civil",
      fonte: "CREA-RS, 2016"}
   - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
