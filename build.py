@@ -148,9 +148,27 @@ def carregar_gestoes():
 
 
 def carregar_presidentes():
-    """Lê data/presidentes.yml — a relação histórica de ex-presidentes."""
+    """Lê data/presidentes.yml e resolve a foto de cada presidente, quando houver.
+
+    A foto é a mesma do quadro de associados: procura por slug do nome, ou pelo
+    slug informado no campo `foto` quando o nome ali for diferente.
+    """
     arq = ROOT / "data" / "presidentes.yml"
-    return yaml.safe_load(arq.read_text(encoding="utf-8")) if arq.exists() else None
+    if not arq.exists():
+        return None
+    d = yaml.safe_load(arq.read_text(encoding="utf-8")) or None
+    if not d:
+        return None
+    pasta = ROOT / "static" / "img" / "associados"
+    for e in d.get("linha") or []:
+        s_ = e.get("foto") or slug(e["nome"])
+        achou = next((s_ + x for x in (".jpg", ".jpeg", ".png", ".webp")
+                      if (pasta / "mini" / (s_ + x)).is_file()), None)
+        e["foto_mini"] = achou
+        e["ficha"] = s_ if achou and (pasta / achou).is_file() else None
+        partes = [x for x in e["nome"].split() if len(x) > 2]
+        e["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else e["nome"][:2].upper()
+    return d
 
 
 def carregar_guia():

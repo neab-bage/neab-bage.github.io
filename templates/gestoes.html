@@ -57,39 +57,31 @@
     <h2>{{ presidentes.titulo }}</h2>
     <p class="presidentes__intro">{{ presidentes.intro | safe }}</p>
 
-    <ol class="pres-lista">
-      {% for e in presidentes.relacao %}
-      <li class="pres">
-        <span class="pres__n">{{ e.n }}</span>
-        <span class="pres__corpo">
-          <strong>{{ e.nome }}</strong>
+    <ol class="tl">
+      {% for e in presidentes.linha %}
+      <li class="tl__item{% if e.periodo %} tl__item--datado{% endif %}">
+        <span class="tl__marca" aria-hidden="true"></span>
+        <span class="tl__ano">{% if e.periodo %}{{ e.periodo }}{% else %}<span class="tl__sem">—</span>{% endif %}</span>
+        {% if e.foto_mini %}
+        <img class="tl__foto" src="{{ root }}static/img/associados/mini/{{ e.foto_mini }}" alt="" loading="lazy" decoding="async" width="240" height="240">
+        {% else %}
+        <span class="tl__foto tl__foto--vazia" aria-hidden="true">{{ e.iniciais }}</span>
+        {% endif %}
+        <span class="tl__corpo">
+          <strong>{% if e.ficha %}<a href="{{ root }}associados/{{ e.ficha }}/">{{ e.nome }}</a>{% else %}{{ e.nome }}{% endif %}</strong>
           {% if e.formacao %}<small>{{ e.formacao }}</small>{% endif %}
           {% if e.observacao %}<em>{{ e.observacao }}</em>{% endif %}
+          {% if e.fonte %}<span class="tl__fonte">{{ e.fonte }}</span>{% endif %}
         </span>
       </li>
       {% endfor %}
     </ol>
 
-    {% if presidentes.periodos %}
-    <h3 class="pres__subtit">Mandatos com período identificado</h3>
-    <table class="pres-tabela">
-      <thead><tr><th scope="col">Período</th><th scope="col">Presidente</th><th scope="col">Fonte</th></tr></thead>
-      <tbody>
-        {% for e in presidentes.periodos %}
-        <tr>
-          <td class="pres-tabela__periodo">{{ e.periodo }}</td>
-          <td><strong>{{ e.nome }}</strong>{% if e.formacao %}<br><small>{{ e.formacao }}</small>{% endif %}</td>
-          <td class="pres-tabela__fonte">{{ e.fonte }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    {% endif %}
-
     {% if presidentes.galeria %}<p class="presidentes__galeria">{{ i.icon("escudo", 18) }}<span>{{ presidentes.galeria | safe }}</span></p>{% endif %}
     {% if presidentes.nota %}<p class="nota">{{ presidentes.nota | safe }}</p>{% endif %}
   </section>
 {% endif %}
+
 
   <p class="nota">Tem documentos, atas ou recortes de jornal sobre alguma gestão do núcleo?
      Fale conosco pela <a href="{{ root }}contato/">página de contato</a> — esse acervo é

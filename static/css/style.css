@@ -446,21 +446,34 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 /* ---------- ex-presidentes ---------- */
 .presidentes{border-top:1px solid var(--concreto-2);margin-top:44px;padding-top:34px}
 .presidentes__intro{color:var(--grafite-2);max-width:78ch;margin:0 0 24px}
-.pres-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(282px,1fr));gap:2px 26px;counter-reset:none}
-.pres{display:flex;align-items:baseline;gap:14px;padding:11px 12px;margin:0 -12px;border-radius:10px}
-.pres:hover{background:var(--concreto)}
-.pres__n{flex:none;width:1.9em;text-align:right;font-variant-numeric:tabular-nums;font-size:.84rem;font-weight:600;color:var(--cobre)}
-.pres__corpo{min-width:0}
-.pres__corpo strong{display:block;font-weight:600;line-height:1.3}
-.pres__corpo small{display:block;margin-top:2px;font-size:.85rem;color:var(--grafite-2)}
-.pres__corpo em{display:block;margin-top:4px;font-size:.84rem;font-style:normal;color:var(--grafite-2);border-left:2px solid var(--concreto-2);padding-left:9px}
-.pres__subtit{margin:38px 0 14px;font-size:1.05rem}
-.pres-tabela{width:100%;max-width:760px;border-collapse:collapse;font-size:.95rem}
-.pres-tabela th,.pres-tabela td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--concreto-2);vertical-align:top}
-.pres-tabela th{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grafite-2);background:var(--concreto)}
-.pres-tabela__periodo{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
-.pres-tabela__fonte{color:var(--grafite-2);font-size:.88rem}
-.pres-tabela small{color:var(--grafite-2)}
-@media (max-width:620px){.pres-tabela th:nth-child(3),.pres-tabela td:nth-child(3){display:none}}
+@media (max-width:620px){}
 .presidentes__galeria{display:flex;align-items:flex-start;gap:10px;margin:28px 0 0;padding:14px 18px;background:var(--cobre-claro);border-radius:var(--raio);max-width:80ch;font-size:.95rem;color:var(--grafite)}
 .presidentes__galeria .icon{flex:none;margin-top:2px;color:var(--cobre)}
+
+/* ---------- linha do tempo da presidência ---------- */
+.tl{list-style:none;margin:28px 0 0;padding:0;position:relative;max-width:660px}
+.tl::before{content:"";position:absolute;left:84px;top:14px;bottom:14px;width:2px;background:var(--concreto-2)}
+.tl__item{position:relative;display:grid;grid-template-columns:70px 28px 56px 1fr;align-items:center;gap:0 14px;padding:9px 10px 9px 0;border-radius:12px}
+.tl__item:hover{background:var(--concreto)}
+.tl__ano{grid-column:1;text-align:right;font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--grafite-2);line-height:1.2}
+.tl__item--datado .tl__ano{color:var(--cobre)}
+.tl__sem{color:var(--concreto-2)}
+.tl__marca{grid-column:2;justify-self:center;width:11px;height:11px;border-radius:50%;background:#fff;box-shadow:0 0 0 2px var(--concreto-2);z-index:1}
+.tl__item--datado .tl__marca{background:var(--cobre);box-shadow:0 0 0 2px var(--cobre),0 0 0 5px #fff}
+.tl__foto{grid-column:3;width:56px;height:56px;border-radius:12px;object-fit:cover;background:var(--concreto)}
+.tl__foto--vazia{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:1.02rem;color:var(--grafite-2);background:var(--concreto);box-shadow:inset 0 0 0 1px var(--concreto-2)}
+.tl__corpo{grid-column:4;min-width:0}
+.tl__corpo strong{display:block;font-weight:600;line-height:1.3}
+.tl__corpo strong a{text-decoration:none;color:var(--preto)}
+.tl__corpo strong a:hover{color:var(--cobre)}
+.tl__corpo small{display:block;margin-top:1px;font-size:.86rem;color:var(--grafite-2)}
+.tl__corpo em{display:block;margin-top:5px;font-size:.84rem;font-style:normal;color:var(--grafite-2);line-height:1.45}
+.tl__fonte{display:block;margin-top:4px;font-size:.76rem;color:var(--grafite-2);opacity:.8}
+@media (max-width:620px){
+  .tl::before{left:26px}
+  .tl__item{grid-template-columns:20px 48px 1fr;gap:0 12px;padding-left:0}
+  .tl__ano{grid-column:1/-1;grid-row:1;text-align:left;padding-left:44px;margin-bottom:3px}
+  .tl__marca{grid-column:1;grid-row:2}
+  .tl__foto{grid-column:2;grid-row:2;width:48px;height:48px}
+  .tl__corpo{grid-column:3;grid-row:2}
+}
