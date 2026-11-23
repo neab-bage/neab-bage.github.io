@@ -5,6 +5,9 @@ nome: NEAB
 nome_longo: Núcleo dos Engenheiros e Arquitetos de Bagé
 local: Bagé/RS
 base_url: "/"            # usado só na página 404. Em Pages de projeto: "/nome-do-repositorio/"
+# Endereço absoluto do site. Usado nas etiquetas de compartilhamento (og:image, og:url) e no
+# link canônico, que exigem URL completa. TROCAR quando o domínio próprio entrar no ar.
+url_absoluta: "https://neab-bage.github.io"
 
 descricao_curta: >-
   O NEAB é a sociedade civil que reúne engenheiros, arquitetos e profissionais de

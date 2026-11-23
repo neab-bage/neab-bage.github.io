@@ -103,6 +103,7 @@ def carregar_associados():
                     achou = s + ext
                     break
             p["foto_arquivo"] = achou
+            p["foto_mini"] = achou if achou and (pasta / "mini" / achou).is_file() else None
             p["slug"] = s
             if p.get("site"):
                 # o guia traz os endereços sem esquema; o href precisa dele, o rótulo não
@@ -119,6 +120,9 @@ def carregar_associados():
             reg["areas"].append(g["area"])
             if p.get("registro") and not reg.get("registro"):
                 reg["registro"] = p["registro"]
+            for campo in ("foto_mini",):
+                if p.get(campo) and not reg.get(campo):
+                    reg[campo] = p[campo]
             for campo in ("site", "site_url", "site_rotulo", "email", "telefone"):
                 if p.get(campo) and not reg.get(campo):
                     reg[campo] = p[campo]
@@ -296,7 +300,9 @@ def gerar():
         """destino: caminho relativo dentro de dist/, ex.: 'diretoria/index.html'."""
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
+        caminho = "" if destino == "index.html" else str(Path(destino).parent).replace("\\", "/") + "/"
         html = env.get_template(template).render(
+            caminho=caminho,
             site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, programa=programa, associados=associados,
             agenda_prox=ag_prox, agenda_real=ag_real, agenda_home=ag_prox[:2],
             root=root, ano=ano, **ctx)

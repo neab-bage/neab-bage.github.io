@@ -15,7 +15,7 @@
     {% for p in grupo.pessoas %}
     <li><a class="assoc" href="{{ root }}associados/{{ p.slug }}/">
       {% if p.foto_arquivo %}
-      <img class="assoc__foto" src="{{ root }}static/img/associados/{{ p.foto_arquivo }}" alt="{{ p.nome }}" loading="lazy" width="200" height="200">
+      <img class="assoc__foto" src="{{ root }}static/img/associados/{% if p.foto_mini %}mini/{{ p.foto_mini }}{% else %}{{ p.foto_arquivo }}{% endif %}" alt="{{ p.nome }}" loading="lazy" decoding="async" width="240" height="240">
       {% else %}
       <span class="assoc__foto assoc__foto--vazia" aria-hidden="true">{{ p.iniciais }}</span>
       {% endif %}
