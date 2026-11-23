@@ -1,3 +1,8 @@
+# ACERVO — este arquivo NÃO é exibido no site.
+# A página de gestões anteriores mostra apenas a linha do tempo da presidência
+# (data/presidentes.yml), em padrão único para todos os mandatos. A composição
+# completa das diretorias fica guardada aqui para consulta e para o dia em que
+# houver registro equivalente de todas as gestões.
 periodo: "2023/2024"
 inicio: 2023
 fim: 2024

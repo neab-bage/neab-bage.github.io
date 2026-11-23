@@ -1,3 +1,8 @@
+# ACERVO — este arquivo NÃO é exibido no site.
+# A página de gestões anteriores mostra apenas a linha do tempo da presidência
+# (data/presidentes.yml), em padrão único para todos os mandatos. A composição
+# completa das diretorias fica guardada aqui para consulta e para o dia em que
+# houver registro equivalente de todas as gestões.
 # Modelo para registrar uma gestão. Copie este arquivo, renomeie para o período
 # (ex.: 2021-2023.yml) e preencha o que souber. Campos em branco simplesmente não aparecem.
 # Arquivos começados por "_" são ignorados pelo build.

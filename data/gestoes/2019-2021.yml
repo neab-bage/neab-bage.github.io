@@ -1,3 +1,8 @@
+# ACERVO — este arquivo NÃO é exibido no site.
+# A página de gestões anteriores mostra apenas a linha do tempo da presidência
+# (data/presidentes.yml), em padrão único para todos os mandatos. A composição
+# completa das diretorias fica guardada aqui para consulta e para o dia em que
+# houver registro equivalente de todas as gestões.
 periodo: "2019/2021"
 inicio: 2019
 fim: 2021
@@ -12,8 +17,8 @@ posse:
 
 fonte: "Convite da sessão solene e recorte de jornal, acervo do NEAB"
 observacao: >-
-  O convite da sessão solene chama o mandato de "gestão 19/20"; confirmar se o biênio correto é
-  2019/2020 ou 2019/2021. Os títulos profissionais de cada integrante não constam do recorte e
+  O convite da sessão solene chama o mandato de "gestão 19/20". A Diretoria confirmou, em
+  novembro de 2026, que as gestões de Antônio Luiz Arla da Silva foram 2019/2020 e 2021/2022. Os títulos profissionais de cada integrante não constam do recorte e
   não foram preenchidos para não haver suposição.
 
 diretoria:

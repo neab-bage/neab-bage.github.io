@@ -6,55 +6,15 @@
   <div class="wrap">
     <p class="etiqueta">Memória</p>
     <h1>Gestões anteriores</h1>
-    <p class="cab__lead">Registro das diretorias que conduziram o núcleo ao longo de sua
-       história. Este levantamento está em construção: gestões faltantes vão sendo
-       acrescentadas conforme a documentação é localizada.</p>
+    <p class="cab__lead">Quem conduziu o núcleo ao longo de sua história, do mandato mais
+       recente ao primeiro. O levantamento está em construção: os períodos vão sendo
+       atribuídos conforme a documentação é localizada.</p>
   </div>
 </section>
 
 <section class="wrap secao">
-  {% if gestoes %}
-  {% for g in gestoes %}
-  <article class="gestao">
-    <div class="gestao__cab">
-      <h2>Biênio {{ g.periodo }}</h2>
-      {% if g.posse and g.posse.data %}
-      <p class="gestao__posse">{{ i.icon("calendario", 16) }}Posse em {{ g.posse.data }}{% if g.posse.local %}, {{ g.posse.local }}{% endif %}.
-        {% if g.posse.nota %}{{ g.posse.nota }}{% endif %}</p>
-      {% endif %}
-    </div>
-
-    <ul class="pessoas">
-      {% for m in g.diretoria %}
-      <li class="pessoa">
-        <span class="pessoa__cargo">{{ m.cargo }}</span>
-        <strong class="pessoa__nome">{% if m.titulo %}{{ m.titulo }} {% endif %}{{ m.nome }}</strong>
-      </li>
-      {% endfor %}
-    </ul>
-
-    {% if g.conselho_fiscal %}
-    <h3>Conselho Fiscal</h3>
-    <p class="gestao__linha">{% for m in g.conselho_fiscal %}{% if m.titulo %}{{ m.titulo }} {% endif %}{{ m.nome }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
-    {% endif %}
-
-    {% if g.relacionamento %}
-    <h3>Diretorias de relacionamento</h3>
-    <p class="gestao__linha">{% for m in g.relacionamento %}{{ m.municipio }}: {{ m.nome }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
-    {% endif %}
-
-    {% if g.fonte or g.observacao %}
-    <p class="nota">{% if g.fonte %}Fonte: {{ g.fonte }}.{% endif %} {{ g.observacao or "" }}</p>
-    {% endif %}
-  </article>
-  {% endfor %}
-  {% else %}
-  <p class="nota">Nenhuma gestão registrada ainda.</p>
-  {% endif %}
-
 {% if presidentes %}
-  <section class="presidentes" id="ex-presidentes">
-    <h2>{{ presidentes.titulo }}</h2>
+  <div class="presidentes presidentes--solo" id="ex-presidentes">
     <p class="presidentes__intro">{{ presidentes.intro | safe }}</p>
 
     <ol class="tl">
@@ -79,7 +39,7 @@
 
     {% if presidentes.galeria %}<p class="presidentes__galeria">{{ i.icon("escudo", 18) }}<span>{{ presidentes.galeria | safe }}</span></p>{% endif %}
     {% if presidentes.nota %}<p class="nota">{{ presidentes.nota | safe }}</p>{% endif %}
-  </section>
+  </div>
 {% endif %}
 
 
