@@ -15,8 +15,6 @@
 <section class="wrap secao">
 {% if presidentes %}
   <div class="presidentes presidentes--solo" id="ex-presidentes">
-    <p class="presidentes__intro">{{ presidentes.intro | safe }}</p>
-
     <ol class="tl">
       {% for e in presidentes.linha %}
       <li class="tl__item{% if e.periodo %} tl__item--datado{% endif %}">
@@ -31,7 +29,6 @@
           <strong>{% if e.ficha %}<a href="{{ root }}associados/{{ e.ficha }}/">{{ e.nome }}</a>{% else %}{{ e.nome }}{% endif %}</strong>
           {% if e.formacao %}<small>{{ e.formacao }}</small>{% endif %}
           {% if e.observacao %}<em>{{ e.observacao }}</em>{% endif %}
-          {% if e.fonte %}<span class="tl__fonte">{{ e.fonte }}</span>{% endif %}
         </span>
       </li>
       {% endfor %}

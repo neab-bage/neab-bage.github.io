@@ -24,11 +24,9 @@
 # ---------------------------------------------------------------------------
 
 titulo: "Linha do tempo da presidência"
-intro: >-
-  Quem presidiu o núcleo, do mandato mais recente ao primeiro, desde a fundação
-  em 1968. A relação vem do levantamento feito para o caderno
-  <em>Ellas Revista — Projeto &amp; Construção</em>, publicado em março de 2026
-  pela parceria entre o NEAB e o Jornal Minuano.
+# intro: removido da página — procedência interessa a quem mantém o site, não a quem o visita.
+# As fontes de cada mandato seguem no campo `fonte` de cada entrada, para consulta e revisão,
+# mas não são exibidas.
 galeria: >-
   O NEAB mantém uma <strong>Galeria de Presidentes</strong>, inaugurada em
   2 de dezembro de 2016 na sede do núcleo.

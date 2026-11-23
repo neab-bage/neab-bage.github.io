@@ -435,7 +435,6 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 
 /* ---------- ex-presidentes ---------- */
 .presidentes{border-top:1px solid var(--concreto-2);margin-top:44px;padding-top:34px}
-.presidentes__intro{color:var(--grafite-2);max-width:78ch;margin:0 0 24px}
 @media (max-width:620px){}
 .presidentes__galeria{display:flex;align-items:flex-start;gap:10px;margin:28px 0 0;padding:14px 18px;background:var(--cobre-claro);border-radius:var(--raio);max-width:80ch;font-size:.95rem;color:var(--grafite)}
 .presidentes__galeria .icon{flex:none;margin-top:2px;color:var(--cobre)}
@@ -458,7 +457,6 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .tl__corpo strong a:hover{color:var(--cobre)}
 .tl__corpo small{display:block;margin-top:1px;font-size:.86rem;color:var(--grafite-2)}
 .tl__corpo em{display:block;margin-top:5px;font-size:.84rem;font-style:normal;color:var(--grafite-2);line-height:1.45}
-.tl__fonte{display:block;margin-top:4px;font-size:.76rem;color:var(--grafite-2);opacity:.8}
 @media (max-width:620px){
   .tl::before{left:26px}
   .tl__item{grid-template-columns:20px 48px 1fr;gap:0 12px;padding-left:0}
