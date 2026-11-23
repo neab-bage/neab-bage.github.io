@@ -47,10 +47,10 @@ linha:
      fonte: "CREA-RS, 2016"}
   - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
      fonte: "CREA-RS, 2015 e 2016"}
-  - {periodo: "2008–2010", nome: "Dagoberto Calzia", formacao: "Arquiteto",
-     fonte: "CREA-RS, 2008"}
-  - {n: 20, periodo: "2006", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
-     observacao: "Primeiro mandato", fonte: "Declaração do próprio, Jornal Minuano, dez. 2024"}
+  - {periodo: "2009–2010", nome: "Dagoberto Calzia", formacao: "Arquiteto",
+     fonte: "Diretoria do NEAB (início em 2009); CREA-RS"}
+  - {n: 20, periodo: "2006–2008", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
+     observacao: "Primeiro mandato", fonte: "Diretoria do NEAB; declaração do próprio, Jornal Minuano, dez. 2024"}
   - {n: 19, nome: "Adriane Luiz Alves",            formacao: "Arquiteta e Urbanista"}
   - {n: 18, nome: "Antônio Cândido Trindade",      formacao: "Arquiteto e Urbanista"}
   - {n: 17, nome: "Luciano Vacilotto",             formacao: "Engenheiro Mecânico", observacao: "Segundo mandato"}
