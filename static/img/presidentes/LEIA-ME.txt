@@ -1,0 +1,11 @@
+Retratos de ex-presidentes que NAO constam do quadro de associados atual.
+
+Quem e associado hoje tem a foto em static/img/associados/ e a linha do tempo
+reaproveita aquela imagem automaticamente -- nao duplique aqui.
+
+Nome do arquivo: o nome do presidente como esta em data/presidentes.yml, em
+minusculas, sem acentos, com hifens no lugar dos espacos. Quando a grafia for
+outra, use o campo `foto` naquele arquivo para apontar o slug correto.
+
+Tamanho: 240 x 240 px, quadrado. A linha do tempo exibe em 240 px; nao ha
+versao maior porque estes nomes nao tem ficha individual no site.

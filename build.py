@@ -160,12 +160,19 @@ def carregar_presidentes():
     if not d:
         return None
     pasta = ROOT / "static" / "img" / "associados"
+    hist = ROOT / "static" / "img" / "presidentes"
     for e in d.get("linha") or []:
         s_ = e.get("foto") or slug(e["nome"])
-        achou = next((s_ + x for x in (".jpg", ".jpeg", ".png", ".webp")
-                      if (pasta / "mini" / (s_ + x)).is_file()), None)
-        e["foto_mini"] = achou
-        e["ficha"] = s_ if achou and (pasta / achou).is_file() else None
+        exts = (".jpg", ".jpeg", ".png", ".webp")
+        # quem e associado hoje: reaproveita a miniatura do quadro de associados
+        achou = next((s_ + x for x in exts if (pasta / "mini" / (s_ + x)).is_file()), None)
+        if achou:
+            e["foto_mini"] = "associados/mini/" + achou
+        else:
+            # ex-presidente fora do quadro atual: retrato proprio, sem ficha
+            achou = next((s_ + x for x in exts if (hist / (s_ + x)).is_file()), None)
+            e["foto_mini"] = ("presidentes/" + achou) if achou else None
+        e["ficha"] = s_ if (pasta / "mini" / (s_ + ".jpg")).is_file() and (pasta / (s_ + ".jpg")).is_file() else None
         partes = [x for x in e["nome"].split() if len(x) > 2]
         e["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else e["nome"][:2].upper()
     return d
