@@ -433,3 +433,12 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .destaque__ir .icon{transition:transform .15s}
 .destaque:hover .destaque__ir .icon{transform:translateX(2px)}
 @media (max-width:620px){.destaque{padding:22px 20px}}
+
+/* ---------- atalhos (404 e contato) ---------- */
+.atalhos__tit{font-size:1.05rem;margin:44px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--concreto-2)}
+.atalhos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:12px}
+.atalhos a{display:block;height:100%;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio);padding:16px 18px;text-decoration:none;transition:border-color .15s,background .15s}
+.atalhos a:hover,.atalhos a:focus-visible{border-color:var(--cobre);background:var(--cobre-claro)}
+.atalhos strong{display:block;color:var(--preto);font-size:1rem;margin-bottom:3px}
+.atalhos a:hover strong{color:var(--cobre-esc)}
+.atalhos span{display:block;color:var(--grafite-2);font-size:.9rem;line-height:1.45}
