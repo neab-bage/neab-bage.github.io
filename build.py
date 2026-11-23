@@ -212,7 +212,7 @@ def carregar_formacao():
         anos.setdefault(x.get("ano") or 0, []).append(x)
     com_ano = [{"ano": a, "itens": anos[a]} for a in sorted((k for k in anos if k), reverse=True)]
     if 0 in anos:  # sem ano definido: vai para o fim, rotulado
-        com_ano.append({"ano": None, "rotulo": "Ano a confirmar", "itens": anos[0]})
+        com_ano.append({"ano": None, "rotulo": "", "itens": anos[0]})
     return com_ano
 
 

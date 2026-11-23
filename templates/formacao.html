@@ -6,8 +6,7 @@
   <div class="wrap">
     <p class="etiqueta">Aperfeiçoamento profissional</p>
     <h1>Cursos e formação</h1>
-    <p class="cab__lead">Cursos, palestras e oficinas promovidos ou trazidos a Bagé pelo núcleo.
-       Este registro está em construção e vai sendo completado conforme o acervo é organizado.</p>
+    <p class="cab__lead">Cursos, palestras e oficinas promovidos ou trazidos a Bagé pelo núcleo.</p>
   </div>
 </section>
 
@@ -15,7 +14,7 @@
   {% if formacao %}
   {% for grupo in formacao %}
   <div class="ano-grupo">
-    <h2 class="ano-grupo__ano{% if not grupo.ano %} ano-grupo__ano--aberto{% endif %}">{{ grupo.ano or grupo.rotulo }}</h2>
+    {% if grupo.ano %}<h2 class="ano-grupo__ano">{{ grupo.ano }}</h2>{% else %}<span aria-hidden="true"></span>{% endif %}
     <ul class="formacao">
       {% for f in grupo.itens %}
       <li>
