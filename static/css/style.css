@@ -462,3 +462,5 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .pres-tabela__fonte{color:var(--grafite-2);font-size:.88rem}
 .pres-tabela small{color:var(--grafite-2)}
 @media (max-width:620px){.pres-tabela th:nth-child(3),.pres-tabela td:nth-child(3){display:none}}
+.presidentes__galeria{display:flex;align-items:flex-start;gap:10px;margin:28px 0 0;padding:14px 18px;background:var(--cobre-claro);border-radius:var(--raio);max-width:80ch;font-size:.95rem;color:var(--grafite)}
+.presidentes__galeria .icon{flex:none;margin-top:2px;color:var(--cobre)}

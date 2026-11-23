@@ -86,6 +86,7 @@
     </table>
     {% endif %}
 
+    {% if presidentes.galeria %}<p class="presidentes__galeria">{{ i.icon("escudo", 18) }}<span>{{ presidentes.galeria | safe }}</span></p>{% endif %}
     {% if presidentes.nota %}<p class="nota">{{ presidentes.nota | safe }}</p>{% endif %}
   </section>
 {% endif %}
