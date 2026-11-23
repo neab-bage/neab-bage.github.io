@@ -26,20 +26,10 @@ nota: >-
 grupos:
   - area: "Arquitetura e Urbanismo"
     pessoas:
-      - nome: "Aline Machado Pillon"
-        registro: ""
-        email: "bimhaus@outlook.com"
-        telefone: "(51) 99975-1822"
-        autoriza_contato: true
       - nome: "Ana Lúcia Kalil Sarmento"
         registro: "CAU A33015-9"
         email: "analuciaks@hotmail.com"
         telefone: "(53) 99928-6801"
-        autoriza_contato: true
-      - nome: "Ana Paula Lopes Siqueira Ritta"
-        registro: ""
-        email: "anapaula@hubeearquitetura.com"
-        telefone: "(53) 99946-8070"
         autoriza_contato: true
       - nome: "Antônio Augusto Nadal da Luz"
         registro: ""
@@ -67,16 +57,6 @@ grupos:
         email: "dineu@borbaneto.com.br"
         telefone: "(53) 3241-8342 / (53) 99103-6100"
         autoriza_contato: true
-      - nome: "Diogo Suñé Pfeifer Sant'Anna"
-        registro: ""
-        email: "soa.escritorio@gmail.com"
-        telefone: "(53) 3242-6424 · (51) 98140-3569"
-        autoriza_contato: true
-      - nome: "Eliza Furlong Antochevis"
-        registro: ""
-        email: "eliza.antochevis@gmail.com"
-        telefone: "(53) 99164-7857"
-        autoriza_contato: true
       - nome: "Eulália de Souza Anselmo"
         registro: ""
         email: ""
@@ -91,11 +71,6 @@ grupos:
         registro: ""
         email: "gabrielassbrandao@hotmail.com"
         telefone: "(53) 99965-8885"
-        autoriza_contato: true
-      - nome: "Giovana Delpino da Silveira"
-        registro: ""
-        email: "arquitetagiovanasilveira@hotmail.com"
-        telefone: "(53) 99945-3623"
         autoriza_contato: true
       - nome: "Gisele Pinheiro"
         registro: ""
@@ -143,11 +118,6 @@ grupos:
         email: "arquitetomarcusjardim@outlook.com"
         telefone: "(53) 98153-5384"
         autoriza_contato: true
-      - nome: "Mariana Hoesel Scherer"
-        registro: ""
-        email: "sularquiteturas@gmail.com"
-        telefone: "(53) 99943-9883"
-        autoriza_contato: true
       - nome: "Matheus Quadros Rosa Veleda"
         registro: ""
         email: "matheusveleda@hotmail.com"
@@ -179,21 +149,11 @@ grupos:
         email: ""
         telefone: "(53) 99959-6538"
         autoriza_contato: true
-      - nome: "Taís de Oliveira Maciel"
-        registro: ""
-        email: "arq.taismaciel@gmail.com"
-        telefone: "(53) 99702-2461"
-        autoriza_contato: true
       - nome: "Verônica Machado de Sá Ferreira"
         registro: "CAU A157447-7"
         email: "arvenaarquitetura@gmail.com"
         telefone: "(53) 99947-6945"
         site: "arvenaarquitetura.com.br"
-        autoriza_contato: true
-      - nome: "Victória Vieira"
-        registro: ""
-        email: "victoria-vieira@hotmail.com"
-        telefone: "(53) 99996-9797"
         autoriza_contato: true
   - area: "Engenharia Civil"
     pessoas:
@@ -202,7 +162,7 @@ grupos:
         email: "ad.schafer@gmail.com"
         telefone: "(53) 99957-0717"
         autoriza_contato: true
-      - nome: "Alexandro Gularte Schäfer"
+      - nome: "Alexandro Gularte Schafer"
         registro: ""
         email: "alschafer@gmail.com"
         telefone: "(53) 99951-9908"
@@ -242,11 +202,6 @@ grupos:
         email: ""
         telefone: "(53) 3247-5459 / (53) 99972-0890"
         autoriza_contato: true
-      - nome: "Glaucea Pereira da Silva"
-        registro: ""
-        email: "glaucea@hotmail.com.br"
-        telefone: "(53) 99969-8548"
-        autoriza_contato: true
       - nome: "Gustavo Scherer Fatturi Pires"
         registro: "CREA-RS 207819"
         email: "premoldadosfatturi@hotmail.com"
@@ -256,11 +211,6 @@ grupos:
         registro: "CREA-RS 207849"
         email: ""
         telefone: "(53) 99909-7753"
-        autoriza_contato: true
-      - nome: "Katia Helena Ubal de Rodrigues"
-        registro: ""
-        email: "ubalkatia@gmail.com"
-        telefone: "(53) 999206047"
         autoriza_contato: true
       - nome: "Márcio Marun Gomes"
         registro: ""
@@ -281,11 +231,6 @@ grupos:
         registro: ""
         email: "davila.muriele@gmail.com"
         telefone: "(53) 99928-1601"
-        autoriza_contato: true
-      - nome: "Pierre Carvalho Madruga"
-        registro: ""
-        email: "pierrecarvalho91@gmail.com"
-        telefone: "(53) 99940-8045"
         autoriza_contato: true
       - nome: "Rafael Daneris Delabary"
         registro: "CREA-RS 257786"
@@ -339,11 +284,6 @@ grupos:
         email: "fabioburgo21@gmail.com"
         telefone: "(53) 98119-1765"
         autoriza_contato: true
-      - nome: "Katia Helena Ubal de Rodrigues"
-        registro: ""
-        email: "ubalkatia@gmail.com"
-        telefone: "(53) 999206047"
-        autoriza_contato: true
       - nome: "Márcio Marun Gomes"
         registro: ""
         email: "marcio.marun@terra.com.br"
@@ -370,12 +310,12 @@ grupos:
         registro: ""
         email: "eng.douglas.tarso.dts@outlook.com"
         telefone: "(12) 99728-5083"
+        autoriza_contato: false
       - nome: "Jorge Dias Dias da Costa"
         registro: ""
         email: "jddiasdacosta@gmail.com"
         telefone: "(53) 98112-7532"
         autoriza_contato: true
-
   - area: "Engenharia Química"
     pessoas:
       - nome: "Anastácia Peres Isasmendi"
