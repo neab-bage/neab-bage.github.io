@@ -389,6 +389,7 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .aviso{border:1px solid var(--concreto-2);border-top:3px solid var(--cobre);border-radius:var(--raio);background:#fff;padding:22px 26px;margin:40px 0 0;max-width:82ch}
 .aviso p{margin:0;color:var(--grafite-2);font-size:.95rem}
 .aviso__fonte{margin-top:.7em !important;font-size:.86rem}
+.guia__creditos{margin:26px 0 0;padding-top:18px;border-top:1px solid var(--concreto-2);max-width:82ch;font-size:.88rem;line-height:1.55;color:var(--grafite-2)}
 
 @media (max-width:620px){.checklist{padding:22px 20px}.checklist__itens label{margin:0 -8px;padding:11px 8px}}
 

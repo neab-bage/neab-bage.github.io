@@ -80,6 +80,10 @@
       {% if guia.atualizacao %}<p class="aviso__fonte">Fonte: Guia Prático do NEAB — {{ guia.atualizacao }}.</p>{% endif %}
     </aside>
 
+    {% if guia.creditos %}
+    <p class="guia__creditos">{{ guia.creditos | safe }}</p>
+    {% endif %}
+
   </div>
 </section>
 

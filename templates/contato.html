@@ -49,6 +49,15 @@
       </div>
     </li>
     {% endif %}
+    {% if site.contato.facebook %}
+    <li class="contato">
+      <span class="contato__ic">{{ i.icon("facebook", 22) }}</span>
+      <div>
+        <strong>Facebook</strong>
+        <p><a href="{{ site.contato.facebook }}" target="_blank" rel="noopener">{{ site.contato.facebook_user or "Página do NEAB" }}</a></p>
+      </div>
+    </li>
+    {% endif %}
   </ul>
   {% if not site.contato.email and not site.contato.telefone %}
   <p class="nota">Os canais oficiais de contato do núcleo serão publicados aqui. Até então, a
