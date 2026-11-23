@@ -47,3 +47,29 @@ Marcadas com `PENDENTE` em `data/site.yml`:
 - Edital de convocação de 2026 em versão sem os dados pessoais da assinatura digital.
 - Relatórios de atividades e demonstrações financeiras por exercício (`transparencia.exercicios`).
 - Responsável pelo site no núcleo (`sobre_site.responsavel`).
+
+## Pendências do guia de 23/11/2026 (conferir com a secretaria)
+O PDF dessa revisão foi exportado em PDF/X com as fontes convertidas em curvas: **não tem camada
+de texto**. A conferência foi feita por OCR em duas resoluções (200 e 400 dpi); só foram gravados
+os e-mails lidos igualmente nas duas passagens. Os itens abaixo não puderam ser confirmados.
+
+- **Aliane da Croce** — guia: `alianedacroce@gmail.com`; cadastro atual: `alianecroce@gmail.com`
+  (informado pelo núcleo em 11/11). Endereços diferentes, não é erro de leitura. Confirmar qual vale.
+- **Nubia Margot Menezes Jardim** — guia: `arqmargot_asm@yahoo.com.br`; cadastro:
+  `arqnubiamargot_asm@yahoo.com.br`, montado a partir de um endereço truncado no guia anterior.
+- **Júlia Bueno Raota Fernandes** — guia (OCR): `juliaraota721@`; cadastro: `juliaraota791@`.
+  Mantido o do cadastro, que veio da camada de texto do guia de 18/11.
+- **Gisele Pinheiro** — OCR divergiu entre as duas leituras (`...ge@` e `...go@`). Cadastro mantido:
+  `giselepinheirogp@hotmail.com`.
+- **Gustavo Scherer Fatturi Pires**, **Caíque Nunes Maria Santana**, **Magali Nocchi Collares
+  Gonçalves** — OCR corrompeu o endereço. Cadastro mantido.
+- **Gladis Barcellos Saavedra (Neneca)** — gravado `neneca.sasavedra@gmail.com` conforme as duas
+  leituras; pode ser erro de digitação no próprio guia (Saavedra com dois "a").
+- **Juliana de Oliveira Taschetto** — as duas leituras discordam na pontuação
+  (`arqjuliana.` x `arq.juliana.`). Campo deixado vazio.
+- **Rafael Daneris Delabary** — consta apenas na seção do conselho fiscal, sem entrada na listagem
+  profissional. Igual no guia de 18/11.
+- **Ana Paula Lopes Siqueira Ritta** e as demais removidas após 18/11 seguem ausentes em 23/11.
+  Ana Paula enviou foto; aguardando retorno da diretoria. Foto guardada em
+  `fotos_associados/_previa/ana_paula_recorte.jpg`.
+- **www.neab.org.br** — divulgado nos canais de relacionamento do guia, mas o domínio não existe.
