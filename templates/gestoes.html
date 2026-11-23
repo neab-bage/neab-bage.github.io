@@ -52,6 +52,44 @@
   <p class="nota">Nenhuma gestão registrada ainda.</p>
   {% endif %}
 
+{% if presidentes %}
+  <section class="presidentes" id="ex-presidentes">
+    <h2>{{ presidentes.titulo }}</h2>
+    <p class="presidentes__intro">{{ presidentes.intro | safe }}</p>
+
+    <ol class="pres-lista">
+      {% for e in presidentes.relacao %}
+      <li class="pres">
+        <span class="pres__n">{{ e.n }}</span>
+        <span class="pres__corpo">
+          <strong>{{ e.nome }}</strong>
+          {% if e.formacao %}<small>{{ e.formacao }}</small>{% endif %}
+          {% if e.observacao %}<em>{{ e.observacao }}</em>{% endif %}
+        </span>
+      </li>
+      {% endfor %}
+    </ol>
+
+    {% if presidentes.periodos %}
+    <h3 class="pres__subtit">Mandatos com período identificado</h3>
+    <table class="pres-tabela">
+      <thead><tr><th scope="col">Período</th><th scope="col">Presidente</th><th scope="col">Fonte</th></tr></thead>
+      <tbody>
+        {% for e in presidentes.periodos %}
+        <tr>
+          <td class="pres-tabela__periodo">{{ e.periodo }}</td>
+          <td><strong>{{ e.nome }}</strong>{% if e.formacao %}<br><small>{{ e.formacao }}</small>{% endif %}</td>
+          <td class="pres-tabela__fonte">{{ e.fonte }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
+    {% if presidentes.nota %}<p class="nota">{{ presidentes.nota | safe }}</p>{% endif %}
+  </section>
+{% endif %}
+
   <p class="nota">Tem documentos, atas ou recortes de jornal sobre alguma gestão do núcleo?
      Fale conosco pela <a href="{{ root }}contato/">página de contato</a> — esse acervo é
      construído coletivamente.</p>

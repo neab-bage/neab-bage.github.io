@@ -147,6 +147,12 @@ def carregar_gestoes():
     return gestoes
 
 
+def carregar_presidentes():
+    """Lê data/presidentes.yml — a relação histórica de ex-presidentes."""
+    arq = ROOT / "data" / "presidentes.yml"
+    return yaml.safe_load(arq.read_text(encoding="utf-8")) if arq.exists() else None
+
+
 def carregar_guia():
     """Lê data/guia.yml — os check-lists do Guia Prático do NEAB."""
     arq = ROOT / "data" / "guia.yml"
@@ -278,6 +284,7 @@ def gerar():
     gestoes = carregar_gestoes()
     formacao = carregar_formacao()
     guia = carregar_guia()
+    presidentes = carregar_presidentes()
     associados = carregar_associados()
     programa = carregar_programa(associados)
     hoje = dt.datetime.now(TZ).date()
@@ -303,7 +310,7 @@ def gerar():
         caminho = "" if destino == "index.html" else str(Path(destino).parent).replace("\\", "/") + "/"
         html = env.get_template(template).render(
             caminho=caminho,
-            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, programa=programa, associados=associados,
+            site=site, noticias=noticias, noticias_home=noticias[:3], gestoes=gestoes, formacao=formacao, guia=guia, programa=programa, presidentes=presidentes, associados=associados,
             agenda_prox=ag_prox, agenda_real=ag_real, agenda_home=ag_prox[:2],
             root=root, ano=ano, **ctx)
         saida = DIST / destino

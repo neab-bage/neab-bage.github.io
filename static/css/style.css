@@ -442,3 +442,23 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .atalhos strong{display:block;color:var(--preto);font-size:1rem;margin-bottom:3px}
 .atalhos a:hover strong{color:var(--cobre-esc)}
 .atalhos span{display:block;color:var(--grafite-2);font-size:.9rem;line-height:1.45}
+
+/* ---------- ex-presidentes ---------- */
+.presidentes{border-top:1px solid var(--concreto-2);margin-top:44px;padding-top:34px}
+.presidentes__intro{color:var(--grafite-2);max-width:78ch;margin:0 0 24px}
+.pres-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(282px,1fr));gap:2px 26px;counter-reset:none}
+.pres{display:flex;align-items:baseline;gap:14px;padding:11px 12px;margin:0 -12px;border-radius:10px}
+.pres:hover{background:var(--concreto)}
+.pres__n{flex:none;width:1.9em;text-align:right;font-variant-numeric:tabular-nums;font-size:.84rem;font-weight:600;color:var(--cobre)}
+.pres__corpo{min-width:0}
+.pres__corpo strong{display:block;font-weight:600;line-height:1.3}
+.pres__corpo small{display:block;margin-top:2px;font-size:.85rem;color:var(--grafite-2)}
+.pres__corpo em{display:block;margin-top:4px;font-size:.84rem;font-style:normal;color:var(--grafite-2);border-left:2px solid var(--concreto-2);padding-left:9px}
+.pres__subtit{margin:38px 0 14px;font-size:1.05rem}
+.pres-tabela{width:100%;max-width:760px;border-collapse:collapse;font-size:.95rem}
+.pres-tabela th,.pres-tabela td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--concreto-2);vertical-align:top}
+.pres-tabela th{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grafite-2);background:var(--concreto)}
+.pres-tabela__periodo{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.pres-tabela__fonte{color:var(--grafite-2);font-size:.88rem}
+.pres-tabela small{color:var(--grafite-2)}
+@media (max-width:620px){.pres-tabela th:nth-child(3),.pres-tabela td:nth-child(3){display:none}}

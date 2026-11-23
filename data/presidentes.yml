@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------------------
+# Relação de ex-presidentes do NEAB.
+#
+# FONTE: levantamento feito pelo Eng. Márcio Marun Gomes para a primeira edição do
+# "Ellas Revista — Projeto & Construção", caderno publicado em março de 2026 pela
+# parceria entre o NEAB e o Jornal Minuano, que registra a trajetória dos presidentes
+# da entidade.
+#
+# A numeração reproduz a ordem do levantamento. Os períodos de mandato só constam
+# onde foram identificados; a cronologia completa, incluindo eventuais reeleições,
+# ainda está sendo reconstituída — ver `nota` abaixo.
+#
+# Ao acrescentar ou corrigir, registre a fonte no campo `fonte` da entrada.
+# ---------------------------------------------------------------------------
+
+titulo: "Ex-presidentes"
+intro: >-
+  Quem presidiu o núcleo desde a fundação, em 1968. A relação resulta do levantamento
+  feito para o caderno <em>Ellas Revista — Projeto &amp; Construção</em>, publicado em
+  março de 2026 pela parceria entre o NEAB e o Jornal Minuano.
+nota: >-
+  A reconstituição da cronologia segue em curso. Faltam identificar os períodos de
+  alguns mandatos — em especial entre 2011 e 2014 e entre 2021 e 2022 — e confirmar
+  eventuais reeleições. Quem puder contribuir com documentos, atas ou registros
+  fotográficos pode falar com a Diretoria.
+
+relacao:
+  - {n: 1,  nome: "Glênio Mércio Carneiro",      formacao: "Arquiteto"}
+  - {n: 2,  nome: "Waldir Alves Ramos",          formacao: "Engenheiro"}
+  - {n: 3,  nome: "Ely N. de Mello",             formacao: "Arquiteto"}
+  - {n: 4,  nome: "Manoel Luiz Ungaretti",       formacao: "Engenheiro"}
+  - {n: 5,  nome: "Marcello Ghisolfi",           formacao: "Engenheiro"}
+  - {n: 6,  nome: "Sérgio Amado Coirlo",         formacao: "Arquiteto"}
+  - {n: 7,  nome: "Glênio Mércio Carneiro",      formacao: "Arquiteto", observacao: "Segundo mandato"}
+  - {n: 8,  nome: "José Augusto Reis Bordini",   formacao: "Engenheiro"}
+  - {n: 9,  nome: "Maria de Lourdes Campos Costa", formacao: "Arquiteta"}
+  - {n: 10, nome: "Nubia Margot Menezes",        formacao: "Arquiteta e Urbanista"}
+  - {n: 11, nome: "Néd Medina Quintana",         formacao: "Engenheiro Civil",
+     observacao: "Um dos fundadores do NEAB, em 1968. Faleceu em 2002."}
+  - {n: 12, nome: "Volmir Oliveira",             formacao: ""}
+  - {n: 13, nome: "Lia Quintana",                formacao: "Engenheira Civil",
+     observacao: "Filha de Néd Medina Quintana."}
+  - {n: 14, nome: "Newton Perima Mansur",        formacao: "Engenheiro Civil"}
+  - {n: 15, nome: "Luciano Vacilotto",           formacao: "Engenheiro Mecânico"}
+  - {n: 16, nome: "Gustavo Pinto",               formacao: ""}
+  - {n: 17, nome: "Luciano Vacilotto",           formacao: "Engenheiro Mecânico", observacao: "Segundo mandato"}
+  - {n: 18, nome: "Antônio Cândido Trindade",    formacao: "Arquiteto e Urbanista"}
+  - {n: 19, nome: "Adriane Luiz Alves",          formacao: "Arquiteta e Urbanista"}
+  - {n: 20, nome: "Márcio Marun Gomes",          formacao: "Engenheiro Civil e de Segurança do Trabalho"}
+
+# Mandatos cujo período foi identificado em fontes datadas.
+periodos:
+  - {periodo: "2008–2010", nome: "Dagoberto Calzia",            formacao: "Arquiteto",      fonte: "CREA-RS, 2008"}
+  - {periodo: "2015–2016", nome: "Márcio Marun Gomes",          formacao: "Engenheiro Civil e de Segurança do Trabalho", fonte: "CREA-RS, 2015 e 2016"}
+  - {periodo: "2017–2018", nome: "Adalberto Gularte Schäfer",   formacao: "Engenheiro Civil", fonte: "CREA-RS, 2016"}
+  - {periodo: "2019",      nome: "Antônio Luiz Arla da Silva",  formacao: "Engenheiro Civil", fonte: "CREA-RS, 2019"}
+  - {periodo: "2020",      nome: "Luiz Antônio Arla",           formacao: "Engenheiro Civil", fonte: "Jornal Minuano, 2020"}
+  - {periodo: "2023",      nome: "Jerônimo Bazerque Pereira",   formacao: "Engenheiro Civil", fonte: "CREA-RS"}
