@@ -414,3 +414,22 @@ a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 .assoc-lista--curta{grid-template-columns:repeat(auto-fill,minmax(176px,1fr));max-width:400px}
 .programa__nota{margin:18px 0 0;color:var(--grafite-2);font-size:.95rem}
 @media (max-width:620px){.programa__cartao{padding:22px;gap:18px}.programa__acoes{width:100%}.programa__acoes .botao{flex:1 1 auto;justify-content:center}}
+
+/* ---------- destaques da página inicial ---------- */
+.secao--destaques{padding-bottom:0}
+.destaques{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:22px}
+.destaque{position:relative;background:#fff;border:1px solid var(--concreto-2);border-left:3px solid var(--cobre);border-radius:var(--raio);padding:26px 28px;transition:border-color .15s,box-shadow .15s}
+.destaque:hover{box-shadow:0 2px 14px rgba(10,10,10,.07)}
+.destaque__etiqueta{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:.73rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cobre)}
+.destaque__etiqueta .icon{flex:none}
+.destaque h3{margin:0 0 .5em;font-size:1.3rem;line-height:1.2}
+.destaque h3 a{text-decoration:none;color:var(--preto)}
+.destaque h3 a::after{content:"";position:absolute;inset:0}
+.destaque:hover h3 a{color:var(--cobre-esc)}
+.destaque__txt{margin:0;color:var(--grafite-2);font-size:.99rem;line-height:1.55;max-width:48ch}
+.destaque__ir{margin:16px 0 0}
+.destaque__ir a{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.93rem;color:var(--cobre);text-decoration:none}
+.destaque:hover .destaque__ir a{color:var(--cobre-esc);gap:10px}
+.destaque__ir .icon{transition:transform .15s}
+.destaque:hover .destaque__ir .icon{transform:translateX(2px)}
+@media (max-width:620px){.destaque{padding:22px 20px}}

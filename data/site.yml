@@ -9,10 +9,17 @@ base_url: "/"            # usado só na página 404. Em Pages de projeto: "/nome
 # link canônico, que exigem URL completa. TROCAR quando o domínio próprio entrar no ar.
 url_absoluta: "https://neab-bage.github.io"
 
+# descricao_curta: usada nos metadados e no compartilhamento. Formulação institucional.
 descricao_curta: >-
   O NEAB é a sociedade civil que reúne engenheiros, arquitetos e profissionais de
   especialidades afins da regional do CREA-RS de Bagé para defender o exercício
   profissional e valorizar a engenharia e a arquitetura na região.
+
+# chamada_home: primeira frase que o visitante lê. Escrita do ponto de vista de quem chega,
+# não do Estatuto. A formulação institucional continua em descricao_curta e na página O NEAB.
+chamada_home: >-
+  Quem defende o exercício da engenharia e da arquitetura em Bagé desde 1968 — e quem
+  organiza, para toda a cidade, o que é preciso saber para construir dentro da regra.
 
 fundacao:
   ano: 1968
@@ -304,6 +311,26 @@ parceiros:
 # Logotipos exibidos na página inicial. Arquivos em static/img/logos/ (PNG, de preferência
 # monocromáticos ou em cores oficiais, fundo transparente). Se o arquivo não existir, o site
 # mostra o nome como link de texto.
+# Blocos de destaque da página inicial: o que o site oferece a quem chega de fora.
+# Ordem importa — o primeiro ganha mais peso visual.
+destaques:
+  - etiqueta: "Serviço ao profissional"
+    titulo: "Guia prático"
+    texto: >-
+      O que levar na Geplan, no IPHAE e no laudo de inspeção predial, item por item,
+      em listas que você vai marcando enquanto monta a pasta.
+    link_rotulo: "Ver os check-lists"
+    url: "guia/"
+    icone: "check"
+  - etiqueta: "Toda quarta, 11h"
+    titulo: "Universo das Engenharias"
+    texto: >-
+      O programa do núcleo na Pop Rock FM 98.1, sobre a engenharia que está no dia a dia
+      da cidade — com entrevistas, debates e linguagem de quem quer ser entendido.
+    link_rotulo: "Conhecer o programa"
+    url: "universo-das-engenharias/"
+    icone: "radio"
+
 logos_institucionais:
   titulo: "Articulação institucional"
   itens:

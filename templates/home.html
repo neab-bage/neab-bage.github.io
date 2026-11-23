@@ -6,7 +6,7 @@
   <div class="wrap hero__grade">
     <div>
       <h1>Núcleo dos Engenheiros e Arquitetos de <span>Bagé</span></h1>
-      <p class="hero__lead">{{ site.descricao_curta }}</p>
+      <p class="hero__lead">{{ site.chamada_home or site.descricao_curta }}</p>
       <div class="hero__acoes">
         <a class="btn btn--primario" href="{{ root }}associe-se/">Associe-se ao NEAB {{ i.icon("seta", 18) }}</a>
         <a class="btn btn--suave" href="{{ root }}atuacao/">O que fazemos</a>
@@ -18,6 +18,22 @@
     <img class="hero__logo" src="{{ root }}static/img/logo-neab.png" alt="Logotipo do NEAB — Núcleo dos Engenheiros e Arquitetos de Bagé" width="1552" height="742">
   </div>
 </section>
+
+{% if site.destaques %}
+<section class="wrap secao secao--destaques">
+  <h2 class="sr">Em destaque</h2>
+  <div class="destaques">
+    {% for d in site.destaques %}
+    <article class="destaque">
+      <p class="destaque__etiqueta">{{ i.icon(d.icone or "seta", 17) }}{{ d.etiqueta }}</p>
+      <h3><a href="{{ root }}{{ d.url }}">{{ d.titulo }}</a></h3>
+      <p class="destaque__txt">{{ d.texto }}</p>
+      <p class="destaque__ir"><a href="{{ root }}{{ d.url }}">{{ d.link_rotulo }}{{ i.icon("seta", 16) }}</a></p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 <section class="wrap secao">
   <h2 class="sr">Seções do site</h2>
@@ -56,17 +72,6 @@
         <li><a href="{{ root }}contato/">Contato<small>Sede e canais do núcleo</small></a></li>
       </ul>
     </nav>
-    {% if guia %}
-    <nav class="eixo" aria-label="Guia prático">
-      <h3 class="eixo__titulo">{{ i.icon("check", 18) }}Guia prático</h3>
-      <ul>
-        {% for l in guia.listas[:3] %}
-        <li><a href="{{ root }}guia/#{{ l.id }}">{{ l.titulo }}<small>{{ l.itens | length }} documentos</small></a></li>
-        {% endfor %}
-        <li><a href="{{ root }}guia/">Todos os check-lists<small>O que levar em cada processo</small></a></li>
-      </ul>
-    </nav>
-    {% endif %}
   </div>
 </section>
 
