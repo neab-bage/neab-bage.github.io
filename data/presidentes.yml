@@ -47,8 +47,12 @@ linha:
      fonte: "CREA-RS, 2016"}
   - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
      fonte: "CREA-RS, 2015 e 2016"}
-  - {periodo: "2009–2010", nome: "Dagoberto Calzia", formacao: "Arquiteto",
-     fonte: "Diretoria do NEAB (início em 2009); CREA-RS"}
+  # PENDENTE: ano final do mandato de Dagoberto Calzia, e se Guilherme Worvath cumpriu
+  # mandato de um ano só. A Diretoria informou "provavelmente 2009" para Guilherme.
+  - {periodo: "2010", nome: "Dagoberto Calzia", formacao: "Arquiteto",
+     fonte: "Diretoria do NEAB; CREA-RS"}
+  - {periodo: "2009", nome: "Guilherme Worvath", formacao: "",
+     fonte: "Diretoria do NEAB"}
   - {n: 20, periodo: "2006–2008", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
      observacao: "Primeiro mandato", fonte: "Diretoria do NEAB; declaração do próprio, Jornal Minuano, dez. 2024"}
   - {n: 19, nome: "Adriane Luiz Alves",            formacao: "Arquiteta e Urbanista"}
