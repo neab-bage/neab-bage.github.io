@@ -346,6 +346,10 @@ documentos:
     Estatuto, editais e atos da entidade. Os arquivos ficam em
     <code>static/documentos/</code> e são listados aqui.
   grupos:
+    - titulo: "Guia Prático"
+      itens:
+        - {titulo: "Guia Prático do NEAB", data: "novembro de 2026", arquivo: "guia-pratico-neab.pdf",
+           resumo: "Check-lists dos processos de aprovação em Bagé e a relação de associados por modalidade. A versão interativa está na página Guia prático."}
     - titulo: "Estatuto Social"
       itens:
         - {titulo: "Estatuto Social do NEAB", data: "21 de julho de 2025", arquivo: "estatuto-neab-2025.pdf",

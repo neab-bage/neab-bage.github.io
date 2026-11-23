@@ -18,7 +18,13 @@
 
 titulo: "Guia prático"
 chamada: "Check-lists de documentos"
-atualizacao: "Edição de 18 de novembro de 2026"
+atualizacao: "Edição de 23 de novembro de 2026"
+
+# Versão impressa do guia, para download. Arquivo em static/documentos/.
+pdf:
+  arquivo: "guia-pratico-neab.pdf"
+  rotulo: "Baixar o guia completo em PDF"
+  detalhe: "Edição de novembro de 2026 · 24 páginas · 9 MB"
 intro: >-
   O NEAB reúne aqui as listas de documentos exigidos nos principais processos de
   aprovação em Bagé. São as mesmas do <strong>Guia Prático do NEAB</strong>, agora em
