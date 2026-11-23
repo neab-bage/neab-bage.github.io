@@ -15,6 +15,9 @@
 # ao Jornal Minuano ter sido presidente "pela primeira vez" naquele ano — e por
 # isso aparece uma única vez, com o período.
 #
+# NOMES UNIFICADOS: o Jornal Minuano grafou "Luiz Antônio Arla" e o CREA-RS, "Antônio Luiz
+# Arla da Silva". É a mesma pessoa, associada ao núcleo; vale a grafia do quadro de associados.
+#
 # FOTO: resolvida automaticamente pelo nome, contra static/img/associados/.
 # Quando o nome no quadro de associados for diferente, use o campo `foto` com
 # o slug correto.
@@ -38,10 +41,8 @@ nota: >-
 linha:
   - {periodo: "2023–2024", nome: "Jerônimo Bazerque Pereira", formacao: "Engenheiro Civil",
      fonte: "CREA-RS; Jornal Minuano, jun. e dez. 2024"}
-  - {periodo: "2020", nome: "Luiz Antônio Arla", formacao: "Engenheiro Civil",
-     fonte: "Jornal Minuano, 2020"}
-  - {periodo: "2019", nome: "Antônio Luiz Arla da Silva", formacao: "Engenheiro Civil",
-     fonte: "CREA-RS, 2019"}
+  - {periodo: "2019–2020", nome: "Antônio Luiz Arla da Silva", formacao: "Engenheiro Civil",
+     fonte: "CREA-RS, 2019; Jornal Minuano, 2020"}
   - {periodo: "2017–2018", nome: "Adalberto Gularte Schäfer", formacao: "Engenheiro Civil",
      fonte: "CREA-RS, 2016"}
   - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
