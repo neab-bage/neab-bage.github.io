@@ -30,7 +30,7 @@
             {% if o.url %}<a href="{{ o.url }}" target="_blank" rel="noopener">{{ o.titulo }}{{ i.icon("externo", 15) }}</a>
             {% else %}{{ o.titulo }}{% endif %}
           </p>
-          {% if o.autores and o.autores != "—" %}<p class="norma__ementa"><strong>{{ o.autores }}</strong>{% if o.publicacao %} · {{ o.publicacao }}{% endif %}{% if o.ano %} · {{ o.ano }}{% endif %}</p>
+          {% if o.autores and o.autores != "—" %}<p class="norma__ementa"><strong>{% if o.ficha %}<a href="{{ root }}associados/{{ o.ficha }}/">{{ o.autores }}</a>{% else %}{{ o.autores }}{% endif %}</strong>{% if o.publicacao %} · {{ o.publicacao }}{% endif %}{% if o.ano %} · {{ o.ano }}{% endif %}</p>
           {% elif o.publicacao %}<p class="norma__ementa">{{ o.publicacao }}{% if o.ano %} · {{ o.ano }}{% endif %}</p>{% endif %}
           <p class="norma__ementa">{{ o.resumo }}</p>
           <p class="norma__meta">
