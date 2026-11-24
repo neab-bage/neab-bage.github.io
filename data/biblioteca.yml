@@ -1,0 +1,106 @@
+# ---------------------------------------------------------------------------
+# Bibliografia sobre Bagé — livros, teses, dissertações, artigos e relatórios.
+#
+# REGRA DOS LINKS: só entra link para o texto que esteja publicado em acesso
+# aberto pela própria fonte (repositório universitário, periódico, órgão
+# público). Livro comercial entra como referência bibliográfica, sem link e sem
+# capa — capa é material protegido. Nada de PDF hospedado aqui.
+#
+# Cada item: titulo, autores, publicacao, ano, resumo, url (opcional),
+# fonte (onde está publicado), nota (opcional, para pendências).
+#
+# ESTA LISTA É UM COMEÇO. O levantamento foi feito em buscas abertas; a
+# contribuição dos associados vale mais do que isso. Ver a chamada no fim da página.
+# ---------------------------------------------------------------------------
+
+titulo: "Biblioteca"
+chamada: "Bagé em livros, teses e artigos"
+intro: >-
+  Referências sobre Bagé — sua história, sua arquitetura, seu território. Reunidas aqui
+  porque estão espalhadas por repositórios universitários e catálogos que ninguém encontra
+  por acaso. Onde o texto está em acesso aberto, o link leva ao documento completo.
+
+chamada_contribuicao: >-
+  <strong>Falta muita coisa.</strong> Se você conhece um livro, uma tese ou um relatório
+  sobre Bagé que deveria estar aqui — ou é autor de um deles —, fale com a Diretoria.
+
+secoes:
+  - id: livros
+    titulo: "Livros"
+    itens:
+      - titulo: "Pequenos detalhes de Bagé"
+        autores: "Clarisse Ismério"
+        publicacao: "Ediurcamp"
+        ano: "2019"
+        resumo: "A cidade contada pelos detalhes da sua arquitetura e do seu cotidiano. Publicado pela editora da Urcamp, com texto completo disponível."
+        url: "https://www.urcamp.edu.br/storage/attachments/attachments/15cc1f2d755ab11556214487.pdf"
+        fonte: "Urcamp"
+      - titulo: "Personalidades das Ruas de Bagé"
+        autores: "Diones Piazer Franchi"
+        publicacao: "Exclamação / Editora Renascença, Bagé"
+        ano: "2024"
+        resumo: "Quem são as pessoas que dão nome às ruas da cidade."
+        fonte: "Edição comercial"
+
+  - id: teses
+    titulo: "Teses e dissertações"
+    itens:
+      - titulo: "Arquitetura bajeense: o delinear da modernidade, 1930–1970"
+        autores: "—"
+        publicacao: "Universidade Federal do Rio Grande do Sul"
+        ano: ""
+        resumo: "A chegada da arquitetura moderna a Bagé e o que ela representou no contexto urbano da cidade. Texto completo no repositório Lume."
+        url: "https://lume.ufrgs.br/handle/10183/8623"
+        fonte: "Lume — UFRGS"
+        nota: "PENDENTE: confirmar autoria e ano na página do repositório."
+      - titulo: "Campus Bagé — Unipampa: uma avaliação da produção dos novos espaços universitários"
+        autores: "Carina Ebert Hamm Oliveira"
+        publicacao: "Programa de Pós-Graduação em Arquitetura e Urbanismo, Universidade Federal da Bahia"
+        ano: ""
+        resumo: "Avaliação dos espaços construídos para o campus da Unipampa em Bagé."
+        url: "https://ppgau.ufba.br/teses"
+        fonte: "PPGAU — UFBA"
+        nota: "PENDENTE: link direto para o texto completo e ano de defesa."
+      - titulo: "Entre Charqueadas: um caminho de memórias — diretrizes de preservação para as Vilas Santa Thereza e Industrial, Bagé/RS"
+        autores: "Isadora Baptista Alves"
+        publicacao: "Trabalho final de graduação, Faculdade de Arquitetura e Urbanismo da UFPel"
+        ano: ""
+        resumo: "Diretrizes de preservação para duas vilas operárias ligadas às charqueadas de Bagé."
+        url: "https://wp.ufpel.edu.br/neab/trabalho-final-de-graduacao-patrimonio/"
+        fonte: "Núcleo de Estudos de Arquitetura Brasileira — UFPel"
+        nota: "PENDENTE: link direto para o texto completo e ano."
+
+  - id: artigos
+    titulo: "Artigos e relatórios"
+    itens:
+      - titulo: "O conjunto histórico e paisagístico de Bagé"
+        autores: "—"
+        publicacao: "Revista Memória em Rede, Universidade Federal de Pelotas"
+        ano: ""
+        resumo: >-
+          Inventário do patrimônio arquitetônico urbano de Bagé, com a caracterização que
+          subsidiou o tombamento do centro histórico pelo IPHAN, em 2009.
+        url: "https://periodicos.ufpel.edu.br/index.php/Memoria/article/view/9525/6339"
+        fonte: "Periódicos UFPel"
+        nota: "PENDENTE: confirmar autoria, ano e volume."
+
+  - id: onde
+    titulo: "Onde procurar"
+    descricao: >-
+      Repositórios que reúnem produção acadêmica sobre a região e aceitam busca por
+      “Bagé”. É por aqui que aparecem os trabalhos novos.
+    itens:
+      - titulo: "Guaiaca — Repositório Institucional da UFPel"
+        autores: ""
+        publicacao: ""
+        ano: ""
+        resumo: "Artigos, livros, dissertações e teses da UFPel, incluindo o acervo da Faculdade de Arquitetura e Urbanismo."
+        url: "https://guaiaca.ufpel.edu.br/"
+        fonte: "UFPel"
+      - titulo: "Lume — Repositório Digital da UFRGS"
+        autores: ""
+        publicacao: ""
+        ano: ""
+        resumo: "Teses e dissertações da UFRGS em acesso aberto."
+        url: "https://lume.ufrgs.br/"
+        fonte: "UFRGS"

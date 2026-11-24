@@ -366,6 +366,10 @@ def gerar():
     render("documentos.html", "documentos/index.html", active="documentos", title="Documentos")
     render("transparencia.html", "transparencia/index.html", active="transparencia", title="Transparência")
     render("contato.html", "contato/index.html", active="contato", title="Contato")
+    bib = yaml.safe_load((ROOT / "data" / "biblioteca.yml").read_text(encoding="utf-8"))
+    render("biblioteca.html", "biblioteca/index.html", active="biblioteca",
+           title="Biblioteca", bib=bib,
+           description="Livros, teses, dissertações e artigos sobre Bagé — sua história, sua arquitetura e seu território.")
     leg = yaml.safe_load((ROOT / "data" / "legislacao.yml").read_text(encoding="utf-8"))
     render("legislacao.html", "legislacao/index.html", active="legislacao",
            title="Legislação", leg=leg,

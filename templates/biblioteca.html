@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<header class="cab">
+  <div class="wrap">
+    <p class="etiqueta">{{ bib.chamada }}</p>
+    <h1>{{ bib.titulo }}</h1>
+    <p class="cab__txt">{{ bib.intro }}</p>
+  </div>
+</header>
+
+<section class="secao">
+  <div class="wrap">
+
+    <nav class="guia__indice" aria-label="Índice da biblioteca">
+      <p class="guia__indice-tit">Nesta página</p>
+      <ul>
+        {% for s in bib.secoes %}<li><a href="#{{ s.id }}">{{ s.titulo }}</a></li>{% endfor %}
+      </ul>
+    </nav>
+
+    {% for s in bib.secoes %}
+    <article class="checklist" id="{{ s.id }}">
+      <div class="checklist__cab"><div><h2>{{ s.titulo }}</h2></div></div>
+      {% if s.descricao %}<p class="checklist__resumo">{{ s.descricao }}</p>{% endif %}
+      <ul class="normas">
+        {% for o in s.itens %}
+        <li class="norma">
+          <p class="norma__tit">
+            {% if o.url %}<a href="{{ o.url }}" target="_blank" rel="noopener">{{ o.titulo }}{{ i.icon("externo", 15) }}</a>
+            {% else %}{{ o.titulo }}{% endif %}
+          </p>
+          {% if o.autores and o.autores != "—" %}<p class="norma__ementa"><strong>{{ o.autores }}</strong>{% if o.publicacao %} · {{ o.publicacao }}{% endif %}{% if o.ano %} · {{ o.ano }}{% endif %}</p>
+          {% elif o.publicacao %}<p class="norma__ementa">{{ o.publicacao }}{% if o.ano %} · {{ o.ano }}{% endif %}</p>{% endif %}
+          <p class="norma__ementa">{{ o.resumo }}</p>
+          <p class="norma__meta">
+            {% if o.fonte %}<span>{{ o.fonte }}</span>{% endif %}
+            {% if not o.url %}<span class="norma__sem-link">sem versão em acesso aberto</span>{% endif %}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+
+    {% if bib.chamada_contribuicao %}
+    <p class="guia__protocolo">{{ i.icon("livro", 20) }}<span>{{ bib.chamada_contribuicao | safe }}</span></p>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}
