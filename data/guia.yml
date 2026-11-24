@@ -70,7 +70,7 @@ apoiadores:
         - {nome: "Inove Comunicação Visual", caminho: "apoiadores/inove.png"}
         - {nome: "Mestre da Obra", descricao: "Locação de equipamentos"}
         - {nome: "Safira Engenharia", descricao: "Engenharia e obras"}
-        - {nome: "Versatte Automação", caminho: "apoiadores/versatte-automacao.png"}
+        - {nome: "Versatte Automação", descricao: "Automação de ambientes", url: "https://versatteautomacao.com.br/", caminho: "apoiadores/versatte-automacao.png"}
         - {nome: "Vetrion", descricao: "Esquadrias", caminho: "apoiadores/vetrion.png"}
 
 aviso: >-
