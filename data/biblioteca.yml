@@ -35,6 +35,12 @@ secoes:
         resumo: "A cidade contada pelos detalhes da sua arquitetura e do seu cotidiano. Publicado pela editora da Urcamp, com texto completo disponível."
         url: "https://www.urcamp.edu.br/storage/attachments/attachments/15cc1f2d755ab11556214487.pdf"
         fonte: "Urcamp"
+      - titulo: "História de Bagé: novos olhares"
+        autores: "Organização de G. F. Andrade, Maria Medianeira Padoin e Clarisse Ismério"
+        publicacao: "Texto e Contexto, Bagé"
+        ano: "2021"
+        resumo: "Coletânea de estudos sobre a história da cidade, com capítulos sobre patrimônio, memória e as vilas operárias."
+        fonte: "Edição comercial"
       - titulo: "Personalidades das Ruas de Bagé"
         autores: "Diones Piazer Franchi"
         publicacao: "Exclamação / Editora Renascença, Bagé"
@@ -46,21 +52,15 @@ secoes:
     titulo: "Teses e dissertações"
     itens:
       - titulo: "Arquitetura bajeense: o delinear da modernidade, 1930–1970"
-        autores: "—"
-        publicacao: "Universidade Federal do Rio Grande do Sul"
-        ano: ""
-        resumo: "A chegada da arquitetura moderna a Bagé e o que ela representou no contexto urbano da cidade. Texto completo no repositório Lume."
+        autores: "Magali Nocchi Collares Gonçalves"
+        publicacao: "Dissertação de mestrado, PROPAR — Programa de Pesquisa e Pós-Graduação em Arquitetura, Faculdade de Arquitetura da UFRGS. Orientação de Glenda Pereira da Cruz"
+        ano: "2006"
+        resumo: >-
+          Estuda a arquitetura de Bagé do declínio do ecletismo à extinção gradual dos padrões
+          estéticos modernos, a partir dos profissionais que a produziram. A autora é arquiteta
+          associada ao NEAB.
         url: "https://lume.ufrgs.br/handle/10183/8623"
         fonte: "Lume — UFRGS"
-        nota: "PENDENTE: confirmar autoria e ano na página do repositório."
-      - titulo: "Campus Bagé — Unipampa: uma avaliação da produção dos novos espaços universitários"
-        autores: "Carina Ebert Hamm Oliveira"
-        publicacao: "Programa de Pós-Graduação em Arquitetura e Urbanismo, Universidade Federal da Bahia"
-        ano: ""
-        resumo: "Avaliação dos espaços construídos para o campus da Unipampa em Bagé."
-        url: "https://ppgau.ufba.br/teses"
-        fonte: "PPGAU — UFBA"
-        nota: "PENDENTE: link direto para o texto completo e ano de defesa."
       - titulo: "Entre Charqueadas: um caminho de memórias — diretrizes de preservação para as Vilas Santa Thereza e Industrial, Bagé/RS"
         autores: "Isadora Baptista Alves"
         publicacao: "Trabalho final de graduação, Faculdade de Arquitetura e Urbanismo da UFPel"
@@ -73,16 +73,17 @@ secoes:
   - id: artigos
     titulo: "Artigos e relatórios"
     itens:
-      - titulo: "O conjunto histórico e paisagístico de Bagé"
-        autores: "—"
-        publicacao: "Revista Memória em Rede, Universidade Federal de Pelotas"
-        ano: ""
+      - titulo: "O patrimônio urbano da rainha da fronteira: Bagé, RS"
+        autores: "Ester Judite Bendjouya Gutierrez e Simone Neutzling"
+        publicacao: "Revista Memória em Rede, Pelotas, v. 2, n. 5"
+        ano: "2011"
         resumo: >-
-          Inventário do patrimônio arquitetônico urbano de Bagé, com a caracterização que
-          subsidiou o tombamento do centro histórico pelo IPHAN, em 2009.
+          Resultado do inventário do centro de Bagé feito pela metodologia do SICG, do IPHAN:
+          101 quarteirões e 2.620 prédios levantados, cerca de 1.300 deles apontados como de
+          interesse histórico-cultural. É o estudo que fundamentou a proteção do Conjunto
+          Histórico e Paisagístico, inscrito em 2013 no Livro Tombo do IPHAE sob o número 116.
         url: "https://periodicos.ufpel.edu.br/index.php/Memoria/article/view/9525/6339"
         fonte: "Periódicos UFPel"
-        nota: "PENDENTE: confirmar autoria, ano e volume."
 
   - id: onde
     titulo: "Onde procurar"
