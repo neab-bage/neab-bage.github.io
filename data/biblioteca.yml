@@ -114,14 +114,6 @@ secoes:
         resumo: "Como os nomes de ruas e lugares da cidade constroem memória sobre quem os batizou."
         url: "https://repositorio.unipampa.edu.br/bitstream/riu/8148/1/Fabiane%20Gadea%20Trindade%202023.pdf"
         fonte: "Repositório da Unipampa"
-      - titulo: "Lígia Farinha Almeida: mulheres na política e história da educação em Bagé"
-        autores: "Taiza Fonseca"
-        publicacao: "Dissertação, Universidade Federal do Pampa"
-        ano: "2024"
-        resumo: "A presença feminina no Legislativo de Bagé e na história da educação local."
-        url: "https://dspace.unipampa.edu.br/bitstream/riu/9489/1/Dis%20Taiza%20Fonseca%202024.pdf"
-        fonte: "Repositório da Unipampa"
-        nota: "PENDENTE: confirmar o título exato na folha de rosto."
       - titulo: "Entre Charqueadas: um caminho de memórias — diretrizes de preservação para as Vilas Santa Thereza e Industrial, Bagé/RS"
         autores: "Isadora Baptista Alves"
         publicacao: "Trabalho final de graduação, Faculdade de Arquitetura e Urbanismo da UFPel"
@@ -149,6 +141,21 @@ secoes:
   - id: infraestrutura
     titulo: "Infraestrutura, recursos hídricos e território"
     itens:
+      - titulo: "GeoVias Bagé-RS — Sistema Integrado de Informações sobre Vias e Pavimentação Urbana"
+        autores: "Universidade Federal do Pampa (Unipampa). Responsável técnico: Alexandro Gularte Schäfer, engenheiro civil, CREA-RS 120027"
+        publicacao: >-
+          Projeto de extensão com financiamento do PROFEXT/PROEC e parceria técnica da
+          Prefeitura Municipal de Bagé, no âmbito da iniciativa BAGÉ+. Diagnóstico técnico
+          acompanhado de dois anexos: mapas de pavimentação por bairro e tabela de
+          logradouros.
+        ano: "2025"
+        resumo: >-
+          Mapeou cerca de 526 km de malha viária urbana em Bagé, com o tipo de pavimento,
+          a extensão e a densidade viária de 112 bairros e loteamentos e de 874 logradouros.
+          Entre as vias pavimentadas predomina o asfalto, seguido do paralelepípedo e do
+          intertravado de concreto. Os mapas são interativos e consultáveis por trecho.
+        url: "https://alexandrogschafer.github.io/GeoViasOS/mapas/"
+        fonte: "Unipampa — plataforma pública do GeoVias Bagé-RS"
       - titulo: "Caracterização e diagnóstico da bacia do Rio Negro em território brasileiro — RS"
         autores: "ACL Assessoria & Consultoria Ltda."
         publicacao: >-
