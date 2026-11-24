@@ -67,7 +67,7 @@ linha:
   - {n: 13, nome: "Lia Quintana",                  formacao: "Engenheira Civil",
      observacao: "Filha de Néd Medina Quintana. Foi conselheira do CREA-RS e reitora da Urcamp."}
   - {n: 12, nome: "Volmir Oliveira Silveira",      formacao: "Engenheiro Civil",
-     foto: "volmir-silveira",
+     ficha_slug: "volmir-silveira",
      observacao: "Diretor-geral do DAEB. Associado ao núcleo.",
      fonte: "Nome completo confirmado em documentos do DAEB assinados por ele (2017 e 2018)"}
   - {n: 11, nome: "Néd Medina Quintana",           formacao: "Engenheiro Civil",

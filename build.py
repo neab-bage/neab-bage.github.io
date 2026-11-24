@@ -172,7 +172,8 @@ def carregar_presidentes():
             # ex-presidente fora do quadro atual: retrato proprio, sem ficha
             achou = next((s_ + x for x in exts if (hist / (s_ + x)).is_file()), None)
             e["foto_mini"] = ("presidentes/" + achou) if achou else None
-        e["ficha"] = s_ if (pasta / "mini" / (s_ + ".jpg")).is_file() and (pasta / (s_ + ".jpg")).is_file() else None
+        fs = e.get("ficha_slug") or s_
+        e["ficha"] = fs if (pasta / (fs + ".jpg")).is_file() else None
         partes = [x for x in e["nome"].split() if len(x) > 2]
         e["iniciais"] = (partes[0][0] + partes[-1][0]).upper() if len(partes) > 1 else e["nome"][:2].upper()
     return d
