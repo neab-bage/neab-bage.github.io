@@ -100,6 +100,31 @@
     <p class="guia__creditos">{{ guia.creditos | safe }}</p>
     {% endif %}
 
+    {% if guia.apoiadores and guia.apoiadores.grupos %}
+    <section class="apoio" aria-labelledby="apoio-tit">
+      <h2 class="apoio__titulo" id="apoio-tit">{{ guia.apoiadores.titulo }}</h2>
+      {% if guia.apoiadores.intro %}<p class="apoio__intro">{{ guia.apoiadores.intro | safe }}</p>{% endif %}
+      {% for grupo in guia.apoiadores.grupos %}
+      <div class="apoio__grupo">
+        <p class="apoio__rotulo">{{ grupo.rotulo }}</p>
+        <ul class="apoio__lista">
+          {% for o in grupo.itens %}
+          <li>
+            {% if o.url %}<a href="{{ o.url }}" target="_blank" rel="noopener">{% endif %}
+            {% if o.tem_imagem %}<img src="{{ root }}static/img/{{ o.caminho }}" alt="{{ o.alt or o.nome }}" loading="lazy">
+            {% else %}<span class="apoio__placa">
+              <strong>{{ o.nome }}</strong>
+              {% if o.descricao %}<small>{{ o.descricao }}</small>{% endif %}
+            </span>{% endif %}
+            {% if o.url %}</a>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+
   </div>
 </section>
 

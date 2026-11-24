@@ -184,7 +184,17 @@ def carregar_guia():
     arq = ROOT / "data" / "guia.yml"
     if not arq.exists():
         return None
-    return yaml.safe_load(arq.read_text(encoding="utf-8")) or None
+    d = yaml.safe_load(arq.read_text(encoding="utf-8")) or None
+    if not d:
+        return None
+    # resolve os logotipos dos apoiadores; sem arquivo, o template cai na placa de texto
+    for grupo in (d.get("apoiadores") or {}).get("grupos") or []:
+        for item in grupo.get("itens") or []:
+            caminho = (item.get("caminho") or "").strip()
+            item["tem_imagem"] = bool(caminho) and (ROOT / "static" / "img" / caminho).is_file()
+            if caminho and not item["tem_imagem"]:
+                print(f"Aviso: logotipo de {item.get('nome')} não encontrado em static/img/{caminho}; exibindo o nome.")
+    return d
 
 
 def carregar_programa(associados):

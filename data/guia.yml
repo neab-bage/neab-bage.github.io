@@ -38,6 +38,41 @@ creditos: >-
   o patrocínio da Mútua-RS. Projeto gráfico da <strong>Inove Comunicação Visual</strong>, pelo
   designer Pedro S. Machado, com revisão de Maurício Fernandes Fara.
 
+# ---------------------------------------------------------------------------
+# Quem apoia o Guia Prático. Três grupos, nesta ordem na página:
+#   patrocínio  - quem patrocinou a edição
+#   conselhos   - os conselhos profissionais que chancelam o guia
+#   apoiadores  - quem comprou espaço de anúncio na edição impressa
+# `caminho` é relativo a static/img/. Item sem arquivo (ou com arquivo que não
+# existe) sai como placa de texto; o build avisa no terminal.
+# Faltam os arquivos de Safira Engenharia e Mestre da Obra: nos anúncios os dois
+# logos estão sobre fundo colorido e não servem para a faixa branca.
+# ---------------------------------------------------------------------------
+apoiadores:
+  titulo: "Quem apoia o Guia Prático"
+  intro: >-
+    A edição impressa do guia é distribuída gratuitamente aos profissionais e aos
+    órgãos de Bagé. Ela existe porque estas instituições e empresas sustentaram a
+    publicação.
+  grupos:
+    - rotulo: "Patrocínio"
+      itens:
+        - {nome: "Mútua-RS", descricao: "Caixa de Assistência dos Profissionais do Crea", caminho: "logos/mutua.png", url: "https://www.mutua.com.br/", alt: "Mútua-RS — Caixa de Assistência dos Profissionais do Crea"}
+    - rotulo: "Conselhos profissionais"
+      itens:
+        - {nome: "CREA-RS", descricao: "Conselho Regional de Engenharia e Agronomia do RS", caminho: "logos/crea-rs.png", url: "https://www.crea-rs.org.br/", alt: "CREA-RS"}
+        - {nome: "CAU/RS", descricao: "Conselho de Arquitetura e Urbanismo do RS", caminho: "logos/cau-rs.png", url: "https://www.caurs.gov.br/", alt: "CAU/RS"}
+    - rotulo: "Apoiadores"
+      itens:
+        - {nome: "Animais", caminho: "apoiadores/animais.png"}
+        - {nome: "ASM Materiais de Construção", caminho: "apoiadores/asm-materiais-de-construcao.png"}
+        - {nome: "Gavelux", caminho: "apoiadores/gavelux.png"}
+        - {nome: "Inove Comunicação Visual", caminho: "apoiadores/inove.png"}
+        - {nome: "Mestre da Obra", descricao: "Locação de equipamentos"}
+        - {nome: "Safira Engenharia", descricao: "Engenharia e obras"}
+        - {nome: "Versatte Automação", caminho: "apoiadores/versatte-automacao.png"}
+        - {nome: "Vetrion", descricao: "Esquadrias", caminho: "apoiadores/vetrion.png"}
+
 aviso: >-
   As exigências são definidas pelos órgãos competentes e podem mudar sem que o NEAB
   seja comunicado. Confirme sempre na Geplan, no IPHAE ou no órgão responsável antes

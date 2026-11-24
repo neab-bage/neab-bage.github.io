@@ -245,6 +245,20 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 /* ---------- logotipos institucionais ---------- */
 
 /* ---------- faixa de logos institucionais ---------- */
+/* apoiadores do Guia Pratico (pagina do guia) */
+.apoio{margin:40px 0 0;padding:28px 0 0;border-top:1px solid var(--concreto-2)}
+.apoio__titulo{font-size:1.05rem;margin:0 0 6px}
+.apoio__intro{font-size:.9rem;color:var(--grafite-2);margin:0 0 22px;max-width:60ch}
+.apoio__grupo+.apoio__grupo{margin-top:24px}
+.apoio__rotulo{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grafite-2);margin:0 0 12px}
+.apoio__lista{display:flex;flex-wrap:wrap;align-items:stretch;gap:14px 18px;list-style:none;margin:0;padding:0}
+.apoio__lista img{max-height:42px;width:auto;opacity:.8;transition:opacity .15s}
+.apoio__lista a{text-decoration:none}
+.apoio__lista a:hover img,.apoio__lista a:focus-visible img{opacity:1}
+.apoio__placa{display:flex;flex-direction:column;justify-content:center;gap:3px;min-height:52px;padding:10px 16px;border:1px solid var(--concreto-2);border-radius:var(--raio);background:var(--concreto)}
+.apoio__placa strong{font-size:.92rem;font-weight:700;color:var(--grafite);line-height:1.2}
+.apoio__placa small{font-size:.72rem;line-height:1.3;color:var(--grafite-2)}
+.apoio__lista a:hover .apoio__placa,.apoio__lista a:focus-visible .apoio__placa{border-color:var(--cobre);background:var(--cobre-claro)}
 .instituicoes{background:#fff;border-top:1px solid var(--concreto-2);padding:32px 0;text-align:center}
 .instituicoes__titulo{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--grafite-2);margin:0 0 18px}
 .instituicoes__lista{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:16px 20px;list-style:none;margin:0;padding:0}
