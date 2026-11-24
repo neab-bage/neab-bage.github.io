@@ -9,6 +9,13 @@
 # Cada item: titulo, autores, publicacao, ano, resumo, url (opcional),
 # fonte (onde está publicado), nota (opcional, para pendências).
 #
+# ONDE PROCURAR MAIS (para quem mantém a página, não para o visitante):
+#   Guaiaca — Repositório da UFPel ........ https://guaiaca.ufpel.edu.br/
+#   Repositório da Unipampa ............... https://repositorio.unipampa.edu.br/
+#   Lume — Repositório da UFRGS ........... https://lume.ufrgs.br/
+#   Núcleo de Pesquisas Históricas Tarcísio Taborda — viabilizou boa parte dos livros
+#   sobre a cidade; contato direto rende mais do que busca na internet.
+#
 # ESTA LISTA É UM COMEÇO. O levantamento foi feito em buscas abertas; a
 # contribuição dos associados vale mais do que isso. Ver a chamada no fim da página.
 # ---------------------------------------------------------------------------
@@ -138,31 +145,3 @@ secoes:
           Histórico e Paisagístico, inscrito em 2013 no Livro Tombo do IPHAE sob o número 116.
         url: "https://periodicos.ufpel.edu.br/index.php/Memoria/article/view/9525/6339"
         fonte: "Periódicos UFPel"
-
-  - id: onde
-    titulo: "Onde procurar"
-    descricao: >-
-      Repositórios que reúnem produção acadêmica sobre a região e aceitam busca por
-      “Bagé”. É por aqui que aparecem os trabalhos novos.
-    itens:
-      - titulo: "Guaiaca — Repositório Institucional da UFPel"
-        autores: ""
-        publicacao: ""
-        ano: ""
-        resumo: "Artigos, livros, dissertações e teses da UFPel, incluindo o acervo da Faculdade de Arquitetura e Urbanismo."
-        url: "https://guaiaca.ufpel.edu.br/"
-        fonte: "UFPel"
-      - titulo: "Repositório Institucional da Unipampa"
-        autores: ""
-        publicacao: ""
-        ano: ""
-        resumo: "Dissertações e trabalhos de conclusão produzidos no campus de Bagé e nos demais campi. É onde aparece a produção mais recente sobre a cidade."
-        url: "https://repositorio.unipampa.edu.br/"
-        fonte: "Unipampa"
-      - titulo: "Lume — Repositório Digital da UFRGS"
-        autores: ""
-        publicacao: ""
-        ano: ""
-        resumo: "Teses e dissertações da UFRGS em acesso aberto."
-        url: "https://lume.ufrgs.br/"
-        fonte: "UFRGS"
