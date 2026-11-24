@@ -86,7 +86,8 @@ linha:
      fonte: "Nome completo confirmado em documentos do DAEB assinados por ele (2017 e 2018)"}
   - {n: 11, periodo: "1986",      nome: "Néd Medina Quintana",  formacao: "Engenheiro Civil",
      observacao: "Um dos fundadores do NEAB, em 1968. Faleceu em 2002."}
-  - {n: 10, periodo: "1984",      nome: "Nubia Margot Menezes Jardim", formacao: "Arquiteta e Urbanista"}
+  - {n: 10, periodo: "1984",      nome: "Nubia Margot Menezes Jardim", formacao: "Arquiteta e Urbanista",
+     foto: "nubia-margot-menezes-jardim-presidente", ficha_slug: "nubia-margot-menezes-jardim"}
   - {n: 9,  periodo: "1981",      nome: "Maria de Lourdes Campos Costa", formacao: "Arquiteta"}
   - {n: 8,  periodo: "1979",      nome: "José Augusto Reis Bordini", formacao: "Engenheiro Civil"}
   - {n: 7,  periodo: "1979",      nome: "Glênio Mércio Carneiro", formacao: "Arquiteto", observacao: "Segundo mandato"}
