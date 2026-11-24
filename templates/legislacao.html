@@ -40,14 +40,17 @@
         {% for n in b.itens %}
         <li class="norma">
           <p class="norma__tit">
-            {% if n.url %}
+            {% if n.url and n.url.startswith("http") %}
             <a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.titulo }}{{ i.icon("externo", 15) }}</a>
+            {% elif n.url %}
+            <a href="{{ root }}{{ n.url }}" target="_blank" rel="noopener">{{ n.titulo }}{{ i.icon("baixar", 15) }}</a>
             {% else %}{{ n.titulo }}{% endif %}
           </p>
           <p class="norma__ementa">{{ n.ementa }}</p>
           <p class="norma__meta">
             {% if n.fonte %}<span>{{ n.fonte }}</span>{% endif %}
-            {% if n.url is not defined or not n.url %}<span class="norma__sem-link">texto não localizado em fonte oficial</span>{% endif %}
+            {% if not n.url %}<span class="norma__sem-link">texto não localizado em fonte oficial</span>
+            {% elif not n.url.startswith("http") %}<span>PDF no acervo do NEAB</span>{% endif %}
           </p>
         </li>
         {% endfor %}
