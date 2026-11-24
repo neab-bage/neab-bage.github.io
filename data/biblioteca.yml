@@ -120,7 +120,8 @@ secoes:
     titulo: "Infraestrutura, recursos hídricos e território"
     itens:
       - titulo: "GeoVias Bagé-RS — Sistema Integrado de Informações sobre Vias e Pavimentação Urbana"
-        autores: "Universidade Federal do Pampa (Unipampa). Responsável técnico: Alexandro Gularte Schäfer, engenheiro civil, CREA-RS 120027"
+        autores: "Alexandro Gularte Schafer"
+        ficha: "alexandro-gularte-schafer"
         publicacao: >-
           Projeto de extensão com financiamento do PROFEXT/PROEC e parceria técnica da
           Prefeitura Municipal de Bagé, no âmbito da iniciativa BAGÉ+. Diagnóstico técnico
