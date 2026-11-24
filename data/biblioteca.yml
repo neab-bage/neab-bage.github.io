@@ -145,3 +145,66 @@ secoes:
           Histórico e Paisagístico, inscrito em 2013 no Livro Tombo do IPHAE sob o número 116.
         url: "https://periodicos.ufpel.edu.br/index.php/Memoria/article/view/9525/6339"
         fonte: "Periódicos UFPel"
+
+  - id: infraestrutura
+    titulo: "Infraestrutura, recursos hídricos e território"
+    itens:
+      - titulo: "Caracterização e diagnóstico da bacia do Rio Negro em território brasileiro — RS"
+        autores: "ACL Assessoria & Consultoria Ltda."
+        publicacao: >-
+          Departamento de Água e Esgotos de Bagé (DAEB), contrato nº 004/2007.
+          Relatório síntese e relatório final em quatro volumes: disponibilidades hídricas;
+          estudos multidisciplinares, diagnóstico e prognóstico das demandas hídricas;
+          balanço hídrico nos cenários atual e futuros; aspectos sociais, institucionais,
+          legais e de comunicação social.
+        ano: "2007"
+        resumo: >-
+          O estudo mais completo já feito sobre a bacia que abastece Bagé. É a referência
+          técnica para quem trabalha com disponibilidade hídrica, outorga e saneamento no
+          município.
+        fonte: "DAEB — Departamento de Água e Esgotos de Bagé"
+        nota: >-
+          PENDENTE: o relatório não está publicado na internet. Verificar com o DAEB a
+          autorização para hospedar os volumes no acervo do NEAB.
+      - titulo: "Dinâmica espaço temporal do carbono do solo na bacia do Arroio Piraizinho em Bagé, RS"
+        autores: "Fioravante Jaekel dos Santos"
+        publicacao: >-
+          Tese de doutorado em Agronomia, Programa de Pós-Graduação em Agronomia da
+          Universidade Federal de Pelotas. Orientação de Eloy Antonio Pauletto. 160 f.
+        ano: "2011"
+        resumo: >-
+          Estuda o comportamento do carbono do solo na bacia do Arroio Piraizinho, dentro de
+          Bagé, relacionando-o às práticas agrícolas e à qualidade ambiental da bacia.
+        url: "http://repositorio.ufpel.edu.br/handle/ri/2463"
+        fonte: "Guaiaca — Repositório da UFPel"
+      - titulo: "Estudo preliminar da bacia hidrográfica do Rio Negro (U080)"
+        autores: "Ministério Público do Rio Grande do Sul"
+        publicacao: "Diagnóstico ambiental de bacias hidrográficas, Promotoria de Justiça de Defesa do Meio Ambiente"
+        ano: ""
+        resumo: >-
+          Diagnóstico da bacia na divisão hidrográfica oficial do Estado, com população,
+          rede fluvial e prioridades de ação. Registra o arroio Bagé como corpo receptor do
+          despejo urbano da cidade.
+        url: "https://www.mprs.mp.br/media/areas/ambiente/arquivos/paibh/diagnostico_dat_bacias_hidrograficas_rio_negro.pdf"
+        fonte: "Ministério Público do RS"
+        nota: "PENDENTE: confirmar o ano de publicação."
+      - titulo: "Variabilidade hidroclimática da bacia hidrográfica do Rio Negro: um estudo de caso para a porção brasileira"
+        autores: "Roilan Hernández Valdés, Carolina Kannemberg, André Parcianello, Fabíola Valente e Nathalie Tissot Boiaski"
+        publicacao: "Artigo científico"
+        ano: ""
+        resumo: >-
+          Caracterização hidroclimática do alto curso da bacia, com regime de chuvas e
+          coeficiente de escoamento — base para dimensionamento de drenagem e reservação.
+        url: "https://www.redalyc.org/pdf/4675/467547689062.pdf"
+        fonte: "Redalyc"
+        nota: "PENDENTE: periódico, volume e ano."
+      - titulo: "Análise dos instrumentos legais de gestão hídrica na bacia hidrográfica do Rio Negro/RS"
+        autores: ""
+        publicacao: "Revista Direito Ambiental e Sociedade, Universidade de Caxias do Sul"
+        ano: "2021"
+        resumo: >-
+          Examina os cinco instrumentos de gestão da Política Nacional de Recursos Hídricos
+          aplicados à bacia do Rio Negro e o que falta para que funcionem.
+        url: "https://sou.ucs.br/etc/revistas/index.php/direitoambiental/article/download/9686/5480/42858"
+        fonte: "Universidade de Caxias do Sul"
+        nota: "PENDENTE: autoria."
