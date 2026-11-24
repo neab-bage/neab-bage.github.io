@@ -237,7 +237,14 @@ blocos:
       - titulo: "Instrução Normativa SEDAC/IPHAE nº 04/2026"
         ementa: "Documentos e critérios para intervenção em imóvel tombado ou em área de entorno. O Guia Prático do NEAB traz um resumo dos itens exigidos."
         fonte: "SEDAC/IPHAE"
-        nota: "PENDENTE: localizar o endereço oficial."
+        nota: "PENDENTE: localizar o endereço oficial no portal do IPHAE. O texto está disponível na página da Prefeitura, abaixo."
+      - titulo: "Protocolo no IPHAE — orientações da Prefeitura de Bagé"
+        ementa: >-
+          Passo a passo do protocolo para intervenção em imóvel tombado ou em área de entorno:
+          formulários, documentação exigida por tipo de obra, modalidades de pedido e canais de
+          contato. Traz também o texto da Instrução Normativa nº 04/2026 para download.
+        url: "https://www.patrimoniobage.com.br/protocolo/"
+        fonte: "Prefeitura Municipal de Bagé — Gestão de Obras Privadas"
 
   - id: tecnicas
     titulo: "Normas técnicas"
