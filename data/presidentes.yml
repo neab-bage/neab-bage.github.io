@@ -23,13 +23,13 @@
 # o slug correto.
 # ---------------------------------------------------------------------------
 
-titulo: "Linha do tempo da presidência"
+titulo: "Galeria de Presidentes"
 # intro: removido da página — procedência interessa a quem mantém o site, não a quem o visita.
 # As fontes de cada mandato seguem no campo `fonte` de cada entrada, para consulta e revisão,
 # mas não são exibidas.
 galeria: >-
-  O NEAB mantém uma <strong>Galeria de Presidentes</strong>, inaugurada em
-  2 de dezembro de 2016 na sede do núcleo.
+  A <strong>Galeria de Presidentes</strong> foi inaugurada em 2 de dezembro de 2016 na sede do
+  núcleo, nas dependências da Inspetoria do CREA-RS de Bagé, onde os retratos estão expostos.
 nota: >-
   A reconstituição segue em curso. Falta identificar os períodos da maior parte dos
   mandatos anteriores a 2006 — e, no intervalo já mapeado, os anos de 2011 a 2014.

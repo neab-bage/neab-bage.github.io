@@ -359,7 +359,7 @@ def gerar():
     if programa:
         render("programa.html", "universo-das-engenharias/index.html", active="programa",
                title=programa.get("titulo", "Programa de rádio"))
-    render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Gestões anteriores")
+    render("gestoes.html", "diretoria/gestoes/index.html", active="diretoria", title="Galeria de Presidentes")
     render("associe.html", "associe-se/index.html", active="associe", title="Associe-se")
     render("parceiros.html", "beneficios/index.html", active="beneficios", title="Benefícios e convênios")
     render("agenda.html", "agenda/index.html", active="agenda", title="Agenda")
