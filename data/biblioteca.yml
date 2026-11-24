@@ -33,7 +33,7 @@ chamada_contribuicao: >-
 
 secoes:
   - id: livros
-    titulo: "Livros"
+    titulo: "Arquitetura, patrimônio e cidade"
     itens:
       - titulo: "A Casa Bajeense: um caminho pela história da arquitetura"
         autores: "Curso de Arquitetura e Urbanismo da Urcamp, com a Consultoria Júnior"
@@ -65,34 +65,11 @@ secoes:
         ano: "2021"
         resumo: "Coletânea de estudos sobre a história da cidade, com capítulos sobre patrimônio, memória e as vilas operárias."
         fonte: "Edição comercial"
-      - titulo: "A Rainha da Fronteira: fragmentos da história de Bagé"
-        autores: "Núcleo de Pesquisas Históricas Tarcísio Taborda"
-        ano: "2015"
-        resumo: "Reúne episódios da formação da cidade, entre eles o reconhecimento topográfico da fronteira do Império."
-        fonte: "Edição comercial"
-        nota: "PENDENTE: confirmar autoria individual e editora."
-      - titulo: "Bagé: fatos e personalidades"
-        autores: "Mário Lopes"
-        publicacao: "Editora Praça da Matriz / Evangraf"
-        ano: "2007"
-        resumo: "Fatos históricos da cidade em linguagem direta, em 136 páginas. Projeto viabilizado pelo Núcleo de Pesquisas Tarcísio Taborda."
-        fonte: "Edição comercial"
-      - titulo: "Fragmentos da memória de Bagé: personagens do cotidiano"
-        autores: "Cid Magdar Marinho"
-        ano: "2024"
-        resumo: "Contos, crônicas e histórias sobre a cidade e seus personagens, reunidos a partir das publicações do autor no extinto Correio do Sul."
-        fonte: "Edição comercial"
       - titulo: "As estâncias contam a história"
         autores: "Carlos Fonttes"
         resumo: "A trajetória de 45 propriedades rurais do município."
         fonte: "Edição comercial"
         nota: "PENDENTE: ano e editora."
-      - titulo: "Personalidades das Ruas de Bagé"
-        autores: "Diones Piazer Franchi"
-        publicacao: "Exclamação / Editora Renascença, Bagé"
-        ano: "2024"
-        resumo: "Quem são as pessoas que dão nome às ruas da cidade."
-        fonte: "Edição comercial"
 
   - id: teses
     titulo: "Teses e dissertações"
@@ -215,3 +192,33 @@ secoes:
         url: "https://sou.ucs.br/etc/revistas/index.php/direitoambiental/article/download/9686/5480/42858"
         fonte: "Universidade de Caxias do Sul"
         nota: "PENDENTE: autoria."
+
+  - id: memoria
+    titulo: "Bagé: história e memória"
+    descricao: >-
+      Não são livros técnicos, mas é neles que está a história de quem construiu a cidade
+      e por que ela ficou como ficou.
+    itens:
+      - titulo: "A Rainha da Fronteira: fragmentos da história de Bagé"
+        autores: "Núcleo de Pesquisas Históricas Tarcísio Taborda"
+        ano: "2015"
+        resumo: "Reúne episódios da formação da cidade, entre eles o reconhecimento topográfico da fronteira do Império."
+        fonte: "Edição comercial"
+        nota: "PENDENTE: confirmar autoria individual e editora."
+      - titulo: "Bagé: fatos e personalidades"
+        autores: "Mário Lopes"
+        publicacao: "Editora Praça da Matriz / Evangraf"
+        ano: "2007"
+        resumo: "Fatos históricos da cidade em linguagem direta, em 136 páginas. Projeto viabilizado pelo Núcleo de Pesquisas Tarcísio Taborda."
+        fonte: "Edição comercial"
+      - titulo: "Fragmentos da memória de Bagé: personagens do cotidiano"
+        autores: "Cid Magdar Marinho"
+        ano: "2024"
+        resumo: "Contos, crônicas e histórias sobre a cidade e seus personagens, reunidos a partir das publicações do autor no extinto Correio do Sul."
+        fonte: "Edição comercial"
+      - titulo: "Personalidades das Ruas de Bagé"
+        autores: "Diones Piazer Franchi"
+        publicacao: "Exclamação / Editora Renascença, Bagé"
+        ano: "2024"
+        resumo: "Quem são as pessoas que dão nome às ruas da cidade."
+        fonte: "Edição comercial"
