@@ -17,6 +17,9 @@
 #
 # NOMES UNIFICADOS: o Jornal Minuano grafou "Luiz Antônio Arla" e o CREA-RS, "Antônio Luiz
 # Arla da Silva". É a mesma pessoa, associada ao núcleo; vale a grafia do quadro de associados.
+# O levantamento do Ellas grafou "Volmir Oliveira" e o guia Aprova Fácil, "Volmir Silveira":
+# é a mesma pessoa, Volmir Oliveira Silveira, como consta em documentos do DAEB que ele
+# assinou como diretor-geral. A foto vem da ficha dele no quadro de associados.
 #
 # FOTO: resolvida automaticamente pelo nome, contra static/img/associados/.
 # Quando o nome no quadro de associados for diferente, use o campo `foto` com
@@ -63,7 +66,10 @@ linha:
   - {n: 14, nome: "Newton Perima Mansur",          formacao: "Engenheiro Civil"}
   - {n: 13, nome: "Lia Quintana",                  formacao: "Engenheira Civil",
      observacao: "Filha de Néd Medina Quintana. Foi conselheira do CREA-RS e reitora da Urcamp."}
-  - {n: 12, nome: "Volmir Oliveira",               formacao: "Engenheiro Civil"}
+  - {n: 12, nome: "Volmir Oliveira Silveira",      formacao: "Engenheiro Civil",
+     foto: "volmir-silveira",
+     observacao: "Diretor-geral do DAEB. Associado ao núcleo.",
+     fonte: "Nome completo confirmado em documentos do DAEB assinados por ele (2017 e 2018)"}
   - {n: 11, nome: "Néd Medina Quintana",           formacao: "Engenheiro Civil",
      observacao: "Um dos fundadores do NEAB, em 1968. Faleceu em 2002."}
   - {n: 10, nome: "Nubia Margot Menezes",          formacao: "Arquiteta e Urbanista",
