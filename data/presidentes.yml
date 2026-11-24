@@ -51,22 +51,22 @@ linha:
   - {periodo: "2017–2018", nome: "Adalberto Gularte Schäfer", formacao: "Engenheiro Civil",
      foto: "adalberto-gularte-schafer-presidente", ficha_slug: "adalberto-gularte-schafer",
      fonte: "CREA-RS, 2016; relação de ex-presidentes"}
-  - {periodo: "2014–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
+  - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
      foto: "marcio-marun-gomes-2", ficha_slug: "marcio-marun-gomes",
      observacao: "Segundo mandato", fonte: "Relação de ex-presidentes; CREA-RS, 2015 e 2016"}
-  - {periodo: "2011–2013", nome: "Dagoberto Silva Calzia", formacao: "Arquiteto",
+  - {periodo: "2013–2014", nome: "Dagoberto Silva Calzia", formacao: "Arquiteto",
      foto: "dagoberto-silva-calzia",
      observacao: "Segundo mandato", fonte: "Relação de ex-presidentes"}
-  - {periodo: "2010–2011", nome: "Guilherme Horvath", formacao: "Arquiteto",
+  - {periodo: "2011–2012", nome: "Guilherme Horvath", formacao: "Arquiteto",
      fonte: "Relação de ex-presidentes"}
-  - {periodo: "2008–2010", nome: "Dagoberto Silva Calzia", formacao: "Arquiteto",
+  - {periodo: "2009–2010", nome: "Dagoberto Silva Calzia", formacao: "Arquiteto",
      foto: "dagoberto-silva-calzia",
      fonte: "Relação de ex-presidentes; Diretoria do NEAB; CREA-RS"}
-  - {n: 20, periodo: "2006–2008", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
+  - {n: 20, periodo: "2007–2008", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
      foto: "marcio-marun-gomes-1", ficha_slug: "marcio-marun-gomes",
      observacao: "Primeiro mandato", fonte: "Diretoria do NEAB; declaração do próprio, Jornal Minuano, dez. 2024"}
-  - {n: 19, periodo: "2004–2006", nome: "Adriane Luiz Alves",   formacao: "Arquiteta e Urbanista"}
-  - {n: 18, periodo: "2002–2004", nome: "Antônio Cândido Varela Trindade", formacao: "Arquiteto e Urbanista"}
+  - {n: 19, periodo: "2005–2006", nome: "Adriane Luiz Alves",   formacao: "Arquiteta e Urbanista"}
+  - {n: 18, periodo: "2003–2004", nome: "Antônio Cândido Varela Trindade", formacao: "Arquiteto e Urbanista"}
   - {n: 17, periodo: "2001–2002", nome: "Luciano Vacilotto",    formacao: "Engenheiro Mecânico", observacao: "Segundo mandato",
      foto: "luciano-vacilotto-presidente", ficha_slug: "luciano-vacilotto"}
   - {n: 16, periodo: "2000",      nome: "Gustavo Flores Pinto", formacao: "Arquiteto"}
