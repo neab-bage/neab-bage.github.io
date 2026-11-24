@@ -33,6 +33,8 @@ titulo: "Galeria de Presidentes"
 galeria: >-
   A <strong>Galeria de Presidentes</strong> foi inaugurada em 2 de dezembro de 2016 na sede do
   núcleo, nas dependências da Inspetoria do CREA-RS de Bagé, onde os retratos estão expostos.
+  Os retratos reproduzidos aqui partem de fotografias originais de cada presidente, padronizadas
+  em enquadramento, luz e fundo com apoio de edição por inteligência artificial.
 nota: >-
   A reconstituição segue em curso. Falta identificar os períodos da maior parte dos
   mandatos anteriores a 2006 — e, no intervalo já mapeado, os anos de 2011 a 2014.
@@ -47,8 +49,10 @@ linha:
   - {periodo: "2019–2020", nome: "Antônio Luiz Arla da Silva", formacao: "Engenheiro Civil",
      fonte: "CREA-RS, 2019; Jornal Minuano, 2020; Diretoria do NEAB"}
   - {periodo: "2017–2018", nome: "Adalberto Gularte Schäfer", formacao: "Engenheiro Civil",
+     foto: "adalberto-gularte-schafer-presidente", ficha_slug: "adalberto-gularte-schafer",
      fonte: "CREA-RS, 2016"}
   - {periodo: "2015–2016", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
+     foto: "marcio-marun-gomes-2", ficha_slug: "marcio-marun-gomes",
      fonte: "CREA-RS, 2015 e 2016"}
   # PENDENTE: ano final do mandato de Dagoberto Calzia, e se Guilherme Worvath cumpriu
   # mandato de um ano só. A Diretoria informou "provavelmente 2009" para Guilherme.
@@ -57,12 +61,15 @@ linha:
   - {periodo: "2009", nome: "Guilherme Worvath", formacao: "",
      fonte: "Diretoria do NEAB"}
   - {n: 20, periodo: "2006–2008", nome: "Márcio Marun Gomes", formacao: "Engenheiro Civil e de Segurança do Trabalho",
+     foto: "marcio-marun-gomes-1", ficha_slug: "marcio-marun-gomes",
      observacao: "Primeiro mandato", fonte: "Diretoria do NEAB; declaração do próprio, Jornal Minuano, dez. 2024"}
   - {n: 19, nome: "Adriane Luiz Alves",            formacao: "Arquiteta e Urbanista"}
   - {n: 18, nome: "Antônio Cândido Trindade",      formacao: "Arquiteto e Urbanista"}
-  - {n: 17, nome: "Luciano Vacilotto",             formacao: "Engenheiro Mecânico", observacao: "Segundo mandato"}
+  - {n: 17, nome: "Luciano Vacilotto",             formacao: "Engenheiro Mecânico", observacao: "Segundo mandato",
+     foto: "luciano-vacilotto-presidente", ficha_slug: "luciano-vacilotto"}
   - {n: 16, nome: "Gustavo Pinto",                 formacao: ""}
-  - {n: 15, nome: "Luciano Vacilotto",             formacao: "Engenheiro Mecânico"}
+  - {n: 15, nome: "Luciano Vacilotto",             formacao: "Engenheiro Mecânico",
+     foto: "luciano-vacilotto-presidente", ficha_slug: "luciano-vacilotto"}
   - {n: 14, nome: "Newton Perima Mansur",          formacao: "Engenheiro Civil"}
   - {n: 13, nome: "Lia Quintana",                  formacao: "Engenheira Civil",
      observacao: "Filha de Néd Medina Quintana. Foi conselheira do CREA-RS e reitora da Urcamp."}
