@@ -36,8 +36,8 @@ galeria: >-
   Os retratos reproduzidos aqui partem de fotografias originais de cada presidente, padronizadas
   em enquadramento, luz e fundo com apoio de edição por inteligência artificial.
 nota: >-
-  A reconstituição segue em curso. Entre 1988 e 1998 o núcleo passou um período sem
-  presidente eleito, e o mandato de Volmir Oliveira Silveira ainda está sem data.
+  A reconstituição segue em curso. Entre 1993 e 1997 o núcleo passou um período sem
+  presidente eleito.
   Quem puder contribuir com documentos, atas ou registros fotográficos pode falar
   com a Diretoria.
 
@@ -77,24 +77,24 @@ linha:
   - {n: 16, periodo: "2000",      nome: "Gustavo Flores Pinto", formacao: "Arquiteto"}
   - {n: 15, periodo: "1998–1999", nome: "Luciano Vacilotto",    formacao: "Engenheiro Mecânico",
      foto: "luciano-vacilotto-presidente", ficha_slug: "luciano-vacilotto"}
-  - {n: 14, periodo: "1988",      nome: "Newton Perima Mansur", formacao: "Engenheiro Civil"}
-  - {n: 13, periodo: "1988",      nome: "Lia Maria Herzer Quintana", formacao: "Engenheira Civil",
+  - {n: 14, periodo: "1991–1992", nome: "Newton Perima Mansur", formacao: "Engenheiro Civil"}
+  - {n: 13, periodo: "1989–1990", nome: "Lia Maria Herzer Quintana", formacao: "Engenheira Civil",
      observacao: "Filha de Néd Medina Quintana. Foi conselheira do CREA-RS e reitora da Urcamp."}
-  - {n: 12, nome: "Volmir Oliveira Silveira",      formacao: "Engenheiro Civil",
+  - {n: 12, periodo: "1987–1988", nome: "Volmir Oliveira Silveira", formacao: "Engenheiro Civil",
      ficha_slug: "volmir-silveira",
      observacao: "Diretor-geral do DAEB. Associado ao núcleo.",
      fonte: "Nome completo confirmado em documentos do DAEB assinados por ele (2017 e 2018)"}
-  - {n: 11, periodo: "1986",      nome: "Néd Medina Quintana",  formacao: "Engenheiro Civil",
+  - {n: 11, periodo: "1986–1987", nome: "Néd Medina Quintana",  formacao: "Engenheiro Civil",
      observacao: "Um dos fundadores do NEAB, em 1968. Faleceu em 2002."}
-  - {n: 10, periodo: "1984",      nome: "Nubia Margot Menezes Jardim", formacao: "Arquiteta e Urbanista",
+  - {n: 10, periodo: "1984–1985", nome: "Nubia Margot Menezes Jardim", formacao: "Arquiteta e Urbanista",
      foto: "nubia-margot-menezes-jardim-presidente", ficha_slug: "nubia-margot-menezes-jardim"}
-  - {n: 9,  periodo: "1981",      nome: "Maria de Lourdes Campos Costa", formacao: "Arquiteta"}
-  - {n: 8,  periodo: "1979",      nome: "José Augusto Reis Bordini", formacao: "Engenheiro Civil"}
-  - {n: 7,  periodo: "1979",      nome: "Glênio Mércio Carneiro", formacao: "Arquiteto", observacao: "Segundo mandato"}
-  - {n: 6,  periodo: "1976",      nome: "Sérgio Amado Coirolo", formacao: "Arquiteto"}
-  - {n: 5,  periodo: "1976",      nome: "Marcello Ghisolfi",    formacao: "Engenheiro Civil"}
-  - {n: 4,  periodo: "1974",      nome: "Manoel Luiz Ungaretti Lopes", formacao: "Engenheiro Civil"}
-  - {n: 3,  periodo: "1972",      nome: "Ely Nuget de Mello",   formacao: "Arquiteto"}
-  - {n: 2,  periodo: "1968",      nome: "Waldir Alves Ramos",   formacao: "Engenheiro Civil"}
-  - {n: 1,  periodo: "1968",      nome: "Glênio Mércio Carneiro", formacao: "Arquiteto",
+  - {n: 9,  periodo: "1982–1983", nome: "Maria de Lourdes Campos Costa", formacao: "Arquiteta"}
+  - {n: 8,  periodo: "1981",      nome: "José Augusto Reis Bordini", formacao: "Engenheiro Civil"}
+  - {n: 7,  periodo: "1980",      nome: "Glênio Mércio Carneiro", formacao: "Arquiteto", observacao: "Segundo mandato"}
+  - {n: 6,  periodo: "1978–1979", nome: "Sérgio Amado Coirolo", formacao: "Arquiteto"}
+  - {n: 5,  periodo: "1976–1977", nome: "Marcello Ghisolfi",    formacao: "Engenheiro Civil"}
+  - {n: 4,  periodo: "1974–1975", nome: "Manoel Luiz Ungaretti Lopes", formacao: "Engenheiro Civil"}
+  - {n: 3,  periodo: "1972–1973", nome: "Ely Nuget de Mello",   formacao: "Arquiteto"}
+  - {n: 2,  periodo: "1970–1971", nome: "Waldir Alves Ramos",   formacao: "Engenheiro Civil"}
+  - {n: 1,  periodo: "1968–1969", nome: "Glênio Mércio Carneiro", formacao: "Arquiteto",
      observacao: "Primeiro presidente do núcleo, a partir da fundação em 1968."}
