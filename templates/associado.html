@@ -18,6 +18,40 @@
 </section>
 
 <section class="wrap secao">
+  {% if pessoa.apresentacao %}
+  <p class="ficha__apresentacao">{{ pessoa.apresentacao }}</p>
+  {% endif %}
+
+  {% if pessoa.especialidades %}
+  <h2>Áreas de atuação</h2>
+  <p class="ficha__tags">
+    {% for e in pessoa.especialidades %}<span class="etiqueta-peq etiqueta-peq--neutra">{{ e }}</span>{% endfor %}
+  </p>
+  {% endif %}
+
+  {% if pessoa.formacao %}
+  <h2>Formação</h2>
+  <ul class="ficha__formacao">
+    {% for f in pessoa.formacao %}
+    <li><strong>{{ f.titulo }}</strong>{% if f.instituicao %} · {{ f.instituicao }}{% endif %}{% if f.ano %} · {{ f.ano }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if pessoa.atendimento %}
+  <h2>Onde atende</h2>
+  <p class="ficha__atendimento">{{ pessoa.atendimento }}</p>
+  {% endif %}
+
+  {% if pessoa.publicacoes %}
+  <h2>Publicações</h2>
+  <ul class="ficha__formacao">
+    {% for pb in pessoa.publicacoes %}
+    <li>{% if pb.url %}<a href="{{ pb.url }}"{% if pb.url.startswith("http") %} target="_blank" rel="noopener"{% endif %}>{{ pb.titulo }}</a>{% else %}{{ pb.titulo }}{% endif %}{% if pb.detalhe %} · {{ pb.detalhe }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
   {% if pessoa.autoriza_contato and (pessoa.email or pessoa.telefone or pessoa.site) %}
   <h2>Contato profissional</h2>
   <ul class="ficha__contatos">

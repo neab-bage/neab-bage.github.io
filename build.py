@@ -123,7 +123,8 @@ def carregar_associados():
             for campo in ("foto_mini",):
                 if p.get(campo) and not reg.get(campo):
                     reg[campo] = p[campo]
-            for campo in ("site", "site_url", "site_rotulo", "email", "telefone"):
+            for campo in ("site", "site_url", "site_rotulo", "email", "telefone",
+                          "apresentacao", "atendimento", "formacao", "especialidades", "publicacoes"):
                 if p.get(campo) and not reg.get(campo):
                     reg[campo] = p[campo]
             p["ficha"] = p["slug"]

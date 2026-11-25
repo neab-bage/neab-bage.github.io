@@ -73,3 +73,20 @@ os e-mails lidos igualmente nas duas passagens. Os itens abaixo não puderam ser
   Ana Paula enviou foto; aguardando retorno da diretoria. Foto guardada em
   `fotos_associados/_previa/ana_paula_recorte.jpg`.
 - **www.neab.org.br** — divulgado nos canais de relacionamento do guia, mas o domínio não existe.
+
+## Ficha de associado — campos novos (em teste desde 25/11/2026)
+
+Campos opcionais acrescentados a `data/associados.yml`, todos renderizados só quando existem:
+`apresentacao` (texto curto), `especialidades` (lista), `formacao` (lista de
+`{titulo, instituicao, ano}`), `atendimento` (string) e `publicacoes` (lista de
+`{titulo, url, detalhe}`). Quem não tiver nada preenchido mantém a ficha como era.
+
+Preenchidos até agora só na ficha do Alexandro, como exemplo de layout.
+
+PENDENTE:
+- Conferir os dados da ficha do Alexandro: as especialidades foram escolhidas pelo Claude
+  para a página não ficar vazia, e instituição e ano da formação estão em branco.
+- 37 dos 51 associados estão sem `registro` preenchido.
+- Fechar a lista de especialidades com a diretoria, antes de coletar. Lista aberta vira
+  vitrine e quebra a isonomia entre quem preenche e quem não preenche.
+- Decidir a forma de coleta (formulário único, mesmos campos e mesmo limite para todos).

@@ -162,11 +162,29 @@ grupos:
         email: "ad.schafer@gmail.com"
         telefone: "(53) 99957-0717"
         autoriza_contato: true
+      # FICHA DE EXEMPLO — campos novos em teste. Conferir e corrigir antes de pedir
+      # os mesmos dados aos demais associados. Ver as pendências no CLAUDE.md.
       - nome: "Alexandro Gularte Schafer"
-        registro: ""
+        registro: "CREA-RS 120027"
         email: "alschafer@gmail.com"
         telefone: "(53) 99951-9908"
         autoriza_contato: true
+        apresentacao: >-
+          Engenheiro civil e professor na Universidade Federal do Pampa, em Bagé, onde
+          trabalha com sistemas de informação geográfica aplicados ao território, recursos
+          hídricos e infraestrutura urbana. Coordena o GeoVias Bagé-RS, que mapeou a malha
+          viária e a pavimentação do município.
+        especialidades:
+          - "Geoprocessamento e cartografia"
+          - "Recursos hídricos"
+          - "Infraestrutura urbana"
+          - "Drenagem"
+        formacao:
+          - {titulo: "Doutor em Engenharia Civil", instituicao: "", ano: ""}
+          - {titulo: "Engenheiro Civil", instituicao: "", ano: ""}
+        atendimento: "Bagé e região da Campanha"
+        publicacoes:
+          - {titulo: "GeoVias Bagé-RS — Sistema Integrado de Informações sobre Vias e Pavimentação Urbana", url: "https://alexandrogschafer.github.io/GeoViasOS/", detalhe: "2025"}
       - nome: "Aliane da Croce"
         registro: "CREA-RS 234118"
         email: "alianecroce@gmail.com"
