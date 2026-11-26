@@ -42,7 +42,7 @@
         <ul class="nav__lista">
           {% set g_nucleo = active in ["neab","atuacao","diretoria"] %}
           {% set g_ativ   = active in ["agenda","formacao","noticias","programa"] %}
-          {% set g_assoc  = active in ["associe","associados","beneficios"] %}
+          {% set g_assoc  = active in ["associe","beneficios"] %}
           {% set g_transp = active in ["documentos","transparencia","sobre"] %}
           {% set g_prof   = active in ["guia","checklists","legislacao","biblioteca"] %}
           <li class="nav__item">
@@ -63,10 +63,19 @@
               <li><a href="{{ root }}universo-das-engenharias/"{% if active == "programa" %} aria-current="page"{% endif %}>Universo das Engenharias</a></li>
             </ul>
           </li>
+          <li class="nav__item"><a href="{{ root }}associados/"{% if active == "associados" %} aria-current="page"{% endif %}>Encontre um profissional</a></li>
           <li class="nav__item">
-            <button class="nav__grupo{% if g_assoc %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Profissionais{{ i.icon("chevron", 16) }}</button>
+            <button class="nav__grupo{% if g_prof %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Guia e legislação{{ i.icon("chevron", 16) }}</button>
             <ul class="nav__sub">
-              <li><a href="{{ root }}associados/"{% if active == "associados" %} aria-current="page"{% endif %}>Encontre um profissional</a></li>
+              <li><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
+              <li><a href="{{ root }}guia/checklists/"{% if active == "checklists" %} aria-current="page"{% endif %}>Check-lists de documentos</a></li>
+              <li><a href="{{ root }}legislacao/"{% if active == "legislacao" %} aria-current="page"{% endif %}>Legislação</a></li>
+              <li><a href="{{ root }}biblioteca/"{% if active == "biblioteca" %} aria-current="page"{% endif %}>Biblioteca</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <button class="nav__grupo{% if g_assoc %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Associe-se{{ i.icon("chevron", 16) }}</button>
+            <ul class="nav__sub">
               <li><a href="{{ root }}associe-se/"{% if active == "associe" %} aria-current="page"{% endif %}>Como se associar</a></li>
               <li><a href="{{ root }}beneficios/"{% if active == "beneficios" %} aria-current="page"{% endif %}>Benefícios e convênios</a></li>
             </ul>
@@ -77,15 +86,6 @@
               <li><a href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}>Documentos</a></li>
               <li><a href="{{ root }}transparencia/"{% if active == "transparencia" %} aria-current="page"{% endif %}>Prestação de contas</a></li>
               <li><a href="{{ root }}sobre/"{% if active == "sobre" %} aria-current="page"{% endif %}>Sobre o site</a></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <button class="nav__grupo{% if g_prof %} nav__grupo--ativo{% endif %}" type="button" aria-expanded="false">Para o profissional{{ i.icon("chevron", 16) }}</button>
-            <ul class="nav__sub">
-              <li><a href="{{ root }}guia/"{% if active == "guia" %} aria-current="page"{% endif %}>Guia prático</a></li>
-              <li><a href="{{ root }}guia/checklists/"{% if active == "checklists" %} aria-current="page"{% endif %}>Check-lists de documentos</a></li>
-              <li><a href="{{ root }}legislacao/"{% if active == "legislacao" %} aria-current="page"{% endif %}>Legislação</a></li>
-              <li><a href="{{ root }}biblioteca/"{% if active == "biblioteca" %} aria-current="page"{% endif %}>Biblioteca</a></li>
             </ul>
           </li>
           <li class="nav__item"><a href="{{ root }}contato/"{% if active == "contato" %} aria-current="page"{% endif %}>Contato</a></li>
