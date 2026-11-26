@@ -14,7 +14,7 @@
 
     {% if guia.pdf %}
     <p class="guia__pdf">
-      <a class="botao botao--linha" href="{{ root }}static/documentos/{{ guia.pdf.arquivo }}" target="_blank" rel="noopener">
+      <a class="btn btn--suave" href="{{ root }}static/documentos/{{ guia.pdf.arquivo }}" target="_blank" rel="noopener">
         {{ i.icon("baixar", 18) }}{{ guia.pdf.rotulo }}
       </a>
       {% if guia.pdf.detalhe %}<small>{{ guia.pdf.detalhe }}</small>{% endif %}
@@ -44,10 +44,10 @@
 
     <p class="nota">As páginas acima são imagens da edição impressa e não podem ser pesquisadas
        nem lidas por leitor de tela. O mesmo conteúdo em texto está na
-       <a href="{{ root }}guia/">página do Guia prático</a>.</p>
+       <a href="{{ root }}guia/checklists/">página das check-lists</a>.</p>
 
     <div class="acoes">
-      <a class="btn btn--suave btn--peq" href="{{ root }}guia/">Voltar ao Guia prático</a>
+      <a class="btn btn--suave btn--peq" href="{{ root }}guia/checklists/">Abrir as check-lists</a>
     </div>
 
   </div>

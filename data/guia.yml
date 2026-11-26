@@ -16,8 +16,8 @@
 #   tabela   - {colunas: [], linhas: [[]]} (opcional)
 # ---------------------------------------------------------------------------
 
-titulo: "Guia prático"
-chamada: "Check-lists de documentos"
+titulo: "Check-lists de documentos"
+chamada: "Guia prático · NEAB"
 atualizacao: "Edição de 23 de novembro de 2026"
 
 # Versão impressa do guia, para download. Arquivo em static/documentos/.
@@ -34,13 +34,13 @@ pdf:
 # Arquivos em static/img/guia-paginas/p01.jpg … p24.jpg.
 # -------------------------------------------------------------------------
 folhear:
-  titulo: "Folhear a edição impressa"
-  chamada: "Guia Prático · edição de 2026"
+  titulo: "Guia prático"
+  chamada: "Edição impressa · NEAB 58 anos · 2026"
   rotulo: "Folhear a edição impressa"
   intro: >-
-    As 24 páginas do Guia Prático como foram impressas, para quem prefere ver a publicação
-    tal como ela é distribuída. O conteúdo em texto, com as listas de documentos de cada
-    processo, está na <a href="{raiz}guia/">página do guia</a>.
+    As 24 páginas do Guia Prático Aprova Fácil como foram impressas. Para marcar os documentos
+    enquanto monta a pasta, use as
+    <a href="{raiz}guia/checklists/">check-lists interativas</a>.
   total: 24
   secoes:
     1: "Capa"

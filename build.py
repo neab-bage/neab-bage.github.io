@@ -391,10 +391,12 @@ def gerar():
                title=g["area"], grupo=g)
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     if guia:
-        render("guia.html", "guia/index.html", active="guia", title=guia.get("titulo", "Guia prático"))
+        # /guia/ abre a publicação como ela foi impressa; as check-lists ficam em /guia/checklists/
+        render("guia.html", "guia/checklists/index.html", active="guia",
+               title=guia.get("titulo", "Guia prático"))
         if guia.get("folhear"):
-            render("guia_folhear.html", "guia/folhear/index.html", active="guia",
-                   title=guia["folhear"].get("titulo", "Folhear a edição impressa"))
+            render("guia_folhear.html", "guia/index.html", active="guia",
+                   title=guia["folhear"].get("titulo", "Guia prático"))
     if programa:
         render("programa.html", "universo-das-engenharias/index.html", active="programa",
                title=programa.get("titulo", "Programa de rádio"))
