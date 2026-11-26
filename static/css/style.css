@@ -356,12 +356,15 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__contatos{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px;max-width:52ch}
 .ficha__contatos li{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);padding:14px 16px;word-break:break-word}
 .ficha__contatos .icon{color:var(--cobre);flex:none}
-.ficha__apresentacao{max-width:68ch;font-size:1.03rem;line-height:1.7;margin:0 0 30px}
-.ficha__tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;max-width:72ch}
-.ficha__formacao{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px;max-width:68ch}
+.secao--ficha h2{margin:38px 0 .35em;padding-top:26px;border-top:1px solid var(--concreto-2);font-size:1.12rem;letter-spacing:.01em}
+.secao--ficha > :first-child{margin-top:0}
+.secao--ficha h2:first-child{border-top:0;padding-top:0;margin-top:0}
+.ficha__apresentacao{max-width:68ch;font-size:1.05rem;line-height:1.75;margin:0 0 4px}
+.ficha__tags{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 4px;max-width:72ch}
+.ficha__formacao{list-style:none;margin:16px 0 4px;padding:0;display:grid;gap:12px;max-width:68ch}
 .ficha__formacao li{padding-left:16px;position:relative;line-height:1.6}
 .ficha__formacao li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--cobre)}
-.ficha__atendimento{max-width:68ch;margin:14px 0 0}
+.ficha__atendimento{max-width:68ch;margin:16px 0 4px}
 .secao--folhear{padding-top:22px}
 .folhear__visor{max-width:780px;margin:0 auto}
 .folhear__visor--cheia{max-width:none;background:var(--preto);display:flex;flex-direction:column;justify-content:safe center;gap:10px;padding:10px 14px;overflow:auto}
