@@ -4,23 +4,16 @@ data: 2026-11-23
 categoria: "Comunicação"
 autor: "NEAB"
 resumo: >-
-  Apresentado pelos engenheiros Antônio Arla e Márcio Marun, o programa mostra a engenharia que
-  está no cotidiano da cidade. Quartas-feiras, das 11h ao meio-dia, em 98.1 FM.
+  Apresentado pelos engenheiros Antônio Arla e Márcio Marun, o programa do núcleo ocupa as
+  manhãs de quarta na 98.1 FM.
 ---
 
-Toda quarta-feira, das 11h ao meio-dia, a **Pop Rock Bagé 98.1 FM** leva ao ar o **Universo das
-Engenharias**, programa apresentado pelos engenheiros **Antônio Arla** e **Márcio Marun**, ambos
-associados ao NEAB.
+O **Universo das Engenharias**, programa do NEAB na **Pop Rock Bagé 98.1 FM**, vai ao ar às
+quartas-feiras, das 11h ao meio-dia, com apresentação dos engenheiros **Antônio Arla** e
+**Márcio Marun**, ambos associados ao núcleo.
 
-A proposta é mostrar como a engenharia está presente no dia a dia das pessoas — muitas vezes de
-forma imperceptível, sempre essencial. Cada edição parte de um tema concreto, da infraestrutura
-urbana à tecnologia que passa despercebida dentro de casa, e vai atrás da engenharia que existe por
-trás dele, com entrevistas e debates com especialistas, gestores e profissionais.
+A proposta é mostrar a engenharia que está no cotidiano das pessoas, partindo de um tema
+concreto a cada edição e ouvindo quem projeta, executa e fiscaliza.
 
-O formato dispensa o jargão técnico sem abrir mão do rigor, e funciona como ponte entre quem
-estuda, quem produz e quem usa. Para o núcleo, é também a forma mais direta de levar ao público o
-que normalmente fica restrito ao meio profissional.
-
-O programa pode ser acompanhado ao vivo pelo rádio, pela
-[página da emissora](https://poprockbage.com.br/programacao/universo-das-engenharias) ou pelo
-[Instagram do programa](https://www.instagram.com/programauniversodasengenharias/).
+A programação, os canais de transmissão e o histórico das edições estão na
+[página do programa](/universo-das-engenharias/).

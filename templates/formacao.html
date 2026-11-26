@@ -30,6 +30,7 @@
         {% if f.local %}<p class="formacao__meta">{{ f.local }}</p>{% endif %}
         {% if f.promocao %}<p class="formacao__meta">Promoção: {{ f.promocao }}</p>{% endif %}
         {% if f.parceria %}<p class="formacao__meta">Parceria: {{ f.parceria }}</p>{% endif %}
+        {% if f.noticia %}<p class="formacao__meta"><a class="link-seta" href="{{ root }}noticias/{{ f.noticia }}/">Leia como foi {{ i.icon("seta", 15) }}</a></p>{% endif %}
         {% if f.fonte %}<p class="formacao__meta">Fonte: {{ f.fonte }}</p>{% endif %}
       </li>
       {% endfor %}
