@@ -171,7 +171,7 @@ grupos:
         autoriza_contato: true
         apresentacao: >-
           Professor da Universidade Federal do Pampa, em Bagé. Desenvolve soluções tecnológicas
-          aplicadas à inteligência territorial, à infraestrutura urbana e aos recursos hídricos,
+          aplicadas à inteligência territorial, à infraestrutura e aos recursos hídricos,
           integrando geotecnologias, ciência de dados espaciais e engenharia — sistemas
           geoespaciais, plataformas computacionais e metodologias orientadas por dados para apoio
           à decisão e à gestão territorial.
@@ -181,7 +181,7 @@ grupos:
           - "Geoprocessamento e geotecnologias"
           - "Inteligência territorial"
           - "Recursos hídricos"
-          - "Infraestrutura urbana"
+          - "Infraestrutura"
           - "Ciência de dados espaciais"
         formacao:
           - {titulo: "Doutor em Engenharia Civil", instituicao: "Universidade Federal de Santa Catarina", ano: ""}
