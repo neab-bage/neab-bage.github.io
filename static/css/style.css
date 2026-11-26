@@ -382,8 +382,10 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .folhear__contador{color:var(--grafite-2);font-size:.92rem;font-variant-numeric:tabular-nums;min-width:5.5em;text-align:center}
 .folhear__ctrl .btn{white-space:nowrap}
 @media (max-width:480px){.folhear__ctrl{gap:10px}.folhear__ctrl .btn{padding:9px 12px}}
-.folhear__pag{margin:0;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);overflow:hidden;scroll-margin-top:90px}
-.folhear__pag img{display:block;width:100%;height:auto;background:var(--concreto)}
+.folhear__pag{margin:0;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);overflow:hidden;scroll-margin-top:90px;display:flex;flex-direction:column;align-items:center}
+/* a página cabe na janela: altura limitada pelo que sobra fora do visor */
+.folhear__pag img{display:block;width:auto;max-width:100%;height:auto;max-height:calc(100vh - 240px);background:var(--concreto)}
+.folhear__pag figcaption{width:100%}
 .folhear__pag figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-top:1px solid var(--concreto-2);color:var(--grafite-2);font-size:.9rem}
 .folhear__pag figcaption b{font-weight:600;color:var(--grafite)}
 a.assoc{text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}

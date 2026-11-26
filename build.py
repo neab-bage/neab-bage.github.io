@@ -392,7 +392,7 @@ def gerar():
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     if guia:
         # /guia/ abre a publicação como ela foi impressa; as check-lists ficam em /guia/checklists/
-        render("guia.html", "guia/checklists/index.html", active="guia",
+        render("guia.html", "guia/checklists/index.html", active="checklists",
                title=guia.get("titulo", "Guia prático"))
         if guia.get("folhear"):
             render("guia_folhear.html", "guia/index.html", active="guia",
