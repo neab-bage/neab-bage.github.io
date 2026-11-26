@@ -95,6 +95,8 @@ ul,ol{margin:0 0 1em;padding-left:1.1rem}
 
 /* ---------- cabeçalho de página ---------- */
 .cab{background:var(--concreto);border-bottom:1px solid var(--concreto-2);padding:54px 0 48px}
+.cab--curta{padding:30px 0 26px}
+.cab--curta h1{font-size:clamp(1.6rem,3.2vw,2.1rem);margin:2px 0 0}
 .cab__lead{font-size:1.1rem;color:var(--grafite-2);max-width:62ch;margin:0}
 
 /* ---------- seções ---------- */
