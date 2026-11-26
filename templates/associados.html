@@ -14,7 +14,6 @@
   <div class="cartoes cartoes--areas">
     {% for g in associados.grupos %}
     <a class="cartao area-cartao" href="{{ root }}associados/{{ g.slug }}/">
-      <span class="cartao__ic">{{ i.icon("pessoas", 22) }}</span>
       <h2>{{ g.area }}</h2>
       <span class="link-seta">Ver profissionais {{ i.icon("seta", 16) }}</span>
     </a>
