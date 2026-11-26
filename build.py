@@ -128,6 +128,8 @@ def carregar_associados():
                 if p.get(campo) and not reg.get(campo):
                     reg[campo] = p[campo]
             p["ficha"] = p["slug"]
+    # modalidades em ordem alfabética, ignorando acentos
+    dados["grupos"].sort(key=lambda g: slug(g["area"]))
     dados["pessoas"] = sorted(pessoas.values(), key=lambda p: p["slug"])
     if faltando:
         print(f"Aviso: {faltando} associado(s) sem foto em static/img/associados/; exibindo as iniciais.")
