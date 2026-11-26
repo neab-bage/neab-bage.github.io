@@ -7,11 +7,6 @@
     <div>
       <h1>Núcleo dos Engenheiros e Arquitetos de <span>Bagé</span></h1>
       <p class="hero__lead">{{ site.chamada_home or site.descricao_curta }}</p>
-      <div class="hero__acoes">
-        <a class="btn btn--primario" href="{{ root }}associados/">Encontre um profissional {{ i.icon("seta", 18) }}</a>
-        <a class="btn btn--suave" href="{{ root }}guia/">Guia prático</a>
-        <a class="btn btn--suave" href="{{ root }}o-neab/">Conheça o núcleo</a>
-      </div>
       {% if site.fundacao.confirmado and site.idade %}
       <p class="hero__selo">{{ i.icon("escudo", 18) }} {{ site.idade }} anos de representação profissional em Bagé</p>
       {% endif %}
