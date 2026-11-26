@@ -317,13 +317,10 @@ grupos:
         email: "engreinaldocl@gmail.com"
         telefone: "(53) 99961-4565"
         autoriza_contato: true
-  - area: "Engenharia Elétrica — Engenharia de Energia"
+  # As duas modalidades aparecem separadas no guia 1.13 e passam a aparecer
+  # separadas aqui, cada profissional na sua.
+  - area: "Engenharia Elétrica"
     pessoas:
-      - nome: "Caíque Nunes Maria Santana"
-        registro: ""
-        email: "nunescaique10@gmail.com"
-        telefone: "(53) 99968-1158"
-        autoriza_contato: true
       - nome: "Douglas de Tarso da Silva"
         registro: ""
         email: "eng.douglas.tarso.dts@outlook.com"
@@ -333,6 +330,13 @@ grupos:
         registro: ""
         email: "jddiasdacosta@gmail.com"
         telefone: "(53) 98112-7532"
+        autoriza_contato: true
+  - area: "Engenharia de Energia"
+    pessoas:
+      - nome: "Caíque Nunes Maria Santana"
+        registro: ""
+        email: "nunescaique10@gmail.com"
+        telefone: "(53) 99968-1158"
         autoriza_contato: true
   - area: "Engenharia Química"
     pessoas:
