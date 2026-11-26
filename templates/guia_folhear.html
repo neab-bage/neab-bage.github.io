@@ -30,7 +30,7 @@
       </ul>
     </nav>
 
-    <div class="folhear">
+    <div class="folhear" id="folhear">
       {% for pg in guia.folhear.paginas %}
       <figure class="folhear__pag" id="pagina-{{ pg.n }}">
         <img src="{{ root }}static/img/guia-paginas/{{ pg.arquivo }}"
@@ -42,7 +42,7 @@
       {% endfor %}
     </div>
 
-    <p class="nota">As páginas acima são imagens da edição impressa e não podem ser pesquisadas
+    <p class="nota">As páginas são imagens da edição impressa e não podem ser pesquisadas
        nem lidas por leitor de tela. O mesmo conteúdo em texto está na
        <a href="{{ root }}guia/checklists/">página das check-lists</a>.</p>
 
@@ -52,4 +52,78 @@
 
   </div>
 </section>
+
+<script>
+(function () {
+  var caixa = document.getElementById("folhear");
+  if (!caixa) return;
+  var paginas = Array.prototype.slice.call(caixa.querySelectorAll(".folhear__pag"));
+  if (paginas.length < 2) return;
+
+  // só vira visor se o JS rodar; sem JS, a página empilhada continua servindo
+  caixa.classList.add("folhear--visor");
+
+  var atual = 0;
+
+  var barra = document.createElement("div");
+  barra.className = "folhear__ctrl";
+  barra.innerHTML =
+    '<button type="button" class="btn btn--suave btn--peq" data-ir="-1" aria-label="Página anterior">&#8592; Anterior</button>' +
+    '<span class="folhear__contador" aria-live="polite"></span>' +
+    '<button type="button" class="btn btn--suave btn--peq" data-ir="1" aria-label="Próxima página">Próxima &#8594;</button>';
+  caixa.parentNode.insertBefore(barra, caixa);
+  var rodape = barra.cloneNode(true);
+  caixa.parentNode.insertBefore(rodape, caixa.nextSibling);
+  var contadores = [barra.querySelector(".folhear__contador"), rodape.querySelector(".folhear__contador")];
+
+  function mostrar(i, rolar) {
+    atual = Math.max(0, Math.min(paginas.length - 1, i));
+    paginas.forEach(function (p, k) {
+      p.hidden = k !== atual;
+      var img = p.querySelector("img");
+      // carrega a vizinhança para a virada não piscar
+      if (Math.abs(k - atual) <= 1) img.loading = "eager";
+    });
+    var txt = (atual + 1) + " / " + paginas.length;
+    contadores.forEach(function (c) { c.textContent = txt; });
+    Array.prototype.forEach.call(document.querySelectorAll(".guia__indice a"), function (a) {
+      a.setAttribute("aria-current", a.getAttribute("href") === "#pagina-" + (atual + 1) ? "true" : "false");
+    });
+    if (rolar) barra.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+
+  [barra, rodape].forEach(function (b) {
+    b.addEventListener("click", function (ev) {
+      var alvo = ev.target.closest("[data-ir]");
+      if (alvo) mostrar(atual + Number(alvo.dataset.ir), b === rodape);
+    });
+  });
+
+  // o índice passa a trocar a página em vez de rolar
+  Array.prototype.forEach.call(document.querySelectorAll(".guia__indice a"), function (a) {
+    a.addEventListener("click", function (ev) {
+      var n = parseInt((a.getAttribute("href") || "").replace("#pagina-", ""), 10);
+      if (n) { ev.preventDefault(); mostrar(n - 1, true); }
+    });
+  });
+
+  document.addEventListener("keydown", function (ev) {
+    if (ev.target.matches("input, textarea, select")) return;
+    if (ev.key === "ArrowLeft") mostrar(atual - 1);
+    if (ev.key === "ArrowRight") mostrar(atual + 1);
+  });
+
+  // arrastar o dedo no celular
+  var x0 = null;
+  caixa.addEventListener("touchstart", function (ev) { x0 = ev.touches[0].clientX; }, { passive: true });
+  caixa.addEventListener("touchend", function (ev) {
+    if (x0 === null) return;
+    var d = ev.changedTouches[0].clientX - x0;
+    if (Math.abs(d) > 45) mostrar(atual + (d < 0 ? 1 : -1));
+    x0 = null;
+  }, { passive: true });
+
+  mostrar(0, false);
+})();
+</script>
 {% endblock %}

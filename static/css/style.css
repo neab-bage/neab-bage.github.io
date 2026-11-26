@@ -361,6 +361,11 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__formacao li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--cobre)}
 .ficha__atendimento{max-width:68ch;margin:14px 0 0}
 .folhear{display:grid;gap:22px;max-width:780px;margin:28px auto 0}
+.folhear--visor{gap:0;margin-top:0}
+.folhear__ctrl{display:flex;align-items:center;justify-content:center;gap:16px;max-width:780px;margin:22px auto;scroll-margin-top:84px}
+.folhear__contador{color:var(--grafite-2);font-size:.92rem;font-variant-numeric:tabular-nums;min-width:5.5em;text-align:center}
+.folhear__ctrl .btn{white-space:nowrap}
+@media (max-width:480px){.folhear__ctrl{gap:10px}.folhear__ctrl .btn{padding:9px 12px}}
 .folhear__pag{margin:0;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);overflow:hidden;scroll-margin-top:90px}
 .folhear__pag img{display:block;width:100%;height:auto;background:var(--concreto)}
 .folhear__pag figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-top:1px solid var(--concreto-2);color:var(--grafite-2);font-size:.9rem}
