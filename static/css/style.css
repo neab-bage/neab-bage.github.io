@@ -94,14 +94,14 @@ ul,ol{margin:0 0 1em;padding-left:1.1rem}
 .hero__logo{width:min(330px,100%);height:auto;margin-inline:auto;filter:drop-shadow(0 18px 32px rgba(10,10,10,.14))}
 
 /* ---------- cabeçalho de página ---------- */
-.cab{background:var(--concreto);border-bottom:1px solid var(--concreto-2);padding:24px 0 22px}
+.cab{background:var(--concreto);border-bottom:1px solid var(--concreto-2);padding:16px 0 15px}
 .cab h1{margin-bottom:.22em}
 .cab--curta{padding:30px 0 26px}
 .cab--curta h1{font-size:clamp(1.6rem,3.2vw,2.1rem);margin:2px 0 0}
 .cab__lead{font-size:1.04rem;color:var(--grafite-2);max-width:62ch;margin:0}
 
 /* ---------- seções ---------- */
-.secao{padding:40px 0}
+.secao{padding:28px 0}
 .secao__cab{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .secao__cab h2{margin-bottom:.4em}
 .duas{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
