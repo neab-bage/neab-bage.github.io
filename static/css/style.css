@@ -383,6 +383,9 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .guia__pdf--centro{justify-content:center;margin:26px 0 22px}
 .folhear__contador{color:var(--grafite-2);font-size:.92rem;font-variant-numeric:tabular-nums;min-width:5.5em;text-align:center}
 .folhear__ctrl .btn{white-space:nowrap}
+.folhear__cheia{background:var(--cobre);color:#fff;border-color:var(--cobre)}
+.folhear__cheia:hover,.folhear__cheia:focus-visible{background:var(--preto);border-color:var(--preto);color:#fff}
+.folhear__visor--cheia .folhear__cheia{background:#fff;color:var(--preto);border-color:#fff}
 @media (max-width:480px){.folhear__ctrl{gap:10px}.folhear__ctrl .btn{padding:9px 12px}}
 .folhear__pag{margin:0;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);overflow:hidden;scroll-margin-top:90px;display:flex;flex-direction:column;align-items:center}
 /* a página cabe na janela: altura limitada pelo que sobra fora do visor */
