@@ -360,9 +360,15 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__formacao li{padding-left:16px;position:relative;line-height:1.6}
 .ficha__formacao li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--cobre)}
 .ficha__atendimento{max-width:68ch;margin:14px 0 0}
+.secao--folhear{padding-top:22px}
+.folhear__cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px;max-width:780px;margin:0 auto}
+.folhear__cab h1{font-size:clamp(1.5rem,3.4vw,2rem);margin:2px 0 0}
+.folhear__cab .etiqueta{margin:0}
+.folhear__intro{flex:1 1 20ch;margin:0;color:var(--grafite-2);font-size:.94rem;line-height:1.55}
 .folhear{display:grid;gap:22px;max-width:780px;margin:28px auto 0}
 .folhear--visor{gap:0;margin-top:0}
-.folhear__ctrl{display:flex;align-items:center;justify-content:center;gap:16px;max-width:780px;margin:22px auto;scroll-margin-top:84px}
+.folhear__ctrl{display:flex;align-items:center;justify-content:center;gap:16px;max-width:780px;margin:16px auto;scroll-margin-top:84px}
+.guia__pdf--centro{justify-content:center;margin:26px 0 22px}
 .folhear__contador{color:var(--grafite-2);font-size:.92rem;font-variant-numeric:tabular-nums;min-width:5.5em;text-align:center}
 .folhear__ctrl .btn{white-space:nowrap}
 @media (max-width:480px){.folhear__ctrl{gap:10px}.folhear__ctrl .btn{padding:9px 12px}}

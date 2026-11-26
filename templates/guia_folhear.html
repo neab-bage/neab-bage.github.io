@@ -1,34 +1,18 @@
 {% extends "base.html" %}
 {% import "_icons.html" as i %}
 {% block conteudo %}
-<header class="cab">
-  <div class="wrap">
-    <p class="etiqueta">{{ guia.folhear.chamada }}</p>
-    <h1>{{ guia.folhear.titulo }}</h1>
-    <p class="cab__txt">{{ guia.folhear.intro | replace("{raiz}", root) | safe }}</p>
-  </div>
-</header>
-
-<section class="secao">
+<section class="secao secao--folhear">
   <div class="wrap">
 
-    {% if guia.pdf %}
-    <p class="guia__pdf">
-      <a class="btn btn--suave" href="{{ root }}static/documentos/{{ guia.pdf.arquivo }}" target="_blank" rel="noopener">
-        {{ i.icon("baixar", 18) }}{{ guia.pdf.rotulo }}
-      </a>
-      {% if guia.pdf.detalhe %}<small>{{ guia.pdf.detalhe }}</small>{% endif %}
-    </p>
-    {% endif %}
+    <header class="folhear__cab">
+      <div>
+        <p class="etiqueta">{{ guia.folhear.chamada }}</p>
+        <h1>{{ guia.folhear.titulo }}</h1>
+      </div>
+      <p class="folhear__intro">{{ guia.folhear.intro | replace("{raiz}", root) | safe }}</p>
+    </header>
 
-    <nav class="guia__indice" aria-label="Seções do guia">
-      <p class="guia__indice-tit">Nesta página</p>
-      <ul>
-        {% for n, t in guia.folhear.secoes.items() %}
-        <li><a href="#pagina-{{ n }}">{{ t }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+
 
     <div class="folhear" id="folhear">
       {% for pg in guia.folhear.paginas %}
@@ -41,6 +25,15 @@
       </figure>
       {% endfor %}
     </div>
+
+    {% if guia.pdf %}
+    <p class="guia__pdf guia__pdf--centro">
+      <a class="btn btn--suave" href="{{ root }}static/documentos/{{ guia.pdf.arquivo }}" target="_blank" rel="noopener">
+        {{ i.icon("baixar", 18) }}{{ guia.pdf.rotulo }}
+      </a>
+      {% if guia.pdf.detalhe %}<small>{{ guia.pdf.detalhe }}</small>{% endif %}
+    </p>
+    {% endif %}
 
     <p class="nota">As páginas são imagens da edição impressa e não podem ser pesquisadas
        nem lidas por leitor de tela. O mesmo conteúdo em texto está na
