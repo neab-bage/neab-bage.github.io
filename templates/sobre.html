@@ -21,6 +21,15 @@
     <p>Correções, atualizações de conteúdo e pedidos de retirada de informação devem ser
        encaminhados ao núcleo{% if site.sobre_site.email %} — <a href="mailto:{{ site.sobre_site.email }}">{{ site.sobre_site.email }}</a>{% endif %}.</p>
 
+    {% if site.sobre_site.responsavel_email %}
+    <h2>Encontrou um erro ou tem uma sugestão?</h2>
+    <p>Página que não abre, link quebrado, dado errado, algo difícil de achar ou uma ideia do
+       que poderia existir aqui: escreva para
+       <a href="mailto:{{ site.sobre_site.responsavel_email }}">{{ site.sobre_site.responsavel_email }}</a>,
+       que responde pelo site. Assuntos do núcleo — associar-se, documentos, parcerias — seguem
+       pela <a href="{{ root }}contato/">página de contato</a>.</p>
+    {% endif %}
+
     <h2>Código e licença</h2>
     <p><a href="{{ site.sobre_site.repositorio }}" target="_blank" rel="noopener">Repositório no GitHub {{ i.icon("externo", 16) }}</a></p>
     <p>{{ site.sobre_site.licenca }}</p>
@@ -35,7 +44,7 @@
     <h2>Acessibilidade</h2>
     <p>As páginas seguem uma estrutura de títulos única por página, descrição alternativa nas
        imagens, foco visível na navegação por teclado e contraste adequado. Encontrou alguma
-       barreira? Avise pela <a href="{{ root }}contato/">página de contato</a>.</p>
+       barreira? Avise para quem responde pelo site, no endereço acima.</p>
   </div>
 </section>
 

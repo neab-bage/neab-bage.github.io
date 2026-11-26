@@ -400,6 +400,8 @@ sobre_site:
     (Unipampa), Campus Bagé.
   responsavel_orcid: "0000-0001-8700-0860"
   responsavel_ficha: "alexandro-gularte-schafer"
+  # Para quem quiser falar do site em si: erro, link quebrado, sugestão.
+  responsavel_email: "alschafer@gmail.com"
   email: "neabbage@gmail.com"
   repositorio: "https://github.com/neab-bage/neab-bage.github.io"
   doi: "10.5281/zenodo.24011478"
