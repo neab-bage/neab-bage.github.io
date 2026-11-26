@@ -25,6 +25,32 @@ pdf:
   arquivo: "guia-pratico-neab.pdf"
   rotulo: "Baixar o guia completo em PDF"
   detalhe: "Edição de novembro de 2026 · 24 páginas · 9 MB"
+
+# -------------------------------------------------------------------------
+# Folhear a edição impressa: as 24 páginas do guia em imagem, enviadas por
+# quem diagramou a publicação. O texto das checklists continua sendo o
+# conteúdo principal da página do guia — a imagem não é pesquisável nem
+# lida por leitor de tela, por isso entra como complemento, não substituto.
+# Arquivos em static/img/guia-paginas/p01.jpg … p24.jpg.
+# -------------------------------------------------------------------------
+folhear:
+  titulo: "Folhear a edição impressa"
+  chamada: "Guia Prático · edição de 2026"
+  rotulo: "Folhear a edição impressa"
+  intro: >-
+    As 24 páginas do Guia Prático como foram impressas, para quem prefere ver a publicação
+    tal como ela é distribuída. O conteúdo em texto, com as listas de documentos de cada
+    processo, está na <a href="{raiz}guia/">página do guia</a>.
+  total: 24
+  secoes:
+    1: "Capa"
+    2: "O NEAB"
+    4: "Diretoria"
+    6: "Check-lists"
+    14: "Engenharia Civil"
+    18: "Engenharias"
+    20: "Arquitetura e Urbanismo"
+    24: "Contracapa"
 intro: >-
   O NEAB reúne aqui as listas de documentos exigidos nos principais processos de
   aprovação em Bagé. São as mesmas do <strong>Guia Prático do NEAB</strong>, agora em

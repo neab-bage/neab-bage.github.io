@@ -360,6 +360,11 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__formacao li{padding-left:16px;position:relative;line-height:1.6}
 .ficha__formacao li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--cobre)}
 .ficha__atendimento{max-width:68ch;margin:14px 0 0}
+.folhear{display:grid;gap:22px;max-width:780px;margin:28px auto 0}
+.folhear__pag{margin:0;background:#fff;border:1px solid var(--concreto-2);border-radius:var(--raio-p);overflow:hidden;scroll-margin-top:90px}
+.folhear__pag img{display:block;width:100%;height:auto;background:var(--concreto)}
+.folhear__pag figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 16px;border-top:1px solid var(--concreto-2);color:var(--grafite-2);font-size:.9rem}
+.folhear__pag figcaption b{font-weight:600;color:var(--grafite)}
 a.assoc{text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
 a.assoc:hover{border-color:var(--cobre);transform:translateY(-2px)}
 

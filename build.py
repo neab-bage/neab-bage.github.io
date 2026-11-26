@@ -198,6 +198,29 @@ def carregar_guia():
     return d
 
 
+def preparar_folhear(guia):
+    """Monta a lista de páginas da edição impressa, com a seção de cada uma.
+
+    `secoes` em data/guia.yml marca onde cada seção começa; as páginas seguintes
+    herdam o nome até a próxima marca. Só entram as páginas cujo arquivo existe.
+    """
+    f = (guia or {}).get("folhear")
+    if not f:
+        return
+    pasta = ROOT / "static" / "img" / "guia-paginas"
+    secoes = {int(k): v for k, v in (f.get("secoes") or {}).items()}
+    paginas, atual = [], ""
+    for n in range(1, int(f.get("total") or 0) + 1):
+        atual = secoes.get(n, atual)
+        arquivo = "p%02d.jpg" % n
+        if (pasta / arquivo).is_file():
+            paginas.append({"n": n, "arquivo": arquivo, "secao": atual})
+    f["paginas"] = paginas
+    if len(paginas) != int(f.get("total") or 0):
+        print(f"Aviso: folhear do guia — {len(paginas)} de {f.get('total')} páginas encontradas em {pasta}.")
+
+
+
 def carregar_programa(associados):
     """Lê data/programa.yml e liga cada apresentador à sua ficha no quadro de associados."""
     arq = ROOT / "data" / "programa.yml"
@@ -321,6 +344,7 @@ def gerar():
     gestoes = carregar_gestoes()
     formacao = carregar_formacao()
     guia = carregar_guia()
+    preparar_folhear(guia)
     presidentes = carregar_presidentes()
     associados = carregar_associados()
     programa = carregar_programa(associados)
@@ -368,6 +392,9 @@ def gerar():
     render("formacao.html", "formacao/index.html", active="formacao", title="Cursos e formação")
     if guia:
         render("guia.html", "guia/index.html", active="guia", title=guia.get("titulo", "Guia prático"))
+        if guia.get("folhear"):
+            render("guia_folhear.html", "guia/folhear/index.html", active="guia",
+                   title=guia["folhear"].get("titulo", "Folhear a edição impressa"))
     if programa:
         render("programa.html", "universo-das-engenharias/index.html", active="programa",
                title=programa.get("titulo", "Programa de rádio"))

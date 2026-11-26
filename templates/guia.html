@@ -28,6 +28,15 @@
     </p>
     {% endif %}
 
+    {% if guia.folhear and guia.folhear.paginas %}
+    <p class="guia__pdf">
+      <a class="botao botao--linha" href="{{ root }}guia/folhear/">
+        {{ i.icon("livro", 18) }}{{ guia.folhear.rotulo }}
+      </a>
+      <small>As {{ guia.folhear.paginas | length }} páginas como foram impressas, sem baixar nada</small>
+    </p>
+    {% endif %}
+
     <nav class="guia__indice" aria-label="Índice dos check-lists">
       <p class="guia__indice-tit">Nesta página</p>
       <ul>
