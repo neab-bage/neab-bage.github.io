@@ -8,7 +8,8 @@
       <h1>Núcleo dos Engenheiros e Arquitetos de <span>Bagé</span></h1>
       <p class="hero__lead">{{ site.chamada_home or site.descricao_curta }}</p>
       <div class="hero__acoes">
-        <a class="btn btn--primario" href="{{ root }}guia/">Guia prático {{ i.icon("seta", 18) }}</a>
+        <a class="btn btn--primario" href="{{ root }}associados/">Encontre um profissional {{ i.icon("seta", 18) }}</a>
+        <a class="btn btn--suave" href="{{ root }}guia/">Guia prático</a>
         <a class="btn btn--suave" href="{{ root }}o-neab/">Conheça o núcleo</a>
       </div>
       {% if site.fundacao.confirmado and site.idade %}
@@ -34,111 +35,5 @@
   </div>
 </section>
 {% endif %}
-
-<section class="wrap secao">
-  <h2 class="sr">Seções do site</h2>
-  <div class="eixos">
-    <nav class="eixo" aria-label="O núcleo">
-      <h3 class="eixo__titulo">{{ i.icon("info", 18) }}O núcleo</h3>
-      <ul>
-        <li><a href="{{ root }}o-neab/">Apresentação<small>Finalidade, histórico e governança</small></a></li>
-        <li><a href="{{ root }}atuacao/">Atuação<small>Frentes de trabalho e realizações</small></a></li>
-        <li><a href="{{ root }}diretoria/">Diretoria e representação<small>Gestão atual e assento no CREA-RS</small></a></li>
-        <li><a href="{{ root }}diretoria/gestoes/">Galeria de Presidentes<small>Quem conduziu o núcleo desde 1968</small></a></li>
-      </ul>
-    </nav>
-    <nav class="eixo" aria-label="Atividades">
-      <h3 class="eixo__titulo">{{ i.icon("calendario", 18) }}Atividades</h3>
-      <ul>
-        <li><a href="{{ root }}agenda/">Agenda<small>Próximas atividades e realizadas</small></a></li>
-        <li><a href="{{ root }}formacao/">Cursos e formação<small>Palestras, cursos e visitas técnicas</small></a></li>
-        <li><a href="{{ root }}noticias/">Notícias<small>O que o núcleo tem feito</small></a></li>
-        {% if programa %}<li><a href="{{ root }}universo-das-engenharias/">{{ programa.titulo }}<small>{{ programa.dia }}, {{ programa.horario }} · {{ programa.frequencia }}</small></a></li>{% endif %}
-      </ul>
-    </nav>
-    <nav class="eixo" aria-label="Profissionais">
-      <h3 class="eixo__titulo">{{ i.icon("cracha", 18) }}Profissionais</h3>
-      <ul>
-        <li><a href="{{ root }}associados/">Encontre um profissional<small>Engenheiros e arquitetos por modalidade</small></a></li>
-        <li><a href="{{ root }}associe-se/">Como se associar<small>Requisitos, direitos e deveres</small></a></li>
-        <li><a href="{{ root }}beneficios/">Benefícios e convênios<small>Vantagens para quem é associado</small></a></li>
-      </ul>
-    </nav>
-    <nav class="eixo" aria-label="Transparência">
-      <h3 class="eixo__titulo">{{ i.icon("balanca", 18) }}Transparência</h3>
-      <ul>
-        <li><a href="{{ root }}documentos/">Documentos<small>Estatuto, editais e atos</small></a></li>
-        <li><a href="{{ root }}transparencia/">Prestação de contas<small>Relatórios e demonstrações</small></a></li>
-        <li><a href="{{ root }}contato/">Contato<small>Sede e canais do núcleo</small></a></li>
-      </ul>
-    </nav>
-  </div>
-</section>
-
-{% if noticias_home or agenda_prox %}
-<section class="faixa">
-  <div class="wrap duas">
-    <div>
-      <div class="secao__cab"><h2>Notícias</h2><a class="link-seta" href="{{ root }}noticias/">Todas {{ i.icon("seta", 16) }}</a></div>
-      <ul class="lista-posts">
-        {% for p in noticias_home %}
-        <li>
-          <a href="{{ root }}noticias/{{ p.slug }}/">
-            <small>{{ p.categoria }} · {{ p.data_br }}</small>
-            <strong>{{ p.titulo }}</strong>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div>
-      <div class="secao__cab"><h2>Agenda</h2><a class="link-seta" href="{{ root }}agenda/">Completa {{ i.icon("seta", 16) }}</a></div>
-      {% if agenda_prox %}
-      <ul class="lista-ativ">
-        {% for a in agenda_prox[:3] %}
-        <li>
-          <span class="data-bloco"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
-          <span class="lista-ativ__txt">
-            <small>{{ a.dia_semana }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>
-            <strong>{{ a.titulo }}</strong>
-            {% if a.local %}<span>{{ a.local }}</span>{% endif %}
-          </span>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <p class="nota">Nenhuma atividade marcada no momento. As realizadas ficam registradas na agenda.</p>
-      {% endif %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-<section class="wrap secao chamado">
-  <div class="chamado__in">
-    <div>
-      <p class="etiqueta">Para quem é do ramo</p>
-      <h2>É engenheiro ou arquiteto em Bagé?</h2>
-      <p class="chamado__txt">O núcleo representa a categoria junto ao CREA-RS, à Prefeitura e às demais
-         entidades, promove formação e defende o exercício profissional na região da Campanha desde 1968.</p>
-    </div>
-    <div class="chamado__acoes">
-      <a class="btn btn--primario" href="{{ root }}associe-se/">Como se associar {{ i.icon("seta", 18) }}</a>
-      <a class="link-seta" href="{{ root }}beneficios/">Benefícios e convênios {{ i.icon("seta", 16) }}</a>
-    </div>
-  </div>
-</section>
-
-<section class="wrap secao secao--rente">
-  <p class="quem-responde">
-    {{ i.icon("escudo", 18) }}
-    <span><strong>{{ site.diretoria.rotulo or "Diretoria" }} · {{ site.diretoria.biennio }}</strong>
-    {% if site.diretoria.membros %}
-      — {{ site.diretoria.membros[0].cargo }} {{ site.diretoria.membros[0].titulo }} {{ site.diretoria.membros[0].nome }}
-    {% endif %}
-    </span>
-    <a class="link-seta" href="{{ root }}diretoria/">Diretoria e representação {{ i.icon("seta", 16) }}</a>
-  </p>
-</section>
 
 {% endblock %}

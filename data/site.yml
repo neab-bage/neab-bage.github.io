@@ -313,15 +313,33 @@ parceiros:
 # mostra o nome como link de texto.
 # Blocos de destaque da página inicial: o que o site oferece a quem chega de fora.
 # Ordem importa — o primeiro ganha mais peso visual.
+# As portas da página inicial. A home é curta de propósito: apresenta o núcleo e
+# aponta para as subpáginas. O conteúdo fica em cada uma delas, não aqui.
 destaques:
-  - etiqueta: "Serviço ao profissional"
+  - etiqueta: "Vai construir ou reformar"
     titulo: "Guia prático"
     texto: >-
-      O que levar na Geplan, no IPHAE e no laudo de inspeção predial, item por item,
-      em listas que você vai marcando enquanto monta a pasta.
-    link_rotulo: "Ver os check-lists"
+      O que levar na Geplan, no IPHAE e no laudo de inspeção predial, item por item.
+      A publicação inteira para folhear, e listas que você vai marcando enquanto monta a pasta.
+    link_rotulo: "Abrir o guia"
     url: "guia/"
     icone: "check"
+  - etiqueta: "Procura um profissional"
+    titulo: "Engenheiros e arquitetos de Bagé"
+    texto: >-
+      Quem é associado ao núcleo, por modalidade, com formação, áreas de atuação e
+      contato profissional de cada um.
+    link_rotulo: "Encontrar um profissional"
+    url: "associados/"
+    icone: "cracha"
+  - etiqueta: "É engenheiro ou arquiteto"
+    titulo: "Associe-se ao NEAB"
+    texto: >-
+      O núcleo representa a categoria junto ao CREA-RS, à Prefeitura e às demais entidades,
+      promove formação e defende o exercício profissional na Campanha desde 1968.
+    link_rotulo: "Como se associar"
+    url: "associe-se/"
+    icone: "escudo"
   - etiqueta: "Toda quarta, 11h"
     titulo: "Universo das Engenharias"
     texto: >-
