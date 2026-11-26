@@ -187,6 +187,7 @@ grupos:
         formacao:
           - {titulo: "Doutor em Engenharia Civil", instituicao: "Universidade Federal de Santa Catarina", ano: ""}
           - {titulo: "Mestre em Engenharia Civil", instituicao: "Universidade Federal de Santa Catarina", ano: ""}
+          - {titulo: "Especialista em Ciência de Dados", instituicao: "", ano: ""}
           - {titulo: "Graduado em Ciência de Dados", instituicao: "", ano: ""}
           - {titulo: "Engenheiro Civil", instituicao: "Universidade Federal do Rio Grande (FURG)", ano: ""}
         atendimento: "Bagé e região da Campanha"
