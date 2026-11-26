@@ -32,8 +32,11 @@ chamada_contribuicao: >-
   sobre Bagé que deveria estar aqui — ou é autor de um deles —, fale com a Diretoria.
 
 secoes:
-  - id: livros
+  - id: arquitetura
     titulo: "Arquitetura, patrimônio e cidade"
+    descricao: >-
+      Livros, dissertações e artigos sobre o que foi construído em Bagé e sobre a proteção
+      desse acervo.
     itens:
       - titulo: "A Casa Bajeense: um caminho pela história da arquitetura"
         autores: "Curso de Arquitetura e Urbanismo da Urcamp, com a Consultoria Júnior"
@@ -71,9 +74,6 @@ secoes:
         fonte: "Edição comercial"
         nota: "PENDENTE: ano e editora."
 
-  - id: teses
-    titulo: "Teses e dissertações"
-    itens:
       - titulo: "Arquitetura bajeense: o delinear da modernidade, 1930–1970"
         autores: "Magali Nocchi Collares Gonçalves"
         ficha: "magali-nocchi-collares-goncalves"
@@ -85,13 +85,6 @@ secoes:
           associada ao NEAB.
         url: "https://lume.ufrgs.br/handle/10183/8623"
         fonte: "Lume — UFRGS"
-      - titulo: "Nomes de Bagé: produzindo memória sobre personagens e lugares"
-        autores: "Fabiane Gadea Trindade"
-        publicacao: "Universidade Federal do Pampa, Bagé"
-        ano: "2023"
-        resumo: "Como os nomes de ruas e lugares da cidade constroem memória sobre quem os batizou."
-        url: "https://repositorio.unipampa.edu.br/bitstream/riu/8148/1/Fabiane%20Gadea%20Trindade%202023.pdf"
-        fonte: "Repositório da Unipampa"
       - titulo: "Entre Charqueadas: um caminho de memórias — diretrizes de preservação para as Vilas Santa Thereza e Industrial, Bagé/RS"
         autores: "Isadora Baptista Alves"
         publicacao: "Trabalho final de graduação, Faculdade de Arquitetura e Urbanismo da UFPel"
@@ -101,9 +94,6 @@ secoes:
         fonte: "Núcleo de Estudos de Arquitetura Brasileira — UFPel"
         nota: "PENDENTE: link direto para o texto completo e ano."
 
-  - id: artigos
-    titulo: "Artigos e relatórios"
-    itens:
       - titulo: "O patrimônio urbano da rainha da fronteira: Bagé, RS"
         autores: "Ester Judite Bendjouya Gutierrez e Simone Neutzling"
         publicacao: "Revista Memória em Rede, Pelotas, v. 2, n. 5"
@@ -196,7 +186,7 @@ secoes:
         nota: "PENDENTE: autoria."
 
   - id: memoria
-    titulo: "Bagé: história e memória"
+    titulo: "História e memória de Bagé"
     descricao: >-
       Não são livros técnicos, mas é neles que está a história de quem construiu a cidade
       e por que ela ficou como ficou.
@@ -224,3 +214,10 @@ secoes:
         ano: "2024"
         resumo: "Quem são as pessoas que dão nome às ruas da cidade."
         fonte: "Edição comercial"
+      - titulo: "Nomes de Bagé: produzindo memória sobre personagens e lugares"
+        autores: "Fabiane Gadea Trindade"
+        publicacao: "Universidade Federal do Pampa, Bagé"
+        ano: "2023"
+        resumo: "Como os nomes de ruas e lugares da cidade constroem memória sobre quem os batizou."
+        url: "https://repositorio.unipampa.edu.br/bitstream/riu/8148/1/Fabiane%20Gadea%20Trindade%202023.pdf"
+        fonte: "Repositório da Unipampa"
