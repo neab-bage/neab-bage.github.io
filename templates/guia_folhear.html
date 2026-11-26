@@ -14,6 +14,7 @@
 
 
 
+    <div class="folhear__visor" id="visor">
     <div class="folhear" id="folhear">
       {% for pg in guia.folhear.paginas %}
       <figure class="folhear__pag" id="pagina-{{ pg.n }}">
@@ -24,6 +25,7 @@
         <figcaption><b>{{ pg.secao }}</b><span>{{ pg.n }} / {{ guia.folhear.total }}</span></figcaption>
       </figure>
       {% endfor %}
+    </div>
     </div>
 
     {% if guia.pdf %}
@@ -63,10 +65,12 @@
   barra.innerHTML =
     '<button type="button" class="btn btn--suave btn--peq" data-ir="-1" aria-label="Página anterior">&#8592; Anterior</button>' +
     '<span class="folhear__contador" aria-live="polite"></span>' +
-    '<button type="button" class="btn btn--suave btn--peq" data-ir="1" aria-label="Próxima página">Próxima &#8594;</button>';
-  caixa.parentNode.insertBefore(barra, caixa);
+    '<button type="button" class="btn btn--suave btn--peq" data-ir="1" aria-label="Próxima página">Próxima &#8594;</button>' +
+    '<button type="button" class="btn btn--suave btn--peq folhear__cheia" data-cheia aria-label="Abrir em tela cheia">Tela cheia</button>';
+  var visor = document.getElementById("visor") || caixa.parentNode;
+  visor.insertBefore(barra, caixa);
   var rodape = barra.cloneNode(true);
-  caixa.parentNode.insertBefore(rodape, caixa.nextSibling);
+  visor.insertBefore(rodape, caixa.nextSibling);
   var contadores = [barra.querySelector(".folhear__contador"), rodape.querySelector(".folhear__contador")];
 
   function mostrar(i, rolar) {
@@ -88,7 +92,8 @@
   [barra, rodape].forEach(function (b) {
     b.addEventListener("click", function (ev) {
       var alvo = ev.target.closest("[data-ir]");
-      if (alvo) mostrar(atual + Number(alvo.dataset.ir), b === rodape);
+      if (alvo) { mostrar(atual + Number(alvo.dataset.ir), b === rodape && !cheia()); return; }
+      if (ev.target.closest("[data-cheia]")) alternarCheia();
     });
   });
 
@@ -115,6 +120,30 @@
     if (Math.abs(d) > 45) mostrar(atual + (d < 0 ? 1 : -1));
     x0 = null;
   }, { passive: true });
+
+  function cheia() {
+    return document.fullscreenElement === visor || document.webkitFullscreenElement === visor;
+  }
+  function alternarCheia() {
+    var pedir = visor.requestFullscreen || visor.webkitRequestFullscreen;
+    var sair = document.exitFullscreen || document.webkitExitFullscreen;
+    if (!pedir) return;
+    if (cheia()) { sair.call(document); } else { pedir.call(visor); }
+  }
+  // esconde o botão onde a API não existe (iPhone, por exemplo)
+  if (!(visor.requestFullscreen || visor.webkitRequestFullscreen)) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-cheia]"), function (b) { b.hidden = true; });
+  }
+  ["fullscreenchange", "webkitfullscreenchange"].forEach(function (evt) {
+    document.addEventListener(evt, function () {
+      var on = cheia();
+      visor.classList.toggle("folhear__visor--cheia", on);
+      Array.prototype.forEach.call(document.querySelectorAll("[data-cheia]"), function (b) {
+        b.textContent = on ? "Sair da tela cheia" : "Tela cheia";
+        b.setAttribute("aria-label", on ? "Sair da tela cheia" : "Abrir em tela cheia");
+      });
+    });
+  });
 
   mostrar(0, false);
 })();

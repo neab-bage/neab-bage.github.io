@@ -361,6 +361,14 @@ a.cartao:hover{transform:translateY(-3px);box-shadow:var(--sombra-h);border-colo
 .ficha__formacao li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--cobre)}
 .ficha__atendimento{max-width:68ch;margin:14px 0 0}
 .secao--folhear{padding-top:22px}
+.folhear__visor{max-width:780px;margin:0 auto}
+.folhear__visor--cheia{max-width:none;background:var(--preto);display:flex;flex-direction:column;justify-content:center;gap:10px;padding:10px 14px;overflow:auto}
+.folhear__visor--cheia .folhear{margin:0 auto;max-width:none}
+.folhear__visor--cheia .folhear__pag{border:0;background:transparent;display:flex;flex-direction:column;align-items:center}
+.folhear__visor--cheia .folhear__pag img{width:auto;max-width:100%;max-height:82vh;border-radius:4px}
+.folhear__visor--cheia .folhear__pag figcaption{border-top:0;color:#CFCAC2}
+.folhear__visor--cheia .folhear__pag figcaption b{color:#fff}
+.folhear__visor--cheia .folhear__ctrl{margin:0}
 .folhear__cab{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px;max-width:780px;margin:0 auto}
 .folhear__cab h1{font-size:clamp(1.5rem,3.4vw,2rem);margin:2px 0 0}
 .folhear__cab .etiqueta{margin:0}
